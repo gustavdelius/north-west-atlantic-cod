@@ -1,0 +1,16 @@
+       case no_w    dt  method baseline_cod_ssb invasion_rate ssb_min_rel
+1 reference  120 0.100   euler         1.631394     0.2303546   0.3011325
+2  dt_0.025  120 0.025   euler         1.631394     0.2305719   0.2961189
+3   tr_bdf2  120 0.100 tr_bdf2         1.631394     0.2306255   0.2945531
+4  no_w_200  200 0.100   euler         1.961234     0.2267602   0.3302672
+  year_min ssb_2025_rel forage_max_rel_1993_2025 forage_2025_rel year_recover50
+1     1993     3.720597                 1.503980        1.335362           1994
+2     1993     3.717210                 1.509736        1.333011           1994
+3     1993     3.718096                 1.511942        1.333220           1994
+4     1993     3.238678                 1.551946        1.277912           1994
+  year_recover100 years_to_recover50 last_year
+1            1996                  1      2125
+2            1996                  1      2125
+3            1996                  1      2125
+4            1995                  1      2125
+06_numerical_checks.R done

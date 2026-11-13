@@ -1,0 +1,8 @@
+year,cod,groundfish,pelagic,note
+1970,0.40,0.30,0.10,baseline (steady state) fishing; cod F set so model yield matches 1980-85 mean landings (~53 kt)
+1980,0.45,0.35,0.10,period of high TACs (45-64 kt) after extension of jurisdiction
+1986,0.70,0.45,0.10,landings fall while TAC kept high relative to declining biomass
+1990,1.10,0.55,0.10,very high exploitation of a declining stock (landings ~30-34 kt from SSB ~20-50 kt)
+1993,0.30,0.30,0.10,moratorium from September 1993: roughly 1/4 of a year at 1992 levels
+1994,0.02,0.15,0.10,moratorium: cod bycatch / sentinel only (landings 0.1-0.4 kt); other groundfish fisheries reduced
+2025,0.02,0.15,0.10,end of hindcast

@@ -1,0 +1,14 @@
+"Species","nwa","n","Loo_median","K_median","Lm_median"
+"Ammodytes dubius",FALSE,1,26.2,0.34,NA
+"Ammodytes dubius",TRUE,2,25.3,0.355,NA
+"Clupea harengus",FALSE,113,30.6,0.34,24.1
+"Clupea harengus",TRUE,12,35.6,0.305,30
+"Gadus morhua",FALSE,71,112,0.17,39
+"Gadus morhua",TRUE,37,105,0.151,27.1
+"Hippoglossoides platessoides",FALSE,13,65.9,0.093,31.8
+"Mallotus villosus",FALSE,3,19.8,0.454,NA
+"Mallotus villosus",TRUE,2,19.5,0.48,17.5
+"Melanogrammus aeglefinus",FALSE,36,67.1,0.224,32.3
+"Melanogrammus aeglefinus",TRUE,15,73,0.28,34.9
+"Merluccius bilinearis",FALSE,3,48.7,0.358,23.1
+"Merluccius bilinearis",TRUE,13,42.5,0.399,NA

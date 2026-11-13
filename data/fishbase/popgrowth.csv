@@ -1,0 +1,323 @@
+"Species","Sex","Loo","Type","K","to","Winfinity","tmax","tm","M","Lm","Locality","YearStart","YearEnd","Temperature"
+"Ammodytes dubius","unsexed",20.3,"TL",0.38,-0.1,20.97552,NA,NA,NA,NA,"Banquereau, Nova Scotia",1973,NA,10
+"Ammodytes dubius","unsexed",26.2,"TL",0.34,-0.5,45.44152,9,NA,1,NA,"Grand Bank",1981,NA,2
+"Ammodytes dubius","unsexed",30.3,"TL",0.33,-0.1,70.59452,NA,NA,NA,NA,"Western Emerald Bank, Nova Scotia",1973,NA,12
+"Clupea harengus","mixed",30,NA,0.33,-0.88,NA,NA,3.16,NA,22.1,"Western Baltic Sea, Sub-divisions 22-24 and Division IIIa (spring spawners)",2000,2011,NA
+"Clupea harengus","mixed",35.9,NA,0.348,-0.447,NA,NA,2.73,NA,24.1,"North Sea, Sub-area IV, Divisions VIId & IIIa (autumn-spawners)",2000,2011,NA
+"Clupea harengus","unsexed",35.7,"TL",0.40909,NA,NA,NA,3,NA,25.3,"Georges Bank, 1991",NA,NA,NA
+"Clupea harengus","unsexed",22.1,"TL",0.493,NA,71,NA,NA,NA,15,"Baltic, Bornholm Deep",1939,1942,6
+"Clupea harengus","unsexed",23.6,"TL",0.381,NA,86.5,NA,NA,NA,15,"Baltic, Bornholm Deep",1943,1945,6
+"Clupea harengus","unsexed",23.9,"TL",0.295,-1.67,89.9,NA,NA,NA,15,"Baltic, Gulf of Gdansk",1936,1939,8
+"Clupea harengus","unsexed",24.4,"TL",0.35,-2.3,95.7,NA,NA,NA,NA,"Baltic, Gulf of Gdansk",1946,1957,8
+"Clupea harengus","unsexed",24.5,"TL",0.244,-1.68,96.9,NA,NA,NA,15,"Baltic, Gulf of Gdansk",1946,1957,8
+"Clupea harengus","unsexed",24.7,"TL",0.273,-1.01,99.3,NA,NA,NA,15,"Baltic, Gulf of Gdansk",1936,1939,8
+"Clupea harengus","unsexed",26,"TL",0.434,-1.43,116,NA,NA,0.4,15,"Baltic, Bornholm Deep",1952,1957,6
+"Clupea harengus","unsexed",23.6,"TL",0.221,-2.53,86.5,NA,NA,NA,NA,"Gulf of Finland (Baltic Sea)",1990,NA,3.1
+"Clupea harengus","unsexed",23.7,"TL",0.218,-2.25,90.3,NA,NA,NA,NA,"Archipelago Sea, Åland Sea, Northern Baltic proper",1990,NA,3.1
+"Clupea harengus","unsexed",17.7,"TL",0.48,-1.5,35,NA,NA,NA,NA,"eastern Gulf of Finland",1965,1986,9
+"Clupea harengus","unsexed",19.7,"TL",0.45,-1.17,52.5,NA,NA,NA,NA,"western Gulf of Finland",1965,1986,9
+"Clupea harengus","unsexed",24.8,"TL",0.23,-2.33,140,NA,NA,NA,NA,"NE Baltic, west of Hiiumaa and Saaremaa Is",1948,1989,9
+"Clupea harengus","unsexed",25,"TL",0.2,NA,117.39092,10,NA,NA,NA,"Baltic, ICES subdiv. 25-29",1981,NA,NA
+"Clupea harengus","unsexed",32,"TL",0.3,NA,251.71744,10,NA,NA,NA,"Baltic, ICES subdiv. 25-29",NA,NA,NA
+"Clupea harengus","unsexed",19.4,"TL",0.4,NA,55,NA,NA,0.35,NA,"Northern Baltic",1976,NA,8
+"Clupea harengus","unsexed",21.1,"TL",0.76,NA,57.8,NA,NA,NA,NA,"Gulf of Bothnia, near the town of Pietarsaari",NA,NA,3.1
+"Clupea harengus","unsexed",21,"TL",0.38,-1.16,56.3,NA,NA,NA,14,"Bothnian Bay (Baltic Sea)",1990,NA,3.1
+"Clupea harengus","unsexed",21.1,"TL",0.34,-1.1,57.1,NA,NA,NA,NA,"Bothnian Bay (Baltic Sea)",1990,NA,3.1
+"Clupea harengus","unsexed",27.9,"TL",0.62,NA,164.78468,NA,NA,NA,NA,"Kiel Bight, Baltic",1970,NA,8
+"Clupea harengus","unsexed",28.7,"TL",0.63,NA,178,NA,NA,NA,22.1,"Kiel Bight, Baltic",1970,NA,8
+"Clupea harengus","unsexed",27.7,"TL",0.48,NA,160,10,NA,0.36,22.1,"Southern Baltic",1976,NA,9
+"Clupea harengus","unsexed",29.7,"SL",0.275,-1.97,329.10199,NA,NA,NA,NA,"Western Baltic, around Rügen",NA,NA,8.2
+"Clupea harengus","unsexed",30.8,"TL",0.332,-1.66,223.67711,NA,NA,NA,22.1,"Western Baltic, around Rügen",NA,NA,8.2
+"Clupea harengus","unsexed",28.3,"TL",0.41,NA,172.19476,NA,NA,NA,22.1,"Western Baltic",1900,NA,9
+"Clupea harengus","unsexed",25.6,"TL",0.93,NA,126.31688,NA,NA,NA,NA,"Kieler Förde",1941,1946,NA
+"Clupea harengus","unsexed",38.4,"TL",0.13,-4.01,442.16403,12,NA,NA,NA,"Baltic Sea (Spring spawner)",1995,NA,NA
+"Clupea harengus","mixed",30,"TL",0.33,-0.88,206.20755,NA,3.16,NA,22.1,"Western Baltic Sea, Sub-divisions 22-24 and Division IIIa",2000,2012,NA
+"Clupea harengus","unsexed",28.2,"TL",0.378,NA,157,NA,NA,NA,24.1,"East Anglia",1932,NA,9
+"Clupea harengus","unsexed",28.4,"TL",0.361,NA,160,11,NA,NA,24.1,"East Anglia",1933,NA,9
+"Clupea harengus","unsexed",29.1,"TL",0.307,NA,173,NA,NA,NA,24.1,"East Anglia",1936,NA,9
+"Clupea harengus","unsexed",29.3,"TL",0.264,NA,176,NA,NA,0.17,24.1,"East Anglia",1935,NA,9
+"Clupea harengus","unsexed",29.4,"TL",0.234,NA,178,NA,NA,NA,24.1,"East Anglia",1934,NA,9
+"Clupea harengus","unsexed",29.5,"TL",0.29,NA,180,NA,NA,0.184,NA,"East Anglia",1943,NA,9
+"Clupea harengus","unsexed",29.9,"TL",0.375,NA,188,NA,NA,NA,NA,"East Anglia",1947,NA,9
+"Clupea harengus","unsexed",30.2,"TL",0.267,NA,194,NA,NA,0.15,24.1,"East Anglia",1945,NA,9
+"Clupea harengus","unsexed",30.3,"TL",0.222,NA,196,NA,NA,0.13,24.1,"East Anglia",1944,NA,9
+"Clupea harengus","unsexed",30.4,"TL",0.313,NA,198,NA,NA,NA,24.1,"East Anglia",1948,NA,9
+"Clupea harengus","unsexed",31,"TL",0.239,NA,210,NA,NA,0.18,24.1,"East Anglia",1946,NA,9
+"Clupea harengus","unsexed",31,"TL",0.296,NA,210,NA,NA,NA,24.1,"East Anglia",1949,NA,9
+"Clupea harengus","unsexed",31.6,"TL",0.264,NA,223,NA,NA,0.26,22,"East Anglia",1950,NA,9
+"Clupea harengus","unsexed",30.6,"TL",0.42,-0.28,215,NA,NA,NA,24.1,"Buchan Herring",1953,NA,10
+"Clupea harengus","unsexed",30.7,"TL",0.3,-1.84,217,NA,NA,NA,24.1,"Buchan Herring",1954,NA,9.5
+"Clupea harengus","unsexed",31.1,"TL",0.28,-2.87,226,NA,NA,NA,NA,"Buchan Herring",1952,NA,9.1
+"Clupea harengus","unsexed",31.5,"TL",0.43,-0.84,234,NA,NA,NA,27.5,"Buchan Herring",1962,NA,9.1
+"Clupea harengus","unsexed",32.1,"TL",0.31,-2.24,248,NA,NA,NA,24.1,"Buchan Herring",1955,NA,9.6
+"Clupea harengus","unsexed",32.7,"TL",0.42,-0.81,262,NA,NA,NA,24.1,"Buchan Herring",1960,NA,10.1
+"Clupea harengus","unsexed",32.7,"TL",0.48,-0.22,262,NA,NA,NA,24.1,"Buchan Herring",1961,NA,9.8
+"Clupea harengus","unsexed",32.9,"TL",0.28,-1.6,267,NA,NA,NA,24.1,"Buchan Herring",1957,NA,9.7
+"Clupea harengus","unsexed",32.9,"TL",0.32,-1.3,267,NA,NA,NA,24.1,"Buchan Herring",1959,NA,10.1
+"Clupea harengus","unsexed",33.3,"TL",0.29,-1.6,277,NA,NA,NA,24.1,"Buchan Herring",1958,NA,9.6
+"Clupea harengus","unsexed",35.1,"TL",0.16,-4.87,361,NA,NA,NA,NA,"Buchan Herring",1956,NA,9
+"Clupea harengus","unsexed",30,"TL",0.38,NA,200,NA,NA,0.25,24,"`North Sea'",NA,NA,11
+"Clupea harengus","unsexed",29.2,"TL",0.48,NA,176,NA,NA,NA,24.5,"Downs stock",1961,NA,10.6
+"Clupea harengus","unsexed",30,"SL",0.33,NA,236,NA,NA,NA,25.7,"Banks/Dogger stock",1973,NA,9
+"Clupea harengus","unsexed",31.1,"TL",0.3,NA,250,NA,NA,NA,27.5,"Buchan stock",1978,NA,8.8
+"Clupea harengus","unsexed",33.1,"TL",0.46,-0.86,300,8,NA,NA,24.1,"North Sea",1984,2006,10.5
+"Clupea harengus","unsexed",28.6,"TL",0.74,0.05,177.89795,NA,NA,NA,NA,"North Sea",1980,NA,NA
+"Clupea harengus","unsexed",30.1,"TL",0.59,0.04,208.3389,NA,NA,NA,24.1,"North Sea",1981,NA,NA
+"Clupea harengus","unsexed",30.3,"TL",0.58,0.13,212.64616,NA,NA,NA,24.1,"North Sea",1979,NA,NA
+"Clupea harengus","unsexed",30.5,"TL",0.44,-0.69,217.01331,NA,NA,NA,24.1,"North Sea",1989,NA,NA
+"Clupea harengus","unsexed",30.9,"TL",0.41,-0.55,225.92879,NA,NA,NA,24.1,"North Sea",1990,NA,NA
+"Clupea harengus","unsexed",31.5,"TL",0.4,-0.49,239.76152,NA,NA,NA,27.5,"North Sea",1970,NA,NA
+"Clupea harengus","unsexed",31.9,"TL",0.36,-0.49,249.29471,NA,NA,NA,24.1,"North Sea",1987,NA,NA
+"Clupea harengus","unsexed",32.1,"TL",0.41,-0.48,254.15599,NA,NA,NA,24.1,"North Sea",1978,NA,NA
+"Clupea harengus","unsexed",32.2,"TL",0.47,-0.43,256.61057,NA,NA,NA,24.1,"North Sea",1974,NA,NA
+"Clupea harengus","unsexed",32.4,"TL",0.38,-0.64,261.56763,NA,NA,NA,24.1,"North Sea",1971,NA,NA
+"Clupea harengus","unsexed",32.4,"TL",0.4,-0.65,261.56763,NA,NA,NA,24.1,"North Sea",1973,NA,NA
+"Clupea harengus","unsexed",32.6,"TL",0.26,-1.22,266.58899,NA,NA,NA,24.1,"North Sea",1985,NA,NA
+"Clupea harengus","unsexed",32.7,"TL",0.26,-1.4,269.12402,NA,NA,NA,NA,"North Sea",1986,NA,NA
+"Clupea harengus","unsexed",32.8,"TL",0.31,-1.02,271.6752,NA,NA,NA,24.1,"North Sea",1988,NA,NA
+"Clupea harengus","unsexed",33.6,"TL",0.23,-1.8,292.67673,NA,NA,NA,24.1,"North Sea",1984,NA,NA
+"Clupea harengus","unsexed",33.6,"TL",0.33,-0.94,292.67673,NA,NA,NA,24.1,"North Sea",1972,NA,NA
+"Clupea harengus","unsexed",33.7,"TL",0.37,-0.51,295.37674,NA,NA,NA,24.1,"North Sea",1977,NA,NA
+"Clupea harengus","unsexed",33.7,"TL",0.38,-0.42,295.37674,NA,NA,NA,24.1,"North Sea",1975,NA,NA
+"Clupea harengus","unsexed",33.8,"TL",0.39,-0.45,298.09344,NA,NA,NA,24.1,"North Sea",1976,NA,NA
+"Clupea harengus","unsexed",35,"TL",0.19,-2.28,332.02451,NA,NA,NA,NA,"North Sea",1983,NA,NA
+"Clupea harengus","unsexed",36.5,"TL",0.14,-3.98,377.99393,NA,NA,NA,NA,"North Sea",1982,NA,NA
+"Clupea harengus","mixed",35.9,"TL",0.348,-0.447,359.1218,NA,2.73,NA,24.1,"North Sea Sub-area IV, Divisions VIId and IIIa",2000,2012,NA
+"Clupea harengus","unsexed",31.2,"TL",0.44,-1.27,199,NA,NA,0.16,23.8,"Dunmore stock",1963,1971,11.4
+"Clupea harengus","unsexed",30.3,"TL",0.34,-2.45,253,NA,NA,NA,NA,"Celtic Sea",1957,1962,9
+"Clupea harengus","unsexed",30.3,"TL",0.44,NA,212.64616,NA,NA,NA,22.1,"Celtic Sea",1975,1994,13
+"Clupea harengus","unsexed",30.1,"TL",0.34,-2.94,260,8,NA,NA,NA,"Celtic Sea",1958,2006,13.1
+"Clupea harengus","unsexed",34.8,"TL",0.41,NA,582,NA,NA,NA,27,"Clyde stock",NA,NA,9.5
+"Clupea harengus","unsexed",31.3,"TL",0.37,-2.61,250,8,NA,NA,NA,"Northwest of Ireland and south of Scotland",1985,2006,12.1
+"Clupea harengus","unsexed",29.5,"TL",0.39,NA,193,NA,NA,0.2,NA,"Irish Sea (Dunmore Stock)",1963,NA,12
+"Clupea harengus","unsexed",29.6,"TL",0.35,-1.63,181,NA,NA,NA,23.7,"Manx stock",1955,1963,10.3
+"Clupea harengus","unsexed",30.6,"TL",0.32,-0.32,273,NA,NA,NA,24.5,"Manx stock",1964,1970,10.3
+"Clupea harengus","unsexed",29,"TL",0.66,NA,185.69905,NA,NA,NA,22.6,"Irish Sea",1975,1994,13
+"Clupea harengus","unsexed",29.3,"TL",0.5,-1.48,240,7,NA,NA,NA,"Irish Sea",1961,2006,11
+"Clupea harengus","unsexed",21,"TL",0.296,NA,69.5,NA,NA,NA,NA,"`lesser White Sea herring'",1957,NA,4
+"Clupea harengus","unsexed",25.3,"TL",0.381,NA,121,NA,NA,NA,NA,"`large White Sea herring'",1957,NA,4
+"Clupea harengus","unsexed",28.3,"TL",0.292,0.289,170,NA,NA,NA,NA,"Murman Herring (72°N 35°E)",1957,NA,4
+"Clupea harengus","unsexed",21,"TL",0.65,NA,120,10,NA,0.78,28.5,"Lusterfjord",1952,NA,6
+"Clupea harengus","unsexed",34,"TL",0.27,NA,467,NA,NA,0.13,28,"Norwegian Sea",NA,NA,6
+"Clupea harengus","unsexed",36,"TL",0.21,NA,350,23,NA,0.16,28.5,"Atlanto-Scandian",1963,NA,8
+"Clupea harengus","unsexed",37,"TL",0.26,NA,590,NA,NA,0.16,31.2,"Norwegian stock (spring spawner)",1988,NA,8.2
+"Clupea harengus","unsexed",35.7,"TL",0.34,-0.83,352.97559,16,3,NA,26.5,"west coast",1940,1964,NA
+"Clupea harengus","unsexed",36.4,"TL",0.31,-0.83,374.80313,17.5,4,NA,28,"west coast",1940,1964,NA
+"Clupea harengus","unsexed",36.7,"TL",0.275,-0.83,384.43066,18.5,5,NA,29.5,"west coast",1940,1964,NA
+"Clupea harengus","unsexed",37.1,"TL",0.255,-0.83,397.5257,19,6,NA,30.5,"west coast",1940,1964,NA
+"Clupea harengus","unsexed",37.3,"TL",0.23,-0.83,404.18494,19.1,7,NA,31.2,"west coast",1940,1964,NA
+"Clupea harengus","unsexed",37.5,"TL",0.205,-0.83,410.91925,20.1,8,NA,31.4,"west coast",1940,1964,NA
+"Clupea harengus","unsexed",38,"TL",0.185,-0.83,428.08615,20.1,9,NA,32.3,"west coast",1940,1964,NA
+"Clupea harengus","unsexed",32.5,"TL",0.33,-0.33,410,15,NA,NA,28.5,"Norwegian spring spawning herring",1958,2005,6.2
+"Clupea harengus","unsexed",17,"TL",0.666,NA,32.1,NA,NA,NA,NA,"Baltic, Gulf of Riga",1957,NA,3.1
+"Clupea harengus","unsexed",21.6,"TL",0.2,-3.05,65.1,NA,NA,NA,NA,"Gulf of Riga",1958,1989,9
+"Clupea harengus","unsexed",36.3,"TL",0.27,-1.26,430,14,NA,NA,27.5,"Iceland summer spawners",1981,2005,6.4
+"Clupea harengus","unsexed",36.2,"TL",0.3,-1,368.47614,NA,NA,NA,27.5,"Icelandic summer-spawning herring (Division Va)",1961,1964,NA
+"Clupea harengus","unsexed",38,"TL",0.25,-1.2,428.08615,NA,NA,NA,27.5,"Icelandic spring-spawning herring (Division Va)",1961,1964,NA
+"Clupea harengus","unsexed",30.6,"TL",0.69,-0.58,230,8,NA,NA,NA,"Northwest of Scotland",1993,2006,10.9
+"Clupea harengus","unsexed",34.2,"TL",0.31,-0.67,350,11,NA,NA,NA,"East of Newfoundland fall spawners",1983,2005,6
+"Clupea harengus","unsexed",35.3,"TL",0.3,-1.06,370,11,NA,NA,NA,"East of Newfoundland spring spawners",1983,2005,6
+"Clupea harengus","unsexed",41.7,"TL",0.22,-2.05,490,11,NA,NA,NA,"West of Newfoundland fall spawners",1973,2002,4.7
+"Clupea harengus","unsexed",36.4,"TL",0.26,NA,331,NA,NA,NA,32.5,"Southern Gulf of St. Lawrence autumn spawners",1975,NA,8
+"Clupea harengus","unsexed",38.5,"TL",0.32,-0.59,390,11,NA,NA,NA,"Southern Gulf of St. Lawrence fall spawners",1978,2007,6
+"Clupea harengus","unsexed",34,"TL",0.36,NA,295,NA,NA,NA,25,"New Brunswick",1957,NA,10
+"Clupea harengus","unsexed",35.6,"TL",0.32,0.39,380,11,NA,NA,NA,"Nova Scotia and Bay of Fundy",1969,2005,6.5
+"Clupea harengus","unsexed",33.7,"TL",0.32,-0.55,320,11,NA,NA,NA,"Gulf of Maine and Georges Bank",1968,2005,11.2
+"Clupea harengus","unsexed",35.2,"TL",0.28,NA,301,NA,NA,NA,30,"Southern Gulf of St. Lawrence spring spawners",1975,NA,8
+"Clupea harengus","unsexed",33.5,"TL",0.33,NA,305,NA,NA,NA,NA,"Gulf of St. Lawrence",1969,NA,10
+"Clupea harengus","unsexed",35.6,"TL",0.22,-2.75,370,11,NA,NA,NA,"Southern Gulf of St. Lawrence spring spawners",1978,2007,6
+"Clupea harengus","unsexed",37.7,"TL",0.25,-2,450,11,NA,NA,NA,"West of Newfoundland spring spawners",1968,2002,4.7
+"Gadus morhua","unsexed",148,"TL",0.12,NA,36700,NA,NA,NA,NA,"Northwest Atlantic",NA,NA,12
+"Gadus morhua","mixed",115,NA,0.114,-0.08,NA,NA,2.8,NA,32.2,"Eastern Baltic Sea (Subdivisions 25-32)",2000,2011,NA
+"Gadus morhua","mixed",116,NA,0.208,0.18,NA,NA,2.1,NA,37.8,"North Sea, Eastern English Channel & Skagerrak (Cod-347d)",2000,2011,NA
+"Gadus morhua","unsexed",126.525,"TL",0.16242,NA,NA,NA,3.5,NA,55,"North Sea",NA,NA,NA
+"Gadus morhua","unsexed",105,NA,0.155,NA,11356,NA,NA,NA,35,"Baltic",1974,NA,10
+"Gadus morhua","mixed",67.7,"TL",0.368,0.531,3064.33008,NA,NA,NA,NA,"Baltic, Belt Sea and Kiel Bay",NA,NA,3.1
+"Gadus morhua","male",119,"TL",0.15,-0.16,17087.73047,NA,1.7,0.2,29,"Western Baltic Sea, Sub-division 22 & 24",2000,2012,NA
+"Gadus morhua","unsexed",72.8,"TL",0.209,NA,4150,NA,NA,NA,NA,"Baltic, Gdansk Deep",1946,1960,3.1
+"Gadus morhua","unsexed",106,"TL",0.177,NA,13500,NA,NA,NA,39,"Baltic, Bornholm Deep",1962,1970,3.1
+"Gadus morhua","unsexed",116,"TL",0.095,NA,18000,NA,NA,NA,39,"Baltic, Bornholm",1955,1956,3.1
+"Gadus morhua","unsexed",126,"TL",0.217,NA,22200,NA,NA,0.4,NA,"Baltic",1954,NA,3.1
+"Gadus morhua","unsexed",108,"TL",0.153,NA,14300,NA,NA,0.18,NA,"Baltic, Gdansk Deep",1976,NA,3.1
+"Gadus morhua","unsexed",120,"TL",0.125,-0.33,20000,25,NA,NA,39,"Baltic, Bornholm Deep",1976,NA,3.1
+"Gadus morhua","unsexed",120,"TL",0.13,NA,20000,14,NA,0.18,39,"Southern Baltic",1966,NA,3.1
+"Gadus morhua","unsexed",99.5,"TL",0.2,NA,8160,NA,NA,0.44,39,"Baltic, Bornholm Deep",1931,1938,6
+"Gadus morhua","unsexed",103,"TL",0.15,NA,11000,NA,NA,0.33,32.2,"Baltic subdiv. 26",1971,1972,7
+"Gadus morhua","unsexed",112,"TL",0.154,NA,10800,NA,NA,0.31,NA,"Baltic, off Gdansk",1931,1938,5
+"Gadus morhua","female",96.6,"TL",0.169,0.016,10100,NA,NA,NA,39,"Baltic, Bornholm Basin",NA,NA,3.1
+"Gadus morhua","male",95.4,"TL",0.163,-0.01,9710,NA,NA,NA,39,"Baltic, Bornholm Basin",NA,NA,3.1
+"Gadus morhua","mixed",115,"TL",0.114,-0.08,15379.74414,NA,2.8,0.2,32.2,"Eastern Baltic Sea, Sub-Division 25-32",2000,2012,NA
+"Gadus morhua","mixed",127.05,"TL",0.10408,NA,NA,NA,2.8,NA,32.2,"Eastern Baltic Sea, Sub-Division 25-32",NA,NA,NA
+"Gadus morhua","female",122,"TL",0.247,NA,19600,NA,NA,NA,59,"Calais to Boulogne",1970,NA,9
+"Gadus morhua","male",123,"TL",0.232,NA,20000,NA,NA,NA,53,"Calais to Boulogne",1970,NA,9
+"Gadus morhua","unsexed",105,"TL",0.134,NA,12600,NA,NA,NA,NA,"North Eastern North Sea (200 m depth)",1953,NA,9
+"Gadus morhua","unsexed",119,"TL",0.269,NA,18600,NA,NA,NA,NA,"Northern North Sea 60°N 3°E (200 m depth)",1974,NA,8
+"Gadus morhua","unsexed",126,"TL",0.209,NA,22200,NA,NA,NA,NA,"Northern North Sea (200 m depth)",1953,NA,9
+"Gadus morhua","unsexed",126,"TL",0.219,NA,21600,NA,NA,NA,NA,"Southern North Sea",1966,NA,9
+"Gadus morhua","unsexed",132,"TL",0.2,NA,20000,NA,NA,0.2,NA,"North Sea",1957,NA,8
+"Gadus morhua","unsexed",111,"TL",0.333,NA,15000,NA,NA,NA,NA,"Southern North Sea 54°N 3°E",1974,NA,9
+"Gadus morhua","unsexed",123,"TL",0.23,NA,19196,NA,NA,NA,69.7,"North Sea",1975,1994,12
+"Gadus morhua","unsexed",132,"TL",0.2,NA,23848,NA,NA,0.55,37.8,"Norwegian Skagerrak coast",2000,NA,NA
+"Gadus morhua","mixed",116,"TL",0.208,0.18,15795.39062,NA,2.1,NA,37.8,"North Sea, Sub-area IV, Division VIId and IIIa (Skagerrak)",2000,2012,NA
+"Gadus morhua","unsexed",129,"TL",0.126,NA,23800,NA,NA,0.33,85,"Barents Sea",1954,NA,2
+"Gadus morhua","unsexed",95.9,"TL",0.284,NA,8820,NA,NA,NA,NA,"Lofoten (200 m depth)",1934,NA,4.5
+"Gadus morhua","unsexed",134,"TL",0.1,NA,24000,NA,NA,0.2,85,"Northern Norway",1959,NA,2
+"Gadus morhua","unsexed",87,"TL",0.314,NA,7030,NA,NA,NA,NA,"ICNAF 1B 66°N 54°W",1964,NA,7
+"Gadus morhua","unsexed",90.6,"TL",0.236,NA,7970,NA,NA,NA,NA,"ICNAF 1B 66°N 54°W  (200 m depth)",1964,NA,7
+"Gadus morhua","unsexed",92.3,"TL",0.218,NA,8440,NA,NA,NA,NA,"Greenland, Southwest",1949,NA,5
+"Gadus morhua","unsexed",99.9,"TL",0.209,-0.47,10800,NA,NA,NA,NA,"Southeast and Southwest",1957,NA,1
+"Gadus morhua","unsexed",106,"TL",0.164,NA,13000,NA,NA,NA,NA,"Greenland, Northwest",1949,NA,-0.4
+"Gadus morhua","unsexed",154,"TL",0.069,NA,36500,NA,NA,NA,NA,NA,1931,NA,2
+"Gadus morhua","unsexed",87.3,"TL",0.34,2.591,6581.48193,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1976,NA,1.4
+"Gadus morhua","unsexed",97.5,"TL",0.268,2.894,9249.83496,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1980,NA,1.9
+"Gadus morhua","unsexed",99,"TL",0.313,2.603,9695.18652,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1969,NA,0.3
+"Gadus morhua","unsexed",99.4,"TL",0.202,1.055,9816.3457,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1973,NA,1.7
+"Gadus morhua","unsexed",101,"TL",0.153,0.655,10311.20898,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1975,NA,1.9
+"Gadus morhua","unsexed",101,"TL",0.176,0.06,10311.20898,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1957,NA,2.3
+"Gadus morhua","unsexed",102,"TL",0.161,1.043,10628.89941,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1974,NA,1.4
+"Gadus morhua","unsexed",104,"TL",0.151,-0.105,11283.9834,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1960,NA,2.7
+"Gadus morhua","unsexed",105,"TL",0.142,-0.46,11621.5166,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1961,NA,3.2
+"Gadus morhua","unsexed",107,"TL",0.216,2.357,12316.91113,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1966,NA,1.6
+"Gadus morhua","unsexed",110,"TL",0.249,2.086,13411.86719,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1971,NA,0.8
+"Gadus morhua","unsexed",111,"TL",0.115,-0.864,13790.96094,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1962,NA,2.2
+"Gadus morhua","unsexed",115,"TL",0.115,-1.143,15379.74414,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1958,NA,2.2
+"Gadus morhua","unsexed",115,"TL",0.117,-0.05,15379.74414,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1964,NA,2.3
+"Gadus morhua","unsexed",123,"TL",0.134,1.159,18919.40625,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1981,NA,1.6
+"Gadus morhua","unsexed",127,"TL",0.144,1.152,20879.26562,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1972,NA,0.6
+"Gadus morhua","unsexed",136,"TL",0.094,-0.069,25780.99023,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1977,NA,2.2
+"Gadus morhua","unsexed",139,"TL",0.112,1.04,27573.08398,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1979,NA,2.3
+"Gadus morhua","unsexed",151,"TL",0.101,0.657,35583.50781,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1968,NA,2.1
+"Gadus morhua","unsexed",154,"TL",0.06,-2.877,37806.24609,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1959,NA,1.6
+"Gadus morhua","unsexed",162,"TL",0.062,-3.101,44188.16797,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1955,NA,1.2
+"Gadus morhua","unsexed",226,"TL",0.048,-0.639,123212.20312,NA,NA,NA,NA,"ICES Div. XIVb and NAFO Div. 1B-1F",1967,NA,1.5
+"Gadus morhua","unsexed",110,"TL",0.4,0.73,13619,NA,NA,NA,NA,"Faroe Bank ",NA,NA,NA
+"Gadus morhua","unsexed",122,"TL",0.304,NA,21712,NA,3,NA,73,"Faroe Bank, 60°55´N; 8°40´W",1994,1999,NA
+"Gadus morhua","unsexed",115,"SL",0.19,-0.42,16400,NA,NA,0.25,NA,"Faeroe Plateau, 62°N 7°E (200 m depth)",1966,NA,8
+"Gadus morhua","female",110,"TL",0.147,NA,14600,NA,NA,NA,NA,"Eastern Iceland",1965,NA,4.5
+"Gadus morhua","unsexed",102,"TL",0.234,-0.35,11500,NA,NA,NA,NA,"Southwestern Iceland",1965,NA,5
+"Gadus morhua","unsexed",128,"TL",0.147,NA,20800,NA,NA,NA,NA,"Southwest region",1923,NA,6.7
+"Gadus morhua","unsexed",147,"TL",0.096,NA,31500,NA,NA,NA,NA,"Eastern",1923,NA,4.5
+"Gadus morhua","unsexed",200,"TL",0.064,NA,85507,NA,NA,NA,NA,"Northern coast",1923,NA,4.5
+"Gadus morhua","unsexed",128,"SL",0.15,NA,23300,NA,NA,0.32,85,"Icelandic stock",NA,NA,4.5
+"Gadus morhua","unsexed",149,"TL",0.121,NA,34604,NA,NA,NA,NA,NA,NA,NA,NA
+"Gadus morhua","unsexed",98.5,"TL",0.39,NA,9699,NA,NA,NA,60.9,"Irish Sea",1975,1994,13
+"Gadus morhua","unsexed",73.3,"TL",0.154,NA,4130,NA,NA,NA,NA,"Labrador (200 m depth)",1950,1958,7
+"Gadus morhua","unsexed",64,"TL",0.24,NA,2710,NA,NA,NA,NA,"ICNAF Area 2H",1965,NA,7
+"Gadus morhua","unsexed",66.4,"TL",0.501,NA,3040,NA,NA,NA,NA,"ICNAF 3K 51°N 53°W",1964,NA,7
+"Gadus morhua","unsexed",66.6,"TL",0.419,NA,3070,NA,NA,NA,NA,"ICNAF 3K 51°N 53°W",1962,NA,7
+"Gadus morhua","unsexed",68.5,"TL",0.241,-1.57,3350,NA,NA,NA,NA,"ICNAF 2J 53°N 53°W",1964,NA,7
+"Gadus morhua","unsexed",83.9,"TL",0.245,NA,6280,NA,NA,NA,NA,"ICNAF 3L 46°N 47°W",1964,NA,7
+"Gadus morhua","unsexed",101,"TL",0.125,NA,11200,NA,NA,NA,NA,"ICNAF 3L 46°N 47°W  (200 m depth)",1964,NA,7
+"Gadus morhua","unsexed",65,"TL",0.31,NA,2850,NA,NA,NA,NA,"ICNAF 2J",1965,NA,7
+"Gadus morhua","unsexed",77,"TL",0.26,NA,4810,NA,NA,NA,NA,"ICNAF 3K",1965,NA,7
+"Gadus morhua","unsexed",102,"TL",0.16,NA,11500,NA,NA,NA,NA,"ICNAF Area 3L",1965,NA,7
+"Gadus morhua","unsexed",67,"TL",0.28,NA,3000,NA,NA,0.18,NA,"ICNAF 2F",1965,NA,2
+"Gadus morhua","unsexed",98,"TL",0.15,NA,10200,NA,NA,NA,NA,"ICNAF 3M",1965,NA,7
+"Gadus morhua","unsexed",176,"TL",0.07,NA,58631,NA,NA,NA,NA,"Grand Bank",1954,NA,2
+"Gadus morhua","unsexed",130,"TL",0.12,NA,24400,NA,NA,NA,NA,"ICNAF Area 3NO",1965,NA,7
+"Gadus morhua","unsexed",116,"TL",0.114,NA,11700,NA,NA,0.2,NA,"Grand Bank",1972,NA,2
+"Gadus morhua","unsexed",101,"TL",0.17,NA,11200,NA,NA,NA,NA,"ICNAF  Area 3Ps",1965,NA,7
+"Gadus morhua","unsexed",78,"TL",0.25,NA,5010,NA,NA,NA,NA,"ICNAF Pn",1965,NA,7
+"Gadus morhua","unsexed",53.7,"TL",0.29,-0.2,1503,NA,NA,NA,NA,"Southern Gulf of St. Lawrence",1980,NA,10
+"Gadus morhua","unsexed",56.2,"TL",0.24,-0.54,1729,NA,NA,NA,11,"Southern Gulf of St. Lawrence",1981,NA,10
+"Gadus morhua","unsexed",56.9,"TL",0.25,-0.38,1796,NA,NA,NA,NA,"Southern Gulf of St. Lawrence",1982,NA,10
+"Gadus morhua","unsexed",67.8,"TL",0.2,-0.34,3078,NA,NA,NA,NA,"Southern Gulf of St. Lawrence",1976,NA,10
+"Gadus morhua","unsexed",67.9,"TL",0.23,-0.02,3092,NA,NA,NA,NA,"Southern Gulf of St. Lawrence",1977,NA,10
+"Gadus morhua","unsexed",68.6,"TL",0.17,-0.65,3191,NA,NA,0.44,NA,"Southern Gulf of St. Lawrence",1984,NA,10
+"Gadus morhua","unsexed",71.2,"TL",0.2,-0.22,3577,NA,NA,NA,NA,"Southern Gulf of St. Lawrence",1975,NA,10
+"Gadus morhua","unsexed",90,"TL",0.09,-1.44,7350,NA,NA,NA,NA,"Southern Gulf of St. Lawrence",1983,NA,10
+"Gadus morhua","unsexed",110,"TL",0.11,-0.48,13619,NA,NA,NA,NA,"Southern Gulf of St. Lawrence",1971,NA,10
+"Gadus morhua","unsexed",118,"TL",0.1,-0.44,16898,NA,NA,NA,NA,"Southern Gulf of St. Lawrence",1972,NA,10
+"Gadus morhua","unsexed",132,"TL",0.09,-0.32,23848,NA,NA,NA,NA,"Southern Gulf of St. Lawrence",1970,NA,10
+"Gadus morhua","unsexed",110,"TL",0.08,NA,14600,NA,NA,NA,NA,"ICNAF 4V 44°N 56°W",1964,NA,7
+"Gadus morhua","unsexed",124,"TL",0.118,NA,18800,NA,NA,NA,NA,"ICNAF  Subarea 4",1953,NA,7
+"Gadus morhua","unsexed",115,"TL",0.1,NA,15000,NA,NA,0.1,NA,"ICNAF Div. 4TVs and 3M",1965,NA,6
+"Gadus morhua","unsexed",167,"TL",0.118,NA,49129,NA,NA,NA,43.2,"Gulf of Maine Bank (5Y)",NA,NA,NA
+"Gadus morhua","unsexed",98.8,"TL",0.281,NA,9640,NA,NA,NA,NA,"Southern New England (200 m depth)",1930,NA,11.5
+"Gadus morhua","unsexed",148,"TL",0.121,NA,36600,NA,NA,NA,NA,"Georges Bank and Gulf of Maine",1976,NA,12
+"Hippoglossoides platessoides","female",80.7,"TL",0.06,-1.45,5660,NA,NA,NA,NA,"Banc de St. Pierre, New Foundland, 50-200 m",1970,NA,7
+"Hippoglossoides platessoides","male",65.6,"TL",0.08,-1.21,2920,NA,NA,NA,NA,"Banc de St. Pierre, New Foundland, 50-200 m",1970,NA,7
+"Hippoglossoides platessoides","female",64.2,"TL",0.083,NA,2720,NA,NA,NA,NA,"ICNAF Res. Div. 3L",1957,1960,-0.7
+"Hippoglossoides platessoides","female",64.2,"TL",0.108,NA,2720,NA,NA,NA,NA,"ICNAF Res. Div. 3N",1957,1960,0.8
+"Hippoglossoides platessoides","female",65.9,"TL",0.084,NA,2960,NA,NA,NA,NA,"ICNAF Res. Div. 3L",1961,1964,-0.3
+"Hippoglossoides platessoides","female",70.4,"TL",0.093,NA,3320,30,NA,NA,NA,"ICNAF Res. Div. 3N",1961,1964,1.4
+"Hippoglossoides platessoides","female",72.5,"TL",0.067,NA,4020,NA,NA,NA,NA,"ICNAF Res. Div. 3L",1965,1968,-0.2
+"Hippoglossoides platessoides","female",72.5,"TL",0.125,NA,4020,NA,NA,0.4,42.8,"ICNAF Res. Div.3N; M for St. Margaret's Bay,NS",1969,1972,0.8
+"Hippoglossoides platessoides","female",72.9,"TL",0.099,NA,4090,NA,NA,NA,NA,"ICNAF Res. Div. 3N",1965,1968,0.7
+"Hippoglossoides platessoides","female",80.2,"TL",0.076,NA,5550,30,NA,0.23,41.1,"ICNAF Res.Div.3L",1969,1972,-0.2
+"Hippoglossoides platessoides","female",64.2,"NG",0.17,NA,2720,NA,NA,NA,NA,"Northwest Atlantic",NA,NA,7
+"Hippoglossoides platessoides","male",59.9,"NG",0.17,NA,NA,NA,NA,NA,22.5,"Northwest Atlantic",NA,NA,7
+"Hippoglossoides platessoides","unsexed",25,"TL",0.34,NA,115.77477,NA,NA,NA,15,"North Sea",1989,NA,9
+"Mallotus villosus","female",19,"TL",0.48,NA,30.8,5,NA,1.3,17,"Labrador Sea",1948,NA,4.6
+"Mallotus villosus","male",20,"TL",0.48,NA,60,5,NA,1.3,18,"Labrador Sea",1948,NA,4.6
+"Mallotus villosus","mixed",16.9,"TL",0.63,0.36,30.68729,NA,NA,NA,NA,"Sea of Okhotsk",1993,NA,NA
+"Mallotus villosus","female",19.8,"TL",0.454,-0.53,50.85831,5,NA,NA,NA,"Barents Sea & Finmark Coast",1973,NA,4
+"Mallotus villosus","male",27.8,"TL",0.259,-0.83,150.14224,NA,NA,NA,NA,"Barents Sea & Finmark Coast",1973,NA,4
+"Melanogrammus aeglefinus","unsexed",48.3,"NG",0.28,NA,NA,NA,NA,NA,NA,"North Sea",1962,NA,NA
+"Melanogrammus aeglefinus","unsexed",56,"NG",0.22,NA,NA,NA,NA,NA,NA,"ICNAF Subarea 3 (Grand Bank)",1965,NA,NA
+"Melanogrammus aeglefinus","unsexed",58.1,"NG",0.24,NA,NA,NA,NA,NA,NA,"North Sea",1962,NA,NA
+"Melanogrammus aeglefinus","unsexed",70,"NG",0.22,NA,NA,NA,NA,NA,NA,"ICNAP Subarea 4 (Scotian Shelf)",1965,NA,NA
+"Melanogrammus aeglefinus","unsexed",73,"NG",0.28,NA,NA,NA,NA,NA,NA,"ICNAP Subarea 5 (Georges Bank)",1965,NA,NA
+"Melanogrammus aeglefinus","unsexed",77.9,"NG",0.22,NA,NA,NA,NA,NA,NA,"Faroe",1962,NA,NA
+"Melanogrammus aeglefinus","unsexed",75.8,"NG",0.33,NA,3740,NA,NA,NA,NA,"Northwest Atlantic",NA,NA,7
+"Melanogrammus aeglefinus","mixed",80,"TL",0.186,-0.453,4803.04834,NA,NA,NA,NA,"Irish Sea (ICES Div. 7a)",2014,2015,NA
+"Melanogrammus aeglefinus","mixed",82.5,"TL",0.178,-0.452,5280.53516,NA,NA,NA,NA,"Irish Sea (ICES Div. 7a)",2015,2016,NA
+"Melanogrammus aeglefinus","unsexed",115,"TL",0.084,-1.39,12600,NA,NA,NA,NA,"Skagerrak",1938,NA,9
+"Melanogrammus aeglefinus","unsexed",53,"TL",0.2,NA,1430,NA,NA,NA,NA,"North Sea",NA,NA,9
+"Melanogrammus aeglefinus","unsexed",48.3,"TL",0.28,NA,1070,NA,NA,NA,NA,"North Sea, `slow growth area'",1962,NA,9
+"Melanogrammus aeglefinus","unsexed",58.1,"TL",0.24,NA,1730,NA,NA,NA,NA,"North Sea, `fast growth area'",1962,NA,9
+"Melanogrammus aeglefinus","unsexed",68,"TL",0.19,NA,2911.57007,NA,NA,0.43,34,"North Sea",1998,NA,11
+"Melanogrammus aeglefinus","unsexed",53.5,"TL",0.36,-0.13,1391.00745,NA,NA,NA,NA,"North Sea",1963,NA,12
+"Melanogrammus aeglefinus","unsexed",58,"TL",0.29,-0.09,1783.84875,NA,NA,NA,NA,"North Sea",1971,NA,12
+"Melanogrammus aeglefinus","unsexed",61.4,"TL",0.25,-0.25,2125.97632,NA,NA,NA,NA,"North Sea",1964,NA,12
+"Melanogrammus aeglefinus","unsexed",63.5,"TL",0.24,-0.17,2357.99487,NA,NA,NA,NA,"North Sea",1965,NA,12
+"Melanogrammus aeglefinus","unsexed",63.5,"TL",0.25,-0.1,2357.99487,NA,NA,NA,NA,"North Sea",1970,NA,12
+"Melanogrammus aeglefinus","unsexed",63.5,"TL",0.26,-0.01,2357.99487,NA,NA,NA,NA,"North Sea",1969,NA,12
+"Melanogrammus aeglefinus","unsexed",64,"TL",0.23,-0.39,2415.65063,NA,NA,NA,NA,"North Sea",1968,NA,12
+"Melanogrammus aeglefinus","unsexed",66.7,"TL",0.18,-0.96,2743.51465,NA,NA,NA,NA,"North Sea",1959,1962,12
+"Melanogrammus aeglefinus","unsexed",73,"TL",0.18,-0.41,3622.71533,NA,NA,NA,NA,"North Sea",1966,NA,12
+"Melanogrammus aeglefinus","unsexed",74,"TL",0.18,-0.61,3777.75244,NA,NA,NA,NA,"North Sea",1967,NA,12
+"Melanogrammus aeglefinus","unsexed",75.5,"TL",0.234,NA,3700,NA,NA,NA,NA,"Barents Sea",1971,NA,2
+"Melanogrammus aeglefinus","unsexed",89,"TL",0.123,-1.72,5970,NA,NA,NA,NA,"63°N 5°E",1938,NA,4.5
+"Melanogrammus aeglefinus","unsexed",96.8,"TL",0.115,-0.69,7610,20,NA,NA,NA,NA,1957,NA,2
+"Melanogrammus aeglefinus","unsexed",77.9,"TL",0.22,NA,4050,NA,NA,NA,NA,NA,1962,NA,9
+"Melanogrammus aeglefinus","unsexed",63,"TL",0.452,NA,2601,NA,2.8,NA,46,"Faroe Bank, 60°55´N; 8°40´W",1994,1999,NA
+"Melanogrammus aeglefinus","unsexed",81,"TL",0.228,-0.25,4540,NA,NA,NA,NA,NA,1971,NA,5
+"Melanogrammus aeglefinus","unsexed",43.8,"TL",0.269,-0.66,763,NA,NA,NA,NA,"Rockall Island",1971,NA,9
+"Melanogrammus aeglefinus","unsexed",76.57,"TL",0.175,-1.115,4196.62744,12,NA,NA,NA,"NAFO Division 4X",1962,1987,NA
+"Melanogrammus aeglefinus","unsexed",50,"TL",0.3,NA,1129.34705,9,NA,NA,NA,"North Sea",1989,2006,7.12
+"Melanogrammus aeglefinus","unsexed",70,"TL",0.2,NA,3183.47729,NA,NA,NA,NA,"North Sea",1970,1988,6.8
+"Melanogrammus aeglefinus","unsexed",75.7,"TL",0.33,0.2,4051.49243,NA,NA,NA,NA,"Northwest Atlantic",NA,NA,NA
+"Melanogrammus aeglefinus","unsexed",67.9,"TL",0.16,NA,2898.40283,NA,NA,NA,30.6,"West Scotland stock",1975,1994,NA
+"Melanogrammus aeglefinus","unsexed",68,"TL",0.16,NA,2911.57007,NA,NA,NA,30.6,"West of Scotland",NA,NA,NA
+"Melanogrammus aeglefinus","unsexed",57.5,"TL",0.22,NA,1680,16,NA,0.2,NA,"ICNAF  Subarea 3 (Grand Bank)",1965,NA,2
+"Melanogrammus aeglefinus","unsexed",74.8,NA,0.1,-3.6,NA,NA,NA,NA,NA,"Grand Banks, NAFO 3LNO",NA,NA,NA
+"Melanogrammus aeglefinus","unsexed",84.6,NA,0.24,0.47,NA,NA,NA,NA,NA,"St. Pierre Bank, NAFO 3Ps",1948,1975,NA
+"Melanogrammus aeglefinus","unsexed",67.5,"TL",0.195,NA,2680,NA,NA,NA,NA,"ICNAF Subarea 4 (N. Scotia Shelf)",1965,NA,7
+"Melanogrammus aeglefinus","unsexed",51.3,NA,0.26,-0.97,NA,NA,NA,NA,NA,"Eastern Scotian Shelf and Southern
+Gulf of St. Lawrence, NAFO 4TVW",NA,NA,NA
+"Melanogrammus aeglefinus","unsexed",76.6,NA,1.12,0.18,NA,NA,NA,NA,NA,"Western Scotian Shelf, NAFO 4X",NA,NA,NA
+"Melanogrammus aeglefinus","unsexed",73,"TL",0.28,NA,2150,NA,NA,0.3,NA,"ICNAF Subarea 5 (Georges Bank)",1965,NA,5
+"Melanogrammus aeglefinus","unsexed",73.8,NA,0.376,NA,4374,NA,NA,NA,NA,"Georges Bank",1982,NA,7
+"Melanogrammus aeglefinus","unsexed",73.8,NA,0.38,0.17,NA,NA,NA,NA,NA,"Nantucket Shoals, NAFO 5Z",NA,NA,NA
+"Melanogrammus aeglefinus","unsexed",73,"TL",0.33,NA,3622.71533,NA,NA,NA,35,"Georges Bank",NA,NA,NA
+"Melanogrammus aeglefinus","unsexed",58.1,"FL",0.29,-1,NA,NA,NA,NA,NA,"Georges Bank",2011,NA,NA
+"Melanogrammus aeglefinus","unsexed",72.9,NA,0.352,NA,4214,NA,NA,NA,NA,"Gulf of Maine",1982,NA,9.4
+"Melanogrammus aeglefinus","unsexed",72.9,NA,0.35,0.3,NA,NA,NA,NA,NA,"Gulf of Maine, NAFO 5Y",NA,NA,NA
+"Melanogrammus aeglefinus","unsexed",80,"TL",0.265,NA,4803.04834,NA,NA,NA,34.8,"Gulf of Maine",NA,NA,NA
+"Merluccius bilinearis","unsexed",62.2,"TL",0.28,NA,2280,12,NA,NA,NA,"Nova Scotia",1979,NA,7
+"Merluccius bilinearis","unsexed",65.4,"TL",0.18,NA,2680,12,NA,0.4,23.1,"Northwest Atlantic",NA,NA,5
+"Merluccius bilinearis","unsexed",46.7,"SL",0.358,NA,733,NA,NA,NA,NA,"New York Bight (40°19'N, 73°52'W)",1957,1958,12
+"Merluccius bilinearis","unsexed",48.7,"SL",0.499,-0.03,1260,NA,NA,NA,NA,"New York Bight (40°19'N, 73°52'W)",1980,NA,12
+"Merluccius bilinearis","unsexed",35.7,"TL",0.737,0.419,392.9386,NA,NA,NA,NA,"Southern Georges Bank",1982,1987,12
+"Merluccius bilinearis","unsexed",38.5,"TL",0.763,0.494,497.32156,NA,NA,NA,NA,"Middle Atlantic-southern New England",1982,1987,12
+"Merluccius bilinearis","unsexed",38.8,"TL",0.621,0.33,509.51242,NA,NA,NA,NA,"Northern Georges Bank",1982,1987,12
+"Merluccius bilinearis","unsexed",39.7,"TL",0.425,0.175,547.30096,NA,NA,NA,NA,"Southern Georges Bank",1988,1992,12
+"Merluccius bilinearis","unsexed",41.3,"TL",0.472,0.471,619.10449,NA,NA,NA,NA,"Middle Atlantic-southern New England",1988,1992,12
+"Merluccius bilinearis","unsexed",42.2,"TL",0.369,-0.203,662.17792,NA,NA,NA,NA,"Southern Georges Bank",1975,1980,12
+"Merluccius bilinearis","unsexed",42.5,"TL",0.399,0.161,676.97601,NA,NA,NA,NA,"Northern Georges Bank",1988,1992,12
+"Merluccius bilinearis","unsexed",44.3,"TL",0.401,0.054,770.51202,NA,NA,NA,NA,"Gulf of Maine",1982,1987,12
+"Merluccius bilinearis","unsexed",44.9,"TL",0.354,0.092,803.54175,NA,NA,NA,NA,"Gulf of Maine",1988,1992,12
+"Merluccius bilinearis","unsexed",45.1,"TL",0.323,-0.201,814.76166,NA,NA,NA,NA,"Northern Georges Bank",1975,1980,12
+"Merluccius bilinearis","unsexed",49.4,"TL",0.307,-0.336,1082.5,NA,NA,NA,NA,"Middle Atlantic-southern New England",1975,1980,12
+"Merluccius bilinearis","unsexed",51.5,"TL",0.254,-0.208,1232.646,NA,NA,NA,NA,"Gulf of Maine",1975,1980,12

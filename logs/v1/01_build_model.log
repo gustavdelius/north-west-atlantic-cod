@@ -1,0 +1,63 @@
+                             quantity       value
+1                            isSteady        TRUE
+2   max_relative_biomass_drift_per_yr    6.99e-08
+3           tuneSteadyState_attractor fixed_point
+4       stability_max_real_eigenvalue      -0.072
+5        stability_dominant_period_yr         Inf
+6                               kappa         1.4
+7                                r_pp           2
+8                               s_egg           1
+9              reproduction_level_Cod         0.5
+10         reproduction_level_Haddock        0.75
+11     reproduction_level_Silver hake        0.75
+12 reproduction_level_American plaice        0.75
+13         reproduction_level_Herring         0.5
+14      reproduction_level_Sand lance         0.5
+15         reproduction_level_Capelin         0.5
+16                         erepro_Cod     5.6e-05
+17                     erepro_Haddock    6.37e-05
+18                 erepro_Silver hake    0.000268
+19             erepro_American plaice     0.00394
+20                     erepro_Herring    0.000485
+21                  erepro_Sand lance      0.0101
+22                     erepro_Capelin     0.00672
+                        species biomass_observed_gm2 biomass_model_gm2
+Cod                         Cod                 2.00        2.02173506
+Haddock                 Haddock                 1.20        1.19170338
+Silver hake         Silver hake                 1.00        0.99031481
+American plaice American plaice                 1.30        1.30094889
+Herring                 Herring                 1.50        1.48189405
+Sand lance           Sand lance                 1.00        0.98014592
+Capelin                 Capelin                 0.05        0.04887268
+                ssb_model_gm2 yield_model_gm2yr age_mat_target age_mat_model
+Cod                1.63139421       0.669890661            4.5      4.516478
+Haddock            1.07323749       0.300283887            3.0      3.006125
+Silver hake        0.86354472       0.233239265            2.0      2.007301
+American plaice    0.94293733       0.284638290            6.0      6.019309
+Herring            1.00063903       0.128819391            3.5      3.500182
+Sand lance         0.63429592       0.098364607            2.0      2.000000
+Capelin            0.02515644       0.004505357            2.5      2.500040
+# A tibble: 7 × 10
+  predator      Cod Haddock `Silver hake` `American plaice` Herring `Sand lance`
+  <chr>       <dbl>   <dbl>         <dbl>             <dbl>   <dbl>        <dbl>
+1 Cod         0.078   0.063         0.102             0.172   0.179        0.103
+2 Haddock     0.005   0.005         0.016             0.041   0.039        0.127
+3 Silver hake 0.011   0.008         0.04              0.088   0.097        0.184
+4 American p… 0.008   0.006         0.027             0.066   0.066        0.177
+5 Herring     0       0             0                 0       0            0.003
+6 Sand lance  0       0             0                 0       0            0    
+7 Capelin     0       0             0                 0       0            0.001
+# ℹ 3 more variables: Capelin <dbl>, Resource <dbl>, External <dbl>
+                                      quantity      value
+1     cod_early_life_mortality_integral_forage 0.02008962
+2 cod_early_life_mortality_integral_groundfish 0.04935181
+3     fraction_cod_eggs_larvae_eaten_by_forage 0.01988917
+4           cod_larval_duration_1mg_to_0.1g_yr 0.17425017
+Warning messages:
+1: Removed 191 rows containing missing values or values outside the scale range
+(`geom_line()`). 
+2: In scale_y_log10() : log-10 transformation introduced infinite values.
+3: Removed 191 rows containing missing values or values outside the scale range
+(`geom_line()`). 
+4: In scale_y_log10() : log-10 transformation introduced infinite values.
+01_build_model.R done

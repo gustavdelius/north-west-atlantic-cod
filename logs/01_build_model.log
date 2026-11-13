@@ -1,0 +1,86 @@
+  repro_forage target_forage_1995_2004      cod   forage   haddock silver_hake
+1   0.02025881                    7.87 2.365101 1.760023 0.9102223    1.210307
+    plaice  herring forage_2005_12 cod_2005_12
+1 1.023635 1.552953       1.118502    4.992677
+                                                        criterion  value
+1                                               biomass error Cod  0.001
+2                                           biomass error Haddock  0.005
+3                                       biomass error Silver hake  0.003
+4                                   biomass error American plaice  0.006
+5                                           biomass error Herring -0.002
+6                                        biomass error Sand lance -0.001
+7                                           biomass error Capelin  0.001
+8                              cod yield (kt) vs 53.5 kt landings   57.3
+9                                             age at maturity Cod   4.52
+10                                        age at maturity Haddock      3
+11                                    age at maturity Silver hake   2.01
+12                                age at maturity American plaice   6.01
+13                                        age at maturity Herring    3.5
+14                                     age at maturity Sand lance      2
+15                                        age at maturity Capelin    2.5
+16                                                     max erepro 0.0411
+17                                                       isSteady   TRUE
+18        max |log biomass change| over 100 yr at baseline effort  0.425
+19                                            max real eigenvalue  0.014
+20 cod collapse F (equilibrium SSB < 10 % of baseline; 0.1 steps)    0.4
+21         cod F at maximum equilibrium yield (0.1 steps, >= 0.4)    0.4
+22                                                          s_egg     20
+23                                      forage reproduction level   0.02
+                   target
+1           within +-15 %
+2           within +-15 %
+3           within +-15 %
+4           within +-15 %
+5           within +-15 %
+6           within +-15 %
+7           within +-15 %
+8  40-67 kt (within 25 %)
+9              target 4.5
+10               target 3
+11               target 2
+12               target 6
+13             target 3.5
+14               target 2
+15             target 2.5
+16                    < 1
+17                   TRUE
+18                 < 0.05
+19                    < 0
+20                0.7-1.1
+21                      -
+22             assumption
+23  fitted to forage boom
+                     w_lo w_hi         source     integral fraction_killed
+forage...1          0.001    1         forage 2.173688e-01    5.821241e-02
+groundfish...2      0.001    1     groundfish 9.789627e-02    4.548641e-03
+background...3      0.001    1     background 3.545362e+00    9.151922e-01
+other_external...4  0.001    1 other_external 9.797074e-03    1.194026e-03
+fishing...5         0.001    1        fishing 4.550315e-05    4.116066e-06
+...6                0.001    1          total 3.870470e+00    9.791514e-01
+forage...7          0.001   10         forage 2.405364e-01    5.858551e-02
+groundfish...8      0.001   10     groundfish 4.787351e-01    1.005546e-02
+background...9      0.001   10     background 3.743903e+00    9.187019e-01
+other_external...10 0.001   10 other_external 2.364508e-02    1.396644e-03
+fishing...11        0.001   10        fishing 2.529376e-04    6.973911e-06
+...12               0.001   10          total 4.487072e+00    9.887465e-01
+                      survival duration_yr species share_of_deaths
+forage...1          0.02084857   0.3870329     Cod    5.945190e-02
+groundfish...2      0.02084857   0.3870329     Cod    4.645492e-03
+background...3      0.02084857   0.3870329     Cod    9.346790e-01
+other_external...4  0.02084857   0.3870329     Cod    1.219450e-03
+fishing...5         0.02084857   0.3870329     Cod    4.203708e-06
+...6                0.02084857   0.3870329     Cod    1.000000e+00
+forage...7          0.01125354   0.9340975     Cod    5.925231e-02
+groundfish...8      0.01125354   0.9340975     Cod    1.016991e-02
+background...9      0.01125354   0.9340975     Cod    9.291582e-01
+other_external...10 0.01125354   0.9340975     Cod    1.412540e-03
+fishing...11        0.01125354   0.9340975     Cod    7.053285e-06
+...12               0.01125354   0.9340975     Cod    1.000000e+00
+Warning messages:
+1: Removed 196 rows containing missing values or values outside the scale range
+(`geom_line()`). 
+2: In scale_y_log10() : log-10 transformation introduced infinite values.
+3: Removed 196 rows containing missing values or values outside the scale range
+(`geom_line()`). 
+4: In scale_y_log10() : log-10 transformation introduced infinite values.
+01_build_model.R done

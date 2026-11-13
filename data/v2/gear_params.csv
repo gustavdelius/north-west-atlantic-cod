@@ -1,0 +1,8 @@
+gear,species,sel_func,l50,l25,catchability,yield_observed
+cod,Cod,sigmoid_length,40,35,1,0.486
+haddock,Haddock,sigmoid_length,35,31,1,
+silver_hake,Silver hake,sigmoid_length,25,22,1,
+plaice,American plaice,sigmoid_length,30,27,1,
+pelagic,Herring,sigmoid_length,20,18,1,
+pelagic,Sand lance,sigmoid_length,10,9,1,
+pelagic,Capelin,sigmoid_length,11,10,1,

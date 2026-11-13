@@ -1,0 +1,102 @@
+                                       run        cod   haddock silver_hake
+1                  A: moratorium from 1970 3.63465019 0.1726131   0.1052624
+2   B: moratorium from observed 2000 state        NaN       NaN         NaN
+3 calibration: cod forced on observed path 0.06981462 0.7478600   0.6578846
+4    observed (survey; Bundy 2004 for P:D) 0.10000000 0.6100000   0.6000000
+     plaice   herring   forage forage_2005_12 pelagic_demersal_1980_85
+1 0.1158525  1.554255 2.079722       1.624106                0.3017644
+2       NaN       NaN      NaN            NaN                      NaN
+3 0.6031460 11.241100 9.402474      13.283647                0.3017644
+4 0.4500000  6.550000 7.870000       4.110000                0.3000000
+  pelagic_demersal_1995_2000  ssb_min_rel year_min ssb_2025_rel
+1                  0.7220973 4.505435e-01     1993 3.918767e+00
+2                  9.0955583 1.255583e-03     2000 3.875163e+00
+3                  6.8672366 2.215374e-48     2125 1.988033e-12
+4                  3.0000000           NA       NA           NA
+  forage_max_rel_1993_2025 forage_2025_rel year_recover50 year_recover100
+1                 4.661805        1.918312           1994            1995
+2                13.956156        2.039612           2007            2009
+3                17.521932       17.521932             NA              NA
+4                       NA              NA             NA              NA
+  years_to_recover50 last_year
+1                  1      2125
+2                  7      2125
+3                 NA      2125
+4                 NA        NA
+                     w_lo w_hi         source     integral fraction_killed
+forage...1          0.001    1         forage 0.0100245778    2.860222e-03
+groundfish...2      0.001    1     groundfish 0.1613356509    9.470131e-03
+background...3      0.001    1     background 3.5450437213    9.622905e-01
+other_external...4  0.001    1 other_external 0.0097951383    1.291534e-03
+fishing...5         0.001    1        fishing 0.0000454919    4.504302e-06
+...6                0.001    1          total 3.7262445803    9.759169e-01
+forage...7          0.001    1         forage 0.1750083789    4.314313e-02
+groundfish...8      0.001    1     groundfish 0.0942969255    4.328157e-03
+background...9      0.001    1     background 3.8385406126    9.350222e-01
+other_external...10 0.001    1 other_external 0.0106810472    1.187435e-03
+fishing...11        0.001    1        fishing 0.0007789659    6.323657e-05
+...12               0.001    1          total 4.1193059302    9.837442e-01
+forage...13         0.001   10         forage 0.0110443595    2.878547e-03
+groundfish...14     0.001   10     groundfish 0.6984448216    1.796614e-02
+background...15     0.001   10     background 3.7434018912    9.662653e-01
+other_external...16 0.001   10 other_external 0.0236235091    1.512320e-03
+fishing...17        0.001   10        fishing 0.0002526018    7.571370e-06
+...18               0.001   10          total 4.4767671832    9.886299e-01
+forage...19         0.001   10         forage 0.1935782248    4.338667e-02
+groundfish...20     0.001   10     groundfish 0.2678735011    6.492586e-03
+background...21     0.001   10     background 4.0491137782    9.379780e-01
+other_external...22 0.001   10 other_external 0.0248848681    1.362012e-03
+fishing...23        0.001   10        fishing 0.0040784972    1.022870e-04
+...24               0.001   10          total 4.5395288693    9.893216e-01
+                      survival duration_yr            state
+forage...1          0.02408311   0.3869564 baseline 1980-85
+groundfish...2      0.02408311   0.3869564 baseline 1980-85
+background...3      0.02408311   0.3869564 baseline 1980-85
+other_external...4  0.02408311   0.3869564 baseline 1980-85
+fishing...5         0.02408311   0.3869564 baseline 1980-85
+...6                0.02408311   0.3869564 baseline 1980-85
+forage...7          0.01625579   0.4219542        boom 2000
+groundfish...8      0.01625579   0.4219542        boom 2000
+background...9      0.01625579   0.4219542        boom 2000
+other_external...10 0.01625579   0.4219542        boom 2000
+fishing...11        0.01625579   0.4219542        boom 2000
+...12               0.01625579   0.4219542        boom 2000
+forage...13         0.01137011   0.9332454 baseline 1980-85
+groundfish...14     0.01137011   0.9332454 baseline 1980-85
+background...15     0.01137011   0.9332454 baseline 1980-85
+other_external...16 0.01137011   0.9332454 baseline 1980-85
+fishing...17        0.01137011   0.9332454 baseline 1980-85
+...18               0.01137011   0.9332454 baseline 1980-85
+forage...19         0.01067844   0.9830753        boom 2000
+groundfish...20     0.01067844   0.9830753        boom 2000
+background...21     0.01067844   0.9830753        boom 2000
+other_external...22 0.01067844   0.9830753        boom 2000
+fishing...23        0.01067844   0.9830753        boom 2000
+...24               0.01067844   0.9830753        boom 2000
+  w_hi   baseline boom_mortality_only boom_growth_only  boom_both ratio_both
+1    1 0.02408311          0.02229374      0.017660489 0.01625579  0.6749873
+2   10 0.01137011          0.01492285      0.008118835 0.01067844  0.9391673
+  ratio_mortality ratio_growth
+1       0.9257002    0.7333143
+2       1.3124631    0.7140506
+          w level_baseline level_boom share_eaten_baseline share_eaten_boom
+1e-05 1e-05      0.9895897  0.9177915           0.01041033        0.0825209
+1e-04 1e-04      0.9849627  0.8464366           0.01503733        0.1549739
+0.001 1e-03      0.9801829  0.8101209           0.01981713        0.1929099
+0.01  1e-02      0.9618558  0.8047753           0.03814424        0.1999916
+0.1   1e-01      0.8640488  0.8151045           0.13595122        0.1918681
+1     1e+00      0.6275045  0.7714071           0.37249551        0.2389537
+5     5e+00      0.4914535  0.7647942           0.50854653        0.2437489
+# A tibble: 4 × 4
+# Groups:   diagnostic [4]
+  diagnostic            years_to_50pct_from_…¹ cod_ssb_2025_rel cod_ssb_2125_rel
+  <chr>                                  <dbl>            <dbl>            <dbl>
+1 full                                       7             3.88             3.88
+2 neither                                    7             3.45             3.54
+3 no_forage_predation_…                      7             3.87             3.89
+4 no_plankton_depletion                      7             3.46             3.54
+# ℹ abbreviated name: ¹​years_to_50pct_from_2000
+Warning messages:
+1: In scale_y_log10() : log-10 transformation introduced infinite values.
+2: In scale_y_log10() : log-10 transformation introduced infinite values.
+02_collapse_moratorium.R done

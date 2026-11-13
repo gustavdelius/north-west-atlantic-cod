@@ -1,0 +1,123 @@
+# A tibble: 7 × 3
+  species              baseline     collapsed
+  <chr>                   <dbl>         <dbl>
+1 Cod             6.89          6.89         
+2 Haddock         0.205         0.205        
+3 Silver hake     0.785         0.785        
+4 American plaice 1.08          1.08         
+5 Herring         0.00000000656 0.00000000788
+6 Sand lance      3.97          3.97         
+7 Capelin         0.193         0.193        
+# A tibble: 2 × 3
+  start     cod_ssb_end rel_rate_last100
+  <chr>           <dbl>            <dbl>
+1 baseline         6.34        -2.51e-10
+2 collapsed        6.34         5.36e-10
+                                       quantity        value
+1                    cod_free_equilibrium_years 125.00000000
+2                            cod_free_converged   1.00000000
+3          forage_biomass_cod_free_rel_baseline   0.54928762
+4               cod_invasion_growth_rate_per_yr   0.23035458
+5  forage_kill_fraction_cod_early_life_baseline   0.01988917
+6  forage_kill_fraction_cod_early_life_cod_free   0.01367739
+7                          cod_free_biomass_Cod   0.00000000
+8                      cod_free_biomass_Haddock   3.03514926
+9                  cod_free_biomass_Silver hake   1.25746578
+10             cod_free_biomass_American plaice   2.16249165
+11                     cod_free_biomass_Herring   1.22752402
+12                  cod_free_biomass_Sand lance   0.45595615
+13                     cod_free_biomass_Capelin   0.01431989
+   F_cod years converged      cod_ssb  cod_biomass forage_biomass
+1    0.0   400     FALSE 6.343720e+00 6.892876e+00       4.166260
+2    0.1   400     FALSE 4.369573e+00 4.888114e+00       2.911535
+3    0.2   400     FALSE 2.706929e+00 3.162137e+00       1.907800
+4    0.3   175      TRUE 1.565831e+00 1.924616e+00       1.874972
+5    0.4   125      TRUE 6.183745e-01 8.135902e-01       1.704838
+6    0.5   400     FALSE 2.116679e-02 2.994921e-02       1.695948
+7    0.6   350      TRUE 5.849690e-09 8.603596e-09       1.697829
+8    0.7    25      TRUE 7.170362e-10 1.094995e-09       1.697829
+9    0.8    25      TRUE 3.535370e-11 5.607304e-11       1.697829
+10   0.9    25      TRUE 7.385243e-13 1.216764e-12       1.697829
+11   1.0    25      TRUE 6.845787e-15 1.171632e-14       1.697829
+12   1.1    25      TRUE 2.933605e-17 5.215215e-17       1.697829
+13   1.2    25      TRUE 6.028454e-20 1.113082e-19       1.697829
+14   1.3    25      TRUE 6.137723e-23 1.176788e-22       1.697829
+15   1.4    25      TRUE 3.188667e-26 6.347056e-26       1.697829
+16   1.5    25      TRUE 8.677938e-30 1.792848e-29       1.697829
+17   1.6    25      TRUE 1.267006e-33 2.716255e-33       1.697829
+18   1.7    25      TRUE 1.015295e-37 2.257861e-37       1.697829
+19   1.8    25      TRUE 4.544169e-42 1.048036e-41       1.697829
+20   1.9    25      TRUE 1.157873e-46 2.768440e-46       1.697829
+21   2.0    25      TRUE 1.708067e-51 4.232510e-51       1.697829
+22   2.0    50      TRUE 1.525003e-13 3.778093e-13       1.697829
+23   1.9    50      TRUE 4.713120e-13 1.126842e-12       1.697829
+24   1.8    50      TRUE 1.507758e-12 3.477526e-12       1.697829
+25   1.7    50      TRUE 5.007863e-12 1.113841e-11       1.697828
+26   1.6    50      TRUE 1.732801e-11 3.715415e-11       1.697828
+27   1.5    50      TRUE 6.273035e-11 1.296253e-10       1.697828
+28   1.4    50      TRUE 2.385459e-10 4.749207e-10       1.697828
+29   1.3    50      TRUE 9.583372e-10 1.837812e-09       1.697828
+30   1.2    50      TRUE 4.090395e-09 7.553974e-09       1.697828
+31   1.1    75      TRUE 8.402485e-11 1.494049e-10       1.697829
+32   1.0    75      TRUE 8.968200e-10 1.535110e-09       1.697828
+33   0.9   100      TRUE 2.387577e-10 3.934073e-10       1.697829
+34   0.8   125      TRUE 4.093379e-10 6.492618e-10       1.697829
+35   0.7   150      TRUE 5.376993e-09 8.211265e-09       1.697829
+36   0.6   300      TRUE 3.107846e-09 4.570915e-09       1.697829
+37   0.5   400     FALSE 7.040362e-04 9.977586e-04       1.697763
+38   0.4   275      TRUE 6.135469e-01 8.074569e-01       1.705192
+39   0.3   125      TRUE 1.568471e+00 1.927674e+00       1.877760
+40   0.2   150      TRUE 2.844403e+00 3.310852e+00       2.252889
+41   0.1   400     FALSE 4.372054e+00 4.890702e+00       2.916126
+42   0.0   375      TRUE 6.343680e+00 6.892817e+00       4.165694
+   other_groundfish    cod_yield cod_biomass_start    direction
+1          2.071519 0.000000e+00      2.085842e+00 increasing F
+2          2.663098 4.410645e-01      6.892876e+00 increasing F
+3          3.588980 5.485561e-01      4.888114e+00 increasing F
+4          4.618576 4.790496e-01      3.162137e+00 increasing F
+5          5.624911 2.550479e-01      1.924616e+00 increasing F
+6          6.423021 1.107124e-02      8.135902e-01 increasing F
+7          6.455069 3.705090e-09      2.994921e-02 increasing F
+8          6.455069 5.349899e-10      8.603596e-09 increasing F
+9          6.455069 3.046480e-11      1.094995e-09 increasing F
+10         6.455069 7.241186e-13      5.607304e-11 increasing F
+11         6.455069 7.548932e-15      1.216764e-12 increasing F
+12         6.455069 3.604354e-17      1.171632e-14 increasing F
+13         6.455069 8.189912e-20      5.215215e-17 increasing F
+14         6.455069 9.161438e-23      1.113082e-19 increasing F
+15         6.455069 5.201267e-26      1.176788e-22 increasing F
+16         6.455069 1.539777e-29      6.347056e-26 increasing F
+17         6.455069 2.435754e-33      1.792848e-29 increasing F
+18         6.455069 2.107302e-37      2.716255e-33 increasing F
+19         6.455069 1.015187e-41      2.257861e-37 increasing F
+20         6.455069 2.776501e-46      1.048036e-41 increasing F
+21         6.455069 4.385448e-51      2.768440e-46 increasing F
+22         6.455069 3.915594e-13      2.085842e-03 decreasing F
+23         6.455069 1.130279e-12      2.085842e-03 decreasing F
+24         6.455069 3.368760e-12      2.085842e-03 decreasing F
+25         6.455069 1.039558e-11      2.085842e-03 decreasing F
+26         6.455069 3.331625e-11      2.085842e-03 decreasing F
+27         6.455069 1.113201e-10      2.085842e-03 decreasing F
+28         6.455070 3.891547e-10      2.085842e-03 decreasing F
+29         6.455070 1.430615e-09      2.085842e-03 decreasing F
+30         6.455070 5.557533e-09      2.085842e-03 decreasing F
+31         6.455069 1.032459e-10      2.085842e-03 decreasing F
+32         6.455069 9.889988e-10      2.085842e-03 decreasing F
+33         6.455069 2.341089e-10      2.085842e-03 decreasing F
+34         6.455069 3.527383e-10      2.085842e-03 decreasing F
+35         6.455069 4.011826e-09      2.085842e-03 decreasing F
+36         6.455069 1.968448e-09      2.085842e-03 decreasing F
+37         6.454000 3.683647e-04      2.085842e-03 decreasing F
+38         5.630913 2.530690e-01      2.085842e-03 decreasing F
+39         4.616186 4.798512e-01      8.074569e-01 decreasing F
+40         3.562499 5.762452e-01      1.927674e+00 decreasing F
+41         2.663004 4.413133e-01      3.310852e+00 decreasing F
+42         2.071501 0.000000e+00      4.890702e+00 decreasing F
+                         quantity     value
+1   cod_ssb_end_from_baseline_rel 3.8884739
+2  cod_ssb_end_from_collapsed_rel 3.8886712
+3   two_distinct_attractors_at_F0 0.0000000
+4 cod_invasion_growth_rate_per_yr 0.2303546
+5          hysteresis_F_range_min        NA
+6          hysteresis_F_range_max        NA
+03_bistability.R done

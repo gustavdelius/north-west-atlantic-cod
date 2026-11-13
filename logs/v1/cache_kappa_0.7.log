@@ -1,0 +1,4 @@
+Mizer parameter defaults are now at edition 3.
+kappa 1.70: max |biomass error| 0.890
+kappa 0.70: max |biomass error| 0.303
+final: 12 iterations, max |biomass error| 1.531, attractor fixed_point

@@ -1,0 +1,8 @@
+species,latin,group,l_inf,k_vb,l_mat,age_mat,a,b,w_min,beta,sigma,biomass_observed,biomass_cutoff
+Cod,Gadus morhua,groundfish,110,0.15,42,4.5,0.0072,3.07,0.001,66,2.0,2.0,100
+Haddock,Melanogrammus aeglefinus,groundfish,65,0.25,33,3,0.0052,3.16,0.001,558,2.1,1.2,100
+Silver hake,Merluccius bilinearis,groundfish,45,0.38,23,2,0.0046,3.10,0.001,22,1.5,1.0,20
+American plaice,Hippoglossoides platessoides,groundfish,55,0.10,30,6,0.0030,3.30,0.001,113,1.6,1.3,100
+Herring,Clupea harengus,forage,34,0.32,25,3.5,0.00634,3.03,0.001,280540,3.2,1.5,20
+Sand lance,Ammodytes dubius,forage,25,0.35,13,2,0.0020,2.99,0.001,398849,1.9,1.0,2
+Capelin,Mallotus villosus,forage,19.5,0.48,14,2.5,0.0029,3.23,0.001,10000,2.0,0.05,5

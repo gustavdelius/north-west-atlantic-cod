@@ -1,0 +1,103 @@
+  F_cod_forced F_haddock F_silver_hake F_plaice repro_forage objective
+1     6.276441 0.8754438      1.539615 2.395288    0.2842352 0.2965659
+  convergence evaluations target_Cod target_Haddock target_Silver.hake
+1           1         252        0.1           0.61                0.6
+  target_American.plaice target_Forage  model_Cod model_Haddock
+1                   0.45          7.87 0.06981462       0.74786
+  model_Silver.hake model_American.plaice model_Forage
+1         0.6578846              0.603146     9.402474
+  F_haddock_2005 F_silver_hake_2005 F_plaice_2005    objective target_Haddock
+1      0.9817012           1.332207      2.876477 1.629992e-08           0.72
+  target_Silver.hake target_American.plaice target_Forage_validation
+1               0.73                   0.41                     4.11
+  model_Haddock model_Silver.hake model_American.plaice model_Forage
+1     0.7199389         0.7299387             0.4099814     13.28365
+     model_Cod
+1 3.630276e-05
+                             quantity      value
+1                            isSteady       TRUE
+2   max_relative_biomass_drift_per_yr     0.0802
+3       stability_max_real_eigenvalue    -0.0167
+4                               kappa          3
+5                resource_PB_coef_exp 1.41 -0.22
+6                               s_egg          1
+7              reproduction_level_Cod        0.1
+8          reproduction_level_Haddock        0.1
+9      reproduction_level_Silver hake        0.1
+10 reproduction_level_American plaice        0.1
+11         reproduction_level_Herring      0.284
+12      reproduction_level_Sand lance      0.284
+13         reproduction_level_Capelin      0.284
+14                         erepro_Cod   0.000779
+15                     erepro_Haddock   0.000442
+16                 erepro_Silver hake      0.002
+17             erepro_American plaice     0.0162
+18                     erepro_Herring    0.00584
+19                  erepro_Sand lance      0.119
+20                     erepro_Capelin     0.0723
+                        species biomass_observed_gm2 biomass_model_gm2
+Cod                         Cod                 2.00        3.21922804
+Haddock                 Haddock                 1.20        1.35263756
+Silver hake         Silver hake                 1.00        1.02352859
+American plaice American plaice                 1.30        2.07132478
+Herring                 Herring                 1.50        1.39662409
+Sand lance           Sand lance                 1.00        0.68252079
+Capelin                 Capelin                 0.05        0.03476874
+                ssb_model_gm2 yield_model_gm2yr age_mat_model       erepro
+Cod                 2.5293301       1.042915024      4.468230 0.0007786184
+Haddock             1.2135731       0.337998541      2.999640 0.0004424744
+Silver hake         0.8894886       0.237514658      2.001446 0.0020034496
+American plaice     1.4915317       0.448534355      6.001361 0.0162217329
+Herring             0.9899123       0.123860364      3.499945 0.0058416805
+Sand lance          0.4854246       0.068421279      2.000000 0.1190014444
+Capelin             0.0203488       0.003246131      2.499966 0.0722738899
+                     w_lo w_hi         source     integral fraction_killed
+forage...1          0.001    1         forage 0.0100245778    2.860222e-03
+groundfish...2      0.001    1     groundfish 0.1613356509    9.470131e-03
+background...3      0.001    1     background 3.5450437213    9.622905e-01
+other_external...4  0.001    1 other_external 0.0097951383    1.291534e-03
+fishing...5         0.001    1        fishing 0.0000454919    4.504302e-06
+...6                0.001    1          total 3.7262445803    9.759169e-01
+forage...7          0.001   10         forage 0.0110443595    2.878547e-03
+groundfish...8      0.001   10     groundfish 0.6984448216    1.796614e-02
+background...9      0.001   10     background 3.7434018912    9.662653e-01
+other_external...10 0.001   10 other_external 0.0236235091    1.512320e-03
+fishing...11        0.001   10        fishing 0.0002526018    7.571370e-06
+...12               0.001   10          total 4.4767671832    9.886299e-01
+                      survival duration_yr species
+forage...1          0.02408311   0.3869564     Cod
+groundfish...2      0.02408311   0.3869564     Cod
+background...3      0.02408311   0.3869564     Cod
+other_external...4  0.02408311   0.3869564     Cod
+fishing...5         0.02408311   0.3869564     Cod
+...6                0.02408311   0.3869564     Cod
+forage...7          0.01137011   0.9332454     Cod
+groundfish...8      0.01137011   0.9332454     Cod
+background...9      0.01137011   0.9332454     Cod
+other_external...10 0.01137011   0.9332454     Cod
+fishing...11        0.01137011   0.9332454     Cod
+...12               0.01137011   0.9332454     Cod
+          w resource_level share_of_production_eaten
+1e-05 1e-05      0.9895897                0.01041033
+1e-04 1e-04      0.9849627                0.01503733
+0.001 1e-03      0.9801829                0.01981713
+0.01  1e-02      0.9618558                0.03814424
+0.1   1e-01      0.8640488                0.13595122
+1     1e+00      0.6275045                0.37249551
+5     5e+00      0.4914535                0.50854653
+                                 band  biomass production bundy_biomass
+1           small zooplankton (<1 mg) 31.90090  501.91312            34
+2        large zooplankton (1-100 mg) 16.43422   68.59773             9
+3 0.1-10 g (benthos/macrozooplankton) 12.74078   19.24816            NA
+  bundy_PB  model_PB
+1     8.40 15.733510
+2     3.04  4.174078
+3       NA  1.510753
+Warning messages:
+1: Removed 154 rows containing missing values or values outside the scale range
+(`geom_line()`). 
+2: In scale_y_log10() : log-10 transformation introduced infinite values.
+3: Removed 154 rows containing missing values or values outside the scale range
+(`geom_line()`). 
+4: In scale_y_log10() : log-10 transformation introduced infinite values.
+01_build_model.R done

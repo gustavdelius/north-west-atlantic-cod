@@ -1,0 +1,16 @@
+       case no_w    dt  method max_biomass_error forage_ratio_1995_2004
+1 reference  120 0.100   euler         0.6096140               9.402474
+2  dt_0.025  120 0.025   euler         0.6096140               9.410804
+3   tr_bdf2  120 0.100 tr_bdf2         0.6096140               9.456889
+4  no_w_200  200 0.100   euler         0.5255879               8.562288
+  cod_survival_1mg_1g_boom B_years_to_50pct_from_1993 B_cod_ssb_2025_rel
+1               0.01625579                         14           3.875163
+2               0.01600324                         15           3.867422
+3               0.01589635                         15           3.884579
+4               0.01864563                         14           5.256273
+  invasion_rate
+1     0.5216579
+2     0.5156046
+3     0.5156884
+4     0.5173765
+06_numerical_checks.R done

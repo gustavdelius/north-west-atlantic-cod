@@ -1,0 +1,32 @@
+Mizer parameter defaults are now at edition 3.
+kappa 3.00: max |biomass error| 0.856
+  round 1 (damp 1.00): max |error| 1.019, attractor fixed_point, max erepro 0.247
+  round 2 (damp 1.00): max |error| 7.822, attractor fixed_point, max erepro 0.374
+  round 3 (damp 1.00): max |error| 249023552606897.000, attractor NA, max erepro 1.15e+04
+  round 4 (damp 0.50): max |error| 0.610, attractor fixed_point, max erepro 0.281
+  round 5 (damp 0.50): max |error| 30380504.388, attractor NA, max erepro 1.3e+14
+  round 6 (damp 0.25): max |error| 1.658, attractor fixed_point, max erepro 0.362
+  round 7 (damp 0.25): max |error| 3.019, attractor fixed_point, max erepro 1.48
+  round 8 (damp 0.12): max |error| 2.554, attractor fixed_point, max erepro 0.644
+  round 9 (damp 0.12): max |error| 3.826, attractor fixed_point, max erepro 4.91
+  round 10 (damp 0.06): max |error| 2.444, attractor fixed_point, max erepro 0.336
+  round 11 (damp 0.06): max |error| 2.551, attractor fixed_point, max erepro 0.404
+  round 12 (damp 0.06): max |error| 2.305, attractor fixed_point, max erepro 0.334
+  round 13 (damp 0.06): max |error| 8.715, attractor fixed_point, max erepro 0.539
+  round 14 (damp 0.06): max |error| 5.392, attractor fixed_point, max erepro 0.847
+  round 15 (damp 0.06): max |error| 8.388, attractor fixed_point, max erepro 1.04
+  round 16 (damp 0.03): max |error| 0.945, attractor fixed_point, max erepro 0.228
+  round 17 (damp 0.03): max |error| 7.952, attractor fixed_point, max erepro 1.53
+  round 18 (damp 0.02): max |error| 4.104, attractor fixed_point, max erepro 1.2
+  round 19 (damp 0.01): max |error| 1.524, attractor fixed_point, max erepro 0.236
+  round 20 (damp 0.01): max |error| 2.042, attractor fixed_point, max erepro 0.363
+final: 20 iterations, max |biomass error| 0.610, attractor fixed_point
+Time difference of 4.770045 mins
+            Cod         Haddock     Silver hake American plaice         Herring 
+          0.610           0.127           0.024           0.593          -0.069 
+     Sand lance         Capelin 
+         -0.317          -0.305 
+            Cod         Haddock     Silver hake American plaice         Herring 
+       0.000779        0.000442        0.002000        0.016200        0.004780 
+     Sand lance         Capelin 
+       0.097300        0.059100 

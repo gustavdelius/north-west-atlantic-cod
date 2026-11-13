@@ -1,0 +1,1020 @@
+---
+name: create-extension-package
+description: >-
+  Turn a working mizer extension into a shareable R package and maintain it.
+  Use for packaging custom rates or components; choosing metadata-only or
+  dispatching extensions; chaining S3 methods with NextMethod(); recording
+  versions with recordExtension(); coercing, bundling, testing and upgrading
+  extension objects; or making user reports obey info_level. For implementing
+  the underlying extension mechanisms use the extend-mizer skill; for using an
+  existing package use the use-extension-packages skill.
+---
+
+# Creating a mizer extension package
+
+## Overview
+
+This is how to turn a mizer extension into a proper R package. It assumes you
+are already comfortable writing custom rate functions or adding components with
+`setComponent()` — the `extend-mizer` skill covers those — and now want to share
+your extension with others or use it across several projects.
+
+There are two kinds of extension package:
+
+- A **metadata-only** extension records itself in the model metadata for
+  reproducibility, but does not change how any mizer generic function behaves.
+  [mizerStarvation](https://sizespectrum.org/mizerStarvation/) is an
+  example: it adds starvation mortality via the `other_mort` pipeline, but it
+  does not need to override any user-facing mizer functions.
+
+- A **dispatching** extension additionally defines a new object type so that
+  mizer's generic functions (such as `getBiomass()` or `plotBiomass()`) can be
+  made to behave differently for models built with that extension.
+  [mizerShelf](https://sizespectrum.org/mizerShelf/) is an example: it
+  adds detritus and carrion components and overrides `getBiomass()` to include
+  their biomasses in the result.
+
+Both kinds are covered here, working through concrete examples from each
+package.
+
+To get started quickly, clone or fork
+[mizerExtensionTemplate](https://github.com/sizespectrum/mizerExtensionTemplate),
+a minimal working package that illustrates all the mechanisms described here
+with inline comments explaining each step.
+
+## Why a package?
+
+A plain R script works fine for a single project. An R package becomes
+worthwhile when you want:
+
+- **Reuse across projects**: install once, `library()` everywhere.
+- **Composability**: when two extension packages are loaded at the same time,
+  mizer can arrange their contributions to generic functions in the right order
+  automatically (see [Daisy-chaining with `NextMethod()`] below).
+- **Testing and documentation**: a package gives you a natural home for
+  `testthat` tests, roxygen2 documentation and a pkgdown website.
+- **Version tracking**: `getMetadata(params)$extensions` reports the version of
+  each extension package used to build a model. If a collaborator opens your saved
+  `MizerParams` object in a different session, mizer can warn them if the
+  required package is missing or outdated.
+
+## Metadata-only extensions: mizerStarvation
+
+[mizerStarvation](https://github.com/sizespectrum/mizerStarvation) adds
+starvation mortality — an extra per-capita mortality term that kicks in when a
+fish's energy balance is negative. It does this through the `other_mort`
+pipeline: `setStarvation()` registers the name of its rate function, and
+`getMort()` calls every function registered there and adds the result to the
+mortality rate at every time step. No mizer generic function needs to be
+overridden.
+
+That is the right mechanism for an extra mortality that depends on the state of
+the model but carries no state of its own, and `other_mort()` is how you
+register it:
+
+```r
+setStarvation <- function(params, starv_coef = 10) {
+    # ... set up the species parameters the rate function needs ...
+    other_mort(params)[["starvation"]] <- "starvMort"
+    params
+}
+```
+
+`other_encounter()` does the same for a contribution to the encounter rate. Two
+neighbouring mechanisms are easy to confuse with these:
+
+- If the contribution is a **fixed array** rather than a function of the model
+  state, use `ext_mort()` or `ext_encounter()` instead. Those are cheaper and
+  are what mizer's own external mortality and external encounter use.
+- If the contribution comes from a **component with dynamics of its own** — a
+  detritus or carrion pool that is itself updated each time step — create it
+  with `setComponent()` and give the contribution as its `mort_fun` or
+  `encounter_fun` argument. That entry then belongs to the component:
+  `getComponent()` reports it and `removeComponent()` removes it, and
+  `other_mort()` deliberately does not list it.
+
+Do not assign into `params@other_mort` directly, even though older versions of
+mizer left no alternative and mizerStarvation still does so. A bare slot
+assignment skips the check that the name really is a function and that it does
+not collide with a component's.
+
+### Recording the extension
+
+When your package creates or modifies a `MizerParams` object, record that your
+extension has actually been applied. Stamp the installed package version when
+the component is first created; on later modifications preserve the existing
+stamp:
+
+```r
+setStarvation <- function(params, starv_coef = 10) {
+    # ... set up the rate function, species parameters, etc. ...
+    extensions <- getMetadata(params)$extensions
+    version <- if ("mizerStarvation" %in% names(extensions)) {
+        NULL
+    } else {
+        as.character(utils::packageVersion("mizerStarvation"))
+    }
+    params <- mizer::recordExtension(
+        params, "mizerStarvation",
+        version = version,
+        requirement = "sizespectrum/mizerStarvation"
+    )
+    params
+}
+```
+
+`recordExtension()` records the installation requirement (which mizer can use
+to install missing packages automatically when opening saved models with
+`readParams()`), preserves all existing entries and version stamps, and adds
+this extension to the object.
+
+Storing this record serves two purposes:
+
+1. **Reproducibility record.** When the object is saved with `saveParams()` and
+   later loaded with `readParams()`, mizer checks the recorded extensions and
+   warns if any required package is not installed or is too old.
+2. **Class coercion.** `coerceToExtensionClass()` uses the extension record to
+   build the correct S3 class vector, and mizer validation uses it to repair a
+   stale vector or an old file saved without its extension classes.
+
+### Taking a species parameter column away again
+
+An extension that adds a species parameter column usually needs to remove it
+when the user switches the extension off. Assign a table without the column and
+mizer takes it out of both `species_params()` and `given_species_params()`:
+
+```r
+setStarvation <- function(params, starv_coef = 10) {
+    if (all(starv_coef == 0)) {
+        species_params(params)$starv_coef <- NULL   # withdraw the column
+        return(params)
+    }
+    species_params(params)$starv_coef <- starv_coef
+    # ... set up the rate function ...
+}
+```
+
+Do **not** reach into `params@species_params` to do this. The rule is the same
+for `given_species_params(params)$starv_coef <- NULL`: a column mizer knows how
+to calculate comes back as a calculated value, and a column of your own — which
+mizer has no way of recalculating — is gone. Before mizer 3.3.1 neither of these
+worked, so a package that needs the behaviour has to require that version.
+
+## Dispatching extensions: mizerShelf
+
+[mizerShelf](https://github.com/sizespectrum/mizerShelf) adds two dynamical
+components — detritus and carrion — to a mizer model. Beyond just computing
+them, it also needs to change what certain user-facing functions return: for
+example, `getBiomass()` should include the detritus and carrion biomasses
+alongside the species biomasses.
+
+This section explains how to achieve that without breaking the standard mizer
+behaviour, and without preventing other extension packages from also modifying
+the same function.
+
+### The problem with simply overwriting a function
+
+Suppose you define a new `getBiomass()` function in your package that adds your
+extra biomasses to the result. That works as long as your package is the only
+one that modifies `getBiomass()`. But what if a second extension package also
+wants to add its own extra components?
+
+If both packages replace `getBiomass()`, whichever one was loaded last wins, and
+the other's contribution is silently lost. There is no way for the two packages
+to compose their changes.
+
+### How R dispatches to the right function
+
+R has a built-in mechanism for exactly this situation. Every object has a
+**class** attribute — a character string (or a vector of strings) that labels
+what kind of thing it is. When you call a function like `getBiomass(params)`, R
+looks at the class of `params` and searches for a version of `getBiomass` whose
+name ends in `.` followed by that class label, such as `getBiomass.mizerShelf`.
+If it finds one, it calls it. If not, it tries the next class in the vector,
+and so on until it reaches the base class and calls the default version.
+
+This mechanism is called **S3 dispatch**, but you do not need to know that term
+to use it. What matters practically is:
+
+- Give your params objects a distinctive class label (e.g. `"mizerShelf"`).
+- Define functions named `<genericname>.<classname>` (e.g. `getBiomass.mizerShelf`).
+- Inside those functions, call `NextMethod()` to pass control to the next class
+  in the chain before or after your own modifications.
+
+### Daisy-chaining with `NextMethod()`
+
+`NextMethod()` is what makes multiple extension packages compose gracefully.
+Suppose the class of `params` is `c("mizerFoo", "mizerShelf", "MizerParams")`,
+meaning `params` is simultaneously of type `mizerFoo`, type `mizerShelf`, and
+the base type `MizerParams`. Then calling `getBiomass(params)` proceeds like
+this:
+
+1. R finds `getBiomass.mizerFoo` and calls it.
+2. `getBiomass.mizerFoo` calls `NextMethod()`.
+3. R finds `getBiomass.mizerShelf` and calls it.
+4. `getBiomass.mizerShelf` calls `NextMethod()`.
+5. R finds the standard mizer `getBiomass.MizerParams` and calls it.
+6. The standard result is returned to step 4, shelf biomasses are added, the
+   result is returned to step 2, and `mizerFoo`'s biomasses are added on top.
+
+Each extension in the chain sees and extends the result of all the extensions
+below it. The chain grows automatically as packages are loaded, so the user
+does not need to coordinate anything manually.
+
+For this to work, **every method must call `NextMethod()`** so it does not
+accidentally short-circuit the chain below it. The only exception is the base
+mizer method at the bottom of the chain.
+
+### S3 extension classes
+
+Your params objects carry an S3 class vector that prepends your class name to
+`"MizerParams"` (e.g. `c("mizerShelf", "MizerParams")`). All extension-specific
+data lives in `other_params(params)` or in component parameters; the class label
+is simply used for S3 method dispatch.
+
+Because `MizerParams` and `MizerSim` are S3 classes, you do not define classes
+with `setClass()`. R's S3 dispatch mechanism works directly with class attribute
+vectors. When your constructor finishes configuring the object, it calls
+`recordExtension()` and `coerceToExtensionClass()`:
+
+```r
+params <- mizer::recordExtension(
+    params, "mizerShelf",
+    version = as.character(utils::packageVersion("mizerShelf")),
+    requirement = "sizespectrum/mizerShelf"
+)
+params <- mizer::coerceToExtensionClass(params)
+```
+
+So `R/myextension-class.R` holds documentation and no code:
+
+```r
+#' mizerShelf extension classes
+#'
+#' S3 extension classes for MizerParams and MizerSim that enable S3 dispatch for
+#' the methods defined in this package.
+#'
+#' @name mizerShelf-class
+#' @keywords internal
+NULL
+```
+
+The class name is your package/extension name, and the sim class is that name
+with `"Sim"` appended. `MizerSim` objects are coerced to the sim class
+automatically by `project()`.
+
+### Bundled data objects
+
+If your package ships a ready-made `MizerParams` or `MizerSim` object in its
+`data/` directory, create it using your package's setup function (which sets the
+S3 class and records the extension metadata) and save it using
+`usethis::use_data()`. Because `MizerParams` and `MizerSim` are S3 classes, R's
+standard data lazy-loading delivers the object with its extension S3 class
+intact, so users can use the bundled dataset immediately after loading your
+package.
+
+
+
+### Writing methods that call `NextMethod()`
+
+Here is `getBiomass.mizerShelf` from mizerShelf. It calls `NextMethod()` first
+to get the standard mizer result, then appends the detritus and carrion
+biomasses:
+
+```r
+#' @method getBiomass mizerShelf
+#' @export
+getBiomass.mizerShelf <- function(object, ...) {
+    params <- object
+    b <- NextMethod()                       # standard species biomasses
+
+    d_biomass <- sum(params@initial_n_pp *
+                     params@dw_full * params@w_full)
+    b <- c(b, Detritus = d_biomass)
+
+    other <- params@initial_n_other
+    scalar_other <- Filter(function(x) is.numeric(x) && length(x) == 1, other)
+    if (length(scalar_other) > 0) b <- c(b, unlist(scalar_other))
+    b
+}
+```
+
+Because `plotBiomass()` calls `getBiomass()` internally, this single override
+makes biomass plots include detritus and carrion without any further changes.
+
+Always register S3 methods in your package's `NAMESPACE` file. The roxygen2
+`@method` tag does this for you automatically:
+
+```r
+#' @method getBiomass mizerShelf
+#' @export
+getBiomass.mizerShelf <- function(object, ...) { ... }
+```
+
+### Replacing `setRateFunction()` with method dispatch
+
+Users who write mizer extensions often start by replacing one of the built-in
+rate functions with `setRateFunction()`:
+
+```r
+myEncounter <- function(params, n, n_pp, n_other, t = 0, ...) {
+    enc <- mizerEncounter(params, n = n, n_pp = n_pp, n_other = n_other, t = t, ...)
+    enc + extraEncounter(params, n, n_pp, n_other, t, ...)
+}
+params <- setRateFunction(params, "Encounter", "myEncounter")
+```
+
+This works well for a single user's workflow, but it is not composable: if two
+extension packages both call `setRateFunction(params, "Encounter", ...)`,
+whichever runs last silently overwrites the other. When you turn your extension
+into a package, **replace `setRateFunction()` calls with `project*` methods**
+for your extension class. These methods participate in the daisy-chain via
+`NextMethod()`, so two packages can both modify the same rate without conflict.
+
+#### The `project*` generics
+
+Every standard mizer rate function has a corresponding S3 generic that
+extension-aware projections call during `project()`. Define a method for whichever
+rate your extension modifies:
+
+| `setRateFunction()` key | S3 generic to override |
+|------------------------|------------------------|
+| `"Rates"` | `projectRates()` |
+| `"Encounter"` | `projectEncounter()` |
+| `"FeedingLevel"` | `projectFeedingLevel()` |
+| `"EReproAndGrowth"` | `projectEReproAndGrowth()` |
+| `"ERepro"` | `projectERepro()` |
+| `"EGrowth"` | `projectEGrowth()` |
+| `"Diffusion"` | `projectDiffusion()` |
+| `"PredRate"` | `projectPredRate()` |
+| `"PredMort"` | `projectPredMort()` |
+| `"FMort"` | `projectFMort()` |
+| `"Mort"` | `projectMort()` |
+| `"RDI"` | `projectRDI()` |
+| `"RDD"` | `projectRDD()` |
+| `"ResourceMort"` | `projectResourceMort()` |
+
+#### Converting an existing custom rate function
+
+Remove the `setRateFunction()` call from your constructor and define a method
+for your extension class instead:
+
+```r
+#' @method projectEncounter mizerMyExtension
+#' @export
+projectEncounter.mizerMyExtension <- function(params, n, n_pp, n_other,
+                                              t = 0, ...) {
+    enc <- NextMethod()
+    enc + extraEncounter(params, n, n_pp, n_other, t, ...)
+}
+```
+
+`NextMethod()` replaces the explicit call to `mizerEncounter()`. It passes
+control down the chain — first to any lower extension's `projectEncounter`
+method, and ultimately to `projectEncounter.MizerParams`, which performs the
+standard mizer calculation. Each extension in the chain adds its contribution
+on top of the one below it, in load order.
+
+Three rules:
+
+1. **Always call `NextMethod()`** — omitting it silently drops all contributions
+   from lower extensions in the chain.
+2. **Keep the same argument signature** as the generic, and include `...` so
+   extra arguments pass through.
+3. **Do not call `setRateFunction()`** in your constructor for any rate that
+   your package handles via a `project*` method. The two mechanisms are
+   separate and should not be mixed for the same rate within an extension
+   package.
+
+#### The diet follows `getEncounterByPrey()`
+
+`getDiet()` and `getTrophicLevel()` need the encounter rate split by food
+source, and they get the split from the S3 generic `getEncounterByPrey()`, not
+from `projectEncounter()`. They check it against the total from
+`getEncounter()`. A `projectEncounter()` method of yours therefore needs a
+matching `getEncounterByPrey()` method, which makes the same change and calls
+`NextMethod()`:
+
+```r
+#' @method getEncounterByPrey mizerMyExtension
+#' @export
+getEncounterByPrey.mizerMyExtension <- function(params, n, n_pp, n_other,
+                                                t = 0, ...) {
+    by_prey <- NextMethod()
+    # Add your encounter as a food source of its own, named in the `prey`
+    # dimension
+    extra <- extraEncounter(params, n, n_pp, n_other, t, ...)
+    dn <- dimnames(by_prey)
+    dn$prey <- c(dn$prey, "My food")
+    array(c(by_prey, extra), dim = dim(by_prey) + c(0, 0, 1), dimnames = dn)
+}
+```
+
+A method that changes a parameter, such as the search volume, changes it in
+`params` before `NextMethod()`, exactly as its `projectEncounter()` method does.
+Without the method, `getDiet()` and `getTrophicLevel()` find that the split does
+not add up to the total, scale all food sources in proportion, and tell the user
+that the split is exact only if your change affects all of them equally.
+Do not check the result against `getEncounter()` inside the method: the
+parameters it passes on have already been changed, so the encounter rate
+calculated from them would contain your change twice.
+
+`getTrophicLevel()` takes from your method only how much food each prey species
+and the resource provide. Which prey sizes that food comes from it takes from
+the predation kernel stored in the model. If your extension changes the kernel
+during the projection rather than storing it with `setPredKernel()`, also give
+`getTrophicLevel()` a method that stores the kernel in force at time `t` with
+`setPredKernel()` and calls `NextMethod()`.
+
+#### How `setRateFunction()` and `project*` methods interact
+
+A user who calls `setRateFunction(params, "Encounter", "myFn")` is asking for
+their function to completely replace the encounter calculation for that specific
+`params` object. Mizer honours this: when `myFn` is set, `projectEncounter()`
+is not called at all for the Encounter rate, so no extension package's
+`projectEncounter` method will run for that rate either.
+
+This means that if a user applies `setRateFunction()` to a rate that your
+extension package modifies via `projectEncounter.mizerMyExtension`, your
+method will be silently bypassed for that object. It is worth documenting this
+limitation for your users.
+
+#### Mizer's default parameters do not go through your method
+
+Mizer calculates some species parameters by putting the model into a reference
+state and measuring a rate in it. `get_gamma_default()` is the one to know
+about: it gives each species a search volume coefficient of 1, puts a power-law
+prey spectrum in front of it, and measures the available energy to find the
+`gamma` that delivers the target feeding level `f0`. `get_f0_default()` does the
+inverse.
+
+Those measurements use `mizerEncounter()`, not `getEncounter()`, so they do not
+dispatch through your `projectEncounter` method and are unaffected by a
+`setRateFunction()` registration. They also exclude the `ext_encounter` array
+and functions registered with `other_encounter()`, including a component's
+`encounter_fun`. The `gamma` mizer calculates therefore describes the species'
+*baseline* search volume on the reference resource — which is exactly what a
+dynamic modulation such as a temperature scalar is meant to modulate. Do not
+declare `gamma` as a given species parameter merely to protect it from your own
+method or component; that is no longer necessary, and it costs the model the
+ability to let `gamma` follow `f0`.
+
+#### But they do go through your `get_*_default()` method
+
+That non-dispatching measurement is right for an extension that *modulates* a
+rate mizer already has. It is wrong for an extension that changes the model's
+structure — most of all one that replaces the single resource spectrum by a
+resource system of its own. The `gamma` values that
+`newMultispeciesParams()` auto-derived at construction time were calibrated
+against the resource that was there then. Swapping that resource out afterwards
+does not re-derive them, so every species that did not come with a `gamma` of
+its own is left calibrated against a resource the model no longer has.
+
+Nothing in core mizer can notice this for you, and re-calling
+`get_gamma_default()` will not fix it, both because its measurement deliberately
+does not see your resource system and because `species_params(params)$gamma` is
+already populated (only `NA` entries are filled by `get_gamma_default()`). The
+five functions involved are therefore S3 generics, so you can supply the part
+that mizer cannot know:
+
+| Generic | What a method should return |
+|---|---|
+| `measure_avail_energy()` | the coefficient $A_i$ in $E_i(w) = A_i w^{2 + q_i - \lambda}$, the energy the reference state makes available |
+| `get_gamma_default()` | search volume coefficient `gamma` for each species |
+| `get_f0_default()` | target feeding level `f0` for each species |
+| `get_h_default()` | maximum intake rate coefficient `h` |
+| `get_ks_default()` | standard metabolic rate coefficient `ks` |
+
+`measure_avail_energy()` is usually the only one you need. It is the single
+point at which `get_gamma_default()` and `get_f0_default()` look at the prey in
+the model, placing the reference resource on an untruncated power law across
+`w_full` so that evaluating at `w[length(w)]` recovers the scale-free
+coefficient $A_i$ without upper-cutoff distortion. A method for it redirects
+both defaults at your resource system without your having to reimplement either:
+
+```r
+#' @export
+measure_avail_energy.mizerShelf <- function(params, ...) {
+    # Put the extension's own resources into the untruncated power-law
+    # reference state and return the coefficient A_i for each species.
+}
+```
+
+If your extension instead calibrates `gamma` against size-truncated resource
+spectra at a species-specific reference size (such as `w_inf` or `w_min`),
+register methods for `get_gamma_default()` and `get_f0_default()` directly.
+
+On every rebuild of the species parameters, `setParams()` runs the rate
+setters, and three of them fill in the values the user did not give by calling
+these generics: `setSearchVolume()` calls `get_gamma_default()`, which measures
+through `measure_avail_energy()`; `setMaxIntakeRate()` calls `get_h_default()`;
+and `setMetabolicRate()` calls `get_ks_default()`. An object of your class
+therefore picks up your methods for these four on every rebuild — including
+when a user edits a species parameter or hands an explicitly given `gamma` back
+to mizer by removing it from `given_species_params()`. To re-derive these
+defaults at the moment your setup or resource-setting function swaps the
+resource out, trigger a rebuild from `given_species_params()` once the object
+carries your extension class:
+
+```r
+params <- mizer::recordExtension(
+    params, "mizerShelf",
+    version = as.character(utils::packageVersion("mizerShelf")))
+params <- mizer::coerceToExtensionClass(params)
+species_params(params) <- species_params(params)
+```
+
+That no-op assignment rebuilds `species_params(params)` from
+`given_species_params(params)` — dropping the single-resource `gamma` that was
+not given by the user while keeping any explicitly supplied values — and
+re-runs `setParams(params)`, which calls your methods. Leaving this step out
+would leave the stale single-resource `gamma` in `species_params(params)`, where
+`reconcileSpeciesParams()` (and hence `readParams()`) would mistake it for a
+value set by hand and freeze it into `given_species_params(params)`.
+
+#### A rebuild does not calculate `f0`
+
+`get_f0_default()` is the exception. No rate setter calls it, so a rebuild never
+applies your method for it: mizer calls it only in `newTraitParams()` and
+`newSingleSpeciesParams()`, before the model has your class. Nor is there a
+single-resource `f0` for the rebuild to drop, because mizer never stores a
+calculated `f0`. `species_params(params)` holds `f0` only where the user gave
+it, and elsewhere the default calculations use 0.6.
+
+Your method therefore takes effect only where it is called. Call
+`get_f0_default(params)` yourself wherever your package needs the feeding level
+that a species' given `gamma` leads to on your resources. If that value should
+become the species' `f0`, assign it after the rebuild, but only for the species
+whose `gamma` was given and whose `f0` was not:
+
+```r
+given <- given_species_params(params)
+gamma_given <- if (is.null(given$gamma)) FALSE else !is.na(given$gamma)
+f0_given <- if (is.null(given$f0)) FALSE else !is.na(given$f0)
+derive <- which(gamma_given & !f0_given)
+if (length(derive) > 0) {
+    f0 <- get_f0_default(params)
+    species_params(params)[derive, "f0"] <- f0[derive]
+}
+```
+
+Keep that restriction. On a built model every species has a `gamma`, so
+`get_f0_default()` returns a value for each of them. For a species whose `gamma`
+was calculated from `f0` it returns that `f0` again up to rounding, and storing
+it would freeze it as if the user had given it. The restriction also leaves
+alone an `f0` the user chose.
+
+The assigned `f0` is recorded as given, so later rebuilds keep it, and the
+rebuild it triggers uses it for the default `h` and, through `h`, `ks`. A
+species whose `h` was not given therefore gets a new `h`, with which its `gamma`
+leads to a different feeding level again: in one test, storing an `f0` of 0.75
+gave an `h` for which `get_f0_default()` returned 0.80. Give `h` as well if the
+two must agree exactly. Core mizer does not take this step: for a species with
+a given `gamma` it calculates the default `h` from the given `f0`, or from 0.6.
+
+Two rules for a `measure_avail_energy()` or `get_*_default()` method:
+
+- Return a property of the *species parameters*, not of the model's dynamics.
+  Leave out any dynamic modulation of the search volume, and any additive
+  encounter contribution, that your extension applies. Folding such a factor in
+  folds it into `gamma`, and since `gamma` then determines the search volume,
+  the factor gets re-applied on every rebuild (issues #577 and #586).
+- Call `NextMethod()` if what you are doing is adding to mizer's reference
+  state rather than replacing it, so that another extension in the chain still
+  gets its turn.
+
+### Creating objects: the two commands
+
+A constructor function that returns a `mizerShelf` object must end with these
+two lines:
+
+```r
+params <- mizer::recordExtension(
+    params, "mizerShelf",
+    version = as.character(utils::packageVersion("mizerShelf")))
+params <- mizer::coerceToExtensionClass(params)
+```
+
+Here is how `newDetritusCarrionParams()` uses them in mizerShelf:
+
+```r
+newDetritusCarrionParams <- function(species_params, ...) {
+    params <- newMultispeciesParams(species_params, ...,
+                                    resource_dynamics = "detritus_dynamics")
+    # ... set up rate functions, components, colours ...
+
+    params <- mizer::recordExtension(
+        params, "mizerShelf",
+        version = as.character(utils::packageVersion("mizerShelf")))
+    params <- mizer::coerceToExtensionClass(params)
+}
+```
+
+#### What `recordExtension()` does
+
+`recordExtension()` adds the extension that created or modified this object,
+taking its installation requirement from the session registry. Existing
+entries keep their position and version stamps; a new entry is prepended so the
+object's chain stays ordered outermost first. The result is a bill of materials
+for the extensions actually applied to this model, not every extension package
+that happened to be loaded when it was created.
+
+The `version` stamp says which package version's object layout the new component
+conforms to. A constructor supplies it because it has just created that
+component. An ordinary modifier calls `recordExtension(params, "mizerShelf")`
+without `version`, preserving the stamp already on the object. If several
+extension setup functions are applied, their calls accumulate the full object
+chain.
+
+When the object is later loaded from disk with `readParams()`, mizer reads
+the extension record to check that all the recorded extensions are installed in
+the current session and warns the user if any are missing or outdated.
+
+#### What `coerceToExtensionClass(params)` does
+
+At this point `params` is still a plain `MizerParams` object as far as R is
+concerned. If you called `getBiomass(params)` now, R would call the standard
+mizer `getBiomass.MizerParams` rather than `getBiomass.mizerShelf`.
+
+`coerceToExtensionClass()` reads the object's extension record, finds the
+registered dispatch extensions in its recorded chain, and sets the S3 class
+vector. In our example, `params` becomes `c("mizerShelf", "MizerParams")` and
+R will dispatch to `getBiomass.mizerShelf` automatically. `validParams()` also
+normalises the vector as part of validation, which keeps old saved objects
+compatible.
+
+Note that coercion is driven by the object's recorded chain, not by what
+extensions happen to be loaded in the current session. An object created with
+only `mizerShelf` registered will remain a `mizerShelf` object even if
+`mizerOuter` is also loaded.
+
+### What about `MizerSim` objects?
+
+You do not need to call `coerceToExtensionClass()` yourself for `MizerSim`
+objects. When `project()` creates its output it calls `MizerSim()`, which
+in turn calls `coerceToExtensionClass()` on the new sim object. Because the
+params object inside the sim already has the extension metadata, mizer knows to
+promote the sim to `mizerShelfSim` automatically.
+
+This means that after:
+
+```r
+sim <- project(NWMed_params, t_max = 3)
+```
+
+`sim` is already of class `mizerShelfSim`, and any method you have defined
+for that class — such as `getBiomass.mizerShelfSim` — will be dispatched
+automatically.
+
+#### Rate methods on simulations come for free
+
+If your extension modifies rates during projection using `project*` methods (such as `projectMort.mizerStarvation` or `projectEncounter.mizerMyExtension`), you **do not need to write any methods for `MizerSim`**.
+
+Mizer's own simulation rate accessors — `getMort(sim)`, `getEncounter(sim)`, `getRates(sim)`, and projection functions like `project()` — evaluate the rate step-by-step using the simulation's `params` object, which carries your extension class. At each time step, mizer dispatches through your `project*` method via S3, so your rate modifications automatically apply throughout the simulation without writing a `...Sim` method.
+
+#### When you do need a `MizerSim` method
+
+There are two situations where writing a method for your `...Sim` class is necessary:
+
+1. **Overriding non-rate mizer generics.** Functions like `getBiomass()` or `getN()` are summary accessors rather than step-by-step projection rates. When an extension adds external dynamical components (e.g. `Detritus` and `Carrion` in `mizerShelf`), you define both `getBiomass.mizerShelf` (for `MizerParams`) and `getBiomass.mizerShelfSim` (for `MizerSim`) so that `getBiomass(sim)` and `plotBiomass(sim)` include the component biomasses across time.
+
+2. **Providing new extension-specific `get*` rate accessors.** If your package introduces its own rate diagnostic function (such as `getStarvMort()` in `mizerStarvation`), core mizer does not define that function. To let users evaluate the diagnostic on both parameters and simulations (e.g. `getStarvMort(params)` and `getStarvMort(sim)`), define your function as an S3 generic with methods for both `MizerParams` and `MizerSim`:
+
+```r
+#' Starvation mortality rate
+#'
+#' Calculates the starvation mortality rate (1/year) by species and size.
+#'
+#' @param object A `MizerParams` or `MizerSim` object.
+#' @param ... Arguments passed on to methods.
+#' @return An array (species by size for `MizerParams`, or time by species by
+#'   size for `MizerSim`).
+#' @export
+getStarvMort <- function(object, ...) {
+    UseMethod("getStarvMort")
+}
+
+#' @rdname getStarvMort
+#' @export
+getStarvMort.MizerParams <- function(object, n = initialN(object),
+                                     n_pp = initialNResource(object),
+                                     n_other = initialNOther(object),
+                                     t = 0, ...) {
+    starvMort(object, n = n, n_pp = n_pp, n_other = n_other, t = t, ...)
+}
+
+#' @rdname getStarvMort
+#' @export
+getStarvMort.MizerSim <- function(object, time_range, drop = FALSE, ...) {
+    if (missing(time_range)) {
+        time_range <- dimnames(object@n)$time
+    }
+    time_elements <- get_time_elements(object, time_range)
+    # Loop over time_elements and compute rate matrix for each time step
+}
+```
+
+## Telling the user what your package decided
+
+When your package makes a choice on the user's behalf — filling in a default,
+adjusting an input, declining to carry out an instruction — report it through
+mizer's own mechanism rather than with a plain `message()` or `warning()`. A
+plain `message()` ignores `info_level`, is not collected with the other reports,
+and is swallowed on the `species_params<-()` path. Four functions are exported
+for this:
+
+| Call | For |
+|---|---|
+| `signal_info()` | Any report about a choice you made or an input you adjusted |
+| `with_info_level()` | Wrapping your entry point, so the reports raised inside it are collected and given together |
+| `signal_not_recalculated()` | Your setter left a hand-set array alone |
+| `default_info_level()` | The default for your own `info_level` argument |
+
+Give every entry point that reports an `info_level` argument, forward it, and
+wrap the body:
+
+```r
+newFooParams <- function(species_params, ...,
+                         info_level = default_info_level()) {
+    with_info_level(info_level = info_level, {
+        params <- newMultispeciesParams(species_params,
+                                        info_level = info_level, ...)
+        if (is.null(species_params$foo_rate)) {
+            signal_info("foo_rate", "No `foo_rate` provided, using 0.1.",
+                        level = 1)
+            params <- setComponent(params, ...)
+        }
+        params
+    })
+}
+```
+
+Handlers nest by themselves — an inner one steps aside and lets the outermost do
+the reporting — so wrap without checking what your caller did.
+
+Two arguments of `signal_info()` are worth getting right, because both wrong
+choices are invisible at the call site:
+
+- `severity` is not a judgement about how serious the report is, it is a fact
+  about whether the report has to survive `suppressMessages()`. Use
+  `"warning"` when the user asked for something that is not happening, and the
+  default `"info"` when you are telling them about a choice you made.
+  `species_params<-()` suppresses messages over its recalculation, so an
+  `"info"` report raised under it never reaches the user.
+- `unhandled` decides what happens when nothing is collecting, for instance when
+  your setter is called directly. `"drop"` says nothing, which suits chatter that
+  only makes sense as part of a report about a whole model. `"show"` reports it
+  there and then, which is right when this may be all the user hears.
+
+Do **not** hard-code the level in the call — `newMultispeciesParams(sp,
+info_level = 0, ...)` looks like a way to keep your constructor quiet, but a
+user who passes `info_level` themselves then gets `formal argument "info_level"
+matched by multiple actual arguments`, because their value arrives through `...`
+alongside yours.
+
+Progress reports are the exception to all of this: they have to appear while the
+work is happening, and collected reports are given at the end, so use a plain
+`message()` for those.
+
+## Checklist for package authors
+
+When building a dispatching extension package, verify the following:
+
+- [ ] Do **not** call `setClass()` — mizer uses S3 class vectors (`c("<myExtension>", "MizerParams")`),
+  and `coerceToExtensionClass()` manages the class order automatically. See [S3 extension classes].
+- [ ] End every constructor by calling `recordExtension()` with the installed
+  package version and requirement, then `coerceToExtensionClass(params)`.
+- [ ] Register every S3 method in `NAMESPACE` (via `@method` + `@export`).
+- [ ] Call `NextMethod()` in every method override.
+- [ ] For each rate the package modifies during projection, define a
+  `project*` method (e.g. `projectEncounter.mizerMyExtension`) rather than
+  calling `setRateFunction()`. See [Replacing `setRateFunction()` with method dispatch].
+- [ ] If the package has a `projectEncounter()` method, give
+  `getEncounterByPrey()` a method that makes the same change. See
+  [The diet follows `getEncounterByPrey()`].
+- [ ] Store all extension-specific state in `other_params(params)` or in
+  new components created with `setComponent()`, never as extra top-level list elements or new slots.
+- [ ] Add and remove any species parameter column of your own through
+  `species_params(params)$my_col <- value` and
+  `species_params(params)$my_col <- NULL`, never by writing into the
+  `@species_params` slot. See
+  [Taking a species parameter column away again].
+- [ ] Register an extra mortality or encounter term that carries no state of its
+  own with `other_mort()` or `other_encounter()`, never by assigning into
+  `params@other_mort` or `params@other_encounter` directly. See
+  [Metadata-only extensions: mizerStarvation].
+- [ ] If your package changes the resource structure of the model, define a
+  `measure_avail_energy()` (or `get_gamma_default()` / `get_f0_default()`)
+  method and rebuild the species parameters with
+  `species_params(params) <- species_params(params)` after
+  `coerceToExtensionClass(params)` so that the `gamma` default is derived
+  against your resources rather than against the one mizer replaced. The
+  rebuild does not apply an `f0` calculation; if you need one, store its result
+  yourself. See [But they do go through your `get_*_default()` method] and
+  [A rebuild does not calculate `f0`].
+- [ ] Report anything you tell the user with `signal_info()` inside a
+  `with_info_level()`, never a bare `message()` or `warning()`, and give every
+  entry point an `info_level = default_info_level()` argument that it forwards.
+  See [Telling the user what your package decided].
+- [ ] Run mizer's own test suite against an object of your subclass to check
+  that your overrides do not break core behaviour. See
+  [Running mizer's test suite against your subclass].
+
+For metadata-only packages, only the storage item and the reporting item apply,
+and `coerceToExtensionClass()` is not needed. Their setup functions should still
+call `recordExtension()`, stamping the package version and requirement when
+their component is first created.
+
+## Running mizer's test suite against your subclass
+
+A dispatching extension overrides mizer generics, so it is easy to
+accidentally break some core mizer behaviour that you did not mean to change. A
+powerful way to catch this is to run **mizer's own test suite** with the shared
+test fixture replaced by an object of your subclass. If your overrides are
+faithful extensions of the base behaviour, the great majority of mizer's tests
+should still pass; the failures that remain pinpoint exactly where your class
+diverges from a plain `MizerParams` object (and are often legitimate — e.g. a
+test that hard-codes the single-resource object structure).
+
+Most of mizer's tests build on a small shared fixture, `NS_params_small` (and a
+simulation `NS_sim_small` derived from it), defined in
+`tests/testthat/helper.R`. The idea is to turn that fixture into an object of
+your subclass and then run the suite.
+
+### Step 1: Get the mizer source
+
+The test files are not part of the installed package, so clone the mizer source
+and check out the tag or commit that matches your installed version:
+
+```r
+packageVersion("mizer")   # note this, then `git checkout` the matching tag
+```
+
+### Step 2: Convert the shared fixture to your subclass
+
+Edit `tests/testthat/helper.R` and, immediately **after** `NS_params_small` has
+been fully built (just before `NS_sim_small` is created), insert code that
+replaces it with an object of your class. Because `devtools::load_all()` sources
+the helper inside mizer's own namespace, attached packages are not on the lookup
+path there, so:
+
+- call `library(yourPackage)`, and
+- qualify your own functions with `yourPackage::`.
+
+For example, [mizerMR](https://github.com/sizespectrum/mizerMR) (which adds
+multiple resources) converts the single resource into two resources like this:
+
+```r
+suppressMessages(library(mizerMR))
+local({
+    p1 <- NS_params_small
+    rp <- data.frame(resource = c("Res A", "Res B"),
+                     kappa = p1@resource_params$kappa / 2,
+                     lambda = p1@resource_params$lambda, r_pp = 4,
+                     n = p1@resource_params$n, w_min = min(p1@w_full),
+                     w_max = p1@resource_params$w_pp_cutoff)
+    strip <- function(m) { dimnames(m) <- NULL; m }
+    ir <- p1@species_params$interaction_resource
+    NS_params_small <<- suppressMessages(mizerMR::setMultipleResources(
+        p1, resource_params = rp,
+        resource_interaction = strip(cbind(ir, ir)),
+        resource_capacity = strip(rbind(p1@cc_pp / 2, p1@cc_pp / 2)),
+        resource_rate = strip(rbind(p1@rr_pp, p1@rr_pp)),
+        initial_resource = strip(rbind(p1@initial_n_pp / 2, p1@initial_n_pp / 2))))
+})
+```
+
+For your own extension, replace this block with a call to your constructor or
+conversion function, so that `NS_params_small` becomes an object of your S3
+extension class. `NS_sim_small` is built from it on the next line and will then be of your
+`...Sim` class automatically.
+
+### Step 3: Run the suite
+
+Run the tests from the root of the mizer source tree. Use `devtools::test()`
+rather than `testthat::test_dir()`: it calls `load_all()`, which is required
+because some mizer tests use mizer's internal (unexported) functions.
+
+```r
+devtools::test()
+```
+
+### Step 4: Restore the source
+
+The edits above are only for this experiment. Undo them with:
+
+```r
+# from the mizer source root
+system("git checkout tests/testthat")
+```
+
+### Interpreting the results
+
+The only failures left are genuine differences between your subclass and a
+plain `MizerParams` object. Typical, expected ones include tests that assert the
+exact structure of a single-resource object, or that index a resource array as
+if it were one-dimensional. Any *other* failure — especially in a generic you
+override — is worth investigating, as it usually means your method does not
+faithfully extend the base behaviour.
+
+## Upgrading objects across versions of your extension
+
+As your extension evolves you may change where or how it stores its data in a
+`MizerParams` object. Users who saved a model with an older version of your
+package then need that model migrated to the new layout. mizer upgrades the
+*core* slots itself (see `?validParams`), and it lets your extension hook into
+the same machinery so that your migration runs automatically.
+
+### Record a version stamp on the object
+
+`getMetadata(params)$extensions` reports, for each extension in the chain, both
+the installation requirement and the version of the extension package that the
+object conforms to. Write entries with `recordExtension()`; do not modify the
+returned metadata directly. Stamp the installed version **only** when you create
+your component (or when you upgrade the object); for ordinary modifications
+call `recordExtension()` without a `version`, so the existing stamp is
+preserved:
+
+```r
+# in your setup function, when the component is first created:
+params <- recordExtension(params, "myExtension",
+                          version = as.character(packageVersion("myExtension")))
+
+# on later modifications, preserve the stamp:
+params <- recordExtension(params, "myExtension")
+```
+
+Stamping only on create/upgrade is important: if an ordinary modification
+re-stamped to the installed version, an object could claim to be current and
+skip a migration it actually needs.
+
+### Provide an `upgrade` method
+
+mizer registers its core upgrades as methods of the S3 generic
+`utils::upgrade()`. Register your own method for your subclass and have it
+perform **only** your migration. It must be idempotent, must **not** call
+`NextMethod()`, and must **not** touch the version stamp — mizer's orchestrator
+re-stamps the object after calling your method.
+
+```r
+#' @exportS3Method utils::upgrade
+upgrade.myExtension <- function(object, ...) {
+    # Detect the old layout structurally and migrate it. Safe to run twice.
+    if (!is.null(object@other_params$old_location)) {
+        object@other_params$new_location <- object@other_params$old_location
+        object@other_params$old_location <- NULL
+    }
+    object
+}
+```
+
+### How it fires
+
+`needs_upgrading()` returns `TRUE` when the core mizer version is out of date
+**or** when any extension's recorded stamp is missing or older than the
+installed package version. When a user runs the object through `validParams()`
+(directly, or via `readParams()`, `project()`, a setter, …) mizer's orchestrator
+runs the core upgrade if needed and then calls each out-of-date extension's
+`upgrade` method in turn, re-stamping each afterwards. A missing stamp counts as
+out of date, so objects created before you adopted version tracking are migrated
+and stamped on first use. Because your method is idempotent this is always safe.
+
+Note that calling `upgrade()` on an object directly only dispatches to a single
+method and does not run the full chain — `validParams(params)` (or
+`readParams()`) is the entry point users should rely on.
+
+## See also
+
+- [mizerExtensionTemplate](https://github.com/sizespectrum/mizerExtensionTemplate)
+  — a template package that puts all the mechanisms described here into a
+  minimal, working package you can clone and adapt.
+- the `extend-mizer` skill for the full menu of extension mechanisms — custom
+  rate functions, external encounter and mortality, components, and subclassing.
+- the [guide to using mizer extension
+  packages](guide-use-extension-packages.html), which explains how to use
+  extension packages and save/load models.
+- the `upgrade-extension-package` skill, for bringing an *existing* package to
+  the state described here — one written against the S4 mizer, or one that has
+  fallen behind a later release. It lists the changes to make in order and the
+  symptoms that point at each one; this page stays the description of the
+  finished package.
+- `?coerceToExtensionClass`
+- `?recordExtension`
+
+---
+
+## Project notes
+
+If `.claude/skills/create-extension-package/NOTES.md` exists, read it too
+before you start: it records what earlier work in *this* project found, and
+wins over the guidance above wherever the two disagree.
+
+Write what you learn about this project into that file, creating it if it is
+not there. Use that path whichever copy of this skill you are reading, so
+that every agent working in this project shares one set of notes. Do not edit
+`SKILL.md`: it is installed by `mizerAgents::setup_mizer_agent()` and your
+edits would be reported as a conflict on the next run rather than kept.
+
+A lesson that is true of mizer in general, rather than of this project,
+belongs upstream where every project gets it. Tell the user, and offer to
+report it at <https://github.com/sizespectrum/mizerAgents/issues>.

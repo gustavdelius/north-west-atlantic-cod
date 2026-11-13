@@ -1,0 +1,64 @@
+"predator","prey","proportion"
+"Cod","Cod",0.0780217589668504
+"Cod","Haddock",0.0627745462109005
+"Cod","Silver hake",0.101667381604102
+"Cod","American plaice",0.172290419795082
+"Cod","Herring",0.179318858418538
+"Cod","Sand lance",0.103322748138111
+"Cod","Capelin",0.0071595812662561
+"Cod","Resource",0.295444705600161
+"Cod","External",0
+"Haddock","Cod",0.00545104899683563
+"Haddock","Haddock",0.00455292488764129
+"Haddock","Silver hake",0.0159979443649364
+"Haddock","American plaice",0.0405302527185595
+"Haddock","Herring",0.0390446297034455
+"Haddock","Sand lance",0.127130179035337
+"Haddock","Capelin",0.00554584686278889
+"Haddock","Resource",0.761747173430456
+"Haddock","External",0
+"Silver hake","Cod",0.010505273705709
+"Silver hake","Haddock",0.00826746162341466
+"Silver hake","Silver hake",0.0401690467015021
+"Silver hake","American plaice",0.0881062744530647
+"Silver hake","Herring",0.0966843130601162
+"Silver hake","Sand lance",0.184472026469277
+"Silver hake","Capelin",0.0103638872285668
+"Silver hake","Resource",0.561431716758349
+"Silver hake","External",0
+"American plaice","Cod",0.00793001163914882
+"American plaice","Haddock",0.00647428213863822
+"American plaice","Silver hake",0.026809058424216
+"American plaice","American plaice",0.06568426313729
+"American plaice","Herring",0.0662281393427857
+"American plaice","Sand lance",0.176603078455512
+"American plaice","Capelin",0.00872153577981263
+"American plaice","Resource",0.641549631082596
+"American plaice","External",0
+"Herring","Cod",1.91030997334376e-05
+"Herring","Haddock",1.34059607506547e-05
+"Herring","Silver hake",6.77266759018055e-05
+"Herring","American plaice",0.000375140862258995
+"Herring","Herring",0.000248117905197723
+"Herring","Sand lance",0.00279002078859856
+"Herring","Capelin",8.53184368294608e-05
+"Herring","Resource",0.996401166270729
+"Herring","External",0
+"Sand lance","Cod",6.8665437103843e-09
+"Sand lance","Haddock",4.34820767703054e-09
+"Sand lance","Silver hake",2.3738834811789e-08
+"Sand lance","American plaice",2.77700335653578e-07
+"Sand lance","Herring",1.25559902317572e-07
+"Sand lance","Sand lance",3.39483942055739e-06
+"Sand lance","Capelin",8.07498229016566e-08
+"Sand lance","Resource",0.999996086196932
+"Sand lance","External",0
+"Capelin","Cod",3.26350501059888e-06
+"Capelin","Haddock",2.11733730839315e-06
+"Capelin","Silver hake",1.11921541917747e-05
+"Capelin","American plaice",0.000110708483442659
+"Capelin","Herring",5.46850372088338e-05
+"Capelin","Sand lance",0.00116906137442582
+"Capelin","Capelin",2.99444604545781e-05
+"Capelin","Resource",0.998619027647957
+"Capelin","External",0

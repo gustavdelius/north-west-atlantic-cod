@@ -1,0 +1,27 @@
+Mizer parameter defaults are now at edition 3.
+kappa 3.00: max |biomass error| 0.968
+  round 1 (damp 1.00): max |error| 8.923, attractor fixed_point, max erepro 1.05
+  round 2 (damp 0.50): max |error| 0.859, attractor fixed_point, max erepro 0.22
+  round 3 (damp 0.50): max |error| 0.526, attractor fixed_point, max erepro 0.151
+  round 4 (damp 0.50): max |error| 6.076, attractor fixed_point, max erepro 0.295
+  round 5 (damp 0.50): max |error| 2.644, attractor fixed_point, max erepro 6.77
+  round 6 (damp 0.25): max |error| 0.829, attractor fixed_point, max erepro 0.239
+  round 7 (damp 0.25): max |error| 3.641, attractor fixed_point, max erepro 0.249
+  round 8 (damp 0.25): max |error| 9.058, attractor fixed_point, max erepro 0.991
+  round 9 (damp 0.25): max |error| 8.083, attractor fixed_point, max erepro 2.91
+  round 10 (damp 0.12): max |error| 28.841, attractor NA, max erepro 3.85e+05
+  round 11 (damp 0.06): max |error| 3.324, attractor fixed_point, max erepro 0.152
+  round 12 (damp 0.06): max |error| 3.123, attractor fixed_point, max erepro 0.121
+  round 13 (damp 0.06): max |error| 6.171, attractor fixed_point, max erepro 0.445
+  round 14 (damp 0.06): max |error| 13.134, attractor NA, max erepro 344
+  round 15 (damp 0.03): max |error| 2.080, attractor fixed_point, max erepro 0.4
+  round 16 (damp 0.03): max |error| 3.740, attractor fixed_point, max erepro 0.504
+  round 17 (damp 0.03): max |error| 7.061, attractor fixed_point, max erepro 7.98
+  round 18 (damp 0.02): max |error| 0.986, attractor fixed_point, max erepro 0.306
+  round 19 (damp 0.02): max |error| 1.430, attractor fixed_point, max erepro 0.329
+  round 20 (damp 0.02): max |error| 2.331, attractor fixed_point, max erepro 0.328
+final: 20 iterations, max |biomass error| 0.526, attractor fixed_point
+            Cod         Haddock     Silver hake American plaice         Herring 
+          0.341           0.424           0.188           0.078           0.364 
+     Sand lance         Capelin 
+          0.526           0.140 

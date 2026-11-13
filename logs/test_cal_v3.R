@@ -1,0 +1,11 @@
+source("R/functions.R"); options(mizer_info_level = 0); cfg <- default_config(); t0 <- Sys.time()
+p <- readParams("models/calibration_stage1.rds")
+sp3 <- read.csv(file.path(DATA_DIR, "species_params.csv"))
+species_params(p)$biomass_observed <- sp3$biomass_observed
+p <- set_resource_rate(p, cfg)
+q <- calibrate_v3n(p, cfg, outer = 4, s_path = c(5, 10, 20))
+saveParams(q, "models/calibration_cache_test.rds")
+print(round(biomass_error(q), 3)); print(signif(species_params(q)$erepro, 3))
+print(round(age_mat(q), 2)); print(species_params(q)$age_mat)
+cat("cod yield kt:", gm2_to_kt(getYield(q)["Cod"]), "\n")
+cat("isSteady:", isSteady(q), "\n"); print(Sys.time() - t0)
