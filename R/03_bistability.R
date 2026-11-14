@@ -3,8 +3,9 @@
 # Acceptance test 3 (key test): are there two attractors?
 #   (a) identical parameters and efforts (cod F = 0; other gears at their
 #       moratorium levels), two initial states: the 1980-85 baseline
-#       (cod-dominated) and the modelled 2025 state of the documented-F
-#       hindcast (02); 500-year projections.
+#       (cod-dominated) and the collapsed 2025 state (02, run B: documented
+#       F plus adult M 0.8 in 1990-2025; documented F alone leaves cod high);
+#       500-year projections with the baseline parameters.
 #   (b) invasion test: the community with cod exactly absent is brought to
 #       equilibrium, cod is reintroduced at 1e-6 of its baseline abundance and
 #       its per-capita growth rate is fitted on the rare phase (from year 10
@@ -135,7 +136,7 @@ pA <- traj |> filter(species == "Cod") |>
     ggplot(aes(year, ssb / base_ssb, colour = start)) + geom_line(linewidth = 0.8) +
     scale_y_log10() + scale_colour_manual(values = pal,
                                           labels = c(baseline = "from 1980-85 baseline",
-                                                     collapsed = "from modelled 2025 state")) +
+                                                     collapsed = "from collapsed 2025 state (run B)")) +
     labs(x = "Years at cod F = 0", y = "Cod SSB relative to baseline", colour = "Initial state",
          title = "a  Same parameters, same effort, two starts") +
     theme_paper() + theme(legend.position = "inside", legend.position.inside = c(0.65, 0.25))

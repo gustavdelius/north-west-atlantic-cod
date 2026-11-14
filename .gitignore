@@ -3,3 +3,6 @@
 .RData
 .Ruserdata
 .posit/assistant
+
+# regenerable cache of website scenario runs
+website/data/cache/

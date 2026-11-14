@@ -1,31 +1,33 @@
-  repro_forage target_forage_1995_2004      cod   forage   haddock silver_hake
-1   0.02025881                    7.87 2.365101 1.760023 0.9102223    1.210307
-    plaice  herring forage_2005_12 cod_2005_12
-1 1.023635 1.552953       1.118502    4.992677
-                                                        criterion  value
-1                                               biomass error Cod  0.001
-2                                           biomass error Haddock  0.005
-3                                       biomass error Silver hake  0.003
-4                                   biomass error American plaice  0.006
-5                                           biomass error Herring -0.002
-6                                        biomass error Sand lance -0.001
-7                                           biomass error Capelin  0.001
-8                              cod yield (kt) vs 53.5 kt landings   57.3
-9                                             age at maturity Cod   4.52
-10                                        age at maturity Haddock      3
-11                                    age at maturity Silver hake   2.01
-12                                age at maturity American plaice   6.01
-13                                        age at maturity Herring    3.5
-14                                     age at maturity Sand lance      2
-15                                        age at maturity Capelin    2.5
-16                                                     max erepro 0.0411
-17                                                       isSteady   TRUE
-18        max |log biomass change| over 100 yr at baseline effort  0.425
-19                                            max real eigenvalue  0.014
-20 cod collapse F (equilibrium SSB < 10 % of baseline; 0.1 steps)    0.4
-21         cod F at maximum equilibrium yield (0.1 steps, >= 0.4)    0.4
-22                                                          s_egg     20
-23                                      forage reproduction level   0.02
+  repro_forage critical_level_for_stability lower_bound target_forage_1995_2004
+1    0.1706693                     0.119623    0.169623                    7.87
+       cod   forage   haddock silver_hake   plaice  herring forage_2005_12
+1 2.184418 1.355398 0.9119629    1.138171 1.024949 1.352532      0.7034486
+  cod_2005_12
+1    4.519886
+                                                        criterion    value
+1                                               biomass error Cod    0.001
+2                                           biomass error Haddock    0.005
+3                                       biomass error Silver hake    0.003
+4                                   biomass error American plaice    0.006
+5                                           biomass error Herring   -0.002
+6                                        biomass error Sand lance   -0.001
+7                                           biomass error Capelin    0.001
+8                              cod yield (kt) vs 53.5 kt landings     57.3
+9                                             age at maturity Cod     4.52
+10                                        age at maturity Haddock        3
+11                                    age at maturity Silver hake     2.01
+12                                age at maturity American plaice     6.01
+13                                        age at maturity Herring      3.5
+14                                     age at maturity Sand lance        2
+15                                        age at maturity Capelin      2.5
+16                                                     max erepro   0.0486
+17                                                       isSteady     TRUE
+18        max |log biomass change| over 100 yr at baseline effort    0.153
+19                                            max real eigenvalue -0.00626
+20 cod collapse F (equilibrium SSB < 10 % of baseline; 0.1 steps)      0.5
+21         cod F at maximum equilibrium yield (0.1 steps, >= 0.4)      0.4
+22                                                          s_egg       20
+23                                      forage reproduction level    0.171
                    target
 1           within +-15 %
 2           within +-15 %

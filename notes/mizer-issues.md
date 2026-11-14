@@ -69,3 +69,38 @@ silver-hake runaway as well. The help pages document that Newton can converge
 to unstable fixed points; whether a runaway with reproduction held fixed is
 expected is unclear. Work-around: keep the best fixed point with all
 erepro < 1 and accept a looser calibration (max error 61 %).
+
+## 4. steadySingleSpecies() (and hence matchGrowth()) is far from the identity on a steady state of the v3 model
+
+**Status:** observed with project files; a portable reprex with
+`NS_species_params` (editions 2 and 3) shows only a 0-2 % change, so the
+effect needs this model's steep early-life mortality to become large. Not
+filed upstream.
+
+The help page says `steadySingleSpecies()` "solves the steady-state equation
+with these growth and death rates and the current abundance at the smallest
+size". Applied to a model that *is* at steady state, it should therefore
+return (nearly) the same spectra. On the v3 calibration at s = 5
+(`isSteady()` TRUE, R_max = Inf for all species, hand-set `ext_mort` holding
+the early-life background mortality) it does not:
+
+```r
+library(mizer)
+p <- readParams("notes/reprex_cal_s5.rds")   # v3 calibration at s = 5 (saved with saveParams)
+isSteady(p)                                            # TRUE
+getBiomass(steadySingleSpecies(p, keep = "egg")) / getBiomass(p)
+#  Cod 0.371  Haddock 0.628  Silver hake 1.14  Plaice 0.445  Herring 0.0414  Sand lance 0.316  Capelin 0.236
+getBiomass(steadySingleSpecies(p, keep = "biomass")) / getBiomass(p)
+#  1.02 1.01 1 1.18 4.97 1.07 1.11
+packageVersion("mizer")                                # 3.4.0.9003, defaults_edition(3)
+```
+
+A likely cause is that the steady-state equation is solved with a different
+discretisation from the edition-3 transport scheme used by `project()`,
+which matters where mortality/growth is large (here Z/G = 0.5 background plus
+forage predation on larvae). Because `matchGrowth()` ends with
+`steadySingleSpecies()`, a growth rescaling of < 0.5 % turned the calibrated
+state into one with silver hake x20 and the other species near zero.
+Work-around in v3: `scale_growth()` in `R/functions.R` does the same
+rescaling of gamma, h, ks and k but keeps the spectra, and
+`tuneSteadyState()` re-settles them.

@@ -23,21 +23,6 @@ base_ssb <- getSSB(params)[["Cod"]]
 base_forage <- sum(getBiomass(params)[FORAGE])
 eh <- read_effort_history()
 mor <- moratorium_effort(eh)
-M_ADULT <- 0.8; L_ADULT <- 35
-
-elevate_M <- function(p) {
-    sp <- species_params(p)
-    w_adult <- sp["Cod", "a"] * L_ADULT^sp["Cod", "b"]
-    pm <- getPredMort(p)["Cod", ]
-    em <- ext_mort(p)
-    big <- w(p) >= w_adult
-    em["Cod", big] <- pmax(em["Cod", big], M_ADULT - pm[big])
-    ext_mort(p) <- em
-    p
-}
-s_off <- function(p) { im <- interaction_matrix(p); im[FORAGE, GROUNDFISH] <- 1
-    interaction_matrix(p) <- im; p }
-
 combos <- expand.grid(M = c("baseline", "elevated"), forage_mechanism = c("on", "off"),
                       stringsAsFactors = FALSE)
 eh1 <- eh[eh$year < 1990, ]; eh2 <- eh[eh$year >= 1990, ]

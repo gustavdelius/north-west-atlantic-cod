@@ -1,0 +1,46 @@
+         M forage_mechanism cod_ssb_2000_02_rel_1980_85
+1 baseline               on                  2.92849029
+2 elevated               on                  0.04382660
+3 baseline              off                  3.06455886
+4 elevated              off                  0.05121729
+  cod_survey_ratio_1995_2004 forage_ratio_1995_2004 forage_ratio_2005_2012
+1                 2.18289224              1.3589575              0.7030043
+2                 0.08132261              1.8441923              1.2735206
+3                 2.31838030              0.8511049              0.3085385
+4                 0.10267727              1.1243690              0.4928132
+  cod_ssb_2025_rel cod_ssb_2085_rel years_to_50pct_from_1993
+1     6.1023854723     6.556950e+00                        2
+2     0.0002017002     1.203564e-10                       NA
+3     5.7770181065     6.544554e+00                        2
+4     0.0002038894     9.593262e-11                       NA
+   F_forage  D        M_after_2025 years_to_50pct cod_ssb_2050_rel
+1       0.1 10           stays 0.8             NA     7.114484e-07
+2       0.5 10           stays 0.8             NA     5.476384e-07
+3       1.0 10           stays 0.8             NA     5.218046e-07
+4       2.0 10           stays 0.8             NA     5.105682e-07
+5       0.5 30           stays 0.8             NA     5.413511e-07
+6       1.0 30           stays 0.8             NA     5.210661e-07
+7       2.0 30           stays 0.8             NA     5.105492e-07
+8       0.1 10 returns to baseline             39     3.570839e-02
+9       0.5 10 returns to baseline             43     2.587941e-02
+10      1.0 10 returns to baseline             43     2.429979e-02
+11      2.0 10 returns to baseline             43     2.368204e-02
+12      0.5 30 returns to baseline             43     2.543058e-02
+13      1.0 30 returns to baseline             43     2.424995e-02
+14      2.0 30 returns to baseline             43     2.368099e-02
+   cod_ssb_2125_rel
+1      1.059724e-14
+2      3.291571e-15
+3      2.737267e-15
+4      2.643296e-15
+5      2.752402e-15
+6      2.679040e-15
+7      2.646113e-15
+8      6.204048e+00
+9      4.221930e+00
+10     4.202453e+00
+11     4.201413e+00
+12     4.201662e+00
+13     4.201411e+00
+14     4.200365e+00
+07_adult_mortality_alternative.R done

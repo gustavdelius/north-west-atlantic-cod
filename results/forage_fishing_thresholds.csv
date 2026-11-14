@@ -1,0 +1,14 @@
+"D","min_F_for_persistent_recovery","kind","F_forage","min_D_for_persistent_recovery"
+5,0.25,"by duration",NA,NA
+10,0.25,"by duration",NA,NA
+15,0.25,"by duration",NA,NA
+20,0.25,"by duration",NA,NA
+30,0.25,"by duration",NA,NA
+100,0.25,"by duration",NA,NA
+NA,NA,"by forage F",0.25,5
+NA,NA,"by forage F",0.5,5
+NA,NA,"by forage F",0.75,5
+NA,NA,"by forage F",1,5
+NA,NA,"by forage F",1.5,5
+NA,NA,"by forage F",2,5
+NA,NA,"by forage F",3,5

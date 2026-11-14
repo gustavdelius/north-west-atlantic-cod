@@ -1,0 +1,19 @@
+"quantity","value"
+"cod_free_equilibrium_years",400
+"cod_free_converged",1
+"forage_biomass_cod_free_rel_baseline",19.3488467970443
+"cod_invasion_growth_rate_per_yr",-0.00985810073386095
+"invasion_fit_r2",0.989122442594019
+"invasion_fit_window_start_yr",10
+"invasion_fit_window_end_yr",150
+"forage_kill_fraction_cod_1mg_1g_baseline",0.05821241120008
+"forage_kill_fraction_cod_1mg_1g_cod_free",0.605523196179048
+"cod_survival_1mg_1g_baseline",0.0208485713599335
+"cod_survival_1mg_1g_cod_free",1.9360681104038e-05
+"cod_free_biomass_rel_Cod",0
+"cod_free_biomass_rel_Haddock",2.83813858440744e-17
+"cod_free_biomass_rel_Silver hake",1.55458563381344e-20
+"cod_free_biomass_rel_American plaice",2.50928534737378e-20
+"cod_free_biomass_rel_Herring",22.5523135869233
+"cod_free_biomass_rel_Sand lance",15.4783602485576
+"cod_free_biomass_rel_Capelin",14.3011219519567

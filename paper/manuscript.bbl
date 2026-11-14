@@ -1,0 +1,2901 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{adekoya2026code}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=73f5a4c9ea986c82eeb088a11bf7c07f}{%
+           family={Adekoya},
+           familyi={A\bibinitperiod},
+           given={Ezekiel\bibnamedelima O.},
+           giveni={E\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{73f5a4c9ea986c82eeb088a11bf7c07f}
+      \strng{fullhash}{73f5a4c9ea986c82eeb088a11bf7c07f}
+      \strng{fullhashraw}{73f5a4c9ea986c82eeb088a11bf7c07f}
+      \strng{bibnamehash}{73f5a4c9ea986c82eeb088a11bf7c07f}
+      \strng{authorbibnamehash}{73f5a4c9ea986c82eeb088a11bf7c07f}
+      \strng{authornamehash}{73f5a4c9ea986c82eeb088a11bf7c07f}
+      \strng{authorfullhash}{73f5a4c9ea986c82eeb088a11bf7c07f}
+      \strng{authorfullhashraw}{73f5a4c9ea986c82eeb088a11bf7c07f}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{GitHub repository}
+      \field{note}{Accompanies Adekoya et al. (2026), ICES J. Mar. Sci. 83: fsag195. Accessed 13 November 2026}
+      \field{title}{{ESS\_Restructured}: code and data for a multispecies size spectrum model of the {Eastern} {Scotian Shelf}}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://github.com/Ezekiel-Adekoya/ESS_Restructured
+      \endverb
+      \verb{url}
+      \verb https://github.com/Ezekiel-Adekoya/ESS_Restructured
+      \endverb
+    \endentry
+    \entry{adekoya2026reexamining}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=73f5a4c9ea986c82eeb088a11bf7c07f}{%
+           family={Adekoya},
+           familyi={A\bibinitperiod},
+           given={Ezekiel\bibnamedelima O},
+           giveni={E\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=70ba3913bdd4b17240edcae9716711b8}{%
+           family={Tittensor},
+           familyi={T\bibinitperiod},
+           given={Derek\bibnamedelima P},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=b1565f5499e079a6612dd9796aba8d3e}{%
+           family={Boyce},
+           familyi={B\bibinitperiod},
+           given={Daniel\bibnamedelima G},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+        {{hash=baa2d274799fdbeed10b3de743c1d583}{%
+           family={Fulton},
+           familyi={F\bibinitperiod},
+           given={Elizabeth\bibnamedelima A},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=ca071778a36f32548017e40efc478a78}{%
+           family={Blanchard},
+           familyi={B\bibinitperiod},
+           given={Julia\bibnamedelima L},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6516f2b2cf6e39a19cf53d2d17058c7}
+      \strng{fullhash}{464f24a3c995b404351255efb63a7901}
+      \strng{fullhashraw}{464f24a3c995b404351255efb63a7901}
+      \strng{bibnamehash}{464f24a3c995b404351255efb63a7901}
+      \strng{authorbibnamehash}{464f24a3c995b404351255efb63a7901}
+      \strng{authornamehash}{b6516f2b2cf6e39a19cf53d2d17058c7}
+      \strng{authorfullhash}{464f24a3c995b404351255efb63a7901}
+      \strng{authorfullhashraw}{464f24a3c995b404351255efb63a7901}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ICES Journal of Marine Science}
+      \field{number}{10}
+      \field{title}{Re-examining top-down forcing on the {Eastern} {Scotian Shelf} fish community using a multispecies size spectrum model}
+      \field{volume}{83}
+      \field{year}{2026}
+      \field{pages}{fsag195}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1093/icesjms/fsag195
+      \endverb
+    \endentry
+    \entry{blanchard2014evaluating}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=ca071778a36f32548017e40efc478a78}{%
+           family={Blanchard},
+           familyi={B\bibinitperiod},
+           given={Julia\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=1a35c0fd5dbb58cb018b332864ed40f7}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={Ken\bibnamedelima H.},
+           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=e7e3737a3af29ff4127c09d8017cba9b}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={Finlay},
+           giveni={F\bibinitperiod}}}%
+        {{hash=51c300dd8f853fd9122bf9b73f7f7e9c}{%
+           family={Hintzen},
+           familyi={H\bibinitperiod},
+           given={Niels\bibnamedelima T.},
+           giveni={N\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=b650aa308d7b49ee9dd13e6341ff3def}{%
+           family={Piet},
+           familyi={P\bibinitperiod},
+           given={Gerjan},
+           giveni={G\bibinitperiod}}}%
+        {{hash=f25468f366eb69215df80bb6ba1952ec}{%
+           family={Jennings},
+           familyi={J\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{69d47f8dbc8c5fff323eda511d509a17}
+      \strng{fullhash}{178097af2e82d90c1f6f1efdbe38cec6}
+      \strng{fullhashraw}{178097af2e82d90c1f6f1efdbe38cec6}
+      \strng{bibnamehash}{178097af2e82d90c1f6f1efdbe38cec6}
+      \strng{authorbibnamehash}{178097af2e82d90c1f6f1efdbe38cec6}
+      \strng{authornamehash}{69d47f8dbc8c5fff323eda511d509a17}
+      \strng{authorfullhash}{178097af2e82d90c1f6f1efdbe38cec6}
+      \strng{authorfullhashraw}{178097af2e82d90c1f6f1efdbe38cec6}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Ecology}
+      \field{number}{3}
+      \field{title}{Evaluating targets and trade-offs among fisheries and conservation objectives using a multispecies size spectrum model}
+      \field{volume}{51}
+      \field{year}{2014}
+      \field{pages}{612\bibrangedash 622}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1111/1365-2664.12238
+      \endverb
+    \endentry
+    \entry{bowen1994offshore}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=9cf00b1cc7052c2d80e94069c8e64bcc}{%
+           family={Bowen},
+           familyi={B\bibinitperiod},
+           given={WD},
+           giveni={W\bibinitperiod}}}%
+        {{hash=2f03e2471756a6af05e78c96057f65f2}{%
+           family={Harrison},
+           familyi={H\bibinitperiod},
+           given={GD},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{4217c2b2ff2554cbc24cfb2538d0c9bc}
+      \strng{fullhash}{4217c2b2ff2554cbc24cfb2538d0c9bc}
+      \strng{fullhashraw}{4217c2b2ff2554cbc24cfb2538d0c9bc}
+      \strng{bibnamehash}{4217c2b2ff2554cbc24cfb2538d0c9bc}
+      \strng{authorbibnamehash}{4217c2b2ff2554cbc24cfb2538d0c9bc}
+      \strng{authornamehash}{4217c2b2ff2554cbc24cfb2538d0c9bc}
+      \strng{authorfullhash}{4217c2b2ff2554cbc24cfb2538d0c9bc}
+      \strng{authorfullhashraw}{4217c2b2ff2554cbc24cfb2538d0c9bc}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Marine Ecology Progress Series}
+      \field{title}{Offshore diet of grey seals \textit{Halichoerus grypus} near {Sable Island}, {Canada}}
+      \field{volume}{112}
+      \field{year}{1994}
+      \field{pages}{1\bibrangedash 11}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.3354/meps112001
+      \endverb
+    \endentry
+    \entry{bowen2003sustained}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=9cf00b1cc7052c2d80e94069c8e64bcc}{%
+           family={Bowen},
+           familyi={B\bibinitperiod},
+           given={W.D},
+           giveni={W\bibinitperiod}}}%
+        {{hash=704e91ea4fa857bf3565c970f4d93f7e}{%
+           family={McMillan},
+           familyi={M\bibinitperiod},
+           given={J},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b0fcd558914008e269ff57b041e820bd}{%
+           family={Mohn},
+           familyi={M\bibinitperiod},
+           given={R},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{89cd29d1d92cfccd1a6a1c16d497a86f}
+      \strng{fullhash}{d9551f821f83b0a79b750206ae59fa3b}
+      \strng{fullhashraw}{d9551f821f83b0a79b750206ae59fa3b}
+      \strng{bibnamehash}{d9551f821f83b0a79b750206ae59fa3b}
+      \strng{authorbibnamehash}{d9551f821f83b0a79b750206ae59fa3b}
+      \strng{authornamehash}{89cd29d1d92cfccd1a6a1c16d497a86f}
+      \strng{authorfullhash}{d9551f821f83b0a79b750206ae59fa3b}
+      \strng{authorfullhashraw}{d9551f821f83b0a79b750206ae59fa3b}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ICES Journal of Marine Science}
+      \field{number}{6}
+      \field{title}{Sustained exponential population growth of grey seals at {Sable Island}, {Nova Scotia}}
+      \field{volume}{60}
+      \field{year}{2003}
+      \field{pages}{1265\bibrangedash 1274}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/s1054-3139(03)00147-4
+      \endverb
+    \endentry
+    \entry{bowen2013marine}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=9cf00b1cc7052c2d80e94069c8e64bcc}{%
+           family={Bowen},
+           familyi={B\bibinitperiod},
+           given={W.\bibnamedelimi D.},
+           giveni={W\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=795e234011b75c0ab66f026f5d93c57e}{%
+           family={Lidgard},
+           familyi={L\bibinitperiod},
+           given={Damian},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{87eabc700dedac5c078beba9431f1779}
+      \strng{fullhash}{87eabc700dedac5c078beba9431f1779}
+      \strng{fullhashraw}{87eabc700dedac5c078beba9431f1779}
+      \strng{bibnamehash}{87eabc700dedac5c078beba9431f1779}
+      \strng{authorbibnamehash}{87eabc700dedac5c078beba9431f1779}
+      \strng{authornamehash}{87eabc700dedac5c078beba9431f1779}
+      \strng{authorfullhash}{87eabc700dedac5c078beba9431f1779}
+      \strng{authorfullhashraw}{87eabc700dedac5c078beba9431f1779}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mammal Review}
+      \field{number}{3}
+      \field{title}{Marine mammal culling programs: review of effects on predator and prey populations}
+      \field{volume}{43}
+      \field{year}{2013}
+      \field{pages}{207\bibrangedash 220}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1111/j.1365-2907.2012.00217.x
+      \endverb
+    \endentry
+    \entry{bundy2004mass}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=d1649ff211a73c9e2f44f5f6cef60777}{%
+           family={Bundy},
+           familyi={B\bibinitperiod},
+           given={Alida},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Fisheries}%
+        {Oceans Canada}%
+      }
+      \strng{namehash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{fullhash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{fullhashraw}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{bibnamehash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{authorbibnamehash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{authornamehash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{authorfullhash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{authorfullhashraw}{d1649ff211a73c9e2f44f5f6cef60777}
+      \field{extraname}{1}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{2520}
+      \field{title}{Mass balance models of the eastern {Scotian} {Shelf} before and after the cod collapse and other ecosystem changes}
+      \field{type}{Can. Tech. Rep. Fish. Aquat. Sci.}
+      \field{year}{2004}
+      \verb{urlraw}
+      \verb https://publications.gc.ca/site/eng/9.574099/publication.html
+      \endverb
+      \verb{url}
+      \verb https://publications.gc.ca/site/eng/9.574099/publication.html
+      \endverb
+    \endentry
+    \entry{bundy2005structure}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=d1649ff211a73c9e2f44f5f6cef60777}{%
+           family={Bundy},
+           familyi={B\bibinitperiod},
+           given={Alida},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{fullhash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{fullhashraw}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{bibnamehash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{authorbibnamehash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{authornamehash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{authorfullhash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{authorfullhashraw}{d1649ff211a73c9e2f44f5f6cef60777}
+      \field{extraname}{2}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Canadian Journal of Fisheries and Aquatic Sciences}
+      \field{number}{7}
+      \field{title}{Structure and functioning of the eastern {Scotian Shelf} ecosystem before and after the collapse of groundfish stocks in the early 1990s}
+      \field{volume}{62}
+      \field{year}{2005}
+      \field{pages}{1453\bibrangedash 1473}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1139/f05-085
+      \endverb
+    \endentry
+    \entry{bundy2005can}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=d1649ff211a73c9e2f44f5f6cef60777}{%
+           family={Bundy},
+           familyi={B\bibinitperiod},
+           given={Alida},
+           giveni={A\bibinitperiod}}}%
+        {{hash=2437574b8b7bd0e51d5dcd5946aec2c8}{%
+           family={Fanning},
+           familyi={F\bibinitperiod},
+           given={L\bibnamedelima Paul},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{48249b04f86e1f9724c42b5f94f01e47}
+      \strng{fullhash}{48249b04f86e1f9724c42b5f94f01e47}
+      \strng{fullhashraw}{48249b04f86e1f9724c42b5f94f01e47}
+      \strng{bibnamehash}{48249b04f86e1f9724c42b5f94f01e47}
+      \strng{authorbibnamehash}{48249b04f86e1f9724c42b5f94f01e47}
+      \strng{authornamehash}{48249b04f86e1f9724c42b5f94f01e47}
+      \strng{authorfullhash}{48249b04f86e1f9724c42b5f94f01e47}
+      \strng{authorfullhashraw}{48249b04f86e1f9724c42b5f94f01e47}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Canadian Journal of Fisheries and Aquatic Sciences}
+      \field{number}{7}
+      \field{title}{Can {Atlantic} cod (\textit{Gadus morhua}) recover? Exploring trophic explanations for the non-recovery of the cod stock on the eastern {Scotian Shelf}, {Canada}}
+      \field{volume}{62}
+      \field{year}{2005}
+      \field{pages}{1474\bibrangedash 1489}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1139/f05-086
+      \endverb
+    \endentry
+    \entry{choi2004transition}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=a567065ac616a5d1c523b298eb497545}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Jae\bibnamedelima S},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=a5d755791d950b7db23040a193ebf876}{%
+           family={Frank},
+           familyi={F\bibinitperiod},
+           given={Kenneth\bibnamedelima T},
+           giveni={K\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=0d618c586c84d4bef5c2154a475e69a7}{%
+           family={Leggett},
+           familyi={L\bibinitperiod},
+           given={William\bibnamedelima C},
+           giveni={W\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=2a4e90f861d09872f311af2775e66b68}{%
+           family={Drinkwater},
+           familyi={D\bibinitperiod},
+           given={Ken},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{4f9f341d6051e263962bf8bad815e42d}
+      \strng{fullhash}{a10ecf6a19de30edda02401e08c6851e}
+      \strng{fullhashraw}{a10ecf6a19de30edda02401e08c6851e}
+      \strng{bibnamehash}{a10ecf6a19de30edda02401e08c6851e}
+      \strng{authorbibnamehash}{a10ecf6a19de30edda02401e08c6851e}
+      \strng{authornamehash}{4f9f341d6051e263962bf8bad815e42d}
+      \strng{authorfullhash}{a10ecf6a19de30edda02401e08c6851e}
+      \strng{authorfullhashraw}{a10ecf6a19de30edda02401e08c6851e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Canadian Journal of Fisheries and Aquatic Sciences}
+      \field{number}{4}
+      \field{title}{Transition to an alternate state in a continental shelf ecosystem}
+      \field{volume}{61}
+      \field{year}{2004}
+      \field{pages}{505\bibrangedash 510}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1139/f04-079
+      \endverb
+    \endentry
+    \entry{cosewic2010cod}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=a88b6f941e318ed8b0b9b086ffcfaee4}{%
+           family={{COSEWIC}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Committee on the Status of Endangered Wildlife in Canada}%
+      }
+      \list{location}{1}{%
+        {Ottawa}%
+      }
+      \strng{namehash}{a88b6f941e318ed8b0b9b086ffcfaee4}
+      \strng{fullhash}{a88b6f941e318ed8b0b9b086ffcfaee4}
+      \strng{fullhashraw}{a88b6f941e318ed8b0b9b086ffcfaee4}
+      \strng{bibnamehash}{a88b6f941e318ed8b0b9b086ffcfaee4}
+      \strng{authorbibnamehash}{a88b6f941e318ed8b0b9b086ffcfaee4}
+      \strng{authornamehash}{a88b6f941e318ed8b0b9b086ffcfaee4}
+      \strng{authorfullhash}{a88b6f941e318ed8b0b9b086ffcfaee4}
+      \strng{authorfullhashraw}{a88b6f941e318ed8b0b9b086ffcfaee4}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{xiii + 105 pp.}
+      \field{title}{{COSEWIC} assessment and status report on the {Atlantic} Cod \textit{Gadus morhua} in {Canada}}
+      \field{type}{techreport}
+      \field{year}{2010}
+      \verb{urlraw}
+      \verb https://wildlife-species.canada.ca/species-risk-registry/virtual_sara/files/cosewic/sr_Atlantic%20Cod_0810_e1.pdf
+      \endverb
+      \verb{url}
+      \verb https://wildlife-species.canada.ca/species-risk-registry/virtual_sara/files/cosewic/sr_Atlantic%20Cod_0810_e1.pdf
+      \endverb
+    \endentry
+    \entry{cury2011global}{article}{}{}
+      \name{author}{14}{}{%
+        {{hash=7e731c27ad646bf65a2f8de6dd626ac2}{%
+           family={Cury},
+           familyi={C\bibinitperiod},
+           given={Philippe\bibnamedelima M.},
+           giveni={P\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=0d83023ba4256796f184aa0b7b23bbc4}{%
+           family={Boyd},
+           familyi={B\bibinitperiod},
+           given={Ian\bibnamedelima L.},
+           giveni={I\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=db3808fb3e7acb431416788363c32485}{%
+           family={Bonhommeau},
+           familyi={B\bibinitperiod},
+           given={Sylvain},
+           giveni={S\bibinitperiod}}}%
+        {{hash=a3583c973014b3271456c282b2d81015}{%
+           family={Anker-Nilssen},
+           familyi={A\bibinithyphendelim N\bibinitperiod},
+           given={Tycho},
+           giveni={T\bibinitperiod}}}%
+        {{hash=45716c59211bd5e9c902206d4ceb3b7b}{%
+           family={Crawford},
+           familyi={C\bibinitperiod},
+           given={Robert\bibnamedelimb J.\bibnamedelimi M.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=20d9446c0225754bf722407697847987}{%
+           family={Furness},
+           familyi={F\bibinitperiod},
+           given={Robert\bibnamedelima W.},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=4c3d9a6d7b9828e4daa1dd6a04a6227f}{%
+           family={Mills},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=2ee719eba5e4d6c5e96f68ffbf38348b}{%
+           family={Murphy},
+           familyi={M\bibinitperiod},
+           given={Eugene\bibnamedelima J.},
+           giveni={E\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=40eff921933bfc47ca43b33dcd746da1}{%
+           family={Österblom},
+           familyi={Ö\bibinitperiod},
+           given={Henrik},
+           giveni={H\bibinitperiod}}}%
+        {{hash=b3651997aa451b617a8c4a43c2723ff5}{%
+           family={Paleczny},
+           familyi={P\bibinitperiod},
+           given={Michelle},
+           giveni={M\bibinitperiod}}}%
+        {{hash=293151147b51afa6fd451f25549b1167}{%
+           family={Piatt},
+           familyi={P\bibinitperiod},
+           given={John\bibnamedelima F.},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=80944a3694f3f39e46dd02378a4a480b}{%
+           family={Roux},
+           familyi={R\bibinitperiod},
+           given={Jean-Paul},
+           giveni={J\bibinithyphendelim P\bibinitperiod}}}%
+        {{hash=cd5e00bd4f7cc06b080e985caea15c89}{%
+           family={Shannon},
+           familyi={S\bibinitperiod},
+           given={Lynne},
+           giveni={L\bibinitperiod}}}%
+        {{hash=7783694e4c8a9a35442fa7a01df3fec9}{%
+           family={Sydeman},
+           familyi={S\bibinitperiod},
+           given={William\bibnamedelima J.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{830bcb4055522b6136531f5937e9a28e}
+      \strng{fullhash}{04ddf7b432b278f8851a4befb60d54d1}
+      \strng{fullhashraw}{04ddf7b432b278f8851a4befb60d54d1}
+      \strng{bibnamehash}{04ddf7b432b278f8851a4befb60d54d1}
+      \strng{authorbibnamehash}{04ddf7b432b278f8851a4befb60d54d1}
+      \strng{authornamehash}{830bcb4055522b6136531f5937e9a28e}
+      \strng{authorfullhash}{04ddf7b432b278f8851a4befb60d54d1}
+      \strng{authorfullhashraw}{04ddf7b432b278f8851a4befb60d54d1}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{6063}
+      \field{title}{Global Seabird Response to Forage Fish Depletion---One-Third for the Birds}
+      \field{volume}{334}
+      \field{year}{2011}
+      \field{pages}{1703\bibrangedash 1706}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1126/science.1212928
+      \endverb
+    \endentry
+    \entry{daan1985predation}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=231fcf8cb9b7da69c782751fc1c13945}{%
+           family={Daan},
+           familyi={D\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=e903d0d6bb55f17f9a5aa46ed8314be1}{%
+           family={Rijnsdorp},
+           familyi={R\bibinitperiod},
+           given={A.\bibnamedelimi D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=de2b75d45b01ce1c11a4aa41d9c22d83}{%
+           family={Van\bibnamedelima Overbeeke},
+           familyi={V\bibinitperiod\bibinitdelim O\bibinitperiod},
+           given={G.\bibnamedelimi R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{2c1963af0e9faa8fb93bd3e66a4cb948}
+      \strng{fullhash}{ba37c8bede247536e15c224234ddcd30}
+      \strng{fullhashraw}{ba37c8bede247536e15c224234ddcd30}
+      \strng{bibnamehash}{ba37c8bede247536e15c224234ddcd30}
+      \strng{authorbibnamehash}{ba37c8bede247536e15c224234ddcd30}
+      \strng{authornamehash}{2c1963af0e9faa8fb93bd3e66a4cb948}
+      \strng{authorfullhash}{ba37c8bede247536e15c224234ddcd30}
+      \strng{authorfullhashraw}{ba37c8bede247536e15c224234ddcd30}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Transactions of the American Fisheries Society}
+      \field{number}{4}
+      \field{title}{Predation by {North Sea} Herring \textit{Clupea harengus} on Eggs of Plaice \textit{Pleuronectes platessa} and Cod \textit{Gadus morhua}}
+      \field{volume}{114}
+      \field{year}{1985}
+      \field{pages}{499\bibrangedash 506}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1577/1548-8659(1985)114<499:pbnshc>2.0.co;2
+      \endverb
+    \endentry
+    \entry{deroos2002size}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=494a247208856ab90d8ff04c3f6e9c4a}{%
+           family={De\bibnamedelima Roos},
+           familyi={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={André\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3052f67698be0fd9e8a3c84bde2ae671}{%
+           family={Persson},
+           familyi={P\bibinitperiod},
+           given={Lennart},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{bdad31447a52d075d13e16fdadcb2fdc}
+      \strng{fullhash}{bdad31447a52d075d13e16fdadcb2fdc}
+      \strng{fullhashraw}{bdad31447a52d075d13e16fdadcb2fdc}
+      \strng{bibnamehash}{bdad31447a52d075d13e16fdadcb2fdc}
+      \strng{authorbibnamehash}{bdad31447a52d075d13e16fdadcb2fdc}
+      \strng{authornamehash}{bdad31447a52d075d13e16fdadcb2fdc}
+      \strng{authorfullhash}{bdad31447a52d075d13e16fdadcb2fdc}
+      \strng{authorfullhashraw}{bdad31447a52d075d13e16fdadcb2fdc}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{number}{20}
+      \field{title}{Size-dependent life-history traits promote catastrophic collapses of top predators}
+      \field{volume}{99}
+      \field{year}{2002}
+      \field{pages}{12907\bibrangedash 12912}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1073/pnas.192174199
+      \endverb
+    \endentry
+    \entry{deroos2003influence}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=494a247208856ab90d8ff04c3f6e9c4a}{%
+           family={De\bibnamedelima Roos},
+           familyi={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={André\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=3052f67698be0fd9e8a3c84bde2ae671}{%
+           family={Persson},
+           familyi={P\bibinitperiod},
+           given={Lennart},
+           giveni={L\bibinitperiod}}}%
+        {{hash=c14141693a088ede693b6773ae0040c0}{%
+           family={McCauley},
+           familyi={M\bibinitperiod},
+           given={Edward},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{6014fd8182ae96ebc4ae87bfcbbb20f4}
+      \strng{fullhash}{4c04ed5df521f605728ecddc286e7b8a}
+      \strng{fullhashraw}{4c04ed5df521f605728ecddc286e7b8a}
+      \strng{bibnamehash}{4c04ed5df521f605728ecddc286e7b8a}
+      \strng{authorbibnamehash}{4c04ed5df521f605728ecddc286e7b8a}
+      \strng{authornamehash}{6014fd8182ae96ebc4ae87bfcbbb20f4}
+      \strng{authorfullhash}{4c04ed5df521f605728ecddc286e7b8a}
+      \strng{authorfullhashraw}{4c04ed5df521f605728ecddc286e7b8a}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ecology Letters}
+      \field{number}{5}
+      \field{title}{The influence of size-dependent life-history traits on the structure and dynamics of populations and communities}
+      \field{volume}{6}
+      \field{year}{2003}
+      \field{pages}{473\bibrangedash 487}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1046/j.1461-0248.2003.00458.x
+      \endverb
+    \endentry
+    \entry{delius2013mizer}{manual}{}{}
+      \name{author}{4}{}{%
+        {{hash=1275572562d68b5c85f69b616b2a5537}{%
+           family={Delius},
+           familyi={D\bibinitperiod},
+           given={Gustav},
+           giveni={G\bibinitperiod}}}%
+        {{hash=e7e3737a3af29ff4127c09d8017cba9b}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={Finlay},
+           giveni={F\bibinitperiod}}}%
+        {{hash=91bf6f37188fb409d466203a8e40fb3e}{%
+           family={Blanchard},
+           familyi={B\bibinitperiod},
+           given={Julia},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ee7f7c44be08cd2d745d652cb2b6c536}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={Ken},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Comprehensive R Archive Network (CRAN)}%
+      }
+      \strng{namehash}{c02536047fb08a5639b852b8576ed6ef}
+      \strng{fullhash}{37f777d0567166e4c998d851c1af9dc2}
+      \strng{fullhashraw}{37f777d0567166e4c998d851c1af9dc2}
+      \strng{bibnamehash}{37f777d0567166e4c998d851c1af9dc2}
+      \strng{authorbibnamehash}{37f777d0567166e4c998d851c1af9dc2}
+      \strng{authornamehash}{c02536047fb08a5639b852b8576ed6ef}
+      \strng{authorfullhash}{37f777d0567166e4c998d851c1af9dc2}
+      \strng{authorfullhashraw}{37f777d0567166e4c998d851c1af9dc2}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{mizer: Dynamic Multi-Species Size Spectrum Modelling}
+      \field{year}{2013}
+      \verb{doi}
+      \verb 10.32614/CRAN.package.mizer
+      \endverb
+      \verb{urlraw}
+      \verb https://sizespectrum.org/mizer/
+      \endverb
+      \verb{url}
+      \verb https://sizespectrum.org/mizer/
+      \endverb
+    \endentry
+    \entry{dfo2010greyseals}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=78ba95976069926c8163a9b5c933566c}{%
+           family={{DFO}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Fisheries}%
+        {Oceans Canada}%
+      }
+      \strng{namehash}{78ba95976069926c8163a9b5c933566c}
+      \strng{fullhash}{78ba95976069926c8163a9b5c933566c}
+      \strng{fullhashraw}{78ba95976069926c8163a9b5c933566c}
+      \strng{bibnamehash}{78ba95976069926c8163a9b5c933566c}
+      \strng{authorbibnamehash}{78ba95976069926c8163a9b5c933566c}
+      \strng{authornamehash}{78ba95976069926c8163a9b5c933566c}
+      \strng{authorfullhash}{78ba95976069926c8163a9b5c933566c}
+      \strng{authorfullhashraw}{78ba95976069926c8163a9b5c933566c}
+      \field{extraname}{1}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{2010/071}
+      \field{title}{Impacts of grey seals on fish populations in eastern {Canada}}
+      \field{type}{DFO Can. Sci. Advis. Sec. Sci. Advis. Rep.}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/343116.pdf
+      \endverb
+      \verb{url}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/343116.pdf
+      \endverb
+    \endentry
+    \entry{dfo2011rpa}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=78ba95976069926c8163a9b5c933566c}{%
+           family={{DFO}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Fisheries}%
+        {Oceans Canada}%
+      }
+      \strng{namehash}{78ba95976069926c8163a9b5c933566c}
+      \strng{fullhash}{78ba95976069926c8163a9b5c933566c}
+      \strng{fullhashraw}{78ba95976069926c8163a9b5c933566c}
+      \strng{bibnamehash}{78ba95976069926c8163a9b5c933566c}
+      \strng{authorbibnamehash}{78ba95976069926c8163a9b5c933566c}
+      \strng{authornamehash}{78ba95976069926c8163a9b5c933566c}
+      \strng{authorfullhash}{78ba95976069926c8163a9b5c933566c}
+      \strng{authorfullhashraw}{78ba95976069926c8163a9b5c933566c}
+      \field{extraname}{2}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{2011/028}
+      \field{title}{Recovery Potential Assessment for the {Laurentian} {South} Designatable Unit of {Atlantic} Cod (\textit{Gadus morhua})}
+      \field{type}{DFO Can. Sci. Advis. Sec. Sci. Advis. Rep.}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/344392.pdf
+      \endverb
+      \verb{url}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/344392.pdf
+      \endverb
+    \endentry
+    \entry{dfo2025rvtrends}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=78ba95976069926c8163a9b5c933566c}{%
+           family={{DFO}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Fisheries}%
+        {Oceans Canada}%
+      }
+      \strng{namehash}{78ba95976069926c8163a9b5c933566c}
+      \strng{fullhash}{78ba95976069926c8163a9b5c933566c}
+      \strng{fullhashraw}{78ba95976069926c8163a9b5c933566c}
+      \strng{bibnamehash}{78ba95976069926c8163a9b5c933566c}
+      \strng{authorbibnamehash}{78ba95976069926c8163a9b5c933566c}
+      \strng{authornamehash}{78ba95976069926c8163a9b5c933566c}
+      \strng{authorfullhash}{78ba95976069926c8163a9b5c933566c}
+      \strng{authorfullhashraw}{78ba95976069926c8163a9b5c933566c}
+      \field{extraname}{3}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{2025/017}
+      \field{title}{Maritimes Summer Ecosystem Research Vessel Survey Trends on the {Scotian} {Shelf} and {Bay} of {Fundy} for 2024}
+      \field{type}{DFO Can. Sci. Advis. Sec. Sci. Resp.}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/4129130x.pdf
+      \endverb
+      \verb{url}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/4129130x.pdf
+      \endverb
+    \endentry
+    \entry{dutil2000natural}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=a8a0e5734e1e3bc9fd848066e25b20f9}{%
+           family={Dutil},
+           familyi={D\bibinitperiod},
+           given={Jean-Denis},
+           giveni={J\bibinithyphendelim D\bibinitperiod}}}%
+        {{hash=a1cd39ddf30cbb0d0fff3cd90bf47ae1}{%
+           family={Lambert},
+           familyi={L\bibinitperiod},
+           given={Yvan},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{ce10db47158544118ba24c6de0fda35d}
+      \strng{fullhash}{ce10db47158544118ba24c6de0fda35d}
+      \strng{fullhashraw}{ce10db47158544118ba24c6de0fda35d}
+      \strng{bibnamehash}{ce10db47158544118ba24c6de0fda35d}
+      \strng{authorbibnamehash}{ce10db47158544118ba24c6de0fda35d}
+      \strng{authornamehash}{ce10db47158544118ba24c6de0fda35d}
+      \strng{authorfullhash}{ce10db47158544118ba24c6de0fda35d}
+      \strng{authorfullhashraw}{ce10db47158544118ba24c6de0fda35d}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Canadian Journal of Fisheries and Aquatic Sciences}
+      \field{number}{4}
+      \field{title}{Natural mortality from poor condition in {Atlantic} cod (\textit{Gadus morhua})}
+      \field{volume}{57}
+      \field{year}{2000}
+      \field{pages}{826\bibrangedash 836}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1139/f00-023
+      \endverb
+    \endentry
+    \entry{essington2015fishing}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=70f68dfba27350f7eda7b09208793165}{%
+           family={Essington},
+           familyi={E\bibinitperiod},
+           given={Timothy\bibnamedelima E.},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=351ee279cb762fa9e2f2b3099440c949}{%
+           family={Moriarty},
+           familyi={M\bibinitperiod},
+           given={Pamela\bibnamedelima E.},
+           giveni={P\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=6f3f46b2b206310601827c25abd7a9ee}{%
+           family={Froehlich},
+           familyi={F\bibinitperiod},
+           given={Halley\bibnamedelima E.},
+           giveni={H\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=470bc07dcf1e0802a2b2a180de2a8e54}{%
+           family={Hodgson},
+           familyi={H\bibinitperiod},
+           given={Emma\bibnamedelima E.},
+           giveni={E\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=90922e81b9abf416deff86afd24d9595}{%
+           family={Koehn},
+           familyi={K\bibinitperiod},
+           given={Laura\bibnamedelima E.},
+           giveni={L\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=475bf3f557b460f72d8a451ffa2540c2}{%
+           family={Oken},
+           familyi={O\bibinitperiod},
+           given={Kiva\bibnamedelima L.},
+           giveni={K\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=21a14ad1cc02ce7a5841677377491dff}{%
+           family={Siple},
+           familyi={S\bibinitperiod},
+           given={Margaret\bibnamedelima C.},
+           giveni={M\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=e00553dda8d635e347ba729cf9993d53}{%
+           family={Stawitz},
+           familyi={S\bibinitperiod},
+           given={Christine\bibnamedelima C.},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{3bd11d57f049fc3b499f335c6daa3745}
+      \strng{fullhash}{e8a21f262dd7636f01af817f6c92cd69}
+      \strng{fullhashraw}{e8a21f262dd7636f01af817f6c92cd69}
+      \strng{bibnamehash}{e8a21f262dd7636f01af817f6c92cd69}
+      \strng{authorbibnamehash}{e8a21f262dd7636f01af817f6c92cd69}
+      \strng{authornamehash}{3bd11d57f049fc3b499f335c6daa3745}
+      \strng{authorfullhash}{e8a21f262dd7636f01af817f6c92cd69}
+      \strng{authorfullhashraw}{e8a21f262dd7636f01af817f6c92cd69}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proceedings of the National Academy of Sciences}
+      \field{number}{21}
+      \field{title}{Fishing amplifies forage fish population collapses}
+      \field{volume}{112}
+      \field{year}{2015}
+      \field{pages}{6648\bibrangedash 6652}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1073/pnas.1422020112
+      \endverb
+    \endentry
+    \entry{fanning2003assessment}{report}{}{}
+      \name{author}{3}{}{%
+        {{hash=20b457ec3a548ca468c65314285417af}{%
+           family={Fanning},
+           familyi={F\bibinitperiod},
+           given={L.\bibnamedelimi P.},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=9a49170c747fa69d670c805549633ca3}{%
+           family={Mohn},
+           familyi={M\bibinitperiod},
+           given={R.\bibnamedelimi K.},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=d7ce152f32d5510b9b803582e0f19082}{%
+           family={MacEachern},
+           familyi={M\bibinitperiod},
+           given={W.\bibnamedelimi J.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Fisheries}%
+        {Oceans Canada, Canadian Science Advisory Secretariat}%
+      }
+      \strng{namehash}{06100c992a5df71d38bd6b3410bb30d6}
+      \strng{fullhash}{917433b895c133c9044a42862fe798d1}
+      \strng{fullhashraw}{917433b895c133c9044a42862fe798d1}
+      \strng{bibnamehash}{917433b895c133c9044a42862fe798d1}
+      \strng{authorbibnamehash}{917433b895c133c9044a42862fe798d1}
+      \strng{authornamehash}{06100c992a5df71d38bd6b3410bb30d6}
+      \strng{authorfullhash}{917433b895c133c9044a42862fe798d1}
+      \strng{authorfullhashraw}{917433b895c133c9044a42862fe798d1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{ii + 41 p.}
+      \field{number}{2003/027}
+      \field{title}{Assessment of 4{VsW} cod to 2002}
+      \field{type}{DFO Can. Sci. Advis. Sec. Res. Doc.}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/275363.pdf
+      \endverb
+      \verb{url}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/275363.pdf
+      \endverb
+    \endentry
+    \entry{fauchald2010predator}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=2d5f68e0443c49d391df3bee3917128c}{%
+           family={Fauchald},
+           familyi={F\bibinitperiod},
+           given={Per},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{2d5f68e0443c49d391df3bee3917128c}
+      \strng{fullhash}{2d5f68e0443c49d391df3bee3917128c}
+      \strng{fullhashraw}{2d5f68e0443c49d391df3bee3917128c}
+      \strng{bibnamehash}{2d5f68e0443c49d391df3bee3917128c}
+      \strng{authorbibnamehash}{2d5f68e0443c49d391df3bee3917128c}
+      \strng{authornamehash}{2d5f68e0443c49d391df3bee3917128c}
+      \strng{authorfullhash}{2d5f68e0443c49d391df3bee3917128c}
+      \strng{authorfullhashraw}{2d5f68e0443c49d391df3bee3917128c}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ecology}
+      \field{number}{8}
+      \field{title}{Predator--prey reversal: A possible mechanism for ecosystem hysteresis in the {North Sea}?}
+      \field{volume}{91}
+      \field{year}{2010}
+      \field{pages}{2191\bibrangedash 2197}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1890/09-1500.1
+      \endverb
+    \endentry
+    \entry{frank1996recent}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=8d6bcc9fffb746c11f10bf2a49e13531}{%
+           family={Frank},
+           familyi={F\bibinitperiod},
+           given={K\bibnamedelima T},
+           giveni={K\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=abc9fdb5f79472dc6ef18de0bd1f821a}{%
+           family={Carscadden},
+           familyi={C\bibinitperiod},
+           given={J\bibnamedelima E},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=8e705ec5165fa382f30c2fe8c29f095f}{%
+           family={Simon},
+           familyi={S\bibinitperiod},
+           given={J\bibnamedelima E},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{78ecc31c855f10b008409b93a1fa09e6}
+      \strng{fullhash}{5fb094bafabf9ea46c8160786b5e438e}
+      \strng{fullhashraw}{5fb094bafabf9ea46c8160786b5e438e}
+      \strng{bibnamehash}{5fb094bafabf9ea46c8160786b5e438e}
+      \strng{authorbibnamehash}{5fb094bafabf9ea46c8160786b5e438e}
+      \strng{authornamehash}{78ecc31c855f10b008409b93a1fa09e6}
+      \strng{authorfullhash}{5fb094bafabf9ea46c8160786b5e438e}
+      \strng{authorfullhashraw}{5fb094bafabf9ea46c8160786b5e438e}
+      \field{extraname}{1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Canadian Journal of Fisheries and Aquatic Sciences}
+      \field{number}{7}
+      \field{title}{Recent excursions of capelin (\textit{Mallotus villosus}) to the {Scotian Shelf} and Flemish Cap during anomalous hydrographic conditions}
+      \field{volume}{53}
+      \field{year}{1996}
+      \field{pages}{1473\bibrangedash 1486}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1139/f96-078
+      \endverb
+    \endentry
+    \entry{frank2005trophic}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=a5d755791d950b7db23040a193ebf876}{%
+           family={Frank},
+           familyi={F\bibinitperiod},
+           given={Kenneth\bibnamedelima T.},
+           giveni={K\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=e939fc7bdfce567fead0b2b104e251dd}{%
+           family={Petrie},
+           familyi={P\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=a567065ac616a5d1c523b298eb497545}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Jae\bibnamedelima S.},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=0d618c586c84d4bef5c2154a475e69a7}{%
+           family={Leggett},
+           familyi={L\bibinitperiod},
+           given={William\bibnamedelima C.},
+           giveni={W\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca4c23dd2b893fc655f417b108f656bb}
+      \strng{fullhash}{781b409b4a61ec5ac349a28dd4222b37}
+      \strng{fullhashraw}{781b409b4a61ec5ac349a28dd4222b37}
+      \strng{bibnamehash}{781b409b4a61ec5ac349a28dd4222b37}
+      \strng{authorbibnamehash}{781b409b4a61ec5ac349a28dd4222b37}
+      \strng{authornamehash}{ca4c23dd2b893fc655f417b108f656bb}
+      \strng{authorfullhash}{781b409b4a61ec5ac349a28dd4222b37}
+      \strng{authorfullhashraw}{781b409b4a61ec5ac349a28dd4222b37}
+      \field{extraname}{2}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{5728}
+      \field{title}{Trophic Cascades in a Formerly Cod-Dominated Ecosystem}
+      \field{volume}{308}
+      \field{year}{2005}
+      \field{pages}{1621\bibrangedash 1623}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1126/science.1113075
+      \endverb
+    \endentry
+    \entry{frank2011transient}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=a5d755791d950b7db23040a193ebf876}{%
+           family={Frank},
+           familyi={F\bibinitperiod},
+           given={Kenneth\bibnamedelima T.},
+           giveni={K\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=e939fc7bdfce567fead0b2b104e251dd}{%
+           family={Petrie},
+           familyi={P\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=1a9f1e8c7d97b59bd9d1095d71fc4c22}{%
+           family={Fisher},
+           familyi={F\bibinitperiod},
+           given={Jonathan\bibnamedelimb A.\bibnamedelimi D.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=0d618c586c84d4bef5c2154a475e69a7}{%
+           family={Leggett},
+           familyi={L\bibinitperiod},
+           given={William\bibnamedelima C.},
+           giveni={W\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca4c23dd2b893fc655f417b108f656bb}
+      \strng{fullhash}{4cd2ccdedb9833de8b38811443322478}
+      \strng{fullhashraw}{4cd2ccdedb9833de8b38811443322478}
+      \strng{bibnamehash}{4cd2ccdedb9833de8b38811443322478}
+      \strng{authorbibnamehash}{4cd2ccdedb9833de8b38811443322478}
+      \strng{authornamehash}{ca4c23dd2b893fc655f417b108f656bb}
+      \strng{authorfullhash}{4cd2ccdedb9833de8b38811443322478}
+      \strng{authorfullhashraw}{4cd2ccdedb9833de8b38811443322478}
+      \field{extraname}{3}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{7362}
+      \field{title}{Transient dynamics of an altered large marine ecosystem}
+      \field{volume}{477}
+      \field{year}{2011}
+      \field{pages}{86\bibrangedash 89}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1038/nature10285
+      \endverb
+    \endentry
+    \entry{froese2026fishbase}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=0ed4090d4f3f50f62f25bdca3d3a6cd2}{%
+           family={Froese},
+           familyi={F\bibinitperiod},
+           given={Rainer},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b604044f8f3cd92966263096ffa86ced}{%
+           family={Pauly},
+           familyi={P\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f131d3ee4a7ed5f5f2e7f620be57b6f1}
+      \strng{fullhash}{f131d3ee4a7ed5f5f2e7f620be57b6f1}
+      \strng{fullhashraw}{f131d3ee4a7ed5f5f2e7f620be57b6f1}
+      \strng{bibnamehash}{f131d3ee4a7ed5f5f2e7f620be57b6f1}
+      \strng{authorbibnamehash}{f131d3ee4a7ed5f5f2e7f620be57b6f1}
+      \strng{authornamehash}{f131d3ee4a7ed5f5f2e7f620be57b6f1}
+      \strng{authorfullhash}{f131d3ee4a7ed5f5f2e7f620be57b6f1}
+      \strng{authorfullhashraw}{f131d3ee4a7ed5f5f2e7f620be57b6f1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{World Wide Web electronic publication}
+      \field{note}{Accessed 13 November 2026}
+      \field{title}{{FishBase}}
+      \field{year}{2026}
+      \verb{urlraw}
+      \verb https://www.fishbase.se
+      \endverb
+      \verb{url}
+      \verb https://www.fishbase.se
+      \endverb
+    \endentry
+    \entry{froese2014bayesian}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=3e2d371e34e51bcbc629e9a37ef9f2c6}{%
+           family={Froese},
+           familyi={F\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=56cc9ff484853008986173257e6d673c}{%
+           family={Thorson},
+           familyi={T\bibinitperiod},
+           given={J.\bibnamedelimi T.},
+           giveni={J\bibinitperiod\bibinitdelim T\bibinitperiod}}}%
+        {{hash=d18167a64def8400e21578c21e17c51c}{%
+           family={Reyes},
+           familyi={R\bibinitperiod},
+           given={R.\bibnamedelimi B.},
+           giveni={R\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{22a63cc261c9db514aef8420be4b6c96}
+      \strng{fullhash}{2df7d39da02a3e26c5afc93514f6000e}
+      \strng{fullhashraw}{2df7d39da02a3e26c5afc93514f6000e}
+      \strng{bibnamehash}{2df7d39da02a3e26c5afc93514f6000e}
+      \strng{authorbibnamehash}{2df7d39da02a3e26c5afc93514f6000e}
+      \strng{authornamehash}{22a63cc261c9db514aef8420be4b6c96}
+      \strng{authorfullhash}{2df7d39da02a3e26c5afc93514f6000e}
+      \strng{authorfullhashraw}{2df7d39da02a3e26c5afc93514f6000e}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Applied Ichthyology}
+      \field{number}{1}
+      \field{title}{A {Bayesian} approach for estimating length-weight relationships in fishes}
+      \field{volume}{30}
+      \field{year}{2014}
+      \field{pages}{78\bibrangedash 85}
+      \range{pages}{8}
+      \verb{doi}
+      \verb 10.1111/jai.12299
+      \endverb
+    \endentry
+    \entry{fu2001why}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=46084ac4a08080a0f77af4393ad8d7bb}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Caihong},
+           giveni={C\bibinitperiod}}}%
+        {{hash=e5407f2d76e88483bc9a803d88bbbeff}{%
+           family={Mohn},
+           familyi={M\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=2437574b8b7bd0e51d5dcd5946aec2c8}{%
+           family={Fanning},
+           familyi={F\bibinitperiod},
+           given={L\bibnamedelima Paul},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{173996cb13722ec60bc939074fcd92f2}
+      \strng{fullhash}{ac628968934ecb21246a94d432626f2d}
+      \strng{fullhashraw}{ac628968934ecb21246a94d432626f2d}
+      \strng{bibnamehash}{ac628968934ecb21246a94d432626f2d}
+      \strng{authorbibnamehash}{ac628968934ecb21246a94d432626f2d}
+      \strng{authornamehash}{173996cb13722ec60bc939074fcd92f2}
+      \strng{authorfullhash}{ac628968934ecb21246a94d432626f2d}
+      \strng{authorfullhashraw}{ac628968934ecb21246a94d432626f2d}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Canadian Journal of Fisheries and Aquatic Sciences}
+      \field{number}{8}
+      \field{title}{Why the {Atlantic} cod (\textit{Gadus morhua}) stock off eastern {Nova Scotia} has not recovered}
+      \field{volume}{58}
+      \field{year}{2001}
+      \field{pages}{1613\bibrangedash 1623}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1139/f01-095
+      \endverb
+    \endentry
+    \entry{gardmark2015regime}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=77a7bde2b68a0c9a893239a75090ed9d}{%
+           family={Gårdmark},
+           familyi={G\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=794bbbce6d064d3a7f7fb7621e8e4102}{%
+           family={Casini},
+           familyi={C\bibinitperiod},
+           given={Michele},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f12d144c9f9abd50844fdef0322d9abb}{%
+           family={Huss},
+           familyi={H\bibinitperiod},
+           given={Magnus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9d324c41de0822e03618baf768c10efb}{%
+           family={Leeuwen},
+           familyi={L\bibinitperiod},
+           given={Anieke},
+           giveni={A\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=68505928666b06ff05fd82b0ecec7315}{%
+           family={Hjelm},
+           familyi={H\bibinitperiod},
+           given={Joakim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3052f67698be0fd9e8a3c84bde2ae671}{%
+           family={Persson},
+           familyi={P\bibinitperiod},
+           given={Lennart},
+           giveni={L\bibinitperiod}}}%
+        {{hash=460575c4e4439de7b4315aa868b16f9e}{%
+           family={Roos},
+           familyi={R\bibinitperiod},
+           given={André\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{78cfa38ca1dd87448dc9181ded6185c2}
+      \strng{fullhash}{4951f303133c8fbd0395e9a43fd0235a}
+      \strng{fullhashraw}{4951f303133c8fbd0395e9a43fd0235a}
+      \strng{bibnamehash}{4951f303133c8fbd0395e9a43fd0235a}
+      \strng{authorbibnamehash}{4951f303133c8fbd0395e9a43fd0235a}
+      \strng{authornamehash}{78cfa38ca1dd87448dc9181ded6185c2}
+      \strng{authorfullhash}{4951f303133c8fbd0395e9a43fd0235a}
+      \strng{authorfullhashraw}{4951f303133c8fbd0395e9a43fd0235a}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Philosophical Transactions of the Royal Society B: Biological Sciences}
+      \field{number}{1659}
+      \field{title}{Regime shifts in exploited marine food webs: detecting mechanisms underlying alternative stable states using size-structured community dynamics theory}
+      \field{volume}{370}
+      \field{year}{2015}
+      \field{pages}{20130262}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1098/rstb.2013.0262
+      \endverb
+    \endentry
+    \entry{garrison2000predation}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=1c52d258069fd14e1b812f23fd4038db}{%
+           family={Garrison},
+           familyi={G\bibinitperiod},
+           given={Lance\bibnamedelima P},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=1a499aa73671376433c75dbe596c6189}{%
+           family={Michaels},
+           familyi={M\bibinitperiod},
+           given={William},
+           giveni={W\bibinitperiod}}}%
+        {{hash=5f107cf125e9194dd3b1911ccf940ef9}{%
+           family={Link},
+           familyi={L\bibinitperiod},
+           given={Jason\bibnamedelima S},
+           giveni={J\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=5c866ff3837f82de9e98cd96d6c7db4c}{%
+           family={Fogarty},
+           familyi={F\bibinitperiod},
+           given={Michael\bibnamedelima J},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{6eb26c55f47bbf87cef45eec818b62fc}
+      \strng{fullhash}{1af0ecd8aff8b9c020470f425d27146a}
+      \strng{fullhashraw}{1af0ecd8aff8b9c020470f425d27146a}
+      \strng{bibnamehash}{1af0ecd8aff8b9c020470f425d27146a}
+      \strng{authorbibnamehash}{1af0ecd8aff8b9c020470f425d27146a}
+      \strng{authornamehash}{6eb26c55f47bbf87cef45eec818b62fc}
+      \strng{authorfullhash}{1af0ecd8aff8b9c020470f425d27146a}
+      \strng{authorfullhashraw}{1af0ecd8aff8b9c020470f425d27146a}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Canadian Journal of Fisheries and Aquatic Sciences}
+      \field{number}{12}
+      \field{title}{Predation risk on larval gadids by pelagic fish in the {Georges Bank} ecosystem. I. Spatial overlap associated with hydrographic features}
+      \field{volume}{57}
+      \field{year}{2000}
+      \field{pages}{2455\bibrangedash 2469}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1139/f00-229
+      \endverb
+    \endentry
+    \entry{hartvig2011food}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=15df292963f68c6505b823599317abd8}{%
+           family={Hartvig},
+           familyi={H\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=1a35c0fd5dbb58cb018b332864ed40f7}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={Ken\bibnamedelima H.},
+           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=097cf8d53c5498ebfb2202a21b8e38cf}{%
+           family={Beyer},
+           familyi={B\bibinitperiod},
+           given={Jan\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{edec6993ad07e60929f4556a14349851}
+      \strng{fullhash}{ce5f4b232ad9fb9bd423c8bb61aab45a}
+      \strng{fullhashraw}{ce5f4b232ad9fb9bd423c8bb61aab45a}
+      \strng{bibnamehash}{ce5f4b232ad9fb9bd423c8bb61aab45a}
+      \strng{authorbibnamehash}{ce5f4b232ad9fb9bd423c8bb61aab45a}
+      \strng{authornamehash}{edec6993ad07e60929f4556a14349851}
+      \strng{authorfullhash}{ce5f4b232ad9fb9bd423c8bb61aab45a}
+      \strng{authorfullhashraw}{ce5f4b232ad9fb9bd423c8bb61aab45a}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Theoretical Biology}
+      \field{number}{1}
+      \field{title}{Food web framework for size-structured populations}
+      \field{volume}{272}
+      \field{year}{2011}
+      \field{pages}{113\bibrangedash 122}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.jtbi.2010.12.006
+      \endverb
+    \endentry
+    \entry{hilborn2014dynamics}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=d85fe59626de2bcf628877dc353e7b3c}{%
+           family={Hilborn},
+           familyi={H\bibinitperiod},
+           given={Ray},
+           giveni={R\bibinitperiod}}}%
+        {{hash=689c6ad12af75154467d819eb6bcbfbe}{%
+           family={Hively},
+           familyi={H\bibinitperiod},
+           given={Daniel\bibnamedelima J.},
+           giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3ac9e6e9a4dac88c67b41077838df869}{%
+           family={Jensen},
+           familyi={J\bibinitperiod},
+           given={Olaf\bibnamedelima P.},
+           giveni={O\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=60019ff7cce0461c7ba5ffc832738ffe}{%
+           family={Branch},
+           familyi={B\bibinitperiod},
+           given={Trevor\bibnamedelima A.},
+           giveni={T\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d296bdf0734cbde1563a5a94b089993f}
+      \strng{fullhash}{f00e2da68421785562298d677e4b212d}
+      \strng{fullhashraw}{f00e2da68421785562298d677e4b212d}
+      \strng{bibnamehash}{f00e2da68421785562298d677e4b212d}
+      \strng{authorbibnamehash}{f00e2da68421785562298d677e4b212d}
+      \strng{authornamehash}{d296bdf0734cbde1563a5a94b089993f}
+      \strng{authorfullhash}{f00e2da68421785562298d677e4b212d}
+      \strng{authorfullhashraw}{f00e2da68421785562298d677e4b212d}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ICES Journal of Marine Science}
+      \field{number}{8}
+      \field{title}{The dynamics of fish populations at low abundance and prospects for rebuilding and recovery}
+      \field{volume}{71}
+      \field{year}{2014}
+      \field{pages}{2141\bibrangedash 2151}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1093/icesjms/fsu035
+      \endverb
+    \endentry
+    \entry{houle2013emerging}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=2cbd162877866c72afb2116d201864c6}{%
+           family={Houle},
+           familyi={H\bibinitperiod},
+           given={J.\bibnamedelimi E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=72333f53c467cddd62e2ef9d3f645561}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={K.\bibnamedelimi H.},
+           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=b01bfb9f98ac983c9689451cfe83159d}{%
+           family={Farnsworth},
+           familyi={F\bibinitperiod},
+           given={K.\bibnamedelimi D.},
+           giveni={K\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=2412da0e0bb211406215760020eab0bc}{%
+           family={Reid},
+           familyi={R\bibinitperiod},
+           given={D.\bibnamedelimi G.},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{4906aaaba93ae8c9601d3860e51201e3}
+      \strng{fullhash}{5e16cab3d3deb0729c10391145ac7f5a}
+      \strng{fullhashraw}{5e16cab3d3deb0729c10391145ac7f5a}
+      \strng{bibnamehash}{5e16cab3d3deb0729c10391145ac7f5a}
+      \strng{authorbibnamehash}{5e16cab3d3deb0729c10391145ac7f5a}
+      \strng{authornamehash}{4906aaaba93ae8c9601d3860e51201e3}
+      \strng{authorfullhash}{5e16cab3d3deb0729c10391145ac7f5a}
+      \strng{authorfullhashraw}{5e16cab3d3deb0729c10391145ac7f5a}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Fish Biology}
+      \field{number}{4}
+      \field{title}{Emerging asymmetric interactions between forage and predator fisheries impose management trade-offs}
+      \field{volume}{83}
+      \field{year}{2013}
+      \field{pages}{890\bibrangedash 904}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1111/jfb.12163
+      \endverb
+    \endentry
+    \entry{hutchings2000collapse}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=2e52df0de77049ccfc36980f928b13ff}{%
+           family={Hutchings},
+           familyi={H\bibinitperiod},
+           given={Jeffrey\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{2e52df0de77049ccfc36980f928b13ff}
+      \strng{fullhash}{2e52df0de77049ccfc36980f928b13ff}
+      \strng{fullhashraw}{2e52df0de77049ccfc36980f928b13ff}
+      \strng{bibnamehash}{2e52df0de77049ccfc36980f928b13ff}
+      \strng{authorbibnamehash}{2e52df0de77049ccfc36980f928b13ff}
+      \strng{authornamehash}{2e52df0de77049ccfc36980f928b13ff}
+      \strng{authorfullhash}{2e52df0de77049ccfc36980f928b13ff}
+      \strng{authorfullhashraw}{2e52df0de77049ccfc36980f928b13ff}
+      \field{extraname}{1}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{6798}
+      \field{title}{Collapse and recovery of marine fishes}
+      \field{volume}{406}
+      \field{year}{2000}
+      \field{pages}{882\bibrangedash 885}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1038/35022565
+      \endverb
+    \endentry
+    \entry{hutchings2005life}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=2e52df0de77049ccfc36980f928b13ff}{%
+           family={Hutchings},
+           familyi={H\bibinitperiod},
+           given={Jeffrey\bibnamedelima A},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{2e52df0de77049ccfc36980f928b13ff}
+      \strng{fullhash}{2e52df0de77049ccfc36980f928b13ff}
+      \strng{fullhashraw}{2e52df0de77049ccfc36980f928b13ff}
+      \strng{bibnamehash}{2e52df0de77049ccfc36980f928b13ff}
+      \strng{authorbibnamehash}{2e52df0de77049ccfc36980f928b13ff}
+      \strng{authornamehash}{2e52df0de77049ccfc36980f928b13ff}
+      \strng{authorfullhash}{2e52df0de77049ccfc36980f928b13ff}
+      \strng{authorfullhashraw}{2e52df0de77049ccfc36980f928b13ff}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Canadian Journal of Fisheries and Aquatic Sciences}
+      \field{number}{4}
+      \field{title}{Life history consequences of overexploitation to population recovery in {Northwest} {Atlantic} cod (\textit{Gadus morhua})}
+      \field{volume}{62}
+      \field{year}{2005}
+      \field{pages}{824\bibrangedash 832}
+      \range{pages}{9}
+      \verb{doi}
+      \verb 10.1139/f05-081
+      \endverb
+    \endentry
+    \entry{koenalonso2021comparative}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=720c37b65deb8cd75d57ab3a4e4469ac}{%
+           family={Koen-Alonso},
+           familyi={K\bibinithyphendelim A\bibinitperiod},
+           given={Mariano},
+           giveni={M\bibinitperiod}}}%
+        {{hash=aba5c8cd6dc9c1b2b205ab45e9c364f7}{%
+           family={Lindstrøm},
+           familyi={L\bibinitperiod},
+           given={Ulf},
+           giveni={U\bibinitperiod}}}%
+        {{hash=e6b206b44e29f01e2d3aebd44ec78009}{%
+           family={Cuff},
+           familyi={C\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{d5a507a4ebae5ecd2e32b6f1c80857dc}
+      \strng{fullhash}{87e33d28f2c66ea3dea9681639090572}
+      \strng{fullhashraw}{87e33d28f2c66ea3dea9681639090572}
+      \strng{bibnamehash}{87e33d28f2c66ea3dea9681639090572}
+      \strng{authorbibnamehash}{87e33d28f2c66ea3dea9681639090572}
+      \strng{authornamehash}{d5a507a4ebae5ecd2e32b6f1c80857dc}
+      \strng{authorfullhash}{87e33d28f2c66ea3dea9681639090572}
+      \strng{authorfullhashraw}{87e33d28f2c66ea3dea9681639090572}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers in Marine Science}
+      \field{title}{Comparative Modeling of Cod-Capelin Dynamics in the {Newfoundland}-{Labrador} Shelves and {Barents Sea} Ecosystems}
+      \field{volume}{8}
+      \field{year}{2021}
+      \field{pages}{579946}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.3389/fmars.2021.579946
+      \endverb
+    \endentry
+    \entry{koster2000trophodynamic}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=d87ec596045bd736e090dc108fe1ecc6}{%
+           family={Köster},
+           familyi={K\bibinitperiod},
+           given={Friedrich\bibnamedelima W.},
+           giveni={F\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=b617bfeeb73fb7c4f78e52d796a19a3d}{%
+           family={Möllmann},
+           familyi={M\bibinitperiod},
+           given={Christian},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{946bce64823b4405df9f8cb99ef120dd}
+      \strng{fullhash}{946bce64823b4405df9f8cb99ef120dd}
+      \strng{fullhashraw}{946bce64823b4405df9f8cb99ef120dd}
+      \strng{bibnamehash}{946bce64823b4405df9f8cb99ef120dd}
+      \strng{authorbibnamehash}{946bce64823b4405df9f8cb99ef120dd}
+      \strng{authornamehash}{946bce64823b4405df9f8cb99ef120dd}
+      \strng{authorfullhash}{946bce64823b4405df9f8cb99ef120dd}
+      \strng{authorfullhashraw}{946bce64823b4405df9f8cb99ef120dd}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ICES Journal of Marine Science}
+      \field{number}{2}
+      \field{title}{Trophodynamic control by clupeid predators on recruitment success in {Baltic} cod?}
+      \field{volume}{57}
+      \field{year}{2000}
+      \field{pages}{310\bibrangedash 323}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1006/jmsc.1999.0528
+      \endverb
+    \endentry
+    \entry{minto2012interactions}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=de56e58da7b5b84e88be16ff156b9abb}{%
+           family={Minto},
+           familyi={M\bibinitperiod},
+           given={Cóilín},
+           giveni={C\bibinitperiod}}}%
+        {{hash=d20926afa43feca8de94d916be6425fd}{%
+           family={Worm},
+           familyi={W\bibinitperiod},
+           given={Boris},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{8dbc04a4f9af3652f4126d7f0b9499a3}
+      \strng{fullhash}{8dbc04a4f9af3652f4126d7f0b9499a3}
+      \strng{fullhashraw}{8dbc04a4f9af3652f4126d7f0b9499a3}
+      \strng{bibnamehash}{8dbc04a4f9af3652f4126d7f0b9499a3}
+      \strng{authorbibnamehash}{8dbc04a4f9af3652f4126d7f0b9499a3}
+      \strng{authornamehash}{8dbc04a4f9af3652f4126d7f0b9499a3}
+      \strng{authorfullhash}{8dbc04a4f9af3652f4126d7f0b9499a3}
+      \strng{authorfullhashraw}{8dbc04a4f9af3652f4126d7f0b9499a3}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ecology}
+      \field{number}{10}
+      \field{title}{Interactions between small pelagic fish and young cod across the {North Atlantic}}
+      \field{volume}{93}
+      \field{year}{2012}
+      \field{pages}{2139\bibrangedash 2154}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1890/10-2036.1
+      \endverb
+    \endentry
+    \entry{mohn1994assessment}{report}{}{}
+      \name{author}{2}{}{%
+        {{hash=b0fcd558914008e269ff57b041e820bd}{%
+           family={Mohn},
+           familyi={M\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d7ce152f32d5510b9b803582e0f19082}{%
+           family={MacEachern},
+           familyi={M\bibinitperiod},
+           given={W.\bibnamedelimi J.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Department of Fisheries}%
+        {Oceans}%
+      }
+      \strng{namehash}{54a0a06893b37aeb721ce2d0717b029a}
+      \strng{fullhash}{54a0a06893b37aeb721ce2d0717b029a}
+      \strng{fullhashraw}{54a0a06893b37aeb721ce2d0717b029a}
+      \strng{bibnamehash}{54a0a06893b37aeb721ce2d0717b029a}
+      \strng{authorbibnamehash}{54a0a06893b37aeb721ce2d0717b029a}
+      \strng{authornamehash}{54a0a06893b37aeb721ce2d0717b029a}
+      \strng{authorfullhash}{54a0a06893b37aeb721ce2d0717b029a}
+      \strng{authorfullhashraw}{54a0a06893b37aeb721ce2d0717b029a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{94/40}
+      \field{title}{Assessment of 4{VsW} cod in 1993}
+      \field{type}{DFO Atlantic Fisheries Research Document}
+      \field{year}{1994}
+      \verb{urlraw}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/168316.pdf
+      \endverb
+      \verb{url}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/168316.pdf
+      \endverb
+    \endentry
+    \entry{mohn2012laurentian}{report}{}{}
+      \name{author}{2}{}{%
+        {{hash=9a49170c747fa69d670c805549633ca3}{%
+           family={Mohn},
+           familyi={M\bibinitperiod},
+           given={R.\bibnamedelimi K.},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=3658d397c7a533213b9cde4361599232}{%
+           family={Rowe},
+           familyi={R\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Fisheries}%
+        {Oceans Canada}%
+      }
+      \strng{namehash}{b80afdfc4104ca9ea3a975e7a382c447}
+      \strng{fullhash}{b80afdfc4104ca9ea3a975e7a382c447}
+      \strng{fullhashraw}{b80afdfc4104ca9ea3a975e7a382c447}
+      \strng{bibnamehash}{b80afdfc4104ca9ea3a975e7a382c447}
+      \strng{authorbibnamehash}{b80afdfc4104ca9ea3a975e7a382c447}
+      \strng{authornamehash}{b80afdfc4104ca9ea3a975e7a382c447}
+      \strng{authorfullhash}{b80afdfc4104ca9ea3a975e7a382c447}
+      \strng{authorfullhashraw}{b80afdfc4104ca9ea3a975e7a382c447}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{viii + 71 p.}
+      \field{number}{2011/138}
+      \field{title}{Recovery Potential Assessment for the {Laurentian} {South} Designatable Unit of {Atlantic} Cod (\textit{Gadus morhua}): the {Eastern} {Scotian} {Shelf} cod stock ({NAFO} Div. 4{VsW})}
+      \field{type}{DFO Can. Sci. Advis. Sec. Res. Doc.}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/363102.pdf
+      \endverb
+      \verb{url}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/363102.pdf
+      \endverb
+    \endentry
+    \entry{myers1995population}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=4e454f95f2fe147d17ec34cba4db623b}{%
+           family={Myers},
+           familyi={M\bibinitperiod},
+           given={R.\bibnamedelimi A.},
+           giveni={R\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=0d39a761979920584c6e12904da860fd}{%
+           family={Barrowman},
+           familyi={B\bibinitperiod},
+           given={N.\bibnamedelimi J.},
+           giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=38fe703f9fd457a7a388a4dd9be481bc}{%
+           family={Hutchings},
+           familyi={H\bibinitperiod},
+           given={J.\bibnamedelimi A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=137bba49df546e99cd0c52f7f25c5626}{%
+           family={Rosenberg},
+           familyi={R\bibinitperiod},
+           given={A.\bibnamedelimi A.},
+           giveni={A\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{9997d865412eb3e394d00974f052bc1f}
+      \strng{fullhash}{f3ac6ef496a464fc0cd749b39b467f88}
+      \strng{fullhashraw}{f3ac6ef496a464fc0cd749b39b467f88}
+      \strng{bibnamehash}{f3ac6ef496a464fc0cd749b39b467f88}
+      \strng{authorbibnamehash}{f3ac6ef496a464fc0cd749b39b467f88}
+      \strng{authornamehash}{9997d865412eb3e394d00974f052bc1f}
+      \strng{authorfullhash}{f3ac6ef496a464fc0cd749b39b467f88}
+      \strng{authorfullhashraw}{f3ac6ef496a464fc0cd749b39b467f88}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{5227}
+      \field{title}{Population Dynamics of Exploited Fish Stocks at Low Population Levels}
+      \field{volume}{269}
+      \field{year}{1995}
+      \field{pages}{1106\bibrangedash 1108}
+      \range{pages}{3}
+      \verb{doi}
+      \verb 10.1126/science.269.5227.1106
+      \endverb
+    \endentry
+    \entry{neuenhoff2019continued}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=a78f4583a9d0d6dba0743121d2699676}{%
+           family={Neuenhoff},
+           familyi={N\bibinitperiod},
+           given={Rachel\bibnamedelima D.},
+           giveni={R\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=9f41c076c80c8c84c54aeffd56d53d25}{%
+           family={Swain},
+           familyi={S\bibinitperiod},
+           given={Douglas\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=b9b7de82b2cce012cf6045f93498f305}{%
+           family={Cox},
+           familyi={C\bibinitperiod},
+           given={Sean\bibnamedelima P.},
+           giveni={S\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=a1200e34c071399b237557740f93f1a8}{%
+           family={McAllister},
+           familyi={M\bibinitperiod},
+           given={Murdoch\bibnamedelima K.},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=d09592182c920fdd4bf508c75ce487bc}{%
+           family={Trites},
+           familyi={T\bibinitperiod},
+           given={Andrew\bibnamedelima W.},
+           giveni={A\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+        {{hash=54e759072ba56df2b8385a5c35ce16e1}{%
+           family={Walters},
+           familyi={W\bibinitperiod},
+           given={Carl\bibnamedelima J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=d63add6d70ec7c8c2cf7344b8fa484d8}{%
+           family={Hammill},
+           familyi={H\bibinitperiod},
+           given={Mike\bibnamedelima O.},
+           giveni={M\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+      }
+      \strng{namehash}{768bc630e3610716931cef6060bae7c2}
+      \strng{fullhash}{f1a23419da8d675a0e15e1392068a1b4}
+      \strng{fullhashraw}{f1a23419da8d675a0e15e1392068a1b4}
+      \strng{bibnamehash}{f1a23419da8d675a0e15e1392068a1b4}
+      \strng{authorbibnamehash}{f1a23419da8d675a0e15e1392068a1b4}
+      \strng{authornamehash}{768bc630e3610716931cef6060bae7c2}
+      \strng{authorfullhash}{f1a23419da8d675a0e15e1392068a1b4}
+      \strng{authorfullhashraw}{f1a23419da8d675a0e15e1392068a1b4}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Canadian Journal of Fisheries and Aquatic Sciences}
+      \field{number}{1}
+      \field{title}{Continued decline of a collapsed population of {Atlantic} cod (\textit{Gadus morhua}) due to predation-driven {Allee} effects}
+      \field{volume}{76}
+      \field{year}{2019}
+      \field{pages}{168\bibrangedash 184}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1139/cjfas-2017-0190
+      \endverb
+    \endentry
+    \entry{neumann2017quantifying}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=a988491befe2bb680d620db4c221e8bf}{%
+           family={Neumann},
+           familyi={N\bibinitperiod},
+           given={Viola},
+           giveni={V\bibinitperiod}}}%
+        {{hash=c889711abc084aa602fb20c953e407ca}{%
+           family={Schaber},
+           familyi={S\bibinitperiod},
+           given={Matthias},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4e5c7345a80b0452db311d165768cd72}{%
+           family={Eero},
+           familyi={E\bibinitperiod},
+           given={Margit},
+           giveni={M\bibinitperiod}}}%
+        {{hash=814b0f3d8027b4afede1aa4aef66cea7}{%
+           family={Böttcher},
+           familyi={B\bibinitperiod},
+           given={Uwe},
+           giveni={U\bibinitperiod}}}%
+        {{hash=d87ec596045bd736e090dc108fe1ecc6}{%
+           family={Köster},
+           familyi={K\bibinitperiod},
+           given={Friedrich\bibnamedelima W.},
+           giveni={F\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{6e73379d48153fd3f275624914f63f44}
+      \strng{fullhash}{7286919e43a971e57b68fd2796c06506}
+      \strng{fullhashraw}{7286919e43a971e57b68fd2796c06506}
+      \strng{bibnamehash}{7286919e43a971e57b68fd2796c06506}
+      \strng{authorbibnamehash}{7286919e43a971e57b68fd2796c06506}
+      \strng{authornamehash}{6e73379d48153fd3f275624914f63f44}
+      \strng{authorfullhash}{7286919e43a971e57b68fd2796c06506}
+      \strng{authorfullhashraw}{7286919e43a971e57b68fd2796c06506}
+      \field{sortinit}{N}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Canadian Journal of Fisheries and Aquatic Sciences}
+      \field{number}{6}
+      \field{title}{Quantifying predation on {Baltic} cod early life stages}
+      \field{volume}{74}
+      \field{year}{2017}
+      \field{pages}{833\bibrangedash 842}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1139/cjfas-2016-0215
+      \endverb
+    \endentry
+    \entry{oboyle2012seal}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=bc221fa9e4fa6b2982a45e95c125de34}{%
+           family={O’Boyle},
+           familyi={O\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=eea0c02df3993f455185c35dc0904c5b}{%
+           family={Sinclair},
+           familyi={S\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{20a927a4a6b2d687918254217c833e8e}
+      \strng{fullhash}{20a927a4a6b2d687918254217c833e8e}
+      \strng{fullhashraw}{20a927a4a6b2d687918254217c833e8e}
+      \strng{bibnamehash}{20a927a4a6b2d687918254217c833e8e}
+      \strng{authorbibnamehash}{20a927a4a6b2d687918254217c833e8e}
+      \strng{authornamehash}{20a927a4a6b2d687918254217c833e8e}
+      \strng{authorfullhash}{20a927a4a6b2d687918254217c833e8e}
+      \strng{authorfullhashraw}{20a927a4a6b2d687918254217c833e8e}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Fisheries Research}
+      \field{title}{Seal--cod interactions on the {Eastern} {Scotian Shelf}: Reconsideration of modelling assumptions}
+      \field{volume}{115-116}
+      \field{year}{2012}
+      \field{pages}{1\bibrangedash 13}
+      \range{pages}{13}
+      \verb{doi}
+      \verb 10.1016/j.fishres.2011.10.006
+      \endverb
+    \endentry
+    \entry{olsen2004maturation}{article}{}{}
+      \name{author}{7}{}{%
+        {{hash=d6bef53cbd8b3f9dc89838a45355be53}{%
+           family={Olsen},
+           familyi={O\bibinitperiod},
+           given={Esben\bibnamedelima M.},
+           giveni={E\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=4ca5794849e57ee49b7a08c461d0e658}{%
+           family={Heino},
+           familyi={H\bibinitperiod},
+           given={Mikko},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8c8a0c418d0ee0e565986cee5f266e6c}{%
+           family={Lilly},
+           familyi={L\bibinitperiod},
+           given={George\bibnamedelima R.},
+           giveni={G\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=ef61ffa0ed9ec79302de4ccb728c268c}{%
+           family={Morgan},
+           familyi={M\bibinitperiod},
+           given={M.\bibnamedelimi Joanne},
+           giveni={M\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=9e57fb2c59c8fb0e3452dc7c29a7f11b}{%
+           family={Brattey},
+           familyi={B\bibinitperiod},
+           given={John},
+           giveni={J\bibinitperiod}}}%
+        {{hash=94b1ebec5f9e70ecd20eebeba82ef80b}{%
+           family={Ernande},
+           familyi={E\bibinitperiod},
+           given={Bruno},
+           giveni={B\bibinitperiod}}}%
+        {{hash=874f15c525e51c2b786d5382c67156ea}{%
+           family={Dieckmann},
+           familyi={D\bibinitperiod},
+           given={Ulf},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{9845f34cd5fe8cf0ca40b5f6cc55cc6b}
+      \strng{fullhash}{a73e15547179a791105fd37154141780}
+      \strng{fullhashraw}{a73e15547179a791105fd37154141780}
+      \strng{bibnamehash}{a73e15547179a791105fd37154141780}
+      \strng{authorbibnamehash}{a73e15547179a791105fd37154141780}
+      \strng{authornamehash}{9845f34cd5fe8cf0ca40b5f6cc55cc6b}
+      \strng{authorfullhash}{a73e15547179a791105fd37154141780}
+      \strng{authorfullhashraw}{a73e15547179a791105fd37154141780}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{6986}
+      \field{title}{Maturation trends indicative of rapid evolution preceded the collapse of northern cod}
+      \field{volume}{428}
+      \field{year}{2004}
+      \field{pages}{932\bibrangedash 935}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1038/nature02430
+      \endverb
+    \endentry
+    \entry{persson2007culling}{article}{}{}
+      \name{author}{6}{}{%
+        {{hash=3052f67698be0fd9e8a3c84bde2ae671}{%
+           family={Persson},
+           familyi={P\bibinitperiod},
+           given={Lennart},
+           giveni={L\bibinitperiod}}}%
+        {{hash=11df71482445956a2f230b4b336fcddc}{%
+           family={Amundsen},
+           familyi={A\bibinitperiod},
+           given={Per-Arne},
+           giveni={P\bibinithyphendelim A\bibinitperiod}}}%
+        {{hash=494a247208856ab90d8ff04c3f6e9c4a}{%
+           family={De\bibnamedelima Roos},
+           familyi={D\bibinitperiod\bibinitdelim R\bibinitperiod},
+           given={André\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=a493f09d1036eeae56c2cb760df021c5}{%
+           family={Klemetsen},
+           familyi={K\bibinitperiod},
+           given={Anders},
+           giveni={A\bibinitperiod}}}%
+        {{hash=519dba8c326f896018578a148270b62b}{%
+           family={Knudsen},
+           familyi={K\bibinitperiod},
+           given={Rune},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d946f4ee54a67aee557a488b475b87a7}{%
+           family={Primicerio},
+           familyi={P\bibinitperiod},
+           given={Raul},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{a8174df54d286efb57344079971fcc6e}
+      \strng{fullhash}{a3504b2ee67d7f30f9a2dc912ede78bb}
+      \strng{fullhashraw}{a3504b2ee67d7f30f9a2dc912ede78bb}
+      \strng{bibnamehash}{a3504b2ee67d7f30f9a2dc912ede78bb}
+      \strng{authorbibnamehash}{a3504b2ee67d7f30f9a2dc912ede78bb}
+      \strng{authornamehash}{a8174df54d286efb57344079971fcc6e}
+      \strng{authorfullhash}{a3504b2ee67d7f30f9a2dc912ede78bb}
+      \strng{authorfullhashraw}{a3504b2ee67d7f30f9a2dc912ede78bb}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{5832}
+      \field{title}{Culling prey promotes predator recovery---alternative states in a whole-lake experiment}
+      \field{volume}{316}
+      \field{year}{2007}
+      \field{pages}{1743\bibrangedash 1746}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1126/science.1141412
+      \endverb
+    \endentry
+    \entry{pikitch2014global}{article}{}{}
+      \name{author}{20}{}{%
+        {{hash=af88c180f9d8406223584599f174fee3}{%
+           family={Pikitch},
+           familyi={P\bibinitperiod},
+           given={Ellen\bibnamedelima K},
+           giveni={E\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=e4851befdb96c33d9a7fb5ed17f6e52c}{%
+           family={Rountos},
+           familyi={R\bibinitperiod},
+           given={Konstantine\bibnamedelima J},
+           giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=70f68dfba27350f7eda7b09208793165}{%
+           family={Essington},
+           familyi={E\bibinitperiod},
+           given={Timothy\bibnamedelima E},
+           giveni={T\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=3837753fce6c07275d983486a4627b7b}{%
+           family={Santora},
+           familyi={S\bibinitperiod},
+           given={Christine},
+           giveni={C\bibinitperiod}}}%
+        {{hash=b604044f8f3cd92966263096ffa86ced}{%
+           family={Pauly},
+           familyi={P\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=861ea5ded88ab7c22f719d5e5a1a7c8b}{%
+           family={Watson},
+           familyi={W\bibinitperiod},
+           given={Reg},
+           giveni={R\bibinitperiod}}}%
+        {{hash=b486458768fc3c24d8edaaf0875ba1fb}{%
+           family={Sumaila},
+           familyi={S\bibinitperiod},
+           given={Ussif\bibnamedelima R},
+           giveni={U\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+        {{hash=9de2ef4e5cd7c977fc346a4b640b30f9}{%
+           family={Boersma},
+           familyi={B\bibinitperiod},
+           given={P\bibnamedelima Dee},
+           giveni={P\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=0d83023ba4256796f184aa0b7b23bbc4}{%
+           family={Boyd},
+           familyi={B\bibinitperiod},
+           given={Ian\bibnamedelima L},
+           giveni={I\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=2e7772a1cf3e79d41c8e4315cc4d7b02}{%
+           family={Conover},
+           familyi={C\bibinitperiod},
+           given={David\bibnamedelima O},
+           giveni={D\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=c4427480644667095a85dc75da90c9da}{%
+           family={Cury},
+           familyi={C\bibinitperiod},
+           given={Philippe},
+           giveni={P\bibinitperiod}}}%
+        {{hash=a4a2c08a854061f6218a3636d015f361}{%
+           family={Heppell},
+           familyi={H\bibinitperiod},
+           given={Selina\bibnamedelima S},
+           giveni={S\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=f6213ffe92622666e142c564f531e53f}{%
+           family={Houde},
+           familyi={H\bibinitperiod},
+           given={Edward\bibnamedelima D},
+           giveni={E\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=ef99b213825caf0580ced9127055395e}{%
+           family={Mangel},
+           familyi={M\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=eaeccd6b11e5a29d6fc9ace0ef23f310}{%
+           family={Plagányi},
+           familyi={P\bibinitperiod},
+           given={Éva},
+           giveni={É\bibinitperiod}}}%
+        {{hash=766bf8da7dc95a4c6bf541ac0bc82773}{%
+           family={Sainsbury},
+           familyi={S\bibinitperiod},
+           given={Keith},
+           giveni={K\bibinitperiod}}}%
+        {{hash=1611e21b44317fa9313d1775dce02eb2}{%
+           family={Steneck},
+           familyi={S\bibinitperiod},
+           given={Robert\bibnamedelima S},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=ec505e42794669c027460bbbdf83af97}{%
+           family={Geers},
+           familyi={G\bibinitperiod},
+           given={Tess\bibnamedelima M},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=4dadbccebca53cbbb0aef48d9f65848e}{%
+           family={Gownaris},
+           familyi={G\bibinitperiod},
+           given={Natasha},
+           giveni={N\bibinitperiod}}}%
+        {{hash=1155c77d31accdc980dd95ad57bc5d9c}{%
+           family={Munch},
+           familyi={M\bibinitperiod},
+           given={Stephan\bibnamedelima B},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+      }
+      \strng{namehash}{bb335f0de4fa1e170d48a5c7a3ca3499}
+      \strng{fullhash}{34572e3abfc8d18575a3faa4a847e01a}
+      \strng{fullhashraw}{34572e3abfc8d18575a3faa4a847e01a}
+      \strng{bibnamehash}{34572e3abfc8d18575a3faa4a847e01a}
+      \strng{authorbibnamehash}{34572e3abfc8d18575a3faa4a847e01a}
+      \strng{authornamehash}{bb335f0de4fa1e170d48a5c7a3ca3499}
+      \strng{authorfullhash}{34572e3abfc8d18575a3faa4a847e01a}
+      \strng{authorfullhashraw}{34572e3abfc8d18575a3faa4a847e01a}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Fish and Fisheries}
+      \field{number}{1}
+      \field{title}{The global contribution of forage fish to marine fisheries and ecosystems}
+      \field{volume}{15}
+      \field{year}{2014}
+      \field{pages}{43\bibrangedash 64}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1111/faf.12004
+      \endverb
+    \endentry
+    \entry{rose2015northern}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=e4865d4a130e8b0bb8b462b8c3281603}{%
+           family={Rose},
+           familyi={R\bibinitperiod},
+           given={George\bibnamedelima A.},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=76127c61be1f485de41d68d362f99356}{%
+           family={Rowe},
+           familyi={R\bibinitperiod},
+           given={Sherrylynn},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{8921cfe3d3f4d6872d22238671bf7e05}
+      \strng{fullhash}{8921cfe3d3f4d6872d22238671bf7e05}
+      \strng{fullhashraw}{8921cfe3d3f4d6872d22238671bf7e05}
+      \strng{bibnamehash}{8921cfe3d3f4d6872d22238671bf7e05}
+      \strng{authorbibnamehash}{8921cfe3d3f4d6872d22238671bf7e05}
+      \strng{authornamehash}{8921cfe3d3f4d6872d22238671bf7e05}
+      \strng{authorfullhash}{8921cfe3d3f4d6872d22238671bf7e05}
+      \strng{authorfullhashraw}{8921cfe3d3f4d6872d22238671bf7e05}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Canadian Journal of Fisheries and Aquatic Sciences}
+      \field{number}{12}
+      \field{title}{{Northern} cod comeback}
+      \field{volume}{72}
+      \field{year}{2015}
+      \field{pages}{1789\bibrangedash 1798}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1139/cjfas-2015-0346
+      \endverb
+    \endentry
+    \entry{scheffer2001catastrophic}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=928c6696327fbb9942013ec7d598f6be}{%
+           family={Scheffer},
+           familyi={S\bibinitperiod},
+           given={Marten},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e6102e4f9cc9c61195b8e6869a764a24}{%
+           family={Carpenter},
+           familyi={C\bibinitperiod},
+           given={Steve},
+           giveni={S\bibinitperiod}}}%
+        {{hash=366d81378af029a9cfb44dbe52868c9a}{%
+           family={Foley},
+           familyi={F\bibinitperiod},
+           given={Jonathan\bibnamedelima A.},
+           giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=33396b38f27fa7e13c6e1581623ba37c}{%
+           family={Folke},
+           familyi={F\bibinitperiod},
+           given={Carl},
+           giveni={C\bibinitperiod}}}%
+        {{hash=0e70dedbf6a6b49642ecd8c9d95c41c5}{%
+           family={Walker},
+           familyi={W\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{9dd74bc466019c8d66becb6042640aed}
+      \strng{fullhash}{6b2980cba5b3aae864d9b428d4c90ced}
+      \strng{fullhashraw}{6b2980cba5b3aae864d9b428d4c90ced}
+      \strng{bibnamehash}{6b2980cba5b3aae864d9b428d4c90ced}
+      \strng{authorbibnamehash}{6b2980cba5b3aae864d9b428d4c90ced}
+      \strng{authornamehash}{9dd74bc466019c8d66becb6042640aed}
+      \strng{authorfullhash}{6b2980cba5b3aae864d9b428d4c90ced}
+      \strng{authorfullhashraw}{6b2980cba5b3aae864d9b428d4c90ced}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Nature}
+      \field{number}{6856}
+      \field{title}{Catastrophic shifts in ecosystems}
+      \field{volume}{413}
+      \field{year}{2001}
+      \field{pages}{591\bibrangedash 596}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1038/35098000
+      \endverb
+    \endentry
+    \entry{scott2014mizer}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=e7e3737a3af29ff4127c09d8017cba9b}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={Finlay},
+           giveni={F\bibinitperiod}}}%
+        {{hash=ca071778a36f32548017e40efc478a78}{%
+           family={Blanchard},
+           familyi={B\bibinitperiod},
+           given={Julia\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=1a35c0fd5dbb58cb018b332864ed40f7}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={Ken\bibnamedelima H.},
+           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{5cb0e2808c65ad968e7a3eec38ebb8d7}
+      \strng{fullhash}{c164d7cd25bbd5b6b4ae295aa78d69f7}
+      \strng{fullhashraw}{c164d7cd25bbd5b6b4ae295aa78d69f7}
+      \strng{bibnamehash}{c164d7cd25bbd5b6b4ae295aa78d69f7}
+      \strng{authorbibnamehash}{c164d7cd25bbd5b6b4ae295aa78d69f7}
+      \strng{authornamehash}{5cb0e2808c65ad968e7a3eec38ebb8d7}
+      \strng{authorfullhash}{c164d7cd25bbd5b6b4ae295aa78d69f7}
+      \strng{authorfullhashraw}{c164d7cd25bbd5b6b4ae295aa78d69f7}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Methods in Ecology and Evolution}
+      \field{number}{10}
+      \field{title}{\textit{mizer}: an {R} package for multispecies, trait-based and community size spectrum ecological modelling}
+      \field{volume}{5}
+      \field{year}{2014}
+      \field{pages}{1121\bibrangedash 1125}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1111/2041-210x.12256
+      \endverb
+    \endentry
+    \entry{shelton2006fishing}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=0ceb0a70adb6ade7c30bab2b89f955c8}{%
+           family={Shelton},
+           familyi={S\bibinitperiod},
+           given={Peter\bibnamedelima A},
+           giveni={P\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=41783e39f4c1e79bf3d9525327c775f4}{%
+           family={Sinclair},
+           familyi={S\bibinitperiod},
+           given={Alan\bibnamedelima F},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=21fcc4b94f7130bb2bc0d64e1323638f}{%
+           family={Chouinard},
+           familyi={C\bibinitperiod},
+           given={Ghislain\bibnamedelima A},
+           giveni={G\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=e5407f2d76e88483bc9a803d88bbbeff}{%
+           family={Mohn},
+           familyi={M\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=53300676bcb5227d4efdb602d0448b79}{%
+           family={Duplisea},
+           familyi={D\bibinitperiod},
+           given={Daniel\bibnamedelima E},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \strng{namehash}{8bb993cba9daaa7065dd017aae1867d7}
+      \strng{fullhash}{7c507e3d571046646cc4e62b2ac68119}
+      \strng{fullhashraw}{7c507e3d571046646cc4e62b2ac68119}
+      \strng{bibnamehash}{7c507e3d571046646cc4e62b2ac68119}
+      \strng{authorbibnamehash}{7c507e3d571046646cc4e62b2ac68119}
+      \strng{authornamehash}{8bb993cba9daaa7065dd017aae1867d7}
+      \strng{authorfullhash}{7c507e3d571046646cc4e62b2ac68119}
+      \strng{authorfullhashraw}{7c507e3d571046646cc4e62b2ac68119}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Canadian Journal of Fisheries and Aquatic Sciences}
+      \field{number}{2}
+      \field{title}{Fishing under low productivity conditions is further delaying recovery of {Northwest} {Atlantic} cod (\textit{Gadus morhua})}
+      \field{volume}{63}
+      \field{year}{2006}
+      \field{pages}{235\bibrangedash 238}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1139/f05-253
+      \endverb
+    \endentry
+    \entry{smith2011impacts}{article}{}{}
+      \name{author}{12}{}{%
+        {{hash=50962af07134bc4596935a2346e0806a}{%
+           family={Smith},
+           familyi={S\bibinitperiod},
+           given={Anthony\bibnamedelimb D.\bibnamedelimi M.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=604991ed4e5449395e1d96178269c02c}{%
+           family={Brown},
+           familyi={B\bibinitperiod},
+           given={Christopher\bibnamedelima J.},
+           giveni={C\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=1588c78ee72aa23e1ac42068eb62278d}{%
+           family={Bulman},
+           familyi={B\bibinitperiod},
+           given={Catherine\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=baa2d274799fdbeed10b3de743c1d583}{%
+           family={Fulton},
+           familyi={F\bibinitperiod},
+           given={Elizabeth\bibnamedelima A.},
+           giveni={E\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=1aa2dc1ed210f762d154d5960bc7f788}{%
+           family={Johnson},
+           familyi={J\bibinitperiod},
+           given={Penny},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b55b64421923600eddc3f12238ef30e6}{%
+           family={Kaplan},
+           familyi={K\bibinitperiod},
+           given={Isaac\bibnamedelima C.},
+           giveni={I\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=94a5510947af732dc46410cb1948b9e4}{%
+           family={Lozano-Montes},
+           familyi={L\bibinithyphendelim M\bibinitperiod},
+           given={Hector},
+           giveni={H\bibinitperiod}}}%
+        {{hash=475610ff31bc581eed3e2baf7b34b522}{%
+           family={Mackinson},
+           familyi={M\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=06316180ad114c5d1180d43aa55283c6}{%
+           family={Marzloff},
+           familyi={M\bibinitperiod},
+           given={Martin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9c5eb24afa1d48a374a3d15b15e6dae4}{%
+           family={Shannon},
+           familyi={S\bibinitperiod},
+           given={Lynne\bibnamedelima J.},
+           giveni={L\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=753cb7c62c3e59d832b90d8856369108}{%
+           family={Shin},
+           familyi={S\bibinitperiod},
+           given={Yunne-Jai},
+           giveni={Y\bibinithyphendelim J\bibinitperiod}}}%
+        {{hash=08bafaefe51eabf44cae9da19ad83428}{%
+           family={Tam},
+           familyi={T\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{aa31025c9e06b33cd590ed482742d5b8}
+      \strng{fullhash}{9afb649b961ae1991101c6514d5f6a73}
+      \strng{fullhashraw}{9afb649b961ae1991101c6514d5f6a73}
+      \strng{bibnamehash}{9afb649b961ae1991101c6514d5f6a73}
+      \strng{authorbibnamehash}{9afb649b961ae1991101c6514d5f6a73}
+      \strng{authornamehash}{aa31025c9e06b33cd590ed482742d5b8}
+      \strng{authorfullhash}{9afb649b961ae1991101c6514d5f6a73}
+      \strng{authorfullhashraw}{9afb649b961ae1991101c6514d5f6a73}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Science}
+      \field{number}{6046}
+      \field{title}{Impacts of Fishing Low--Trophic Level Species on Marine Ecosystems}
+      \field{volume}{333}
+      \field{year}{2011}
+      \field{pages}{1147\bibrangedash 1150}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1126/science.1209395
+      \endverb
+    \endentry
+    \entry{swain2015extreme}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=ab7a259c92a301849cf7fa4837c3ed30}{%
+           family={Swain},
+           familyi={S\bibinitperiod},
+           given={DP},
+           giveni={D\bibinitperiod}}}%
+        {{hash=449a11a2ef20c1c4ffdd3c3b455fd35a}{%
+           family={Benoît},
+           familyi={B\bibinitperiod},
+           given={HP},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{cb699a791f43c4b189ba7c7134a66a67}
+      \strng{fullhash}{cb699a791f43c4b189ba7c7134a66a67}
+      \strng{fullhashraw}{cb699a791f43c4b189ba7c7134a66a67}
+      \strng{bibnamehash}{cb699a791f43c4b189ba7c7134a66a67}
+      \strng{authorbibnamehash}{cb699a791f43c4b189ba7c7134a66a67}
+      \strng{authornamehash}{cb699a791f43c4b189ba7c7134a66a67}
+      \strng{authorfullhash}{cb699a791f43c4b189ba7c7134a66a67}
+      \strng{authorfullhashraw}{cb699a791f43c4b189ba7c7134a66a67}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Marine Ecology Progress Series}
+      \field{title}{Extreme increases in natural mortality prevent recovery of collapsed fish populations in a {Northwest} {Atlantic} ecosystem}
+      \field{volume}{519}
+      \field{year}{2015}
+      \field{pages}{165\bibrangedash 182}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.3354/meps11012
+      \endverb
+    \endentry
+    \entry{swain2011life}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=9f41c076c80c8c84c54aeffd56d53d25}{%
+           family={Swain},
+           familyi={S\bibinitperiod},
+           given={Douglas\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{9f41c076c80c8c84c54aeffd56d53d25}
+      \strng{fullhash}{9f41c076c80c8c84c54aeffd56d53d25}
+      \strng{fullhashraw}{9f41c076c80c8c84c54aeffd56d53d25}
+      \strng{bibnamehash}{9f41c076c80c8c84c54aeffd56d53d25}
+      \strng{authorbibnamehash}{9f41c076c80c8c84c54aeffd56d53d25}
+      \strng{authornamehash}{9f41c076c80c8c84c54aeffd56d53d25}
+      \strng{authorfullhash}{9f41c076c80c8c84c54aeffd56d53d25}
+      \strng{authorfullhashraw}{9f41c076c80c8c84c54aeffd56d53d25}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Evolutionary Applications}
+      \field{number}{1}
+      \field{title}{Life-history evolution and elevated natural mortality in a population of {Atlantic} cod (\textit{Gadus morhua})}
+      \field{volume}{4}
+      \field{year}{2011}
+      \field{pages}{18\bibrangedash 29}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1111/j.1752-4571.2010.00128.x
+      \endverb
+    \endentry
+    \entry{swain2012forage}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=9f41c076c80c8c84c54aeffd56d53d25}{%
+           family={Swain},
+           familyi={S\bibinitperiod},
+           given={Douglas\bibnamedelima P.},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=f33f51fae96602905169e25e720e1fae}{%
+           family={Mohn},
+           familyi={M\bibinitperiod},
+           given={Robert\bibnamedelima K.},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{926eb198b0d39f65495bf8faf1a9602c}
+      \strng{fullhash}{926eb198b0d39f65495bf8faf1a9602c}
+      \strng{fullhashraw}{926eb198b0d39f65495bf8faf1a9602c}
+      \strng{bibnamehash}{926eb198b0d39f65495bf8faf1a9602c}
+      \strng{authorbibnamehash}{926eb198b0d39f65495bf8faf1a9602c}
+      \strng{authornamehash}{926eb198b0d39f65495bf8faf1a9602c}
+      \strng{authorfullhash}{926eb198b0d39f65495bf8faf1a9602c}
+      \strng{authorfullhashraw}{926eb198b0d39f65495bf8faf1a9602c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Canadian Journal of Fisheries and Aquatic Sciences}
+      \field{number}{6}
+      \field{title}{Forage fish and the factors governing recovery of {Atlantic} cod (\textit{Gadus morhua}) on the eastern {Scotian Shelf}}
+      \field{volume}{69}
+      \field{year}{2012}
+      \field{pages}{997\bibrangedash 1001}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1139/f2012-045
+      \endverb
+    \endentry
+    \entry{swain2000pelagic}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=ab7a259c92a301849cf7fa4837c3ed30}{%
+           family={Swain},
+           familyi={S\bibinitperiod},
+           given={D\bibnamedelima P},
+           giveni={D\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=09035daed0c88f21b793a3e86a7d5edf}{%
+           family={Sinclair},
+           familyi={S\bibinitperiod},
+           given={A\bibnamedelima F},
+           giveni={A\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{331703c46639be6a1d69fd85ec2fb45b}
+      \strng{fullhash}{331703c46639be6a1d69fd85ec2fb45b}
+      \strng{fullhashraw}{331703c46639be6a1d69fd85ec2fb45b}
+      \strng{bibnamehash}{331703c46639be6a1d69fd85ec2fb45b}
+      \strng{authorbibnamehash}{331703c46639be6a1d69fd85ec2fb45b}
+      \strng{authornamehash}{331703c46639be6a1d69fd85ec2fb45b}
+      \strng{authorfullhash}{331703c46639be6a1d69fd85ec2fb45b}
+      \strng{authorfullhashraw}{331703c46639be6a1d69fd85ec2fb45b}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Canadian Journal of Fisheries and Aquatic Sciences}
+      \field{number}{7}
+      \field{title}{Pelagic fishes and the cod recruitment dilemma in the {Northwest} {Atlantic}}
+      \field{volume}{57}
+      \field{year}{2000}
+      \field{pages}{1321\bibrangedash 1325}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1139/f00-104
+      \endverb
+    \endentry
+    \entry{trzcinski2006continued}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=3941b3e7ae7f9bbf6d7955a9c1207988}{%
+           family={Trzcinski},
+           familyi={T\bibinitperiod},
+           given={M.\bibnamedelimi Kurtis},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=e5407f2d76e88483bc9a803d88bbbeff}{%
+           family={Mohn},
+           familyi={M\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d41be4ab8342e9ab8e61b03636b93009}{%
+           family={Bowen},
+           familyi={B\bibinitperiod},
+           given={W.\bibnamedelimi Don},
+           giveni={W\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{ca6dd72a160c9e1e2385d01a300d7a3e}
+      \strng{fullhash}{4819e809785a3cfc5273998cddcc125d}
+      \strng{fullhashraw}{4819e809785a3cfc5273998cddcc125d}
+      \strng{bibnamehash}{4819e809785a3cfc5273998cddcc125d}
+      \strng{authorbibnamehash}{4819e809785a3cfc5273998cddcc125d}
+      \strng{authornamehash}{ca6dd72a160c9e1e2385d01a300d7a3e}
+      \strng{authorfullhash}{4819e809785a3cfc5273998cddcc125d}
+      \strng{authorfullhashraw}{4819e809785a3cfc5273998cddcc125d}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Ecological Applications}
+      \field{number}{6}
+      \field{title}{Continued decline of an {Atlantic} cod population: how important is gray seal predation?}
+      \field{volume}{16}
+      \field{year}{2006}
+      \field{pages}{2276\bibrangedash 2292}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1890/1051-0761(2006)016[2276:cdoaac]2.0.co;2
+      \endverb
+    \endentry
+    \entry{vanleeuwen2013predators}{article}{}{}
+      \name{author}{8}{}{%
+        {{hash=9d324c41de0822e03618baf768c10efb}{%
+           family={Leeuwen},
+           familyi={L\bibinitperiod},
+           given={Anieke},
+           giveni={A\bibinitperiod},
+           prefix={van},
+           prefixi={v\bibinitperiod}}}%
+        {{hash=f12d144c9f9abd50844fdef0322d9abb}{%
+           family={Huss},
+           familyi={H\bibinitperiod},
+           given={Magnus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=77a7bde2b68a0c9a893239a75090ed9d}{%
+           family={Gårdmark},
+           familyi={G\bibinitperiod},
+           given={Anna},
+           giveni={A\bibinitperiod}}}%
+        {{hash=794bbbce6d064d3a7f7fb7621e8e4102}{%
+           family={Casini},
+           familyi={C\bibinitperiod},
+           given={Michele},
+           giveni={M\bibinitperiod}}}%
+        {{hash=273958820541fa30d6dcfb09d35db6ba}{%
+           family={Vitale},
+           familyi={V\bibinitperiod},
+           given={Francesca},
+           giveni={F\bibinitperiod}}}%
+        {{hash=68505928666b06ff05fd82b0ecec7315}{%
+           family={Hjelm},
+           familyi={H\bibinitperiod},
+           given={Joakim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=3052f67698be0fd9e8a3c84bde2ae671}{%
+           family={Persson},
+           familyi={P\bibinitperiod},
+           given={Lennart},
+           giveni={L\bibinitperiod}}}%
+        {{hash=460575c4e4439de7b4315aa868b16f9e}{%
+           family={Roos},
+           familyi={R\bibinitperiod},
+           given={André\bibnamedelima M.},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod},
+           prefix={de},
+           prefixi={d\bibinitperiod}}}%
+      }
+      \strng{namehash}{64886b4a33e57a6af5848b17f9b08899}
+      \strng{fullhash}{691ed4c315310e7d918821f21f3589c1}
+      \strng{fullhashraw}{691ed4c315310e7d918821f21f3589c1}
+      \strng{bibnamehash}{691ed4c315310e7d918821f21f3589c1}
+      \strng{authorbibnamehash}{691ed4c315310e7d918821f21f3589c1}
+      \strng{authornamehash}{64886b4a33e57a6af5848b17f9b08899}
+      \strng{authorfullhash}{691ed4c315310e7d918821f21f3589c1}
+      \strng{authorfullhashraw}{691ed4c315310e7d918821f21f3589c1}
+      \field{sortinit}{v}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The American Naturalist}
+      \field{number}{1}
+      \field{title}{Predators with Multiple Ontogenetic Niche Shifts Have Limited Potential for Population Growth and Top-Down Control of Their Prey}
+      \field{volume}{182}
+      \field{year}{2013}
+      \field{pages}{53\bibrangedash 66}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1086/670614
+      \endverb
+    \endentry
+    \entry{walters2001cultivation}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=5b3d9aaf77552dbfa28b3bb4d7062d2f}{%
+           family={Walters},
+           familyi={W\bibinitperiod},
+           given={Carl},
+           giveni={C\bibinitperiod}}}%
+        {{hash=195ba147d04fb5f2a00cf8b6ab99c331}{%
+           family={Kitchell},
+           familyi={K\bibinitperiod},
+           given={James\bibnamedelima F},
+           giveni={J\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+      }
+      \strng{namehash}{4108ba8ca5aafb1da1cb5a146b36c77b}
+      \strng{fullhash}{4108ba8ca5aafb1da1cb5a146b36c77b}
+      \strng{fullhashraw}{4108ba8ca5aafb1da1cb5a146b36c77b}
+      \strng{bibnamehash}{4108ba8ca5aafb1da1cb5a146b36c77b}
+      \strng{authorbibnamehash}{4108ba8ca5aafb1da1cb5a146b36c77b}
+      \strng{authornamehash}{4108ba8ca5aafb1da1cb5a146b36c77b}
+      \strng{authorfullhash}{4108ba8ca5aafb1da1cb5a146b36c77b}
+      \strng{authorfullhashraw}{4108ba8ca5aafb1da1cb5a146b36c77b}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Canadian Journal of Fisheries and Aquatic Sciences}
+      \field{number}{1}
+      \field{title}{Cultivation/depensation effects on juvenile survival and recruitment: implications for the theory of fishing}
+      \field{volume}{58}
+      \field{year}{2001}
+      \field{pages}{39\bibrangedash 50}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.1139/f00-160
+      \endverb
+    \endentry
+    \entry{zwanenburg2000effects}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=986050f902fc7ab6c3c9b83ff606a0a0}{%
+           family={Zwanenburg},
+           familyi={Z\bibinitperiod},
+           given={K},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{986050f902fc7ab6c3c9b83ff606a0a0}
+      \strng{fullhash}{986050f902fc7ab6c3c9b83ff606a0a0}
+      \strng{fullhashraw}{986050f902fc7ab6c3c9b83ff606a0a0}
+      \strng{bibnamehash}{986050f902fc7ab6c3c9b83ff606a0a0}
+      \strng{authorbibnamehash}{986050f902fc7ab6c3c9b83ff606a0a0}
+      \strng{authornamehash}{986050f902fc7ab6c3c9b83ff606a0a0}
+      \strng{authorfullhash}{986050f902fc7ab6c3c9b83ff606a0a0}
+      \strng{authorfullhashraw}{986050f902fc7ab6c3c9b83ff606a0a0}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{ICES Journal of Marine Science}
+      \field{number}{3}
+      \field{title}{The effects of fishing on demersal fish communities of the {Scotian Shelf}}
+      \field{volume}{57}
+      \field{year}{2000}
+      \field{pages}{503\bibrangedash 509}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1006/jmsc.2000.0744
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

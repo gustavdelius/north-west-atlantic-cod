@@ -83,12 +83,22 @@ cal_file <- "results/hindcast_calibration.csv"
 if (file.exists(cal_file) && !REBUILD) {
     cal <- read.csv(cal_file)
 } else {
+    # The 1980s state must be an attractor: below a critical forage
+    # reproduction level the calibrated baseline is dynamically unstable
+    # (leading eigenvalue > 0; forage recruitment then responds almost
+    # proportionally to spawners and the forage -> cod early-life loop runs
+    # away). The fit is restricted to levels at least 0.05 above that bound.
+    eig_at <- function(rf) { p <- params; rl <- reproduction_level(p); rl[FORAGE] <- rf
+        reproduction_level(p) <- rl; getStability(p)$max_real_part }
+    rf_crit <- if (eig_at(0.02) < 0) 0.02 else uniroot(eig_at, c(0.02, 0.95), tol = 0.005)$root
+    rf_lo <- min(0.9, rf_crit + 0.05)
     obj <- function(lr) { r <- tryCatch(hind_ratios(plogis(lr))$r, error = function(e) NULL)
         if (is.null(r) || !is.finite(r["forage"])) return(1e6); log(r["forage"] / 7.87)^2 }
-    opt <- optimize(obj, interval = qlogis(c(0.02, 0.95)), tol = 0.02)
+    opt <- optimize(obj, interval = qlogis(c(rf_lo, 0.95)), tol = 0.02)
     rf <- plogis(opt$minimum)
     r <- hind_ratios(rf)$r
-    cal <- data.frame(repro_forage = rf, target_forage_1995_2004 = 7.87, t(r))
+    cal <- data.frame(repro_forage = rf, critical_level_for_stability = rf_crit, lower_bound = rf_lo,
+                      target_forage_1995_2004 = 7.87, t(r))
     write.csv(cal, cal_file, row.names = FALSE)
 }
 print(cal)

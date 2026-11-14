@@ -42,3 +42,19 @@
   observed post-collapse level; equilibrium SSB at F = 0 ~4x baseline): the
   forage feedback would have to make forage fish eat ~30-50 % of cod 1 mg-1 g
   (s_egg ~12-19) to stall recovery for 30 years or create an alternative state.
+
+## v3
+
+* With Beverton-Holt reproduction levels of 0.1 (groundfish) and 0.17
+  (forage) the community has little density dependence left: long-run
+  equilibria away from the calibrated point are single-group communities
+  (cod 4-7x with haddock, hake and plaice extinct; or the other groundfish
+  with cod excluded at cod F >= 0.4-0.5; or forage x19-26). Cod's collapse F
+  is 0.5 whatever s is, set by competition with the other groundfish once
+  they are fished at plausible rates.
+* Forage fish do not boom when cod collapses: the other groundfish take over
+  predation on them and the resource limits them. The boom in the documented
+  F hindcast is x1.4 (x1.8 with adult cod M 0.8); s raises it only to ~x2.
+* With s = 20 a cod-free attractor exists (forage x19, all groundfish gone;
+  invasion -0.01 /yr); the trap captures cod only from an imposed x8 boom with
+  cod at ~1 % of its baseline SSB.

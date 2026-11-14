@@ -1,0 +1,325 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{bundy2004mass}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=d1649ff211a73c9e2f44f5f6cef60777}{%
+           family={Bundy},
+           familyi={B\bibinitperiod},
+           given={Alida},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Fisheries}%
+        {Oceans Canada}%
+      }
+      \strng{namehash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{fullhash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{fullhashraw}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{bibnamehash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{authorbibnamehash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{authornamehash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{authorfullhash}{d1649ff211a73c9e2f44f5f6cef60777}
+      \strng{authorfullhashraw}{d1649ff211a73c9e2f44f5f6cef60777}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{2520}
+      \field{title}{Mass balance models of the eastern {Scotian} {Shelf} before and after the cod collapse and other ecosystem changes}
+      \field{type}{Can. Tech. Rep. Fish. Aquat. Sci.}
+      \field{year}{2004}
+      \verb{urlraw}
+      \verb https://publications.gc.ca/site/eng/9.574099/publication.html
+      \endverb
+      \verb{url}
+      \verb https://publications.gc.ca/site/eng/9.574099/publication.html
+      \endverb
+    \endentry
+    \entry{delius2013mizer}{manual}{}{}
+      \name{author}{4}{}{%
+        {{hash=1275572562d68b5c85f69b616b2a5537}{%
+           family={Delius},
+           familyi={D\bibinitperiod},
+           given={Gustav},
+           giveni={G\bibinitperiod}}}%
+        {{hash=e7e3737a3af29ff4127c09d8017cba9b}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={Finlay},
+           giveni={F\bibinitperiod}}}%
+        {{hash=91bf6f37188fb409d466203a8e40fb3e}{%
+           family={Blanchard},
+           familyi={B\bibinitperiod},
+           given={Julia},
+           giveni={J\bibinitperiod}}}%
+        {{hash=ee7f7c44be08cd2d745d652cb2b6c536}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={Ken},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Comprehensive R Archive Network (CRAN)}%
+      }
+      \strng{namehash}{c02536047fb08a5639b852b8576ed6ef}
+      \strng{fullhash}{37f777d0567166e4c998d851c1af9dc2}
+      \strng{fullhashraw}{37f777d0567166e4c998d851c1af9dc2}
+      \strng{bibnamehash}{37f777d0567166e4c998d851c1af9dc2}
+      \strng{authorbibnamehash}{37f777d0567166e4c998d851c1af9dc2}
+      \strng{authornamehash}{c02536047fb08a5639b852b8576ed6ef}
+      \strng{authorfullhash}{37f777d0567166e4c998d851c1af9dc2}
+      \strng{authorfullhashraw}{37f777d0567166e4c998d851c1af9dc2}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{mizer: Dynamic Multi-Species Size Spectrum Modelling}
+      \field{year}{2013}
+      \verb{doi}
+      \verb 10.32614/CRAN.package.mizer
+      \endverb
+      \verb{urlraw}
+      \verb https://sizespectrum.org/mizer/
+      \endverb
+      \verb{url}
+      \verb https://sizespectrum.org/mizer/
+      \endverb
+    \endentry
+    \entry{dfo2010greyseals}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=78ba95976069926c8163a9b5c933566c}{%
+           family={{DFO}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Fisheries}%
+        {Oceans Canada}%
+      }
+      \strng{namehash}{78ba95976069926c8163a9b5c933566c}
+      \strng{fullhash}{78ba95976069926c8163a9b5c933566c}
+      \strng{fullhashraw}{78ba95976069926c8163a9b5c933566c}
+      \strng{bibnamehash}{78ba95976069926c8163a9b5c933566c}
+      \strng{authorbibnamehash}{78ba95976069926c8163a9b5c933566c}
+      \strng{authornamehash}{78ba95976069926c8163a9b5c933566c}
+      \strng{authorfullhash}{78ba95976069926c8163a9b5c933566c}
+      \strng{authorfullhashraw}{78ba95976069926c8163a9b5c933566c}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{2010/071}
+      \field{title}{Impacts of grey seals on fish populations in eastern {Canada}}
+      \field{type}{DFO Can. Sci. Advis. Sec. Sci. Advis. Rep.}
+      \field{year}{2011}
+      \verb{urlraw}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/343116.pdf
+      \endverb
+      \verb{url}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/343116.pdf
+      \endverb
+    \endentry
+    \entry{fanning2003assessment}{report}{}{}
+      \name{author}{3}{}{%
+        {{hash=20b457ec3a548ca468c65314285417af}{%
+           family={Fanning},
+           familyi={F\bibinitperiod},
+           given={L.\bibnamedelimi P.},
+           giveni={L\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+        {{hash=9a49170c747fa69d670c805549633ca3}{%
+           family={Mohn},
+           familyi={M\bibinitperiod},
+           given={R.\bibnamedelimi K.},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=d7ce152f32d5510b9b803582e0f19082}{%
+           family={MacEachern},
+           familyi={M\bibinitperiod},
+           given={W.\bibnamedelimi J.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Fisheries}%
+        {Oceans Canada, Canadian Science Advisory Secretariat}%
+      }
+      \strng{namehash}{06100c992a5df71d38bd6b3410bb30d6}
+      \strng{fullhash}{917433b895c133c9044a42862fe798d1}
+      \strng{fullhashraw}{917433b895c133c9044a42862fe798d1}
+      \strng{bibnamehash}{917433b895c133c9044a42862fe798d1}
+      \strng{authorbibnamehash}{917433b895c133c9044a42862fe798d1}
+      \strng{authornamehash}{06100c992a5df71d38bd6b3410bb30d6}
+      \strng{authorfullhash}{917433b895c133c9044a42862fe798d1}
+      \strng{authorfullhashraw}{917433b895c133c9044a42862fe798d1}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{ii + 41 p.}
+      \field{number}{2003/027}
+      \field{title}{Assessment of 4{VsW} cod to 2002}
+      \field{type}{DFO Can. Sci. Advis. Sec. Res. Doc.}
+      \field{year}{2003}
+      \verb{urlraw}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/275363.pdf
+      \endverb
+      \verb{url}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/275363.pdf
+      \endverb
+    \endentry
+    \entry{mohn1994assessment}{report}{}{}
+      \name{author}{2}{}{%
+        {{hash=b0fcd558914008e269ff57b041e820bd}{%
+           family={Mohn},
+           familyi={M\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=d7ce152f32d5510b9b803582e0f19082}{%
+           family={MacEachern},
+           familyi={M\bibinitperiod},
+           given={W.\bibnamedelimi J.},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Department of Fisheries}%
+        {Oceans}%
+      }
+      \strng{namehash}{54a0a06893b37aeb721ce2d0717b029a}
+      \strng{fullhash}{54a0a06893b37aeb721ce2d0717b029a}
+      \strng{fullhashraw}{54a0a06893b37aeb721ce2d0717b029a}
+      \strng{bibnamehash}{54a0a06893b37aeb721ce2d0717b029a}
+      \strng{authorbibnamehash}{54a0a06893b37aeb721ce2d0717b029a}
+      \strng{authornamehash}{54a0a06893b37aeb721ce2d0717b029a}
+      \strng{authorfullhash}{54a0a06893b37aeb721ce2d0717b029a}
+      \strng{authorfullhashraw}{54a0a06893b37aeb721ce2d0717b029a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{number}{94/40}
+      \field{title}{Assessment of 4{VsW} cod in 1993}
+      \field{type}{DFO Atlantic Fisheries Research Document}
+      \field{year}{1994}
+      \verb{urlraw}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/168316.pdf
+      \endverb
+      \verb{url}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/168316.pdf
+      \endverb
+    \endentry
+    \entry{mohn2012laurentian}{report}{}{}
+      \name{author}{2}{}{%
+        {{hash=9a49170c747fa69d670c805549633ca3}{%
+           family={Mohn},
+           familyi={M\bibinitperiod},
+           given={R.\bibnamedelimi K.},
+           giveni={R\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=3658d397c7a533213b9cde4361599232}{%
+           family={Rowe},
+           familyi={R\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{institution}{2}{%
+        {Fisheries}%
+        {Oceans Canada}%
+      }
+      \strng{namehash}{b80afdfc4104ca9ea3a975e7a382c447}
+      \strng{fullhash}{b80afdfc4104ca9ea3a975e7a382c447}
+      \strng{fullhashraw}{b80afdfc4104ca9ea3a975e7a382c447}
+      \strng{bibnamehash}{b80afdfc4104ca9ea3a975e7a382c447}
+      \strng{authorbibnamehash}{b80afdfc4104ca9ea3a975e7a382c447}
+      \strng{authornamehash}{b80afdfc4104ca9ea3a975e7a382c447}
+      \strng{authorfullhash}{b80afdfc4104ca9ea3a975e7a382c447}
+      \strng{authorfullhashraw}{b80afdfc4104ca9ea3a975e7a382c447}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{viii + 71 p.}
+      \field{number}{2011/138}
+      \field{title}{Recovery Potential Assessment for the {Laurentian} {South} Designatable Unit of {Atlantic} Cod (\textit{Gadus morhua}): the {Eastern} {Scotian} {Shelf} cod stock ({NAFO} Div. 4{VsW})}
+      \field{type}{DFO Can. Sci. Advis. Sec. Res. Doc.}
+      \field{year}{2012}
+      \verb{urlraw}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/363102.pdf
+      \endverb
+      \verb{url}
+      \verb https://waves-vagues.dfo-mpo.gc.ca/library-bibliotheque/363102.pdf
+      \endverb
+    \endentry
+    \entry{scott2014mizer}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=e7e3737a3af29ff4127c09d8017cba9b}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={Finlay},
+           giveni={F\bibinitperiod}}}%
+        {{hash=ca071778a36f32548017e40efc478a78}{%
+           family={Blanchard},
+           familyi={B\bibinitperiod},
+           given={Julia\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=1a35c0fd5dbb58cb018b332864ed40f7}{%
+           family={Andersen},
+           familyi={A\bibinitperiod},
+           given={Ken\bibnamedelima H.},
+           giveni={K\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{5cb0e2808c65ad968e7a3eec38ebb8d7}
+      \strng{fullhash}{c164d7cd25bbd5b6b4ae295aa78d69f7}
+      \strng{fullhashraw}{c164d7cd25bbd5b6b4ae295aa78d69f7}
+      \strng{bibnamehash}{c164d7cd25bbd5b6b4ae295aa78d69f7}
+      \strng{authorbibnamehash}{c164d7cd25bbd5b6b4ae295aa78d69f7}
+      \strng{authornamehash}{5cb0e2808c65ad968e7a3eec38ebb8d7}
+      \strng{authorfullhash}{c164d7cd25bbd5b6b4ae295aa78d69f7}
+      \strng{authorfullhashraw}{c164d7cd25bbd5b6b4ae295aa78d69f7}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Methods in Ecology and Evolution}
+      \field{number}{10}
+      \field{title}{\textit{mizer}: an {R} package for multispecies, trait-based and community size spectrum ecological modelling}
+      \field{volume}{5}
+      \field{year}{2014}
+      \field{pages}{1121\bibrangedash 1125}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1111/2041-210x.12256
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

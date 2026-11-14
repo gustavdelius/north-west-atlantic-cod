@@ -52,3 +52,28 @@
 * Hindcast calibration (forage reproduction level, groundfish F) is cheap
   because `reproduction_level<-` does not move the steady state: optimise it
   with optim() on the hindcast directly, no rebuild needed.
+
+## v3 (main model, R/functions.R)
+
+* The matchBiomasses / tuneSteadyState loop does not converge for this
+  strongly coupled model (errors oscillate and grow, even with R_max = Inf).
+  What works: `solve_biomasses()` -- Newton's method on the log abundance
+  factors of all species at once, each evaluation one
+  `tuneSteadyState(solver = "project")` with recruitment and resource pinned,
+  finite-difference Jacobian. Converges quadratically (0.43 -> 0.12 -> 0.003
+  max log error), ~20 s per Newton step with 7 species and 120 bins.
+* Keep R_max = Inf (reproduction level 0) while calibrating and set the
+  reproduction levels at the end: with R_max finite, matchBiomasses() scaling
+  is not matched by the pinned recruitment.
+* Do not use `matchGrowth()` here: its final `steadySingleSpecies()` call
+  wrecks the state (see `notes/mizer-issues.md` #4). `scale_growth()`
+  rescales gamma, h, ks, k by age_mat(model)/age_mat(target) and keeps the
+  spectra; growth then matches to < 0.5 %.
+* `tuneSteadyState()` after a growth change can end with termination
+  "residual_tolerance" but attractor NA (instantaneous drift 0.06-0.09/yr in
+  the smallest sizes) although a 50-year projection moves < 4 %; accept
+  those (`settled()`).
+* The calibrated v3 baseline is only weakly stable (leading eigenvalue
+  -0.006/yr) and its stability depends on the forage reproduction level
+  (unstable below ~0.12): check getStability() after setting reproduction
+  levels, not only isSteady().

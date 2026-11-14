@@ -3,15 +3,21 @@
 # Acceptance test 2 for v3 and the pathway analysis.
 #  (1) Hindcast 1970-2025 driven by the documented fishing only
 #      (data/v3/effort_history.csv: cod F up to 1.10 in 1990-92, bycatch 0.02
-#      from 1994; plausible other-groundfish F), continued to 2125 at the
-#      moratorium efforts. Variant: cod F = 0 from 1994.
-#  (2) The 2025 state is saved as models/collapsed_2025_params.rds (initial
-#      state of tests 3-4) and the 2000 state as models/boom_2000_params.rds.
-#  (3) Pathways, baseline vs 2000 (boom): pre-recruit budgets of cod, feeding
-#      level and growth; rate-based decomposition of the survival change;
-#      diagnostic runs from 2000 with (a) the vulnerability factor removed
-#      (s_egg = 1, purely size-based), (b) plankton depletion switched off,
-#      (c) both. Diagnostic runs change parameters; they are not scenarios.
+#      from 1994; other-groundfish F 0.30-0.55), continued to 2125 at the
+#      moratorium efforts (run A). Variant A0: cod F = 0 from 1994.
+#  (2) Alternative run B (labelled; changes a parameter): as A, plus adult
+#      cod natural mortality 0.8 /yr from 1990 to 2025 (elevate_M()), then
+#      back to baseline from 2026. Documented fishing alone does not produce
+#      a collapsed cod stock in v3 (see results), so the 2025 state of run B
+#      is the "collapsed" initial state of tests 3-4
+#      (models/collapsed_2025_params.rds, with the BASELINE parameters).
+#      The 2025 state of run A is saved as models/hindcast_2025_documentedF_params.rds.
+#  (3) Pathways, baseline vs the 2000 state of run B: pre-recruit budgets of
+#      cod, feeding level and growth; rate-based decomposition of the
+#      survival change; diagnostic runs from the collapsed 2025 state with
+#      (a) the vulnerability factor removed (s = 1), (b) plankton depletion
+#      switched off, (c) both. Diagnostic runs change parameters; they are
+#      not scenarios.
 # Outputs: results/hindcast*.csv, results/pathways*.csv, figures/fig2*.
 # ---------------------------------------------------------------------------
 source("R/functions.R")
@@ -24,23 +30,34 @@ base_ssb <- getSSB(params)[["Cod"]]
 base_forage <- sum(getBiomass(params)[FORAGE])
 eh <- read_effort_history()
 mor <- moratorium_effort(eh)
-cont <- function(e, from_sim, start, end) {
+cont <- function(p, e, from_sim, start, end) {
     ext <- e[nrow(e), ]; ext$year <- start
-    run_scenario(params, ext, years = c(start, end), initial = from_sim)
+    run_scenario(p, ext, years = c(start, end), initial = from_sim)
 }
+RUN_A <- "A: documented F, bycatch 0.02 from 1994"
+RUN_A0 <- "A0: documented F, cod F = 0 from 1994"
+RUN_B <- "B (alternative): A + adult cod M 0.8 in 1990-2025"
 hA <- run_scenario(params, eh, years = c(1970, 2025), return_sim = TRUE)
-dA <- bind_rows(hA$data, filter(cont(eh, hA$sim, 2025, 2125), year > 2025))
+dA <- bind_rows(hA$data, filter(cont(params, eh, hA$sim, 2025, 2125), year > 2025))
 eh0 <- eh; eh0$cod[eh0$year >= 1994] <- 0
 h0 <- run_scenario(params, eh0, years = c(1970, 2025), return_sim = TRUE)
-d0 <- bind_rows(h0$data, filter(cont(eh0, h0$sim, 2025, 2125), year > 2025))
-p2025 <- finalParams(hA$sim); initial_effort(p2025) <- mor
-saveParams(setMetadata(p2025, title = "4VsW model v3: state at the end of 2025 (documented-F hindcast)",
+d0 <- bind_rows(h0$data, filter(cont(params, eh0, h0$sim, 2025, 2125), year > 2025))
+h1 <- run_scenario(params, eh[eh$year < 1990, ], years = c(1970, 1990), return_sim = TRUE)
+pM <- elevate_M(params)
+h2 <- run_scenario(pM, eh[eh$year >= 1990, ], years = c(1990, 2025), initial = h1$sim, return_sim = TRUE)
+dB <- bind_rows(h1$data, filter(h2$data, year > 1990),
+                filter(cont(params, eh, h2$sim, 2025, 2125), year > 2025))
+pA2025 <- finalParams(hA$sim); initial_effort(pA2025) <- mor
+saveParams(setMetadata(pA2025, title = "4VsW model v3: 2025 state of the documented-F hindcast",
                        description = "Same parameters as models/baseline_params.rds."),
+           "models/hindcast_2025_documentedF_params.rds")
+p2025 <- set_state(params, finalParams(h2$sim)); initial_effort(p2025) <- mor
+saveParams(setMetadata(p2025, title = "4VsW model v3: collapsed 2025 state (run B: documented F + adult M 0.8 in 1990-2025)",
+                       description = "Baseline parameters (adult M back to baseline) with the 2025 state of run B."),
            "models/collapsed_2025_params.rds")
-p2000 <- getParams(hA$sim, time_range = 2000); initial_effort(p2000) <- mor
+p2000 <- set_state(params, getParams(h2$sim, time_range = 2000)); initial_effort(p2000) <- mor
 saveParams(p2000, "models/boom_2000_params.rds")
-hind <- bind_rows(mutate(dA, run = "A: documented F, bycatch 0.02 from 1994"),
-                  mutate(d0, run = "A0: documented F, cod F = 0 from 1994"))
+hind <- bind_rows(mutate(dA, run = RUN_A), mutate(d0, run = RUN_A0), mutate(dB, run = RUN_B))
 write.csv(hind, "results/hindcast.csv", row.names = FALSE)
 
 obs <- read.csv("literature/data/cod_4VsW_assessment.csv", comment.char = "#")
@@ -73,15 +90,15 @@ write.csv(met, "results/hindcast_metrics.csv", row.names = FALSE)
 print(met)
 
 # (4) pathways ---------------------------------------------------------------------
-pb <- params; pB <- p2000
+pb <- params; pBoom <- p2000
 budget_rows <- bind_rows(lapply(c(1, 10), function(wh) bind_rows(
     mutate(prerecruit_budget(pb, "Cod", 0.001, wh), state = "baseline 1980-85"),
-    mutate(prerecruit_budget(pB, "Cod", 0.001, wh), state = "boom 2000"))))
+    mutate(prerecruit_budget(pBoom, "Cod", 0.001, wh), state = "run B, 2000"))))
 write.csv(budget_rows, "results/pathways_cod_prerecruit_budget.csv", row.names = FALSE)
 print(budget_rows)
 # rate-based decomposition: survival 1 mg -> w_hi with each combination of
 # mortality and growth from the two states
-mcb <- mort_components(pb, "Cod"); mcB <- mort_components(pB, "Cod")
+mcb <- mort_components(pb, "Cod"); mcB <- mort_components(pBoom, "Cod")
 surv <- function(mc, g, wh) prerecruit_budget(pb, "Cod", 0.001, wh, mc = mc, growth = g)$survival[1]
 decomp <- bind_rows(lapply(c(1, 10), function(wh) data.frame(
     w_hi = wh,
@@ -97,33 +114,32 @@ print(decomp)
 ws <- w(pb)
 fgr <- data.frame(w = ws,
                   feeding_baseline = as.numeric(getFeedingLevel(pb)["Cod", ]),
-                  feeding_boom = as.numeric(getFeedingLevel(pB)["Cod", ]),
+                  feeding_boom = as.numeric(getFeedingLevel(pBoom)["Cod", ]),
                   growth_baseline = mcb$growth, growth_boom = mcB$growth,
                   forage_mort_baseline = mcb$forage, forage_mort_boom = mcB$forage,
                   total_mort_baseline = rowSums(mcb[, 2:6]), total_mort_boom = rowSums(mcB[, 2:6]))
 write.csv(fgr, "results/pathways_cod_feeding_growth.csv", row.names = FALSE)
 rlv <- data.frame(w = c(1e-5, 1e-4, 1e-3, 1e-2, 0.1, 1, 5),
-                  level_baseline = resource_level_at(pb), level_boom = resource_level_at(pB),
+                  level_baseline = resource_level_at(pb), level_boom = resource_level_at(pBoom),
                   share_eaten_baseline = resource_consumption_share(pb),
-                  share_eaten_boom = resource_consumption_share(pB))
+                  share_eaten_boom = resource_consumption_share(pBoom))
 write.csv(rlv, "results/pathways_resource_level.csv", row.names = FALSE)
 print(rlv)
 
-# diagnostic runs from the 2000 state
-s1 <- function(p) { im <- interaction_matrix(p); im[FORAGE, GROUNDFISH] <- 1; interaction_matrix(p) <- im; p }
+# diagnostic runs from the collapsed 2025 state (baseline parameters otherwise)
 diag_params <- list(
     full = params,
-    no_vulnerability_factor = s1(params),
+    no_vulnerability_factor = s_off(params),
     no_plankton_depletion = setResource(params, resource_dynamics = "resource_constant"),
-    neither = s1(setResource(params, resource_dynamics = "resource_constant")))
+    neither = s_off(setResource(params, resource_dynamics = "resource_constant")))
 diag_runs <- mclapply(names(diag_params), function(n) {
     p <- diag_params[[n]]
-    p0 <- p2000
+    p0 <- p2025
     if (n %in% c("no_plankton_depletion", "neither")) {
         # hold the resource at its baseline (1980-85) abundance
         initialNResource(p0) <- initialNResource(params)
     }
-    mutate(run_scenario(p, mor, years = c(2000, 2125), initial = p0), diagnostic = n)
+    mutate(run_scenario(p, mor, years = c(2025, 2125), initial = p0), diagnostic = n)
 }, mc.cores = 4)
 diag_df <- bind_rows(diag_runs)
 write.csv(diag_df |> filter(species %in% c("Cod", FORAGE, OTHER_GF)),
@@ -131,15 +147,15 @@ write.csv(diag_df |> filter(species %in% c("Cod", FORAGE, OTHER_GF)),
 diag_met <- diag_df |> group_by(diagnostic) |> group_modify(~ {
     cod <- .x[.x$species == "Cod", ]
     rec <- cod$year[cod$ssb >= 0.5 * base_ssb]
-    data.frame(years_to_50pct_from_2000 = if (length(rec)) min(rec) - 2000 else NA,
-               cod_ssb_2025_rel = cod$ssb[cod$year == 2025] / base_ssb,
+    data.frame(years_to_50pct_from_2025 = if (length(rec)) min(rec) - 2025 else NA,
+               cod_ssb_2050_rel = cod$ssb[cod$year == 2050] / base_ssb,
                cod_ssb_2125_rel = cod$ssb[cod$year == 2125] / base_ssb)
 })
 write.csv(diag_met, "results/pathways_diagnostic_metrics.csv", row.names = FALSE)
 print(diag_met)
 
 # --- Figure 2: hindcast --------------------------------------------------------------
-pal_run <- c("A: documented F, bycatch 0.02 from 1994" = "#000000", "A0: documented F, cod F = 0 from 1994" = "#D55E00")
+pal_run <- setNames(c("#000000", "#0072B2", "#CC79A7"), c(RUN_A, RUN_A0, RUN_B))
 # the cod-forced calibration run is only meaningful over the calibration years
 hind_plot <- hind
 pA <- hind_plot |> filter(species == "Cod", year <= 2060) |>
@@ -160,9 +176,9 @@ grp$rel <- grp$biomass / base_grp[grp$group]
 pB <- ggplot(grp, aes(year, rel, colour = group, linetype = run)) + geom_line(linewidth = 0.7) +
     geom_vline(xintercept = 1993.7, linetype = "dotted") + scale_y_log10() +
     scale_colour_manual(values = SPECIES_COLOURS[c("Cod", "Forage fish", "Other groundfish")]) +
-    scale_linetype_manual(values = c("A: documented F, bycatch 0.02 from 1994" = "solid", "A0: documented F, cod F = 0 from 1994" = "dashed"), guide = "none") +
+    scale_linetype_manual(values = setNames(c("solid", "dashed", "dotdash"), c(RUN_A, RUN_A0, RUN_B)), guide = "none") +
     labs(x = NULL, y = "Biomass relative to baseline", colour = NULL,
-         title = "b  Groups (solid: bycatch 0.02, dashed: cod F = 0)") + theme_paper()
+         title = "b  Groups (solid A, dashed A0, dot-dash B)") + theme_paper()
 srv <- read.csv("literature/data/ess_rv_biomass_not_qadj_derived.csv", comment.char = "#", check.names = FALSE)
 srv_long <- data.frame(year = srv$year,
                        Cod = srv[["ATLANTIC COD"]], Haddock = srv[["HADDOCK"]],
@@ -171,19 +187,20 @@ srv_long <- data.frame(year = srv$year,
                        check.names = FALSE) |>
     pivot_longer(-year, names_to = "species", values_to = "b") |>
     group_by(species) |> mutate(rel = b / mean(b[year %in% 1980:1989]))
-mod_long <- hind |> filter(run == "A: documented F, bycatch 0.02 from 1994", year <= 2018) |>
+mod_long <- hind |> filter(run %in% c(RUN_A, RUN_B), year <= 2018) |>
     mutate(species = ifelse(species %in% FORAGE, "Forage fish", species)) |>
     filter(species %in% unique(srv_long$species)) |>
-    group_by(year, species) |> summarise(b = sum(biomass), .groups = "drop") |>
-    group_by(species) |> mutate(rel = b / mean(b[year %in% 1980:1989]))
+    group_by(run, year, species) |> summarise(b = sum(biomass), .groups = "drop") |>
+    group_by(run, species) |> mutate(rel = b / mean(b[year %in% 1980:1989]))
 pC <- ggplot() + geom_point(data = srv_long, aes(year, rel), colour = "#0072B2", size = 0.8) +
-    geom_line(data = mod_long, aes(year, rel)) + facet_wrap(~ species, scales = "free_y", nrow = 1) +
+    geom_line(data = mod_long, aes(year, rel, colour = run)) + facet_wrap(~ species, scales = "free_y", nrow = 1) +
+    scale_colour_manual(values = pal_run, guide = "none") +
     scale_y_log10() + labs(x = NULL, y = "Biomass / 1980-89 mean",
-                           title = "c  Documented-F hindcast (line) vs summer survey (points)") + theme_paper()
+                           title = "c  Hindcasts A (black) and B (pink) vs summer survey (points)") + theme_paper()
 resd <- hind_plot |> filter(grepl("Resource", species), year <= 2060) |>
     group_by(run, species) |> mutate(rel = biomass / biomass[year == min(year)])
 pD <- ggplot(resd, aes(year, rel, colour = species, linetype = run)) + geom_line() +
-    scale_linetype_manual(values = c("A: documented F, bycatch 0.02 from 1994" = "solid", "A0: documented F, cod F = 0 from 1994" = "dashed"), guide = "none") +
+    scale_linetype_manual(values = setNames(c("solid", "dashed", "dotdash"), c(RUN_A, RUN_A0, RUN_B)), guide = "none") +
     scale_colour_manual(values = c("Resource <1 mg" = "#009E73", "Resource 1-100 mg" = "#E69F00",
                                    "Resource 0.1-10 g" = "#56B4E9")) +
     labs(x = NULL, y = "Resource biomass / start of run", colour = NULL, title = "d  Plankton and benthos") +
@@ -198,7 +215,7 @@ gr <- fgr |> filter(w <= 100) |> transmute(w, baseline = growth_baseline / w, bo
     pivot_longer(-w, names_to = "state", values_to = "v")
 fm <- fgr |> filter(w <= 100) |> transmute(w, baseline = forage_mort_baseline, boom = forage_mort_boom) |>
     pivot_longer(-w, names_to = "state", values_to = "v")
-col2 <- c(baseline = "#0072B2", boom = "#D55E00")
+col2 <- c(baseline = "#0072B2", boom = "#D55E00")   # boom = run B, 2000
 q1 <- ggplot(fl, aes(w, v, colour = state)) + geom_line() + scale_x_log10() + scale_colour_manual(values = col2) +
     labs(x = "Cod mass (g)", y = "Feeding level", colour = NULL, title = "a  Cod feeding level") + theme_paper()
 q2 <- ggplot(gr, aes(w, v, colour = state)) + geom_line() + scale_x_log10() + scale_y_log10() +
@@ -219,6 +236,6 @@ q5 <- diag_df |> filter(species == "Cod") |>
                                    no_plankton_depletion = "#009E73", neither = "#CC79A7")) +
     geom_hline(yintercept = 0.5, linetype = "dotted") +
     labs(x = NULL, y = "Cod SSB / baseline", colour = "Diagnostic run",
-         title = "e  From the 2000 state with pathways switched off") + theme_paper()
+         title = "e  From the collapsed 2025 state (run B) with pathways switched off") + theme_paper()
 save_fig((q1 | q2) / (q3 | q4) / q5, "fig2b_pathways", width = 11, height = 12)
 cat("02_collapse_moratorium.R done\n")

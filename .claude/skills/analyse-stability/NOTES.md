@@ -29,3 +29,16 @@
   and plaice held forever, those species decline towards extinction in every
   long-run equilibrium; long-run results therefore describe a cod + forage
   system unless that mortality is relaxed.
+
+## v3
+
+* `getStability()` of the recalibrated baseline depends strongly on the
+  forage reproduction level: leading eigenvalue +0.014 at 0.02, +0.0026 at
+  0.1, -0.017 at 0.3; the critical level (~0.12) is found with uniroot() in
+  `R/01_build_model.R`. A steady state that `isSteady()` accepts can be
+  unstable.
+* With s = 20 the cod-free community is a (weak) attractor: invasion rate
+  -0.01 /yr, robust to dt, TR-BDF2 and 200 bins. Long-run equilibria are
+  mostly single-group communities (cod, forage or the other groundfish), so
+  sweeps over F show exclusion switches rather than smooth curves; several
+  equilibrations need > 400 years near the switches.

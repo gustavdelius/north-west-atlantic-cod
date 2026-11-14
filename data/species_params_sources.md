@@ -242,3 +242,67 @@ Calibration targets for the hindcast (summer RV survey, not q-adjusted,
 `literature/data/ess_rv_biomass_not_qadj_derived.csv`): cod 0.10, haddock
 0.61, silver hake 0.60, plaice 0.45, herring + sand lance + capelin 7.87
 (herring 6.55; 2005-12: 4.11). Tag: derived (literature agent's file), indicative.
+
+# Model v3 (main model): the assumption under test and the recalibration
+
+v3 keeps every v2 input (resource from Bundy 2004, background early-life
+mortality Z/G = 0.5, reproduction level 0.1 for groundfish) and changes:
+
+## The assumption under test: early-life vulnerability factor s
+
+Forage fish (herring, sand lance, capelin) feed on the eggs, larvae and small
+juveniles of all four groundfish (cod, haddock, silver hake, American plaice)
+s = 20 times more readily than on plankton of the same size (interaction-matrix
+entries forage -> groundfish = 20; all other entries 1). **Assumption, not
+data.** It was chosen so that, in the recalibrated 1980-85 baseline, forage
+fish cause 5.9 % of the deaths of cod between 1 mg and 1 g (5.8 % of the cohort;
+`results/baseline_prerecruit_budget.csv`), i.e. at the top of the 3-5 % range
+named in the brief and at the v2 threshold for an alternative state (s ~ 19
+without recalibration). Applied to all four groundfish because there is no
+basis for singling out cod; the sensitivity analysis varies s from 1 to 160
+(recalibrated for s = 1-40; s = 80 and 160 not recalibrated, flagged).
+
+## Calibration targets (data/v3/species_params.csv)
+
+As v2 except cod: 1.6 g m^-2 above 100 g (176 kt) instead of 2.0, so that the
+modelled cod yield at the baseline cod F (0.40) is 57 kt, within 7 % of the
+1980-85 mean landings of 53.5 kt (`literature/data/cod_4VsW_landings_1958_2002.csv`;
+tag: derived). The survey-based q-adjusted cod biomass is uncertain by more
+than this change.
+
+## Calibration method
+
+`calibrate_v3n()` in `R/functions.R`: s stepped 5 -> 10 -> 20; at each step
+all seven biomass targets solved simultaneously by Newton's method on the log
+abundance factors (recruitment and resource pinned by `tuneSteadyState()`,
+R_max = Inf while calibrating), alternated with a growth rescaling to age at
+maturity (`scale_growth()`, used instead of `matchGrowth()`, see
+`notes/mizer-issues.md` #4). Beverton-Holt levels imposed at the end. Result:
+all biomass errors < 1 %, ages at maturity within 0.5 %, erepro <= 0.05.
+
+## Forage reproduction level
+
+Fitted (`R/01_build_model.R`, Step C) to the forage boom in the documented-F
+hindcast, but restricted to values at least 0.05 above the level below which
+the 1980-85 state is dynamically unstable (0.12). The boom cannot be reached
+(target x7.9; at most x1.4 at the bound), so the fit sits on the bound:
+0.17 (`results/hindcast_calibration.csv`).
+
+## Fishing (data/v3/gear_params.csv, data/v3/effort_history.csv)
+
+Documented cod F only: 0.40 (1970s), 0.45 (1980-85), 0.70 (1986-89), 1.10
+(1990-92, "above Fmax", Mohn et al. 1994; survey Z of ages 5-8 about 1.0-1.8
+in 1989-93, Fanning et al. 2003 Table 14), 0.30 (1993, closure in September),
+0.02 from 1994 (mean F ages 5-15 after 1993 0.035, recently ~0.01; Mohn &
+Rowe 2012). Tag: **derived from the cited summaries, not an assessment time
+series**. Haddock, silver hake and plaice: 0.30, 0.35 (1980-85), 0.45
+(1986-89), 0.55 (1990-92), 0.30 (1993), 0.20 from 1994. **Assumption**
+(plausible groundfish F, replacing the v2 effective mortalities of 0.9-2.9).
+Pelagic gear 0.10 throughout.
+
+## Elevated adult M (alternative, run B and 07)
+
+Adult cod (>= 35 cm) natural mortality 0.8 /yr from 1990 to 2025: VPA M of
+ages 5+ mean 0.8 in 1990-2004 (Mohn & Rowe 2012, p. v) and survey Z ~ M ~ 1.0
+of older ages after the closure (Fanning et al. 2003). Tag: verified in
+`literature/empirical_targets.md` (sources marked [R] there).

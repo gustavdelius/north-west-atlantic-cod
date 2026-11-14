@@ -1,0 +1,1441 @@
+<title>Eastern Scotian Shelf Cod</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<style>
+/* Layout: one 1120px column; prose held to ~68 characters, figures use the full column;
+   sections separated by hairline rules, no cards except the explorer console and callouts. */
+:root {
+  --bg: #f1f4f3;
+  --surface: #fbfcfc;
+  --surface-2: #e6ecea;
+  --ink: #13222a;
+  --ink-2: #3e4f57;
+  --muted: #627279;
+  --rule: #d0dad9;
+  --grid: #e1e7e6;
+  --axis: #b4c0c0;
+  --accent: #0b6670;
+  --accent-ink: #ffffff;
+  --accent-wash: rgba(11, 102, 112, 0.09);
+  --caution: #93306c;
+  --caution-wash: rgba(147, 48, 108, 0.07);
+  --cod: #2a78d6;
+  --forage: #eb6834;
+  --seal: #6250d6;
+  --sq: #8d999e;
+  --obs: #13222a;
+  --good: #1d7a3e;
+  --warn: #9a6200;
+  --bad: #be352e;
+  --map-fast: #1d7346;
+  --map-fast-ink: #ffffff;
+  --map-slow: #74b892;
+  --map-slow-ink: #0c2418;
+  --map-vslow: #cfe6d6;
+  --map-vslow-ink: #13222a;
+  --map-stuck: #be352e;
+  --map-stuck-ink: #ffffff;
+  --font-display: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-ui: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --measure: 68ch;
+  --step--1: 0.8125rem;
+  --step-0: 1.0625rem;
+  --step-1: 1.25rem;
+  --step-2: 1.6rem;
+  --step-3: clamp(1.9rem, 4.2vw, 2.9rem);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d161a;
+    --surface: #132026;
+    --surface-2: #1a2a31;
+    --ink: #e2eaea;
+    --ink-2: #adbbbe;
+    --muted: #84959b;
+    --rule: #283940;
+    --grid: #1e2d33;
+    --axis: #3a4c53;
+    --accent: #52b3bb;
+    --accent-ink: #061a1d;
+    --accent-wash: rgba(82, 179, 187, 0.13);
+    --caution: #d885b7;
+    --caution-wash: rgba(216, 133, 183, 0.10);
+    --cod: #3987e5;
+    --forage: #d95926;
+    --seal: #9085e9;
+    --sq: #7a898f;
+    --obs: #e2eaea;
+    --good: #4cbb72;
+    --warn: #e0a440;
+    --bad: #ec6a60;
+    --map-fast: #2b9a5d;
+    --map-fast-ink: #ffffff;
+    --map-slow: #2a6a48;
+    --map-slow-ink: #e2eaea;
+    --map-vslow: #1d3a2e;
+    --map-vslow-ink: #cfe0d6;
+    --map-stuck: #c8463e;
+    --map-stuck-ink: #ffffff;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d161a;
+  --surface: #132026;
+  --surface-2: #1a2a31;
+  --ink: #e2eaea;
+  --ink-2: #adbbbe;
+  --muted: #84959b;
+  --rule: #283940;
+  --grid: #1e2d33;
+  --axis: #3a4c53;
+  --accent: #52b3bb;
+  --accent-ink: #061a1d;
+  --accent-wash: rgba(82, 179, 187, 0.13);
+  --caution: #d885b7;
+  --caution-wash: rgba(216, 133, 183, 0.10);
+  --cod: #3987e5;
+  --forage: #d95926;
+  --seal: #9085e9;
+  --sq: #7a898f;
+  --obs: #e2eaea;
+  --good: #4cbb72;
+  --warn: #e0a440;
+  --bad: #ec6a60;
+  --map-fast: #2b9a5d;
+  --map-fast-ink: #ffffff;
+  --map-slow: #2a6a48;
+  --map-slow-ink: #e2eaea;
+  --map-vslow: #1d3a2e;
+  --map-vslow-ink: #cfe0d6;
+  --map-stuck: #c8463e;
+  --map-stuck-ink: #ffffff;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: 1.6;
+}
+.page {
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 0 4rem;
+}
+.wrap { max-width: 1120px; margin: 0 auto; }
+.prose { max-width: var(--measure); }
+.prose > * + * { margin-top: 0.9em; }
+p { margin: 0; }
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  font-stretch: 87.5%;
+  color: var(--ink);
+  text-wrap: balance;
+  margin: 0;
+  line-height: 1.15;
+}
+h1 { font-size: var(--step-3); font-weight: 760; letter-spacing: -0.01em; }
+h2 { font-size: var(--step-2); font-weight: 720; }
+h3 { font-size: var(--step-1); font-weight: 680; }
+h4 { font-size: 1rem; font-weight: 680; }
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+strong { font-weight: 650; }
+.num, .tab { font-variant-numeric: tabular-nums; }
+.ui { font-family: var(--font-ui); }
+.kicker {
+  font-family: var(--font-ui);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.muted { color: var(--muted); }
+.small { font-size: var(--step--1); line-height: 1.5; }
+.ui.small, .ui .small { font-family: var(--font-ui); }
+
+/* masthead */
+.masthead { padding-block: 2.4rem 1.6rem; border-bottom: 1px solid var(--rule); }
+.masthead .grid { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 2.5rem; align-items: start; }
+.masthead .lede { font-size: 1.15rem; color: var(--ink-2); max-width: 60ch; margin-top: 1rem; }
+.masthead h1 { margin-top: 0.6rem; }
+.chartlabel {
+  display: inline-flex; gap: 0.6rem; align-items: baseline; flex-wrap: wrap;
+  font-family: var(--font-ui); font-size: var(--step--1); color: var(--muted);
+}
+.chartlabel b { font-family: var(--font-display); font-stretch: 75%; font-size: 1.05rem; color: var(--ink); letter-spacing: 0.04em; }
+.answer {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  padding: 1.1rem 1.2rem 1.2rem;
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.answer h2 { font-size: 1.05rem; letter-spacing: 0.02em; }
+.answer ul { list-style: none; margin: 0.7rem 0 0; padding: 0; display: grid; gap: 0.65rem; }
+.answer li { display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: 0.6rem; }
+.answer li::before { content: ""; width: 8px; height: 8px; margin-top: 0.45em; background: var(--ink); border-radius: 1px; }
+.answer li.caution::before { background: var(--caution); }
+.answer .foot { margin-top: 0.9rem; padding-top: 0.7rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: var(--step--1); }
+nav.toc { margin-top: 1.6rem; font-family: var(--font-ui); font-size: var(--step--1); }
+nav.toc ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
+nav.toc a { color: var(--ink-2); text-decoration: none; border-bottom: 1px solid var(--rule); }
+nav.toc a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+/* sections */
+section.block { padding-block: 2.6rem 0.4rem; border-top: 1px solid var(--rule); margin-top: 2.6rem; }
+section.block:first-of-type { border-top: 0; margin-top: 0; }
+.sechead { display: grid; gap: 0.45rem; margin-bottom: 1.2rem; }
+.figrow { display: grid; gap: 1.6rem; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 1.6rem; }
+.figrow.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+figure { margin: 1.6rem 0 0; min-width: 0; }
+.figrow figure { margin-top: 0; }
+figcaption, .figcap { font-family: var(--font-ui); font-size: var(--step--1); color: var(--muted); line-height: 1.45; margin-top: 0.5rem; max-width: 80ch; }
+.fighead { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.3rem 1rem; margin-bottom: 0.4rem; }
+.fighead h3, .fighead h4 { font-size: 1rem; font-weight: 650; font-family: var(--font-ui); font-stretch: 100%; }
+.tag {
+  font-family: var(--font-ui); font-size: 0.72rem; font-weight: 650; letter-spacing: 0.07em; text-transform: uppercase;
+  padding: 0.12rem 0.45rem; border-radius: 2px; white-space: nowrap; border: 1px solid currentColor;
+}
+.tag.obs { color: var(--ink-2); }
+.tag.model { color: var(--accent); }
+.tag.assume { color: var(--caution); background: var(--caution-wash); }
+.tags { display: inline-flex; gap: 0.35rem; flex-wrap: wrap; }
+.legend { display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; font-family: var(--font-ui); font-size: var(--step--1); color: var(--ink-2); margin-bottom: 0.3rem; }
+.legend span { display: inline-flex; align-items: center; gap: 0.4rem; }
+.key { display: inline-block; flex: none; }
+.key.line { width: 18px; height: 2px; border-radius: 1px; }
+.key.thin { height: 1.5px; opacity: 0.85; }
+.key.dot { width: 8px; height: 8px; border-radius: 50%; }
+.key.ring { width: 8px; height: 8px; border-radius: 50%; border: 1.5px solid; background: transparent; }
+.key.bar { width: 8px; height: 12px; border-radius: 1px; }
+.key.band { width: 14px; height: 12px; background: var(--accent-wash); border: 1px solid var(--rule); }
+.key.step { width: 18px; height: 3px; }
+
+/* charts */
+.chart { position: relative; width: 100%; min-width: 0; background: var(--surface); border: 1px solid var(--rule); border-radius: 3px; touch-action: pan-y; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.chart text { font-family: var(--font-ui); }
+.tip {
+  position: absolute; pointer-events: none; z-index: 5;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--rule); border-radius: 3px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12); padding: 0.45rem 0.6rem; min-width: 9rem; max-width: 16rem;
+  font-family: var(--font-ui); font-size: 0.78rem; line-height: 1.35; font-variant-numeric: tabular-nums;
+}
+.tip .t { color: var(--muted); margin-bottom: 0.2rem; }
+.tip .r { display: grid; grid-template-columns: 14px auto minmax(0, 1fr); gap: 0.35rem; align-items: center; }
+.tip .r b { font-weight: 650; }
+.tip .r span:last-child { color: var(--ink-2); }
+details.table { margin-top: 0.5rem; font-family: var(--font-ui); font-size: var(--step--1); }
+details.table summary { cursor: pointer; color: var(--ink-2); width: fit-content; }
+.tablewrap { overflow-x: auto; max-height: 22rem; overflow-y: auto; margin-top: 0.4rem; border: 1px solid var(--rule); border-radius: 3px; background: var(--surface); }
+table { border-collapse: collapse; font-variant-numeric: tabular-nums; width: 100%; }
+th, td { padding: 0.25rem 0.6rem; text-align: right; border-bottom: 1px solid var(--grid); white-space: nowrap; }
+th { position: sticky; top: 0; background: var(--surface-2); color: var(--ink-2); font-weight: 600; }
+th:first-child, td:first-child { text-align: left; }
+
+/* callouts */
+.callout { border: 1px solid var(--rule); border-radius: 3px; background: var(--surface); padding: 0.9rem 1rem; font-family: var(--font-ui); font-size: 0.93rem; line-height: 1.5; max-width: 78ch; }
+.callout.assume { border-color: var(--caution); background: var(--caution-wash); }
+.callout h3 { font-size: 0.95rem; font-family: var(--font-ui); font-stretch: 100%; margin-bottom: 0.3rem; }
+.callout.assume h3 { color: var(--caution); }
+.callout p + p { margin-top: 0.5rem; }
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1.6rem 2.4rem; align-items: start; }
+
+/* diagram */
+.diagram { overflow-x: auto; background: var(--surface); border: 1px solid var(--rule); border-radius: 3px; padding: 0.6rem; }
+.diagram svg { display: block; width: 100%; max-width: 820px; min-width: 520px; height: auto; color: var(--ink); margin: 0 auto; }
+
+/* controls (shared) */
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--rule); border-radius: 3px; background: var(--surface); padding: 2px; gap: 2px; }
+.seg input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+.seg label { font-family: var(--font-ui); font-size: 0.88rem; padding: 0.45rem 0.8rem; min-height: 40px; display: inline-flex; align-items: center; border-radius: 2px; cursor: pointer; color: var(--ink-2); user-select: none; }
+.seg label:hover { background: var(--surface-2); }
+.seg input:checked + label { background: var(--ink); color: var(--bg); }
+.seg input:focus-visible + label { outline: 3px solid var(--accent); outline-offset: 1px; }
+.seg input:disabled + label { opacity: 0.45; cursor: not-allowed; }
+.check { display: inline-flex; gap: 0.5rem; align-items: center; font-family: var(--font-ui); font-size: 0.9rem; color: var(--ink-2); cursor: pointer; min-height: 40px; }
+.check input { width: 18px; height: 18px; accent-color: var(--accent); }
+
+.readouts { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem; margin-top: 1.2rem; }
+.readout { border: 1px solid var(--rule); border-radius: 3px; padding: 0.8rem 0.95rem; font-family: var(--font-ui); font-size: 0.9rem; line-height: 1.5; background: transparent; color: var(--ink-2); }
+.readout h4 { font-family: var(--font-ui); font-stretch: 100%; font-size: 0.9rem; color: var(--ink); margin-bottom: 0.3rem; }
+.readout.on { background: var(--surface); border-color: var(--ink-2); color: var(--ink); }
+
+/* explorer */
+.console { margin-top: 1.4rem; border: 1px solid var(--rule); border-radius: 4px; background: var(--surface); }
+.console-grid { display: grid; grid-template-columns: minmax(0, 330px) minmax(0, 1fr); }
+.controls { padding: 1.1rem; border-right: 1px solid var(--rule); display: grid; gap: 1.3rem; align-content: start; font-family: var(--font-ui); }
+.controls fieldset { border: 0; margin: 0; padding: 0; min-width: 0; display: grid; gap: 0.5rem; }
+.controls legend { font-family: var(--font-ui); font-weight: 650; font-size: 0.9rem; padding: 0; margin-bottom: 0.4rem; color: var(--ink); }
+.controls .hint { font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
+.starts { display: grid; gap: 0.35rem; }
+.start input { position: absolute; opacity: 0; width: 1px; height: 1px; pointer-events: none; }
+.start label { display: grid; gap: 0.1rem; border: 1px solid var(--rule); border-radius: 3px; padding: 0.5rem 0.65rem; cursor: pointer; background: var(--bg); }
+.start label:hover { border-color: var(--ink-2); }
+.start label .nm { font-weight: 650; font-size: 0.88rem; color: var(--ink); display: flex; gap: 0.4rem; align-items: baseline; flex-wrap: wrap; }
+.start label .ds { font-size: 0.76rem; color: var(--muted); line-height: 1.35; }
+.start input:checked + label { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); background: var(--surface); }
+.start input:focus-visible + label { outline: 3px solid var(--accent); outline-offset: 1px; }
+.minitag { font-size: 0.66rem; font-weight: 650; letter-spacing: 0.06em; text-transform: uppercase; color: var(--caution); }
+.slider { display: grid; gap: 0.3rem; }
+.slider input[type="range"] { width: 100%; accent-color: var(--accent); height: 32px; margin: 0; }
+.slider .val { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; }
+.slider .val b { font-size: 1.05rem; font-variant-numeric: tabular-nums; }
+.slider .val span { font-size: 0.8rem; color: var(--muted); }
+.ticks { display: flex; justify-content: space-between; font-size: 0.7rem; color: var(--muted); font-variant-numeric: tabular-nums; padding: 0 2px; }
+.controls .seg label { padding: 0.4rem 0.6rem; font-size: 0.84rem; }
+#dur-seg { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+#dur-seg label { justify-content: center; }
+.output { padding: 1.1rem 1.2rem 1.3rem; min-width: 0; display: grid; gap: 1.1rem; align-content: start; }
+.verdict { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 0.8rem; align-items: start; padding: 0.9rem 1rem; border: 1px solid var(--rule); border-radius: 3px; background: var(--bg); }
+.verdict .icon { width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center; background: var(--surface-2); color: var(--ink); }
+.verdict .icon svg { width: 20px; height: 20px; }
+.verdict[data-tone="good"] .icon { background: var(--good); color: #fff; }
+.verdict[data-tone="warn"] .icon { background: var(--warn); color: #fff; }
+.verdict[data-tone="bad"] .icon { background: var(--bad); color: #fff; }
+.verdict[data-tone="neutral"] .icon { background: var(--ink-2); color: var(--bg); }
+.verdict .head { font-family: var(--font-display); font-stretch: 87.5%; font-size: 1.4rem; font-weight: 720; line-height: 1.2; }
+.verdict .detail { font-family: var(--font-ui); font-size: 0.92rem; color: var(--ink-2); margin-top: 0.25rem; line-height: 1.45; }
+.flags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.55rem; }
+.flag { font-family: var(--font-ui); font-size: 0.78rem; font-weight: 600; padding: 0.2rem 0.5rem; border-radius: 2px; border: 1px solid currentColor; display: inline-flex; gap: 0.35rem; align-items: center; }
+.flag.bad { color: var(--bad); }
+.flag.assume { color: var(--caution); background: var(--caution-wash); }
+.flag.info { color: var(--ink-2); }
+.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; border: 1px solid var(--rule); border-radius: 3px; }
+.stat { padding: 0.65rem 0.8rem; border-left: 1px solid var(--rule); min-width: 0; font-family: var(--font-ui); }
+.stat:first-child { border-left: 0; }
+.stat .lbl { font-size: 0.74rem; color: var(--muted); line-height: 1.3; }
+.stat .v { font-size: 1.15rem; font-weight: 650; margin-top: 0.2rem; line-height: 1.2; }
+.stat .cmp { font-size: 0.76rem; color: var(--ink-2); margin-top: 0.15rem; line-height: 1.3; }
+.presets { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.7rem; }
+.presets button {
+  font-family: var(--font-ui); font-size: 0.84rem; color: var(--ink); background: var(--surface); border: 1px solid var(--rule);
+  border-radius: 3px; padding: 0.45rem 0.7rem; min-height: 40px; cursor: pointer; text-align: left;
+}
+.presets button:hover { border-color: var(--accent); color: var(--accent); }
+.subcharts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+.note { font-family: var(--font-ui); font-size: 0.8rem; color: var(--muted); line-height: 1.45; }
+
+/* sensitivity map */
+.maps { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 1.2rem 1.4rem; margin-top: 1rem; }
+.mapp { min-width: 0; font-family: var(--font-ui); }
+.mapp h4 { font-family: var(--font-ui); font-stretch: 100%; font-size: 0.88rem; font-weight: 650; }
+.mapp .sub { font-size: 0.75rem; color: var(--muted); margin-bottom: 0.4rem; display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: baseline; }
+.mgrid { display: grid; grid-template-columns: 3.6rem repeat(5, minmax(0, 1fr)); gap: 2px; font-size: 0.75rem; font-variant-numeric: tabular-nums; }
+.mgrid .ch { color: var(--muted); text-align: center; padding: 0.15rem 0; line-height: 1.15; }
+.mgrid .ch.hl, .mgrid .rh.hl { color: var(--ink); font-weight: 650; }
+.mgrid .rh { color: var(--muted); text-align: right; padding-right: 0.35rem; display: flex; align-items: center; justify-content: flex-end; line-height: 1.1; }
+.mgrid .cell { height: 30px; display: grid; place-items: center; border-radius: 2px; font-weight: 600; }
+.mgrid .cell[data-o="fast"] { background: var(--map-fast); color: var(--map-fast-ink); }
+.mgrid .cell[data-o="slow"] { background: var(--map-slow); color: var(--map-slow-ink); }
+.mgrid .cell[data-o="very_slow"] { background: var(--map-vslow); color: var(--map-vslow-ink); }
+.mgrid .cell[data-o="stuck"] { background: var(--map-stuck); color: var(--map-stuck-ink); }
+.mgrid .cell.ring { box-shadow: 0 0 0 2px var(--surface), 0 0 0 3.5px var(--ink); }
+.mapflag { margin-top: 0.45rem; font-size: 0.78rem; line-height: 1.4; color: var(--bad); font-weight: 600; }
+.maplegend { display: flex; flex-wrap: wrap; gap: 0.4rem 1.1rem; font-family: var(--font-ui); font-size: var(--step--1); color: var(--ink-2); margin-top: 0.8rem; }
+.maplegend span { display: inline-flex; gap: 0.4rem; align-items: center; }
+.maplegend i { width: 14px; height: 14px; border-radius: 2px; display: inline-block; }
+
+/* decisions */
+.costs { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0; border-top: 1px solid var(--rule); margin-top: 1rem; }
+.cost { padding: 0.9rem 1.2rem 0.9rem 0; border-bottom: 1px solid var(--rule); font-family: var(--font-ui); font-size: 0.93rem; line-height: 1.5; color: var(--ink-2); min-width: 0; }
+.cost:nth-child(2n) { padding-left: 1.2rem; border-left: 1px solid var(--rule); padding-right: 0; }
+.cost h4 { font-family: var(--font-ui); font-stretch: 100%; font-size: 0.95rem; color: var(--ink); margin-bottom: 0.25rem; }
+ol.evidence, ul.limits { margin: 0.6rem 0 0; padding-left: 1.3rem; display: grid; gap: 0.55rem; max-width: var(--measure); }
+.statement { font-family: var(--font-display); font-stretch: 87.5%; font-size: 1.35rem; line-height: 1.3; font-weight: 600; max-width: 40ch; }
+footer.colophon { margin-top: 3rem; padding-top: 1.2rem; border-top: 1px solid var(--rule); font-family: var(--font-ui); font-size: var(--step--1); color: var(--muted); display: grid; gap: 0.4rem; }
+.placeholder { border-bottom: 1px dashed var(--muted); color: var(--ink-2); }
+
+@media (max-width: 880px) {
+  .masthead .grid { grid-template-columns: minmax(0, 1fr); gap: 1.6rem; }
+  .console-grid { grid-template-columns: minmax(0, 1fr); }
+  .controls { border-right: 0; border-bottom: 1px solid var(--rule); }
+  .subcharts { grid-template-columns: minmax(0, 1fr); }
+  .figrow.three { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 720px) {
+  .figrow, .two, .readouts, .costs { grid-template-columns: minmax(0, 1fr); }
+  .cost:nth-child(2n) { padding-left: 0; border-left: 0; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .stat:nth-child(3) { border-left: 0; }
+  .stat:nth-child(n+3) { border-top: 1px solid var(--rule); }
+  .verdict .head { font-size: 1.2rem; }
+  body { font-size: 1rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  html { scroll-behavior: smooth; }
+  .chart path.series { transition: opacity 0.2s; }
+}
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..100,400..800&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400&amp;display=swap">
+<!--BODY-->
+<div class="page">
+<div class="wrap">
+
+<header class="masthead">
+  <div class="grid">
+    <div>
+      <div class="chartlabel"><b>NAFO 4VsW</b><span>Eastern Scotian Shelf cod · model briefing for fisheries managers</span></div>
+      <h1>Would fishing forage fish bring back eastern Scotian Shelf cod?</h1>
+      <p class="lede">Cod on the eastern Scotian Shelf collapsed in the early 1990s and did not come back after the {{moratorium_year}} moratorium. Herring, sand lance and capelin increased at the same time. One explanation is that predator and prey swapped roles: forage fish, freed from cod, now eat and outcompete young cod. If that is right, fishing forage fish could release cod. We tested the idea with a size-based model of the shelf's fish community.</p>
+    </div>
+    <aside class="answer" aria-labelledby="answer-h">
+      <h2 id="answer-h">The short answer</h2>
+      <ul>
+        <li><span>On present evidence, fishing forage fish is not a supported way to rebuild this cod stock.</span></li>
+        <li><span>Driven by the real fishing history, the model's cod is back above half its 1980s level {{hindA_years_to_50}} years after the stock's {{hindA_year_min}} low. Fishing alone does not explain why the real stock stayed down.</span></li>
+        <li><span>Raising the death rate of adult cod to the level estimated after the collapse, which includes grey seal predation, reproduces the decline. While that death rate stays high, none of the forage-fishing programmes tested brings cod back.</span></li>
+        <li class="caution"><span>Forage fishing restores cod only from a cod-free state that exists under one untested assumption and that the model never reaches from the real history. From the model's own depleted 2025 state it delays recovery by {{dep_delay_min}} to {{dep_delay_max}} years.</span></li>
+        <li><span>The costs are less food for cod, seabirds and seals, and forage stocks fished down to a small fraction of their size.</span></li>
+      </ul>
+      <p class="foot">These are model results. They are no forecast and no recommendation; use the years shown to compare options with each other.</p>
+    </aside>
+  </div>
+  <nav class="toc" aria-label="Sections">
+    <ul>
+      <li><a href="#record">The record</a></li>
+      <li><a href="#idea">The idea tested</a></li>
+      <li><a href="#history">Model and history</a></li>
+      <li><a href="#explorer">Try it</a></li>
+      <li><a href="#take">What it would take</a></li>
+      <li><a href="#decisions">For decisions</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+<!-- ============================================================ the record -->
+<section class="block" id="record" aria-labelledby="record-h">
+  <div class="sechead">
+    <span class="kicker">Observations</span>
+    <h2 id="record-h">What happened</h2>
+  </div>
+  <div class="prose">
+    <p>Cod landings peaked at {{landings_peak_kt:.0f}} thousand tonnes (kt) in {{landings_peak_year}} and averaged {{landings_1980s_mean_kt:.0f}} kt a year through the 1980s. The spawning stock, estimated from the summer research survey, peaked at {{ssb_peak_kt:.0f}} kt in {{ssb_peak_year}} and was down to {{ssb_2002_kt:.1f}} kt by 2002, a fall of {{ssb_decline_frac:.0%}}. The directed fishery closed in September {{moratorium_year}}. Since then only bycatch has been landed: {{landings_1994_t:int}} t in 1994 and {{landings_2002_t:int}} t in 2002. The survey's cod biomass index was {{rv_index_2023_t:int}} t in 2023 and {{rv_index_2024_t:int}} t in 2024.</p>
+  </div>
+  <figure>
+    <div class="fighead">
+      <h3>Cod landings and spawning stock, thousand tonnes</h3>
+      <span class="tags"><span class="tag obs">Observed</span></span>
+    </div>
+    <div class="legend" aria-hidden="true">
+      <span><i class="key bar" style="background:var(--sq)"></i>Landings</span>
+      <span><i class="key dot" style="background:var(--obs)"></i>Spawning stock (survey-based estimate)</span>
+    </div>
+    <div class="chart" id="ch-landings" tabindex="0" role="img" aria-label="Cod landings 1958 to 2002 and survey-based spawning stock 1970 to 2002, in thousand tonnes"></div>
+    <figcaption>Landings: reported catches (Fanning et al. 2003, Table 1). Spawning stock: survey-based estimate (same report, Table 13). The assessment series ends in 2002.</figcaption>
+    <details class="table" id="tb-landings"><summary>Show the numbers</summary></details>
+  </figure>
+
+  <div class="prose" style="margin-top:1.6rem">
+    <p>Over the same years the survey caught many more forage fish. Averaged over 1995–2004, the survey index for herring, sand lance and capelin together was {{survey_forage_1995_2004:x}} its 1980s average, while cod was at {{survey_cod_1995_2004:x}}. Haddock, silver hake and American plaice fell too, to between {{survey_plaice_1995_2004:x}} and {{survey_haddock_1995_2004:x}}. The forage fish declined again to {{survey_forage_2005_12:x}} in 2005–12 without cod returning. Grey seals on Sable Island multiplied throughout.</p>
+  </div>
+  <div class="figrow">
+    <figure>
+      <div class="fighead">
+        <h3>Survey biomass index, relative to the 1980s average</h3>
+        <span class="tags"><span class="tag obs">Observed</span></span>
+      </div>
+      <div class="legend" aria-hidden="true">
+        <span><i class="key step" style="background:var(--cod)"></i><i class="key dot" style="background:var(--cod);opacity:.45"></i>Cod</span>
+        <span><i class="key step" style="background:var(--forage)"></i><i class="key dot" style="background:var(--forage);opacity:.45"></i>Forage fish (herring, sand lance, capelin)</span>
+      </div>
+      <div class="chart" id="ch-survey" tabindex="0" role="img" aria-label="Survey biomass index of cod and forage fish 1970 to 2018 relative to the 1980s average, with period averages"></div>
+      <figcaption>Dots: single years. Bars across: period averages, the only comparison the survey supports for these species. Log scale: each gridline is ten times the one below.</figcaption>
+      <details class="table" id="tb-survey"><summary>Show period averages</summary></details>
+    </figure>
+    <figure>
+      <div class="fighead">
+        <h3>Grey seal pups born on Sable Island</h3>
+        <span class="tags"><span class="tag obs">Observed</span></span>
+      </div>
+      <div class="chart" id="ch-seals" tabindex="0" role="img" aria-label="Grey seal pup production on Sable Island 1963 to 2021"></div>
+      <figcaption>Pup production rose from {{seal_pups_1980:int}} in 1980 to {{seal_pups_2016:int}} in 2016 and was {{seal_pups_2021:int}} in 2021 (Hammill et al. 2023, Table 4). Early estimates are very uncertain.</figcaption>
+    </figure>
+  </div>
+  <div class="callout" style="margin-top:1.4rem">
+    <h3>Read the survey numbers with care</h3>
+    <p>The summer survey is a bottom trawl. It samples schooling herring and buried sand lance poorly, so single years are noisy. In the 1980s sand lance and capelin were scarce in the survey, which inflates their later ratios. The series shown here are derived from a public compilation of DFO survey data and are indicative; official series should replace them before any formal use.</p>
+  </div>
+</section>
+
+<!-- ============================================================ the idea -->
+<section class="block" id="idea" aria-labelledby="idea-h">
+  <div class="sechead">
+    <span class="kicker">The hypothesis</span>
+    <h2 id="idea-h">The idea tested: predator and prey swap roles</h2>
+  </div>
+  <div class="two">
+    <div class="prose">
+      <p>Adult cod eat forage fish. Forage fish eat cod eggs and larvae and compete with young cod for plankton. While cod are plentiful they keep forage fish down, which protects their own young. Once cod are scarce, forage fish multiply and may hold each new generation of cod down.</p>
+      <p>If this loop is strong enough, the shelf can settle into a second, cod-poor state that lasts even with no cod fishing. Fishing forage fish hard could then break the loop and let cod back in.</p>
+      <p>Grey seals offer a competing explanation: more seals, and other causes, raised the death rate of adult cod. Estimates of adult natural mortality for 1990–2004 average about {{adult_M_1990_2004}} per year, meaning roughly {{adult_M_frac_high:.0%}} of adult cod die each year from causes other than fishing, against about {{adult_M_frac_normal:.0%}} at the {{adult_M_normal}} usually assumed for a healthy stock.</p>
+    </div>
+    <div class="callout assume">
+      <h3>The untested assumption (s = {{s_value}})</h3>
+      <p>In the model, forage fish eat cod eggs, larvae and small juveniles {{s_value}} times more readily than plankton of the same size. With this setting they cause {{forage_share_cod_deaths:.1%}} of deaths of young cod between 1 mg and 1 g at 1980s abundance.</p>
+      <p>No study on this shelf has found forage fish eating cod eggs or larvae. In the North Sea, herring ate at most {{north_sea_herring_egg_max_pct}}% of cod eggs. A direct test on this shelf found cod recruitment unrelated to forage-fish biomass. Every result below that depends on the role reversal depends on this setting.</p>
+    </div>
+  </div>
+  <figure>
+    <div class="diagram">
+      <svg viewBox="0 0 760 342" role="img" aria-label="Food-web diagram. Adult cod eat forage fish. Forage fish eat young cod, an assumed link, and compete with them for plankton. Young cod grow into adult cod. Grey seals eat adult cod.">
+        <defs>
+          <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="currentColor"/></marker>
+          <marker id="ahc" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--caution)"/></marker>
+          <marker id="ahs" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" style="fill:var(--seal)"/></marker>
+        </defs>
+        <!-- nodes -->
+        <g font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="13">
+          <rect x="40" y="30" width="190" height="62" rx="3" style="fill:var(--surface);stroke:var(--cod)" stroke-width="2"/>
+          <text x="135" y="57" text-anchor="middle" font-weight="700" fill="currentColor">Adult cod</text>
+          <text x="135" y="76" text-anchor="middle" font-size="11.5" style="fill:var(--muted)">{{adult_length_cm}} cm and larger</text>
+
+          <rect x="40" y="226" width="190" height="62" rx="3" style="fill:var(--surface);stroke:var(--cod)" stroke-width="2" stroke-dasharray="0"/>
+          <text x="135" y="253" text-anchor="middle" font-weight="700" fill="currentColor">Young cod</text>
+          <text x="135" y="272" text-anchor="middle" font-size="11.5" style="fill:var(--muted)">eggs, larvae, small juveniles</text>
+
+          <rect x="500" y="128" width="220" height="62" rx="3" style="fill:var(--surface);stroke:var(--forage)" stroke-width="2"/>
+          <text x="610" y="155" text-anchor="middle" font-weight="700" fill="currentColor">Forage fish</text>
+          <text x="610" y="174" text-anchor="middle" font-size="11.5" style="fill:var(--muted)">herring, sand lance, capelin</text>
+
+          <rect x="300" y="268" width="160" height="44" rx="3" style="fill:var(--surface-2);stroke:var(--axis)" stroke-width="1"/>
+          <text x="380" y="295" text-anchor="middle" font-weight="600" fill="currentColor">Plankton</text>
+
+          <rect x="300" y="16" width="130" height="40" rx="3" style="fill:var(--surface);stroke:var(--seal)" stroke-width="1.5"/>
+          <text x="365" y="41" text-anchor="middle" font-weight="600" fill="currentColor">Grey seals</text>
+        </g>
+        <!-- edges -->
+        <g font-family="Archivo, Helvetica Neue, Arial, sans-serif" font-size="12" fill="none" stroke-width="2" stroke-linecap="round">
+          <!-- adult cod eat forage fish -->
+          <path d="M230,70 C380,70 470,100 520,128" stroke="currentColor" marker-end="url(#ah)"/>
+          <text x="408" y="110" text-anchor="middle" fill="currentColor" stroke="none" font-weight="600">eat</text>
+          <!-- forage fish eat young cod (assumed) -->
+          <path d="M520,190 C470,225 360,245 232,250" style="stroke:var(--caution)" stroke-width="3" marker-end="url(#ahc)"/>
+          <text x="372" y="208" text-anchor="middle" stroke="none" font-weight="700" style="fill:var(--caution)">eat eggs and larvae</text>
+          <text x="372" y="224" text-anchor="middle" stroke="none" font-size="11" style="fill:var(--caution)">assumed: s = {{s_value}}</text>
+          <!-- both eat plankton -->
+          <path d="M560,190 C560,250 520,290 462,290" stroke="currentColor" stroke-opacity="0.7" marker-end="url(#ah)"/>
+          <path d="M200,288 C230,300 260,298 298,294" stroke="currentColor" stroke-opacity="0.7" marker-end="url(#ah)"/>
+          <text x="560" y="300" text-anchor="start" stroke="none" style="fill:var(--ink-2)">eat</text>
+          <text x="250" y="312" text-anchor="middle" stroke="none" style="fill:var(--ink-2)">eat</text>
+          <text x="380" y="332" text-anchor="middle" stroke="none" font-size="11" style="fill:var(--muted)">both eat plankton, so they compete</text>
+          <!-- young cod grow into adults -->
+          <path d="M100,226 L100,94" stroke="currentColor" stroke-opacity="0.55" stroke-dasharray="5 4" marker-end="url(#ah)"/>
+          <text x="110" y="166" text-anchor="start" stroke="none" style="fill:var(--ink-2)">grow up</text>
+          <text x="110" y="181" text-anchor="start" stroke="none" font-size="11" style="fill:var(--muted)">mature at about {{cod_age_mat:.1f}} years</text>
+          <!-- seals eat adult cod -->
+          <path d="M300,40 C270,40 250,44 232,50" style="stroke:var(--seal)" marker-end="url(#ahs)"/>
+          <text x="266" y="30" text-anchor="middle" stroke="none" font-size="11" style="fill:var(--seal)">eat</text>
+        </g>
+      </svg>
+    </div>
+    <figcaption>Cod and forage fish each prey on the other, at different life stages. The magenta link is the assumption under test. Grey seals are not a species in the model; their effect enters only as a higher death rate for adult cod in one labelled scenario.</figcaption>
+  </figure>
+</section>
+
+<!-- ============================================================ model vs history -->
+<section class="block" id="history" aria-labelledby="history-h">
+  <div class="sechead">
+    <span class="kicker">Model compared with the record</span>
+    <h2 id="history-h">What the model found with the real fishing history</h2>
+  </div>
+  <div class="prose">
+    <p>The model follows seven species (cod, haddock, silver hake, American plaice, herring, sand lance and capelin) and the plankton they eat, by body size. Its 1980–85 state matches the survey biomasses to within {{max_biomass_error:.1%}} and gives cod landings of {{model_cod_yield_kt:.0f}} kt against {{observed_landings_kt}} kt reported. It was then driven by the documented fishing pressure from 1970 to 2025.</p>
+  </div>
+  <div style="display:flex;flex-wrap:wrap;gap:0.6rem 1.4rem;align-items:center;margin-top:1.2rem">
+    <div class="seg" role="radiogroup" aria-label="Hindcast run">
+      <input type="radio" name="hrun" id="hrun-fishing" value="fishing_only" checked><label for="hrun-fishing">Fishing only</label>
+      <input type="radio" name="hrun" id="hrun-highM" value="high_M"><label for="hrun-highM">Fishing plus higher adult cod mortality</label>
+    </div>
+    <label class="check" for="hrun-s1"><input type="checkbox" id="hrun-s1">Also show the run without the assumption (s = 1)</label>
+  </div>
+  <div class="figrow">
+    <figure>
+      <div class="fighead">
+        <h3>Cod spawning stock, relative to the 1980s</h3>
+        <span class="tags"><span class="tag model">Model</span><span class="tag obs">Observed</span><span class="tag assume">s = {{s_value}}</span></span>
+      </div>
+      <div class="legend" id="lg-hcod" aria-hidden="true"></div>
+      <div class="chart" id="ch-hcod" tabindex="0" role="img" aria-label="Modelled cod spawning stock 1970 to 2025 compared with survey observations"></div>
+      <figcaption>Line: model. Filled dots: survey-based spawning stock, 1970–2002, relative to its 1980–85 mean. Open dots: survey biomass index, relative to its 1980–89 mean. Log scale.</figcaption>
+    </figure>
+    <figure>
+      <div class="fighead">
+        <h3>Forage fish biomass, relative to the 1980s</h3>
+        <span class="tags"><span class="tag model">Model</span><span class="tag obs">Observed</span><span class="tag assume">s = {{s_value}}</span></span>
+      </div>
+      <div class="legend" id="lg-hfor" aria-hidden="true"></div>
+      <div class="chart" id="ch-hfor" tabindex="0" role="img" aria-label="Modelled forage fish biomass 1970 to 2025 compared with survey period averages"></div>
+      <figcaption>Line: model (herring, sand lance and capelin). Bars across: survey period averages; dots: single survey years. Log scale.</figcaption>
+    </figure>
+  </div>
+  <div class="readouts" id="hreadouts">
+    <div class="readout on" data-run="fishing_only">
+      <h4>Fishing only</h4>
+      <p>Cod falls to {{hindA_ssb_1993_rel:pct}} of its 1980s spawning stock in 1993, close to the survey, then recovers: it is back above half the 1980s level by {{hindA_year_50}}. Over 1995–2004 the model has cod at {{hindA_cod_ratio:x}} its 1980s level, where the survey shows {{survey_cod_1995_2004:x}}. Forage fish rise only to {{hindA_forage_ratio:x}}, where the survey shows {{survey_forage_1995_2004:x}}.</p>
+    </div>
+    <div class="readout" data-run="high_M">
+      <h4>Fishing plus higher adult cod mortality</h4>
+      <p>Adult cod natural mortality is raised to {{adult_M_1990_2004}} per year from 1990, the estimate after the collapse. Cod over 1995–2004 is then at {{hindB_cod_ratio:x}}, close to the survey's {{survey_cod_1995_2004:x}}, and at {{hindB_ssb_2025_rel:pct}} of its 1980s spawning stock in 2025. Forage fish still rise only to {{hindB_forage_ratio:x}}. With the forage-fish effect switched off (s = 1), cod in 2000–02 is {{hindB_mech_effect:.0%}} higher: the adult death rate does almost all the work.</p>
+    </div>
+  </div>
+  <div class="prose" style="margin-top:1.4rem">
+    <p><strong>What this means.</strong> In this model, fishing alone does not explain why cod stayed down, at any strength of the assumption tested (see <a href="#take">What it would take</a>). A higher adult death rate does. The model also cannot make forage fish boom the way the survey shows, so it cannot test the role reversal at the size of boom that actually happened.</p>
+  </div>
+</section>
+
+<!-- ============================================================ explorer -->
+<section class="block" id="explorer" aria-labelledby="explorer-h">
+  <div class="sechead">
+    <span class="kicker">Explorer</span>
+    <h2 id="explorer-h">Try it: forage fishing from different starting points</h2>
+  </div>
+  <div class="prose">
+    <p>Choose where the shelf starts, how hard and for how long forage fish are fished, and whether adult cod keep dying at the post-collapse rate. Each choice is a separate 150-year model run. The grey lines show the same start with forage fishing left at today's model level (F {{status_quo_F}}); cod bycatch stays at F {{cod_bycatch_F}} throughout. Fishing mortality F is roughly the share of a stock caught in a year: F 0.25 takes about a fifth, F 1 about two-thirds, F 3 nearly all of it.</p>
+  </div>
+  <div class="presets" aria-label="Scenarios to try">
+    <button type="button" id="pre-1" data-start="depleted_2025" data-f="1" data-d="10" data-m="baseline">Model's 2025 state, hard forage fishing for 10 years</button>
+    <button type="button" id="pre-2" data-start="alt_state" data-f="1" data-d="10" data-m="baseline">Same programme from the cod-free state</button>
+    <button type="button" id="pre-3" data-start="alt_state" data-f="1" data-d="10" data-m="elevated">Cod-free state, adult deaths stay high</button>
+    <button type="button" id="pre-4" data-start="boom_cod01" data-f="0.5" data-d="10" data-m="baseline">Survey-like boom, cod at 1%</button>
+    <button type="button" id="pre-5" data-start="boom_cod10" data-f="0.5" data-d="10" data-m="baseline">Survey-like boom, cod at 10%</button>
+  </div>
+
+  <div class="console" id="console">
+    <div class="console-grid">
+      <form class="controls" id="controls" aria-label="Scenario settings" onsubmit="return false">
+        <fieldset>
+          <legend>Starting state</legend>
+          <div class="starts">
+            <div class="start"><input type="radio" name="start" id="st-depleted_2025" value="depleted_2025" checked><label for="st-depleted_2025"><span class="nm">Model's 2025 state</span><span class="ds">From the hindcast with high adult cod deaths: cod at <span class="num" data-startval="depleted_2025:cod"></span> of its 1980s spawning stock, forage fish at <span class="num" data-startval="depleted_2025:forage"></span>. Year 0 is 2026.</span></label></div>
+            <div class="start"><input type="radio" name="start" id="st-alt_state" value="alt_state"><label for="st-alt_state"><span class="nm">Cod-free alternative state <span class="minitag">needs s = 20</span></span><span class="ds">Forage fish at <span class="num" data-startval="alt_state:forage"></span> their 1980s level, no haddock, hake or plaice; cod and these reintroduced at {{alt_reintro:pct}}. No hindcast reaches it.</span></label></div>
+            <div class="start"><input type="radio" name="start" id="st-boom_cod10" value="boom_cod10"><label for="st-boom_cod10"><span class="nm">Survey-like boom, cod at 10%</span><span class="ds">Imposed: forage fish {{survey_forage_1995_2004:x}}, other groundfish at survey levels, cod at the survey's 1995–2004 ratio.</span></label></div>
+            <div class="start"><input type="radio" name="start" id="st-boom_cod04" value="boom_cod04"><label for="st-boom_cod04"><span class="nm">Survey-like boom, cod at 4%</span><span class="ds">As above, cod near the lowest survey spawning-stock estimates ({{ssb_min_post1993_rel:pct}}).</span></label></div>
+            <div class="start"><input type="radio" name="start" id="st-boom_cod01" value="boom_cod01"><label for="st-boom_cod01"><span class="nm">Survey-like boom, cod at 1%</span><span class="ds">As above, cod below anything the survey recorded.</span></label></div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Forage-fish fishing</legend>
+          <div class="slider">
+            <div class="val"><b id="f-val">F 1</b><span id="f-desc">about 63% caught per year</span></div>
+            <input type="range" id="f-slider" min="0" max="7" step="1" value="4" aria-describedby="f-desc">
+            <div class="ticks" aria-hidden="true" id="f-ticks"></div>
+          </div>
+        </fieldset>
+        <fieldset id="dur-fs">
+          <legend>Programme length</legend>
+          <div class="seg" role="radiogroup" aria-label="Programme length" id="dur-seg"></div>
+          <span class="hint" id="dur-hint">After the programme, forage fishing returns to F {{status_quo_F}}.</span>
+        </fieldset>
+        <fieldset>
+          <legend>Adult cod natural mortality</legend>
+          <div class="seg" role="radiogroup" aria-label="Adult cod natural mortality">
+            <input type="radio" name="mort" id="m-baseline" value="baseline" checked><label for="m-baseline">Back to 1980s level</label>
+            <input type="radio" name="mort" id="m-elevated" value="elevated"><label for="m-elevated">Stays at {{adult_M_1990_2004}} per year</label>
+          </div>
+          <span class="hint">Staying high is the seal-and-other-causes explanation, a labelled alternative.</span>
+        </fieldset>
+      </form>
+      <div class="output">
+        <div class="verdict" id="verdict" role="status" aria-live="polite" data-tone="neutral">
+          <div class="icon" id="v-icon" aria-hidden="true"></div>
+          <div>
+            <div class="head" id="v-head">Loading the scenario</div>
+            <div class="detail" id="v-detail"></div>
+            <div class="flags" id="v-flags"></div>
+          </div>
+        </div>
+        <div class="stats" id="stats"></div>
+        <figure style="margin:0">
+          <div class="fighead">
+            <h4>Cod spawning stock, relative to the 1980s</h4>
+            <span class="tags"><span class="tag model">Model</span><span class="tag assume">s = {{s_value}}</span></span>
+          </div>
+          <div class="legend" id="lg-ecod" aria-hidden="true"></div>
+          <div class="chart" id="ch-ecod" tabindex="0" role="img" aria-label="Cod spawning stock over 150 years for the chosen scenario and for no extra forage fishing"></div>
+        </figure>
+        <div class="subcharts">
+          <figure style="margin:0">
+            <div class="fighead"><h4>Forage fish biomass</h4></div>
+            <div class="chart" id="ch-efor" tabindex="0" role="img" aria-label="Forage fish biomass relative to the 1980s"></div>
+          </figure>
+          <figure style="margin:0">
+            <div class="fighead"><h4>Forage-fish catch, kt per year</h4></div>
+            <div class="chart" id="ch-efy" tabindex="0" role="img" aria-label="Forage fish catch in thousand tonnes per year"></div>
+          </figure>
+          <figure style="margin:0">
+            <div class="fighead"><h4>Cod catch (bycatch), kt per year</h4></div>
+            <div class="chart" id="ch-ecy" tabindex="0" role="img" aria-label="Cod catch in thousand tonnes per year"></div>
+          </figure>
+        </div>
+        <p class="note" id="e-note">Recovery here means cod spawning stock back to half its 1980s level and still there over the last 30 of the 150 years. In the model's long-run states, recovered cod settle at {{eq_cod_min:.0f}} to {{eq_cod_max:.0f}} times their 1980s level and squeeze out haddock, hake and plaice. That long-run behaviour is a known weakness of the model, so do not read the late part of these curves as a prediction.</p>
+        <details class="table" id="tb-explorer"><summary>Show this scenario as a table</summary></details>
+      </div>
+    </div>
+  </div>
+  <div class="prose" style="margin-top:1.4rem">
+    <p><strong>What to notice.</strong> The answer depends on where the shelf starts and on adult cod deaths. From the model's 2025 state, cod recovers without help and forage fishing slows it by taking away cod food. From the cod-free state, which needs the s = 20 assumption, cod never returns on its own and a short, hard forage fishery brings it back. With adult deaths kept high, nothing tested brings cod back from any start. From a survey-like boom, cod at 10% or 4% recovers within a decade on its own; only at 1%, below anything the survey recorded, is it held down.</p>
+  </div>
+</section>
+
+<!-- ============================================================ what it would take -->
+<section class="block" id="take" aria-labelledby="take-h">
+  <div class="sechead">
+    <span class="kicker">Sensitivity</span>
+    <h2 id="take-h">What it would take for forage fish to hold cod down</h2>
+  </div>
+  <div class="prose">
+    <p>Two things decide whether forage fish can trap cod in this model: how much they prey on young cod (the assumption), and how far the community has already tipped, meaning how large the forage boom is and how few cod are left. Each assumption strength below was recalibrated so the 1980s state still matches the survey. It is shown as the share of deaths of young cod (1 mg to 1 g) caused by forage fish at 1980s abundance.</p>
+  </div>
+  <figure>
+    <div class="fighead">
+      <h3>Forage boom the model produces from the real fishing history</h3>
+      <span class="tags"><span class="tag model">Model</span><span class="tag obs">Observed</span><span class="tag assume">varies the assumption</span></span>
+    </div>
+    <div class="chart" id="ch-boom" tabindex="0" role="img" aria-label="Range of forage boom produced by the model at each assumption strength, against the survey boom"></div>
+    <figcaption>Each row is one assumption strength; dots are the forage-fish ratio 1995–2004 to 1980s at seven settings of forage-fish density dependence. The vertical line is the survey's ratio. In all {{sens_n_rec}} combinations, cod is back above half its 1980s level within {{sens_max_years}} years of its 1993 low. Two stronger settings ({{sens_share_s80:pct}} and {{sens_share_s160:pct}} of young-cod deaths) could not be recalibrated: the 1980s cod stock could not persist under them, so they are left out.</figcaption>
+  </figure>
+
+  <figure style="margin-top:2rem">
+    <div class="fighead">
+      <h3>If the boom is imposed: years until cod is back to half its 1980s level</h3>
+      <span class="tags"><span class="tag model">Model</span><span class="tag assume">varies the assumption</span></span>
+    </div>
+    <p class="figcap" style="margin-top:0">Each panel is one assumption strength. Columns: forage fish at the start, as a multiple of the 1980s level. Rows: cod spawning stock at the start, as a share of the 1980s level. Haddock, hake and plaice start at their survey levels. Moratorium fishing, adult cod deaths at the 1980s rate, 150 years. Outlined cells are the survey-like states of the explorer.</p>
+    <div class="maplegend" aria-label="Outcome classes">
+      <span><i style="background:var(--map-fast)"></i>Recovers within 10 years</span>
+      <span><i style="background:var(--map-slow)"></i>11 to 30 years</span>
+      <span><i style="background:var(--map-vslow);box-shadow:inset 0 0 0 1px var(--rule)"></i>More than 30 years</span>
+      <span><i style="background:var(--map-stuck)"></i>No lasting recovery in 150 years</span>
+    </div>
+    <div class="maps" id="maps"></div>
+    <details class="table" id="tb-maps"><summary>Show the map as a table</summary></details>
+  </figure>
+  <div class="prose" style="margin-top:1.4rem" id="map-reading">
+    <p>Up to {{map_share_s10:pct}} of young-cod deaths, cod comes back on its own from every start in the grid, however large the boom and however few cod are left. In the main model ({{map_share_s20:pct}}), cod is held down in {{map_stuck_s20}} of {{map_cells_per_panel}} starts: with the survey's boom ({{survey_forage_1995_2004:x}}) only when cod starts at 2% of its 1980s level or less, and with a boom twice that size also at 4%. With the survey's boom and cod at the survey's own post-collapse levels, cod is back to half its 1980s level in {{map_s20_cod04_boom787_years}} years from 4% and {{map_s20_cod10_boom787_years}} years from 10%.</p>
+    <p>At {{map_share_s40:pct}} of young-cod deaths cod is held down in {{map_stuck_s40}} of {{map_cells_per_panel}} starts, including the survey's own cod levels. At that setting, though, the model's 1980s state is itself unstable, so these long-run outcomes are not reliable. Driven by the real fishing history, this setting still has cod back above half its 1980s level within {{sens_max_years}} years of the 1993 low.</p>
+  </div>
+</section>
+
+<!-- ============================================================ decisions -->
+<section class="block" id="decisions" aria-labelledby="decisions-h">
+  <div class="sechead">
+    <span class="kicker">Implications</span>
+    <h2 id="decisions-h">What this means for decisions</h2>
+  </div>
+  <p class="statement">On present evidence, fishing forage fish is not a supported lever for rebuilding eastern Scotian Shelf cod.</p>
+  <div class="two" style="margin-top:1.4rem">
+    <div class="prose">
+      <h3>Why</h3>
+      <p>The model brings cod back after the moratorium unless adult cod die at the elevated rate estimated after the collapse. With that rate held, none of the {{all_M_n_runs}} explorer runs with high adult deaths brings cod back, from any starting state and with or without forage fishing. From the model's own 2025 state, forage fishing takes {{dep_prog_min_years}} to {{dep_prog_max_years}} years to reach half the 1980s spawning stock, against {{dep_sq_years}} years without it, because cod lose food.</p>
+    </div>
+    <div class="prose">
+      <h3>The narrow case where it could work</h3>
+      <p>If forage fish really do eat young cod at the assumed rate, and the shelf has reached the cod-free state with forage fish at about {{alt_forage_cod_free:.0f}} times their 1980s level, a short, hard forage fishery restores cod in the model: at least F {{alt_min_F_D5}} for 5 years, F {{alt_min_F_D10}} for 10 years, or F {{alt_min_F_D15}} for 15 years or longer. Cod then needs {{alt_rec_years_min}} to {{alt_rec_years_max}} years to reach half its 1980s level. The model's history never reaches that state, and adult cod deaths must also have returned to normal.</p>
+    </div>
+  </div>
+
+  <h3 style="margin-top:2rem">What forage fishing would cost</h3>
+  <div class="costs">
+    <div class="cost"><h4>Food for cod</h4><p>On the banks, large cod eat mainly sand lance. In the model's long-run states, cod at age 5 weigh {{eq_cod_w5_sq_kg:.2f}} kg with today's forage fishing and {{eq_cod_w5_F1_kg:.2f}} kg when forage fish are fished at F 1.</p></div>
+    <div class="cost"><h4>Seabirds</h4><p>Across the world's seabird colonies, breeding success drops once prey falls below about a third of its highest level. Seabirds are not in the model, so this cost is not counted in any run.</p></div>
+    <div class="cost"><h4>Seals and other mammals</h4><p>Grey seals near Sable Island ate mostly sand lance ({{seal_diet_sand_lance:.0%}} of their diet by weight in 1991–93). Fewer sand lance could push seals onto cod. Seals are not a species in the model, so this feedback is missing.</p></div>
+    <div class="cost"><h4>The forage stocks themselves</h4><p>From the model's 2025 state, forage F of 0.5 or more for 10 years or longer takes forage fish down to {{dep_hardF_forage_low_max:pct}} of their 1980s level or less at their low point, against {{dep_sq_forage_low:pct}} without a programme. From the cod-free state the catches are very large, about {{alt_F1_D10_yield:,.0f}} kt a year over a 10-year programme at F 1, but they come from a boom the model never produces from history. There is no sand lance fishery on this shelf, and herring stocks are managed separately; their current status was not compiled here.</p></div>
+  </div>
+
+  <div class="two" style="margin-top:2rem">
+    <div>
+      <h3>What evidence would change the answer</h3>
+      <ol class="evidence">
+        <li>Direct measurements, during cod spawning on this shelf, of forage fish eating cod eggs and larvae. The conditional result rests on them causing several percent of young-cod deaths; North Sea estimates are far lower.</li>
+        <li>A link between forage-fish abundance and young-cod survival or recruitment in the survey record. The direct test so far found none.</li>
+        <li>Better estimates of adult cod mortality and its causes, including grey seals. If adult deaths stay high, the forage lever does not matter in the model.</li>
+        <li>A model that reproduces the observed forage boom ({{survey_forage_1995_2004:x}}) and its later decline ({{survey_forage_2005_12:x}}). Until then, the role reversal at the size of boom that actually happened is untested.</li>
+        <li>The present state of herring and other forage stocks on the shelf.</li>
+      </ol>
+    </div>
+    <div>
+      <h3>Limits of the model</h3>
+      <ul class="limits">
+        <li>It cannot reproduce the forage boom: {{hindA_forage_ratio:x}} with fishing only and {{hindB_forage_ratio:x}} with higher adult cod deaths, against {{survey_forage_1995_2004:x}} in the survey, or the later decline.</li>
+        <li>Haddock, silver hake and plaice stay between {{hindA_other_min:x}} and {{hindA_other_max:x}} in the fishing-only run, where the survey shows {{survey_plaice_1995_2004:x}} to {{survey_haddock_1995_2004:x}}.</li>
+        <li>One assumption, s = {{s_value}}, has no data behind it.</li>
+        <li>The modelled community is fragile. Cod collapses under steady cod fishing at F {{cod_collapse_F_model}}, below the {{cod_collapse_F_target}} expected, and recovered cod overshoot and push out the other groundfish.</li>
+        <li>Seals, temperature and changes in cod growth and maturity are not modelled. Recovery times move by up to {{numcheck_max_shift_yr}} years with numerical settings.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ about -->
+<section class="block" id="about" aria-labelledby="about-h">
+  <div class="sechead">
+    <span class="kicker">About</span>
+    <h2 id="about-h">About the models</h2>
+  </div>
+  <div class="prose">
+    <p>Three versions of a multi-species size-spectrum model, built with the R package mizer (version {{mizer_version_text}}), were tried. The first could not test the idea: forage fish caused almost none of the deaths of young cod, and cod recovered within a few years of 1994. The second made deaths of eggs and larvae explicit and tied plankton to Scotian Shelf data; it reproduced the forage boom only by forcing cod and other groundfish down with fishing far above documented levels. The third, used on this page, adds the explicit assumption s = {{s_value}}, recalibrates the 1980s state with it, and uses documented fishing only. None of the three finds that the role reversal by itself explains the failed recovery.</p>
+    <p>Paper: <span class="placeholder">link to be added</span>. Model code and data: <span class="placeholder">link to be added</span>.</p>
+  </div>
+  <footer class="colophon">
+    <p>Sources of observations: Fanning, Mohn and MacEachern 2003 (DFO Res. Doc. 2003/027) for landings and spawning stock; DFO Maritimes summer research vessel survey, eastern Scotian Shelf strata, as compiled for Adekoya et al. 2026 (derived, indicative); Hammill et al. 2023 (DFO Res. Doc. 2023/053) for grey seal pups; DFO 2025 survey trends for the 2023–24 index; Mohn and Rowe 2012 for adult cod mortality.</p>
+    <p>Model runs: version 3 of the model; explorer and map runs computed for this page with the project's own scenario functions and checked against the main model results ({{sanity_agree}} of {{sanity_n}} overlapping checks agree).</p>
+  </footer>
+</section>
+</main>
+</div>
+</div>
+
+<script>
+(function () {
+'use strict';
+/*__SITE_DATA__*/
+var NS = 'http://www.w3.org/2000/svg';
+var EX = SITE.explorer;
+
+/* ---------- helpers ---------- */
+function $(s, r) { return (r || document).querySelector(s); }
+function svg(tag, attrs, parent) {
+  var e = document.createElementNS(NS, tag);
+  if (attrs) for (var k in attrs) {
+    if (k === 'style') e.setAttribute('style', attrs[k]);
+    else if (attrs[k] !== null && attrs[k] !== undefined) e.setAttribute(k, attrs[k]);
+  }
+  if (parent) parent.appendChild(e);
+  return e;
+}
+function h(tag, cls, parent, text) {
+  var e = document.createElement(tag);
+  if (cls) e.className = cls;
+  if (text !== undefined && text !== null) e.textContent = text;
+  if (parent) parent.appendChild(e);
+  return e;
+}
+function dec(a) { return a.map(function (v) { return v === null ? null : Math.pow(10, v / 100); }); }
+function sig(v, n) { return Number(v.toPrecision(n)); }
+function fmtPct(v) {               // relative value -> percent text
+  if (v === null || v === undefined || !isFinite(v)) return 'n/a';
+  var p = v * 100;
+  if (p >= 1000) return Math.round(p).toLocaleString('en') + '%';
+  if (p >= 10) return Math.round(p) + '%';
+  if (p >= 1) return p.toFixed(1).replace(/\.0$/, '') + '%';
+  if (p >= 0.0000995) return sig(p, 2) + '%';
+  return 'under 0.0001%';
+}
+function fmtRel(v) {               // multiples above 2, percent below
+  if (v === null || v === undefined || !isFinite(v)) return 'n/a';
+  if (v >= 2) return '×' + (v >= 10 ? Math.round(v) : v.toFixed(1));
+  return fmtPct(v);
+}
+function fmtKt(v) {
+  if (v === null || v === undefined || !isFinite(v)) return 'n/a';
+  if (v >= 100) return Math.round(v).toLocaleString('en') + ' kt';
+  if (v >= 10) return v.toFixed(0) + ' kt';
+  if (v >= 1) return v.toFixed(1) + ' kt';
+  if (v > 0) return v.toPrecision(1) + ' kt';
+  return '0 kt';
+}
+function caughtShare(F) { return 1 - Math.exp(-F); }
+function niceStep(range, n) {
+  var raw = range / n, p = Math.pow(10, Math.floor(Math.log10(raw))), m = raw / p;
+  return (m < 1.5 ? 1 : m < 3.5 ? 2 : m < 7.5 ? 5 : 10) * p;
+}
+function linTicks(d0, d1, n) {
+  var st = niceStep(d1 - d0, n || 5), out = [];
+  for (var v = Math.ceil(d0 / st) * st; v <= d1 + 1e-9; v += st) out.push(Number(v.toPrecision(12)));
+  return out;
+}
+function logTicks(d0, d1) {
+  var out = [];
+  for (var e = Math.ceil(Math.log10(d0) - 1e-9); e <= Math.floor(Math.log10(d1) + 1e-9); e++) out.push(Math.pow(10, e));
+  return out;
+}
+function cssv(name) { return 'var(' + name + ')'; }
+
+/* ---------- generic chart ---------- */
+/* cfg: {height, x:{domain,ticks,fmt,label}, y:{log,domain,ticks,fmt,label}, series:[...],
+         bands:[{x0,x1,label}], hlines:[{y,label}], vlines:[{x,label}], tipTitle(x), margin} */
+var CHARTS = [];
+function chart(host, cfg) {
+  host._cfg = cfg;
+  if (CHARTS.indexOf(host) < 0) CHARTS.push(host);
+  render(host);
+}
+function render(host) {
+  var cfg = host._cfg;
+  while (host.firstChild) host.removeChild(host.firstChild);
+  var W = Math.max(260, host.clientWidth || 600);
+  var small = W < 460;
+  var H = cfg.height * (small ? 0.88 : 1);
+  var m = Object.assign({ t: 14, r: 14, b: 30, l: 52 }, cfg.margin || {});
+  if (small && cfg.marginSmall) Object.assign(m, cfg.marginSmall);
+  var pw = W - m.l - m.r, ph = H - m.t - m.b;
+  var s = svg('svg', { viewBox: '0 0 ' + W + ' ' + H, width: W, height: H, 'aria-hidden': 'true' }, host);
+  var xd = cfg.x.domain, yd = cfg.y.domain;
+  var X = function (v) { return m.l + (v - xd[0]) / (xd[1] - xd[0]) * pw; };
+  var Y = cfg.y.log
+    ? function (v) { var l = Math.log10(Math.min(Math.max(v, yd[0]), yd[1])); return m.t + ph - (l - Math.log10(yd[0])) / (Math.log10(yd[1]) - Math.log10(yd[0])) * ph; }
+    : function (v) { return m.t + ph - (Math.min(Math.max(v, yd[0]), yd[1]) - yd[0]) / (yd[1] - yd[0]) * ph; };
+  host._X = X; host._Y = Y; host._m = m; host._pw = pw; host._ph = ph; host._W = W;
+  var clipId = 'clip-' + host.id;
+  var defs = svg('defs', null, s);
+  var cp = svg('clipPath', { id: clipId }, defs);
+  svg('rect', { x: m.l, y: m.t - 2, width: pw, height: ph + 4 }, cp);
+  // bands
+  (cfg.bands || []).forEach(function (b) {
+    var x0 = X(Math.max(b.x0, xd[0])), x1 = X(Math.min(b.x1, xd[1]));
+    svg('rect', { x: x0, y: m.t, width: Math.max(0, x1 - x0), height: ph, style: 'fill:var(--accent-wash)' }, s);
+    if (b.label) {
+      var bt = svg('text', { x: x0 + 5, y: m.t + 12, 'font-size': 11, style: 'fill:var(--accent)', 'font-weight': 600 }, s);
+      bt.textContent = b.label;
+    }
+  });
+  // grid + y ticks
+  var yt = cfg.y.ticks || (cfg.y.log ? logTicks(yd[0], yd[1]) : linTicks(yd[0], yd[1], small ? 4 : 5));
+  yt.forEach(function (t) {
+    var yy = Y(t);
+    svg('line', { x1: m.l, x2: m.l + pw, y1: yy, y2: yy, style: 'stroke:var(--grid)', 'stroke-width': 1 }, s);
+    var tx = svg('text', { x: m.l - 6, y: yy + 3.5, 'text-anchor': 'end', 'font-size': 10.5, style: 'fill:var(--muted)' }, s);
+    tx.textContent = cfg.y.fmt ? cfg.y.fmt(t) : String(t);
+  });
+  // x axis
+  svg('line', { x1: m.l, x2: m.l + pw, y1: m.t + ph, y2: m.t + ph, style: 'stroke:var(--axis)', 'stroke-width': 1 }, s);
+  var xt = cfg.x.ticks || linTicks(xd[0], xd[1], small ? 4 : 7);
+  if (small && cfg.x.ticksSmall) xt = cfg.x.ticksSmall;
+  xt.forEach(function (t) {
+    var xx = X(t);
+    svg('line', { x1: xx, x2: xx, y1: m.t + ph, y2: m.t + ph + 4, style: 'stroke:var(--axis)' }, s);
+    var tx = svg('text', { x: xx, y: m.t + ph + 16, 'text-anchor': 'middle', 'font-size': 10.5, style: 'fill:var(--muted)' }, s);
+    tx.textContent = cfg.x.fmt ? cfg.x.fmt(t) : String(t);
+  });
+  if (cfg.x.label) {
+    var xl = svg('text', { x: m.l + pw, y: H - 2, 'text-anchor': 'end', 'font-size': 10.5, style: 'fill:var(--muted)' }, s);
+    xl.textContent = cfg.x.label;
+  }
+  // reference lines
+  (cfg.hlines || []).forEach(function (r) {
+    var yy = Y(r.y);
+    svg('line', { x1: m.l, x2: m.l + pw, y1: yy, y2: yy, style: 'stroke:var(--ink-2)', 'stroke-width': 1, 'stroke-dasharray': '2 3' }, s);
+    if (r.label) {
+      var t = svg('text', { x: m.l + pw - 4, y: yy - 4, 'text-anchor': 'end', 'font-size': 10.5, style: 'fill:var(--ink-2)' }, s);
+      t.textContent = r.label;
+    }
+  });
+  (cfg.vlines || []).forEach(function (r) {
+    var xx = X(r.x);
+    svg('line', { x1: xx, x2: xx, y1: m.t, y2: m.t + ph, style: 'stroke:var(--ink-2)', 'stroke-width': 1, 'stroke-dasharray': '2 3' }, s);
+    if (r.label) {
+      var anchor = (xx > m.l + pw * 0.7) ? 'end' : 'start';
+      var t = svg('text', { x: xx + (anchor === 'end' ? -4 : 4), y: m.t + 11, 'text-anchor': anchor, 'font-size': 10.5, style: 'fill:var(--ink-2)' }, s);
+      t.textContent = r.label;
+    }
+  });
+  // series
+  var g = svg('g', { 'clip-path': 'url(#' + clipId + ')' }, s);
+  cfg.series.forEach(function (se) {
+    var col = cssv(se.color);
+    if (se.kind === 'bars') {
+      var bw = Math.max(1.5, Math.min(se.barWidth || 8, pw / se.x.length * 0.62));
+      se.x.forEach(function (xv, i) {
+        var v = se.y[i]; if (v === null || v === undefined) return;
+        var y0 = Y(cfg.y.log ? yd[0] : Math.max(0, yd[0])), y1 = Y(v);
+        svg('rect', { x: X(xv) - bw / 2, y: Math.min(y0, y1), width: bw, height: Math.abs(y0 - y1), style: 'fill:' + col, opacity: se.opacity || 1 }, g);
+      });
+    } else if (se.kind === 'dots' || se.kind === 'ring') {
+      se.x.forEach(function (xv, i) {
+        var v = se.y[i]; if (v === null || v === undefined || (cfg.y.log && v <= 0)) return;
+        if (cfg.y.log && v < yd[0]) return;
+        if (se.kind === 'dots') svg('circle', { cx: X(xv), cy: Y(v), r: se.r || 3.5, style: 'fill:' + col + ';stroke:var(--surface)', 'stroke-width': 1.5, opacity: se.opacity || 1 }, g);
+        else svg('circle', { cx: X(xv), cy: Y(v), r: se.r || 3.5, style: 'fill:var(--surface);stroke:' + col, 'stroke-width': 1.5, opacity: se.opacity || 1 }, g);
+      });
+    } else if (se.kind === 'steps') {
+      se.steps.forEach(function (st) {
+        svg('line', { x1: X(st.x0), x2: X(st.x1 + 1), y1: Y(st.y), y2: Y(st.y), style: 'stroke:' + col, 'stroke-width': 3.5, 'stroke-linecap': 'butt' }, g);
+        if (st.label) {
+          var t = svg('text', { x: (X(st.x0) + X(st.x1 + 1)) / 2, y: Y(st.y) + (st.below ? 14 : -6), 'text-anchor': 'middle', 'font-size': 10.5, 'font-weight': 650, style: 'fill:var(--ink)' }, s);
+          t.textContent = st.label;
+        }
+      });
+    } else {
+      var d = '', pen = false;
+      se.x.forEach(function (xv, i) {
+        var v = se.y[i];
+        if (v === null || v === undefined || (cfg.y.log && v <= 0)) { pen = false; return; }
+        d += (pen ? 'L' : 'M') + X(xv).toFixed(1) + ',' + Y(v).toFixed(1);
+        pen = true;
+      });
+      svg('path', { d: d, class: 'series', fill: 'none', style: 'stroke:' + col, 'stroke-width': se.width || 2, 'stroke-linejoin': 'round', 'stroke-linecap': 'round', 'stroke-dasharray': se.dash || null, opacity: se.opacity || 1 }, g);
+    }
+  });
+  // direct end labels
+  (cfg.endLabels || []).forEach(function (el) {
+    var t = svg('text', { x: X(el.x) + (el.dx || 6), y: Y(el.y) + (el.dy || 4), 'font-size': 11, 'font-weight': 600, 'text-anchor': el.anchor || 'start', style: 'fill:var(--ink)' }, s);
+    t.textContent = el.text;
+  });
+  // floor note for clipped log values
+  if (cfg.floorNote) {
+    var fn = svg('text', { x: m.l + 4, y: m.t + ph - 5, 'font-size': 10, style: 'fill:var(--muted)' }, s);
+    fn.textContent = cfg.floorNote;
+  }
+  if (cfg.hover !== false) addHover(host, s, cfg);
+  if (cfg.table) cfg.table();
+}
+function addHover(host, s, cfg) {
+  var X = host._X, Y = host._Y, m = host._m;
+  var xs = {};
+  cfg.series.forEach(function (se) { if (se.hover !== false && se.x) se.x.forEach(function (v) { xs[v] = 1; }); });
+  var xv = Object.keys(xs).map(Number).sort(function (a, b) { return a - b; });
+  if (!xv.length) return;
+  var cross = svg('line', { y1: m.t, y2: m.t + host._ph, style: 'stroke:var(--ink-2)', 'stroke-width': 1, opacity: 0 }, s);
+  var dotsG = svg('g', null, s);
+  var tip = h('div', 'tip', host); tip.hidden = true;
+  var idx = -1;
+  function show(i) {
+    idx = Math.max(0, Math.min(xv.length - 1, i));
+    var x0 = xv[idx], px = X(x0);
+    cross.setAttribute('x1', px); cross.setAttribute('x2', px); cross.setAttribute('opacity', 0.6);
+    while (dotsG.firstChild) dotsG.removeChild(dotsG.firstChild);
+    while (tip.firstChild) tip.removeChild(tip.firstChild);
+    h('div', 't', tip, cfg.tipTitle ? cfg.tipTitle(x0) : String(x0));
+    cfg.series.forEach(function (se) {
+      if (se.hover === false || !se.x) return;
+      var j = se.x.indexOf(x0); if (j < 0) return;
+      var v = se.y[j]; if (v === null || v === undefined) return;
+      var r = h('div', 'r', tip);
+      var k = h('i', 'key ' + (se.kind === 'dots' || se.kind === 'ring' ? 'dot' : se.kind === 'bars' ? 'bar' : 'line'), r);
+      k.style.background = cssv(se.color);
+      h('b', null, r, se.fmt ? se.fmt(v) : (cfg.y.fmtTip ? cfg.y.fmtTip(v) : String(v)));
+      h('span', null, r, se.label);
+      if (se.kind !== 'bars' && !(cfg.y.log && v <= 0)) svg('circle', { cx: px, cy: Y(v), r: 4, style: 'fill:' + cssv(se.color) + ';stroke:var(--surface)', 'stroke-width': 2 }, dotsG);
+    });
+    tip.hidden = false;
+    var tw = tip.offsetWidth, left = px + 12;
+    if (left + tw > host.clientWidth - 4) left = px - tw - 12;
+    tip.style.left = Math.max(4, left) + 'px';
+    tip.style.top = (m.t + 4) + 'px';
+  }
+  function hide() { cross.setAttribute('opacity', 0); tip.hidden = true; while (dotsG.firstChild) dotsG.removeChild(dotsG.firstChild); }
+  function nearest(clientX) {
+    var rect = s.getBoundingClientRect(), scale = host._W / rect.width;
+    var px = (clientX - rect.left) * scale, best = 0, bd = Infinity;
+    xv.forEach(function (v, i) { var d = Math.abs(X(v) - px); if (d < bd) { bd = d; best = i; } });
+    return best;
+  }
+  s.addEventListener('pointermove', function (e) { show(nearest(e.clientX)); });
+  s.addEventListener('pointerdown', function (e) { show(nearest(e.clientX)); });
+  s.addEventListener('pointerleave', hide);
+  host.onkeydown = function (e) {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      e.preventDefault();
+      show(idx < 0 ? 0 : idx + (e.key === 'ArrowRight' ? 1 : -1));
+    } else if (e.key === 'Escape') hide();
+  };
+  host.onblur = hide;
+}
+var rsTimer = null, ro = null;
+function redraw(c) { if (c._draw) c._draw(); else render(c); }
+function redrawChanged() {
+  CHARTS.forEach(function (c) { if (c.clientWidth && Math.abs(c.clientWidth - (c._W || 0)) > 2) redraw(c); });
+}
+if (window.ResizeObserver) {
+  ro = new ResizeObserver(function () { clearTimeout(rsTimer); rsTimer = setTimeout(redrawChanged, 80); });
+} else {
+  window.addEventListener('resize', function () { clearTimeout(rsTimer); rsTimer = setTimeout(redrawChanged, 120); });
+}
+function observe(host) { if (ro) ro.observe(host); }
+
+function fillTable(det, cols, rows) {
+  var old = det.querySelector('.tablewrap'); if (old) det.removeChild(old);
+  var wrap = h('div', 'tablewrap', det);
+  var t = h('table', null, wrap), th = h('thead', null, t), tr = h('tr', null, th);
+  cols.forEach(function (c) { h('th', null, tr, c); });
+  var tb = h('tbody', null, t);
+  rows.forEach(function (r) { var row = h('tr', null, tb); r.forEach(function (c) { h('td', null, row, c); }); });
+}
+function pctTick(v) {               // tick label for a power of ten, as percent
+  var e = Math.round(Math.log10(v)) + 2;
+  if (e >= 0) return Math.pow(10, e).toLocaleString('en') + '%';
+  return '0.' + '0'.repeat(-e - 1) + '1%';
+}
+function relTick(v) { return v >= 1 ? '×' + v : pctTick(v); }
+
+/* ---------- observations ---------- */
+var OBS = SITE.observed;
+(function () {
+  var host = $('#ch-landings');
+  var ssbYears = OBS.ssb.year;
+  chart(host, {
+    height: 260, margin: { l: 44, r: 12 },
+    x: { domain: [1957, 2003], ticks: [1960, 1970, 1980, 1990, 2000] },
+    y: { domain: [0, 180], ticks: [0, 50, 100, 150], fmt: String },
+    vlines: [{ x: 1993.67, label: 'Moratorium, Sept 1993' }],
+    series: [
+      { kind: 'bars', x: OBS.landings.year, y: OBS.landings.kt, color: '--sq', label: 'landings', barWidth: 7, fmt: function (v) { return fmtKt(v); } },
+      { kind: 'line', x: ssbYears, y: OBS.ssb.kt, color: '--obs', width: 1.25, hover: false, opacity: 0.55 },
+      { kind: 'dots', x: ssbYears, y: OBS.ssb.kt, color: '--obs', label: 'spawning stock', fmt: function (v) { return fmtKt(v); } }
+    ],
+    tipTitle: function (x) { return String(x); }
+  });
+  observe(host);
+  var rows = OBS.landings.year.map(function (y, i) {
+    var j = ssbYears.indexOf(y);
+    return [String(y), OBS.landings.kt[i].toFixed(1), j >= 0 ? OBS.ssb.kt[j].toFixed(1) : ''];
+  });
+  fillTable($('#tb-landings'), ['Year', 'Landings, kt', 'Spawning stock, kt'], rows);
+})();
+(function () {
+  var host = $('#ch-survey');
+  var P = OBS.survey_periods.filter(function (p) { return p.period !== '1980-89'; });
+  var all = OBS.survey_periods;
+  var codSteps = all.map(function (p) { return { x0: p.start, x1: p.end, y: p.cod, label: p.period === '1995-2004' ? fmtRel(p.cod) : null, below: true }; });
+  var forSteps = all.map(function (p) { return { x0: p.start, x1: p.end, y: p.forage, label: (p.period === '1995-2004' || p.period === '2005-12') ? fmtRel(p.forage) : null }; });
+  var pos = function (a) { return a.map(function (v) { return v > 0 ? v : null; }); };
+  chart(host, {
+    height: 260, margin: { l: 50, r: 10 },
+    x: { domain: [1969, 2019], ticks: [1970, 1980, 1990, 2000, 2010] },
+    y: { log: true, domain: [0.001, 30], ticks: [0.001, 0.01, 0.1, 1, 10], fmt: relTick, fmtTip: function (v) { return fmtRel(v); } },
+    hlines: [{ y: 1, label: '1980s average' }],
+    vlines: [{ x: 1993.67 }],
+    series: [
+      { kind: 'dots', x: OBS.survey.year, y: pos(OBS.survey.cod_rel), color: '--cod', opacity: 0.4, r: 3, label: 'cod, single year' },
+      { kind: 'dots', x: OBS.survey.year, y: pos(OBS.survey.forage_rel), color: '--forage', opacity: 0.4, r: 3, label: 'forage fish, single year' },
+      { kind: 'steps', steps: codSteps, color: '--cod', hover: false },
+      { kind: 'steps', steps: forSteps, color: '--forage', hover: false }
+    ],
+    tipTitle: function (x) { return String(x); }
+  });
+  observe(host);
+  fillTable($('#tb-survey'), ['Period', 'Cod', 'Forage fish', 'Haddock', 'Silver hake', 'Plaice'],
+    all.map(function (p) { return [p.period, fmtRel(p.cod), fmtRel(p.forage), fmtRel(p.haddock), fmtRel(p.silver_hake), fmtRel(p.plaice)]; }));
+})();
+(function () {
+  var host = $('#ch-seals');
+  var yrs = OBS.seals.year, v = OBS.seals.sable_pups.map(function (x) { return x / 1000; });
+  chart(host, {
+    height: 260, margin: { l: 40, r: 10 },
+    x: { domain: [1961, 2023], ticks: [1970, 1990, 2010] },
+    y: { domain: [0, 100], ticks: [0, 25, 50, 75, 100], fmt: function (t) { return t === 0 ? '0' : t + 'k'; } },
+    vlines: [{ x: 1993.67 }],
+    series: [
+      { kind: 'line', x: yrs, y: v, color: '--seal', width: 1.25, hover: false, opacity: 0.6 },
+      { kind: 'dots', x: yrs, y: v, color: '--seal', label: 'pups', fmt: function (x) { return Math.round(x * 1000).toLocaleString('en'); } }
+    ],
+    tipTitle: function (x) { return String(x); }
+  });
+  observe(host);
+})();
+
+/* ---------- hindcast ---------- */
+var HC = SITE.hindcast;
+function hindcastDraw() {
+  var run = document.querySelector('input[name="hrun"]:checked').value;
+  var s1 = $('#hrun-s1').checked;
+  var R = HC.runs[run], R1 = HC.runs[run + '_s1'];
+  var obsSsb = { x: OBS.ssb.year, y: OBS.ssb.rel };
+  var surv = OBS.survey;
+  var label = run === 'fishing_only' ? 'model, fishing only' : 'model, fishing + higher adult deaths';
+  var codSeries = [
+    { kind: 'line', x: HC.year, y: R.cod_ssb_rel, color: '--cod', label: label, fmt: fmtRel },
+    { kind: 'dots', x: obsSsb.x, y: obsSsb.y, color: '--obs', label: 'survey spawning stock', fmt: fmtRel },
+    { kind: 'ring', x: surv.year, y: surv.cod_rel.map(function (v) { return v > 0 ? v : null; }), color: '--obs', label: 'survey biomass index', fmt: fmtRel, r: 3 }
+  ];
+  if (s1) codSeries.splice(1, 0, { kind: 'line', x: HC.year, y: R1.cod_ssb_rel, color: '--cod', width: 1.25, dash: '5 3', opacity: 0.9, label: 'model with s = 1', fmt: fmtRel });
+  var cfgCod = {
+    height: 300, margin: { l: 56, r: 12 },
+    x: { domain: [1969, 2026], ticks: [1970, 1980, 1990, 2000, 2010, 2020] },
+    y: { log: true, domain: [1e-4, 20], ticks: [1e-4, 1e-3, 1e-2, 0.1, 1, 10], fmt: pctTick, fmtTip: fmtRel },
+    vlines: [{ x: 1993.67, label: 'Moratorium' }],
+    hlines: [{ y: 0.5, label: 'half the 1980s level' }],
+    series: codSeries, tipTitle: String
+  };
+  chart($('#ch-hcod'), cfgCod);
+  var P = OBS.survey_periods;
+  var forSteps = P.map(function (p) { return { x0: p.start, x1: p.end, y: p.forage, label: p.period === '1995-2004' ? fmtRel(p.forage) : null }; });
+  var forSeries = [
+    { kind: 'line', x: HC.year, y: R.forage_rel, color: '--forage', label: label, fmt: fmtRel },
+    { kind: 'dots', x: surv.year, y: surv.forage_rel.map(function (v) { return v > 0 ? v : null; }), color: '--obs', opacity: 0.35, r: 2.6, label: 'survey, single year', fmt: fmtRel },
+    { kind: 'steps', steps: forSteps, color: '--obs', hover: false }
+  ];
+  if (s1) forSeries.splice(1, 0, { kind: 'line', x: HC.year, y: R1.forage_rel, color: '--forage', width: 1.25, dash: '5 3', label: 'model with s = 1', fmt: fmtRel });
+  chart($('#ch-hfor'), {
+    height: 300, margin: { l: 56, r: 12 },
+    x: { domain: [1969, 2026], ticks: [1970, 1980, 1990, 2000, 2010, 2020] },
+    y: { log: true, domain: [0.001, 30], ticks: [0.001, 0.01, 0.1, 1, 10], fmt: relTick, fmtTip: fmtRel },
+    vlines: [{ x: 1993.67 }],
+    hlines: [{ y: 1 }],
+    series: forSeries, tipTitle: String
+  });
+  var lc = $('#lg-hcod'); lc.textContent = '';
+  legendItem(lc, 'line', '--cod', 'Model');
+  if (s1) legendItem(lc, 'line thin', '--cod', 'Model, s = 1', true);
+  legendItem(lc, 'dot', '--obs', 'Survey spawning stock');
+  legendItem(lc, 'ring', '--obs', 'Survey biomass index');
+  var lf = $('#lg-hfor'); lf.textContent = '';
+  legendItem(lf, 'line', '--forage', 'Model');
+  if (s1) legendItem(lf, 'line thin', '--forage', 'Model, s = 1', true);
+  legendItem(lf, 'step', '--obs', 'Survey period average');
+  document.querySelectorAll('#hreadouts .readout').forEach(function (r) { r.classList.toggle('on', r.getAttribute('data-run') === run); });
+}
+function legendItem(parent, kind, color, text, dashed) {
+  var sp = h('span', null, parent);
+  var k = h('i', 'key ' + kind, sp);
+  if (kind.indexOf('ring') === 0) k.style.borderColor = cssv(color); else k.style.background = cssv(color);
+  if (dashed) { k.style.background = 'repeating-linear-gradient(90deg,' + cssv(color) + ' 0 5px, transparent 5px 8px)'; }
+  sp.appendChild(document.createTextNode(text));
+}
+document.querySelectorAll('input[name="hrun"]').forEach(function (r) { r.addEventListener('change', hindcastDraw); });
+$('#hrun-s1').addEventListener('change', hindcastDraw);
+hindcastDraw(); observe($('#ch-hcod')); observe($('#ch-hfor'));
+
+/* ---------- explorer ---------- */
+var FL = EX.F_levels, DL = EX.D_levels, PERM = EX.permanent_D, T = EX.t, SQF = EX.status_quo_F;
+var state = { start: 'depleted_2025', F: 1, D: 10, M: 'baseline' };
+function key(st, M, F, D) { return st + '|' + M + '|' + F + '|' + (F === SQF ? 5 : D); }
+function getRun(st, M, F, D) { return EX.runs[key(st, M, F, D)]; }
+// start-state descriptions from the data
+document.querySelectorAll('[data-startval]').forEach(function (el) {
+  var p = el.getAttribute('data-startval').split(':');
+  var r = getRun(p[0], 'baseline', SQF, 5);
+  var v = Math.pow(10, r[p[1]][0] / 100);
+  el.textContent = p[1] === 'forage' && v >= 2 ? fmtRel(v) : fmtPct(v);
+});
+// slider ticks and duration buttons
+var ft = $('#f-ticks');
+FL.forEach(function (f) { h('span', null, ft, String(f)); });
+var seg = $('#dur-seg');
+DL.forEach(function (d) {
+  var id = 'dur-' + d;
+  var inp = h('input', null, seg); inp.type = 'radio'; inp.name = 'dur'; inp.id = id; inp.value = String(d);
+  var lb = h('label', null, seg, d === PERM ? 'Permanent' : d + ' yr'); lb.setAttribute('for', id);
+  inp.addEventListener('change', function () { state.D = d; update(); });
+});
+$('#f-slider').addEventListener('input', function () { state.F = FL[+this.value]; update(); });
+document.querySelectorAll('input[name="start"]').forEach(function (r) { r.addEventListener('change', function () { state.start = this.value; update(); }); });
+document.querySelectorAll('input[name="mort"]').forEach(function (r) { r.addEventListener('change', function () { state.M = this.value; update(); }); });
+document.querySelectorAll('.presets button').forEach(function (b) {
+  b.addEventListener('click', function () {
+    state.start = b.getAttribute('data-start'); state.F = Number(b.getAttribute('data-f'));
+    state.D = Number(b.getAttribute('data-d')); state.M = b.getAttribute('data-m');
+    update(true);
+    var c = $('#console'); if (c.scrollIntoView) c.scrollIntoView({ block: 'start' });
+  });
+});
+var ICONS = {
+  good: '<svg viewBox="0 0 20 20"><path d="M4 10.5l4 4 8-9" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+  warn: '<svg viewBox="0 0 20 20"><path d="M10 4v7M10 14.5v1" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg>',
+  bad: '<svg viewBox="0 0 20 20"><path d="M5 5l10 10M15 5L5 15" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>',
+  neutral: '<svg viewBox="0 0 20 20"><path d="M4 10h12" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>'
+};
+function yrs(n) { return n + (n === 1 ? ' year' : ' years'); }
+function verdictFor(P, S, isSQ, D) {
+  var pr = P.persist, sr = S.persist, out = { flags: [] };
+  if (isSQ) {
+    if (pr) { out.tone = 'good'; out.head = 'Cod recovers in ' + yrs(P.y50); out.detail = 'With forage fishing left at today’s level, cod spawning stock is back to half its 1980s level after ' + yrs(P.y50) + '.'; }
+    else { out.tone = 'bad'; out.head = 'Cod never recovers'; out.detail = P.y50 !== null ? 'Cod briefly reaches half its 1980s level in year ' + P.y50 + ', then declines again.' : 'Cod does not get back to half its 1980s level within 150 years.'; }
+    out.detail += ' This is the comparison case; move the forage-fishing slider to test a programme.';
+    return out;
+  }
+  if (pr && sr) {
+    var dd = P.y50 - S.y50;
+    if (dd > 0) { out.tone = 'warn'; out.head = 'Recovery delayed by ' + yrs(dd); }
+    else if (dd < 0) { out.tone = 'good'; out.head = 'Recovery ' + yrs(-dd) + ' sooner'; }
+    else { out.tone = 'neutral'; out.head = 'No change in recovery time'; }
+    out.detail = 'Cod is back to half its 1980s level after ' + yrs(P.y50) + ' with this programme, and after ' + yrs(S.y50) + ' without extra forage fishing.';
+  } else if (pr && !sr) {
+    out.tone = 'good'; out.head = 'Cod recovers in ' + yrs(P.y50);
+    out.detail = 'Without the programme cod does not recover within 150 years' + (S.y50 !== null ? ' (it touches half its 1980s level in year ' + S.y50 + ', then declines).' : '.');
+  } else if (!pr && !sr) {
+    out.tone = 'bad'; out.head = 'Cod never recovers';
+    out.detail = 'Neither this programme nor leaving forage fishing at today’s level brings cod back to half its 1980s level for good within 150 years.';
+    if (P.y50 !== null) out.detail += ' With the programme cod touches that level in year ' + P.y50 + ', then declines.';
+  } else {
+    out.tone = 'bad'; out.head = 'The programme prevents recovery';
+    out.detail = 'Without it cod is back to half its 1980s level after ' + yrs(S.y50) + '; with it cod does not stay there.';
+  }
+  return out;
+}
+function setRadio(name, val) { var r = document.querySelector('input[name="' + name + '"][value="' + val + '"]'); if (r) r.checked = true; }
+function update(syncControls) {
+  var isSQ = state.F === SQF;
+  if (syncControls) {
+    setRadio('start', state.start); setRadio('mort', state.M);
+    $('#f-slider').value = String(FL.indexOf(state.F));
+  }
+  setRadio('dur', state.D);
+  document.querySelectorAll('input[name="dur"]').forEach(function (r) { r.disabled = isSQ; });
+  $('#dur-hint').textContent = isSQ ? 'No programme: forage fishing stays at F ' + SQF + ' throughout.' : 'After the programme, forage fishing returns to F ' + SQF + '.';
+  $('#f-val').textContent = 'F ' + state.F + (isSQ ? ' (today’s level)' : '');
+  $('#f-desc').textContent = 'about ' + Math.round(caughtShare(state.F) * 100) + '% caught per year';
+  var P = getRun(state.start, state.M, state.F, state.D), S = getRun(state.start, state.M, SQF, 5);
+  if (!P || !S) return;
+  var v = verdictFor(P, S, isSQ, state.D);
+  var flags = [];
+  if (!isSQ && P.f_min < 0.01) flags.push(['bad', 'Forage fish nearly eliminated: at their lowest ' + fmtPct(P.f_min) + ' of their 1980s level (' + fmtPct(S.f_min) + ' without the programme)']);
+  if (state.start === 'alt_state') flags.push(['assume', 'This start exists only under the s = 20 assumption']);
+  if (state.M === 'elevated') flags.push(['info', 'Adult cod deaths stay at the post-collapse rate (alternative hypothesis)']);
+  var vd = $('#verdict'); vd.setAttribute('data-tone', v.tone);
+  $('#v-icon').innerHTML = ICONS[v.tone];
+  $('#v-head').textContent = v.head;
+  $('#v-detail').textContent = v.detail;
+  var fl = $('#v-flags'); fl.textContent = '';
+  flags.forEach(function (f) { h('span', 'flag ' + f[0], fl, f[1]); });
+  // stats
+  var st = $('#stats'); st.textContent = '';
+  function stat(lbl, val, cmp) { var d = h('div', 'stat', st); h('div', 'lbl', d, lbl); h('div', 'v num', d, val); if (cmp) h('div', 'cmp num', d, cmp); }
+  var recTxt = function (r) { return r.persist ? yrs(r.y50) : 'not within 150 years'; };
+  stat('Cod back to half its 1980s level', recTxt(P), isSQ ? null : 'without programme: ' + recTxt(S));
+  stat('Forage fish, lowest point in 150 years', fmtRel(P.f_min), isSQ ? 'relative to the 1980s level' : 'without programme: ' + fmtRel(S.f_min));
+  stat('Forage catch during the programme', isSQ ? 'no programme' : fmtKt(P.fy_mean) + ' a year', isSQ ? null : 'total ' + fmtKt(P.fy_total));
+  stat('Cod catch, first 60 years', fmtKt(P.cy60), isSQ ? null : 'without programme: ' + fmtKt(S.cy60));
+  // charts
+  var Dp = state.D >= PERM ? PERM : state.D;
+  var bands = isSQ ? [] : [{ x0: 0, x1: Dp, label: state.D >= PERM ? 'Programme (permanent)' : 'Programme' }];
+  var xcfg = { domain: [0, 150], ticks: [0, 25, 50, 75, 100, 125, 150], ticksSmall: [0, 50, 100, 150], label: state.start === 'depleted_2025' ? 'years from start (0 = 2026)' : 'years from start' };
+  var tipT = function (x) { return 'Year ' + x + (state.start === 'depleted_2025' ? ' (' + (2026 + x) + ')' : ''); };
+  var progLbl = isSQ ? 'today’s forage fishing' : 'with programme', sqLbl = 'no extra forage fishing';
+  var codP = dec(P.cod), codS = dec(S.cod), forP = dec(P.forage), forS = dec(S.forage);
+  function pair(sy, py, col, fmt) {
+    var out = [];
+    if (!isSQ) out.push({ kind: 'line', x: T, y: sy, color: '--sq', label: sqLbl, fmt: fmt });
+    out.push({ kind: 'line', x: T, y: py, color: col, label: progLbl, fmt: fmt, width: 2.25 });
+    return out;
+  }
+  chart($('#ch-ecod'), {
+    height: 300, margin: { l: 62, r: 12 }, x: xcfg,
+    y: { log: true, domain: [1e-6, 20], ticks: [1e-6, 1e-4, 1e-2, 1], fmt: pctTick, fmtTip: fmtRel },
+    bands: bands, hlines: [{ y: 0.5, label: 'recovery: half the 1980s level' }],
+    series: pair(codS, codP, '--cod', fmtRel), tipTitle: tipT,
+    floorNote: 'values below 0.0001% sit on the bottom edge'
+  });
+  chart($('#ch-efor'), {
+    height: 210, margin: { l: 50, r: 10 }, x: Object.assign({}, xcfg, { ticks: [0, 50, 100, 150], label: null }),
+    y: { log: true, domain: [1e-6, 40], ticks: [1e-6, 1e-4, 1e-2, 1], fmt: relTick, fmtTip: fmtRel },
+    bands: bands.map(function (b) { return { x0: b.x0, x1: b.x1 }; }), hlines: [{ y: 1 }],
+    series: pair(forS, forP, '--forage', fmtRel), tipTitle: tipT
+  });
+  var ymaxF = Math.max.apply(null, P.fy.concat(S.fy)) * 1.1 || 1;
+  chart($('#ch-efy'), {
+    height: 210, margin: { l: 50, r: 10 }, x: Object.assign({}, xcfg, { ticks: [0, 50, 100, 150], label: null }),
+    y: { domain: [0, ymaxF], fmt: function (v) { return v >= 1000 ? (v / 1000) + 'k' : String(v); }, fmtTip: fmtKt },
+    bands: bands.map(function (b) { return { x0: b.x0, x1: b.x1 }; }),
+    series: pair(S.fy, P.fy, '--forage', fmtKt), tipTitle: tipT
+  });
+  var ymaxC = Math.max.apply(null, P.cy.concat(S.cy)) * 1.1 || 1;
+  chart($('#ch-ecy'), {
+    height: 210, margin: { l: 50, r: 10 }, x: Object.assign({}, xcfg, { ticks: [0, 50, 100, 150], label: null }),
+    y: { domain: [0, ymaxC], fmt: function (v) { return String(v); }, fmtTip: fmtKt },
+    bands: bands.map(function (b) { return { x0: b.x0, x1: b.x1 }; }),
+    series: pair(S.cy, P.cy, '--cod', fmtKt), tipTitle: tipT
+  });
+  var lg = $('#lg-ecod'); lg.textContent = '';
+  legendItem(lg, 'line', '--cod', isSQ ? 'Forage fishing at today’s level' : 'With the programme');
+  if (!isSQ) legendItem(lg, 'line', '--sq', 'No extra forage fishing');
+  if (!isSQ) { var sp = h('span', null, lg); h('i', 'key band', sp); sp.appendChild(document.createTextNode('Programme years')); }
+  // table
+  var keep = [0, 5, 10, 15, 20, 30, 40, 50, 60, 80, 100, 125, 150];
+  var rows = keep.map(function (yy) {
+    var i = T.indexOf(yy);
+    return [tipT(yy).replace('Year ', ''), fmtRel(codP[i]), isSQ ? '' : fmtRel(codS[i]), fmtRel(forP[i]), isSQ ? '' : fmtRel(forS[i]), fmtKt(P.fy[i]), fmtKt(P.cy[i])];
+  });
+  fillTable($('#tb-explorer'), ['Year', 'Cod', 'Cod, no extra fishing', 'Forage fish', 'Forage, no extra fishing', 'Forage catch / yr', 'Cod catch / yr'], rows);
+}
+update(true);
+['#ch-ecod', '#ch-efor', '#ch-efy', '#ch-ecy'].forEach(function (s) { observe($(s)); });
+
+/* ---------- forage boom range (documented fishing, recalibrated s) ---------- */
+(function () {
+  var rows = SITE.sensitivity_documented.filter(function (r) { return r.recalibrated; });
+  var svals = []; rows.forEach(function (r) { if (svals.indexOf(r.s) < 0) svals.push(r.s); });
+  svals.sort(function (a, b) { return a - b; });
+  var host = $('#ch-boom');
+  host._cfg = { custom: true };
+  CHARTS.push(host);
+  var survey = SITE.facts.survey_forage_1995_2004;
+  host._draw = function () {
+    while (host.firstChild) host.removeChild(host.firstChild);
+    var W = Math.max(260, host.clientWidth || 600), small = W < 520;
+    var m = { l: small ? 92 : 210, r: 16, t: 26, b: 30 }, rowH = 30, H = m.t + m.b + rowH * svals.length;
+    var pw = W - m.l - m.r;
+    var d0 = 0.5, d1 = 12;
+    var X = function (v) { return m.l + (Math.log10(v) - Math.log10(d0)) / (Math.log10(d1) - Math.log10(d0)) * pw; };
+    var s = svg('svg', { viewBox: '0 0 ' + W + ' ' + H, width: W, height: H, 'aria-hidden': 'true' }, host);
+    host._W = W;
+    [0.5, 1, 2, 5, 10].forEach(function (t) {
+      svg('line', { x1: X(t), x2: X(t), y1: m.t - 4, y2: H - m.b, style: 'stroke:var(--grid)' }, s);
+      var tx = svg('text', { x: X(t), y: H - m.b + 15, 'text-anchor': 'middle', 'font-size': 10.5, style: 'fill:var(--muted)' }, s);
+      tx.textContent = '×' + t;
+    });
+    var xl = svg('text', { x: m.l + pw, y: H - 2, 'text-anchor': 'end', 'font-size': 10.5, style: 'fill:var(--muted)' }, s);
+    xl.textContent = 'forage fish 1995–2004 relative to 1980s';
+    var xs = X(survey);
+    svg('line', { x1: xs, x2: xs, y1: m.t - 8, y2: H - m.b, style: 'stroke:var(--obs)', 'stroke-width': 2 }, s);
+    var st = svg('text', { x: xs - 5, y: m.t - 12, 'text-anchor': 'end', 'font-size': 11, 'font-weight': 650, style: 'fill:var(--ink)' }, s);
+    st.textContent = 'Survey ' + fmtRel(survey);
+    svals.forEach(function (sv, i) {
+      var rr = rows.filter(function (r) { return r.s === sv; });
+      var b = rr.map(function (r) { return r.boom; });
+      var y = m.t + rowH * i + rowH / 2;
+      var lo = Math.min.apply(null, b), hi = Math.max.apply(null, b);
+      var lab = svg('text', { x: m.l - 10, y: y + 4, 'text-anchor': 'end', 'font-size': 11, style: 'fill:var(--ink-2)' }, s);
+      lab.textContent = small ? fmtPct(rr[0].share) : fmtPct(rr[0].share) + ' of young-cod deaths' + (sv === 20 ? ' (main)' : '');
+      svg('line', { x1: X(lo), x2: X(hi), y1: y, y2: y, style: 'stroke:var(--forage)', 'stroke-width': 3, 'stroke-linecap': 'round', opacity: 0.45 }, s);
+      rr.forEach(function (r) {
+        var c = svg('circle', { cx: X(r.boom), cy: y, r: 4, style: 'fill:var(--forage);stroke:var(--surface)', 'stroke-width': 1.5 }, s);
+        var ti = svg('title', null, c); ti.textContent = fmtPct(r.share) + ' of deaths, forage density setting ' + r.repro_forage + ': boom ' + fmtRel(r.boom) + ', cod back to half in ' + r.years_to_50 + ' years';
+      });
+    });
+  };
+  host._draw();
+  observe(host);
+})();
+
+/* ---------- conditional map ---------- */
+(function () {
+  var CM = SITE.conditional_map, wrap = $('#maps');
+  var order = CM.s.map(function (s, i) { return { s: s, share: CM.share[i] }; }).sort(function (a, b) { return a.share - b.share; });
+  var surveyBoom = SITE.facts.survey_forage_1995_2004;
+  var tableRows = [];
+  order.forEach(function (o) {
+    var i = CM.s.indexOf(o.s), stable = CM.baseline_stable[i];
+    var p = h('div', 'mapp' + (o.s === 20 ? ' main' : '') + (stable ? '' : ' unstable'), wrap);
+    h('h4', null, p, 'Forage fish cause ' + fmtPct(o.share) + ' of young-cod deaths');
+    var sub = h('div', 'sub', p); h('span', null, sub, o.s === 20 ? 's = 20, the main model' : 's = ' + o.s + ', recalibrated to the 1980s');
+    var g = h('div', 'mgrid', p);
+    h('div', 'ch', g, '');
+    CM.boom.forEach(function (b) { var c = h('div', 'ch' + (Math.abs(b - surveyBoom) < 0.05 ? ' hl' : ''), g, '×' + (b % 1 ? b.toFixed(1) : b)); });
+    CM.cod_start.forEach(function (cs) {
+      h('div', 'rh' + (cs === 0.1 || cs === 0.04 || cs === 0.01 ? ' hl' : ''), g, fmtPct(cs));
+      CM.boom.forEach(function (b) {
+        var cell = CM.cells.filter(function (c) { return c.s === o.s && c.boom === b && Math.abs(c.cod - cs) < 1e-9; })[0];
+        var txt = cell.outcome === 'stuck' ? 'none' : String(cell.y50);
+        var d = h('div', 'cell', g, txt);
+        d.setAttribute('data-o', cell.outcome);
+        var desc = 'Cod ' + fmtPct(cs) + ', forage ×' + b + ': ' + (cell.outcome === 'stuck' ? (cell.y50 !== null ? 'touches half in year ' + cell.y50 + ', then declines' : 'no recovery in 150 years') : 'back to half in ' + yrs(cell.y50));
+        d.title = desc; d.setAttribute('aria-label', desc);
+        if (o.s === 20 && Math.abs(b - surveyBoom) < 0.05 && (cs === 0.1 || cs === 0.04 || cs === 0.01)) d.classList.add('ring');
+        tableRows.push([fmtPct(o.share), 's = ' + o.s, '×' + b, fmtPct(cs), cell.outcome === 'stuck' ? 'none' + (cell.y50 !== null ? ' (touches half in year ' + cell.y50 + ')' : '') : String(cell.y50)]);
+      });
+    });
+    if (!stable) h('p', 'mapflag', p, 'The 1980s state is itself unstable at this setting, so these long-run outcomes are not reliable.');
+  });
+  fillTable($('#tb-maps'), ['Forage share of young-cod deaths', 'Setting', 'Forage at start', 'Cod at start', 'Years to half the 1980s level'], tableRows);
+})();
+})();
+</script>

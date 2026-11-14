@@ -1,7 +1,9 @@
 # 04_forage_fishing_recovery.R  (v3)
 # ---------------------------------------------------------------------------
-# Acceptance test 4 (v3): from the modelled 2025 state of the documented-F
-# hindcast (models/collapsed_2025_params.rds, written by 02), raise the
+# Acceptance test 4 (v3): from the collapsed 2025 state
+# (models/collapsed_2025_params.rds, written by 02: run B, documented F plus
+# adult cod M 0.8 in 1990-2025; adult M back at baseline here, see 07 for
+# M staying high), raise the
 # forage-fish (pelagic) effort to F_forage for D years from 2026, then return
 # it to the status quo (0.1); cod stays at its moratorium bycatch F (0.02),
 # the other groundfish gears at their moratorium levels. Only fishing effort

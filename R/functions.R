@@ -282,7 +282,8 @@ retune_s_egg <- function(params, s_egg, n_iter = 8, tol = 0.03, cfg = default_co
     params
 }
 
-#' Refine a calibration by projecting the full dynamics (v3)
+#' Refine a calibration by projecting the full dynamics (v3; superseded by
+#' calibrate_v3n(): the full projection drifted for centuries and never settled)
 #'
 #' Each round: scale every species' abundance part of the way towards its
 #' target (damped matchBiomasses), re-match growth to age at maturity,
@@ -759,6 +760,26 @@ cod_F_sweep <- function(params, effort, Fs = seq(0.4, 1.6, by = 0.1), t_max = 30
                                              cod_yield = getYield(p)[["Cod"]])
     }
     do.call(rbind, out)
+}
+
+#' Alternative hypothesis: adult cod (>= l_adult cm) natural mortality raised
+#' to M_adult (predation by fish species in the model is counted towards it;
+#' the remainder is added as external mortality). Changes a parameter, so
+#' runs using it are labelled as the elevated-adult-M alternative.
+elevate_M <- function(p, M_adult = 0.8, l_adult = 35) {
+    sp <- species_params(p)
+    w_adult <- sp["Cod", "a"] * l_adult^sp["Cod", "b"]
+    pm <- getPredMort(p)["Cod", ]
+    em <- ext_mort(p)
+    big <- w(p) >= w_adult
+    em["Cod", big] <- pmax(em["Cod", big], M_adult - pm[big])
+    ext_mort(p) <- em
+    p
+}
+
+#' Switch the assumption under test off: forage -> groundfish interaction 1
+s_off <- function(p) {
+    im <- interaction_matrix(p); im[FORAGE, GROUNDFISH] <- 1; interaction_matrix(p) <- im; p
 }
 
 # ---------------------------------------------------------------------------

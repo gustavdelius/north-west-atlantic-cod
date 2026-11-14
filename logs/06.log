@@ -1,0 +1,22 @@
+Mizer parameter defaults are now at edition 3.
+       case no_w    dt  method max_biomass_error A_cod_ratio_1995_2004
+1 reference  120 0.100   euler       0.005928743              2.184418
+2  dt_0.025  120 0.025   euler       0.005928743              2.162789
+3   tr_bdf2  120 0.100 tr_bdf2       0.005928743              2.154165
+4  no_w_200  200 0.100   euler       0.010080290              2.149170
+  A_forage_ratio_1995_2004 A_cod_ssb_2025_rel B_cod_ratio_1995_2004
+1                 1.355398           6.101893            0.08132261
+2                 1.370621           6.100917            0.07574017
+3                 1.358577           6.125691            0.07487283
+4                 1.351827           6.179203            0.07677531
+  B_years_to_50pct_after_2025 B_forage_F1_10yr_years_to_50pct invasion_rate
+1                          39                              43  -0.009858101
+2                          41                              44  -0.008723919
+3                          41                              45  -0.009770070
+4                          41                              46  -0.016911771
+  invasion_fit_r2
+1       0.9891224
+2       0.9870044
+3       0.9890839
+4       0.9934319
+06_numerical_checks.R done

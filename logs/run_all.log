@@ -1,0 +1,1290 @@
+
+========== R/01_build_model.R ==========
+  repro_forage critical_level_for_stability lower_bound target_forage_1995_2004
+1    0.1706693                     0.119623    0.169623                    7.87
+       cod   forage   haddock silver_hake   plaice  herring forage_2005_12
+1 2.184418 1.355398 0.9119629    1.138171 1.024949 1.352532      0.7034486
+  cod_2005_12
+1    4.519886
+                                                        criterion    value
+1                                               biomass error Cod    0.001
+2                                           biomass error Haddock    0.005
+3                                       biomass error Silver hake    0.003
+4                                   biomass error American plaice    0.006
+5                                           biomass error Herring   -0.002
+6                                        biomass error Sand lance   -0.001
+7                                           biomass error Capelin    0.001
+8                              cod yield (kt) vs 53.5 kt landings     57.3
+9                                             age at maturity Cod     4.52
+10                                        age at maturity Haddock        3
+11                                    age at maturity Silver hake     2.01
+12                                age at maturity American plaice     6.01
+13                                        age at maturity Herring      3.5
+14                                     age at maturity Sand lance        2
+15                                        age at maturity Capelin      2.5
+16                                                     max erepro   0.0486
+17                                                       isSteady     TRUE
+18        max |log biomass change| over 100 yr at baseline effort    0.153
+19                                            max real eigenvalue -0.00626
+20 cod collapse F (equilibrium SSB < 10 % of baseline; 0.1 steps)      0.5
+21         cod F at maximum equilibrium yield (0.1 steps, >= 0.4)      0.4
+22                                                          s_egg       20
+23                                      forage reproduction level    0.171
+                   target
+1           within +-15 %
+2           within +-15 %
+3           within +-15 %
+4           within +-15 %
+5           within +-15 %
+6           within +-15 %
+7           within +-15 %
+8  40-67 kt (within 25 %)
+9              target 4.5
+10               target 3
+11               target 2
+12               target 6
+13             target 3.5
+14               target 2
+15             target 2.5
+16                    < 1
+17                   TRUE
+18                 < 0.05
+19                    < 0
+20                0.7-1.1
+21                      -
+22             assumption
+23  fitted to forage boom
+                     w_lo w_hi         source     integral fraction_killed
+forage...1          0.001    1         forage 2.173688e-01    5.821241e-02
+groundfish...2      0.001    1     groundfish 9.789627e-02    4.548641e-03
+background...3      0.001    1     background 3.545362e+00    9.151922e-01
+other_external...4  0.001    1 other_external 9.797074e-03    1.194026e-03
+fishing...5         0.001    1        fishing 4.550315e-05    4.116066e-06
+...6                0.001    1          total 3.870470e+00    9.791514e-01
+forage...7          0.001   10         forage 2.405364e-01    5.858551e-02
+groundfish...8      0.001   10     groundfish 4.787351e-01    1.005546e-02
+background...9      0.001   10     background 3.743903e+00    9.187019e-01
+other_external...10 0.001   10 other_external 2.364508e-02    1.396644e-03
+fishing...11        0.001   10        fishing 2.529376e-04    6.973911e-06
+...12               0.001   10          total 4.487072e+00    9.887465e-01
+                      survival duration_yr species share_of_deaths
+forage...1          0.02084857   0.3870329     Cod    5.945190e-02
+groundfish...2      0.02084857   0.3870329     Cod    4.645492e-03
+background...3      0.02084857   0.3870329     Cod    9.346790e-01
+other_external...4  0.02084857   0.3870329     Cod    1.219450e-03
+fishing...5         0.02084857   0.3870329     Cod    4.203708e-06
+...6                0.02084857   0.3870329     Cod    1.000000e+00
+forage...7          0.01125354   0.9340975     Cod    5.925231e-02
+groundfish...8      0.01125354   0.9340975     Cod    1.016991e-02
+background...9      0.01125354   0.9340975     Cod    9.291582e-01
+other_external...10 0.01125354   0.9340975     Cod    1.412540e-03
+fishing...11        0.01125354   0.9340975     Cod    7.053285e-06
+...12               0.01125354   0.9340975     Cod    1.000000e+00
+Warning messages:
+1: Removed 196 rows containing missing values or values outside the scale range
+(`geom_line()`). 
+2: In scale_y_log10() : log-10 transformation introduced infinite values.
+3: Removed 196 rows containing missing values or values outside the scale range
+(`geom_line()`). 
+4: In scale_y_log10() : log-10 transformation introduced infinite values.
+01_build_model.R done
+R/01_build_model.R finished with status 0 in 1.7 min
+
+========== R/02_collapse_moratorium.R ==========
+                                                run        cod   haddock
+1           A: documented F, bycatch 0.02 from 1994 2.18441780 0.9119629
+2             A0: documented F, cod F = 0 from 1994 2.35466116 0.8892598
+3 B (alternative): A + adult cod M 0.8 in 1990-2025 0.08132261 1.2553597
+4             observed (survey; Bundy 2004 for P:D) 0.10000000 0.6100000
+  silver_hake    plaice  herring   forage forage_2005_12
+1    1.138171 1.0249486 1.352532 1.355398      0.7034486
+2    1.099486 0.9971383 1.311909 1.330495      0.7037838
+3    1.856367 1.5591636 2.212157 1.844192      1.2735206
+4    0.600000 0.4500000 6.550000 7.870000      4.1100000
+  pelagic_demersal_1980_85 pelagic_demersal_1995_2000  ssb_min_rel year_min
+1                0.5850644                  0.8267927 0.2557362165     1993
+2                0.5850644                  0.8090603 0.2557362165     1993
+3                0.5850644                  1.1735657 0.0002017002     2025
+4                0.3000000                  3.0000000           NA       NA
+  ssb_2025_rel forage_max_rel_1993_2025 forage_2025_rel year_recover50
+1 6.1018929826                 2.265693        1.557494           1995
+2 6.5861135311                 2.264535        1.716863           1995
+3 0.0002017002                 2.470655        0.862339           2064
+4           NA                       NA              NA             NA
+  year_recover100 years_to_recover50 last_year
+1            1996                  2      2125
+2            1996                  2      2125
+3            2069                 71      2125
+4              NA                 NA        NA
+                     w_lo w_hi         source     integral fraction_killed
+forage...1          0.001    1         forage 2.173688e-01    5.821241e-02
+groundfish...2      0.001    1     groundfish 9.789627e-02    4.548641e-03
+background...3      0.001    1     background 3.545362e+00    9.151922e-01
+other_external...4  0.001    1 other_external 9.797074e-03    1.194026e-03
+fishing...5         0.001    1        fishing 4.550315e-05    4.116066e-06
+...6                0.001    1          total 3.870470e+00    9.791514e-01
+forage...7          0.001    1         forage 5.448937e-01    1.298339e-01
+groundfish...8      0.001    1     groundfish 8.930654e-02    3.113316e-03
+background...9      0.001    1     background 3.575071e+00    8.512868e-01
+other_external...10 0.001    1 other_external 9.886246e-03    1.054800e-03
+fishing...11        0.001    1        fishing 2.296001e-06    1.774266e-07
+...12               0.001    1          total 4.219160e+00    9.852890e-01
+forage...13         0.001   10         forage 2.405364e-01    5.858551e-02
+groundfish...14     0.001   10     groundfish 4.787351e-01    1.005546e-02
+background...15     0.001   10     background 3.743903e+00    9.187019e-01
+other_external...16 0.001   10 other_external 2.364508e-02    1.396644e-03
+fishing...17        0.001   10        fishing 2.529376e-04    6.973911e-06
+...18               0.001   10          total 4.487072e+00    9.887465e-01
+forage...19         0.001   10         forage 6.069680e-01    1.305227e-01
+groundfish...20     0.001   10     groundfish 5.018523e-01    7.146889e-03
+background...21     0.001   10     background 3.774814e+00    8.537452e-01
+other_external...22 0.001   10 other_external 2.377652e-02    1.193454e-03
+fishing...23        0.001   10        fishing 1.268905e-05    2.743606e-07
+...24               0.001   10          total 4.907424e+00    9.926085e-01
+                       survival duration_yr            state
+forage...1          0.020848571   0.3870329 baseline 1980-85
+groundfish...2      0.020848571   0.3870329 baseline 1980-85
+background...3      0.020848571   0.3870329 baseline 1980-85
+other_external...4  0.020848571   0.3870329 baseline 1980-85
+fishing...5         0.020848571   0.3870329 baseline 1980-85
+...6                0.020848571   0.3870329 baseline 1980-85
+forage...7          0.014710995   0.3905556      run B, 2000
+groundfish...8      0.014710995   0.3905556      run B, 2000
+background...9      0.014710995   0.3905556      run B, 2000
+other_external...10 0.014710995   0.3905556      run B, 2000
+fishing...11        0.014710995   0.3905556      run B, 2000
+...12               0.014710995   0.3905556      run B, 2000
+forage...13         0.011253543   0.9340975 baseline 1980-85
+groundfish...14     0.011253543   0.9340975 baseline 1980-85
+background...15     0.011253543   0.9340975 baseline 1980-85
+other_external...16 0.011253543   0.9340975 baseline 1980-85
+fishing...17        0.011253543   0.9340975 baseline 1980-85
+...18               0.011253543   0.9340975 baseline 1980-85
+forage...19         0.007391506   0.9392902      run B, 2000
+groundfish...20     0.007391506   0.9392902      run B, 2000
+background...21     0.007391506   0.9392902      run B, 2000
+other_external...22 0.007391506   0.9392902      run B, 2000
+fishing...23        0.007391506   0.9392902      run B, 2000
+...24               0.007391506   0.9392902      run B, 2000
+  w_hi   baseline boom_mortality_only boom_growth_only   boom_both ratio_both
+1    1 0.02084857         0.015237125       0.02018160 0.014710995  0.7056117
+2   10 0.01125354         0.007676349       0.01086686 0.007391506  0.6568159
+  ratio_mortality ratio_growth
+1       0.7308474    0.9680089
+2       0.6821273    0.9656390
+          w level_baseline level_boom share_eaten_baseline share_eaten_boom
+1e-05 1e-05      0.9885517  0.9804287           0.01144832       0.01942331
+1e-04 1e-04      0.9835740  0.9682520           0.01642597       0.03148672
+0.001 1e-03      0.9818477  0.9607073           0.01815226       0.03895746
+0.01  1e-02      0.9741774  0.9538941           0.02582257       0.04572221
+0.1   1e-01      0.9148834  0.9136422           0.08511664       0.08618688
+1     1e+00      0.7158097  0.7155148           0.28419026       0.28357849
+5     5e+00      0.5738535  0.5497072           0.42614650       0.45038284
+# A tibble: 4 × 4
+# Groups:   diagnostic [4]
+  diagnostic            years_to_50pct_from_…¹ cod_ssb_2050_rel cod_ssb_2125_rel
+  <chr>                                  <dbl>            <dbl>            <dbl>
+1 full                                      39           0.0429             6.25
+2 neither                                   37           0.0626             3.96
+3 no_plankton_depletion                     38           0.0541             5.73
+4 no_vulnerability_fac…                     40           0.0437             4.52
+# ℹ abbreviated name: ¹​years_to_50pct_from_2025
+Warning messages:
+1: In scale_y_log10() : log-10 transformation introduced infinite values.
+2: In scale_y_log10() : log-10 transformation introduced infinite values.
+02_collapse_moratorium.R done
+R/02_collapse_moratorium.R finished with status 0 in 1.4 min
+
+========== R/03_bistability.R ==========
+# A tibble: 7 × 3
+  species         baseline collapsed
+  <chr>              <dbl>     <dbl>
+1 Cod             9.64e+ 0  9.64e+ 0
+2 Haddock         1.57e-45  2.18e-40
+3 Silver hake     7.69e-26  2.62e-24
+4 American plaice 1.78e-41  1.70e-37
+5 Herring         3.63e-69  3.16e-62
+6 Sand lance      5.48e+ 0  5.49e+ 0
+7 Capelin         1.12e- 1  1.12e- 1
+# A tibble: 2 × 3
+  start     cod_ssb_end rel_rate_last100
+  <chr>           <dbl>            <dbl>
+1 baseline         8.81      0.000000351
+2 collapsed        8.81     -0.000000239
+                                   quantity         value
+1                cod_free_equilibrium_years  4.000000e+02
+2                        cod_free_converged  1.000000e+00
+3      forage_biomass_cod_free_rel_baseline  1.934885e+01
+4           cod_invasion_growth_rate_per_yr -9.858101e-03
+5                           invasion_fit_r2  9.891224e-01
+6              invasion_fit_window_start_yr  1.000000e+01
+7                invasion_fit_window_end_yr  1.500000e+02
+8  forage_kill_fraction_cod_1mg_1g_baseline  5.821241e-02
+9  forage_kill_fraction_cod_1mg_1g_cod_free  6.055232e-01
+10             cod_survival_1mg_1g_baseline  2.084857e-02
+11             cod_survival_1mg_1g_cod_free  1.936068e-05
+12                 cod_free_biomass_rel_Cod  0.000000e+00
+13             cod_free_biomass_rel_Haddock  2.838139e-17
+14         cod_free_biomass_rel_Silver hake  1.554586e-20
+15     cod_free_biomass_rel_American plaice  2.509285e-20
+16             cod_free_biomass_rel_Herring  2.255231e+01
+17          cod_free_biomass_rel_Sand lance  1.547836e+01
+18             cod_free_biomass_rel_Capelin  1.430112e+01
+   F_cod years converged       cod_ssb   cod_biomass forage_biomass
+1    0.0   150      TRUE  8.813031e+00  9.641997e+00   5.590262e+00
+2    0.1    75      TRUE  6.823605e+00  7.704696e+00   4.695668e+00
+3    0.2    75      TRUE  5.654498e+00  6.630948e+00   4.837797e+00
+4    0.3   400     FALSE  2.122194e+00  2.644852e+00   1.550179e+00
+5    0.4   400     FALSE  8.663839e-05  1.164452e-04   2.074050e-08
+6    0.5   400     FALSE  2.331527e-20  3.257662e-20   2.100844e-29
+7    0.6   400     FALSE  3.919372e-42  5.705369e-42   2.528368e-42
+8    0.7   400     FALSE  1.139249e-70  1.728248e-70   2.801179e-39
+9    0.8   100      TRUE  2.066446e-79  3.268283e-79   1.614995e-38
+10   0.9    25      TRUE  5.469948e-82  9.023009e-82   2.502465e-38
+11   1.0    25      TRUE  6.362326e-85  1.092724e-84   3.875486e-38
+12   1.1    25      TRUE  3.401043e-88  6.089970e-88   6.009024e-38
+13   1.2    25      TRUE  8.695541e-92  1.621409e-91   9.304925e-38
+14   1.3    25      TRUE  1.096261e-95  2.131177e-95   1.441053e-37
+15   1.4    25      TRUE 7.050435e-100  1.426176e-99   2.235603e-37
+16   1.5    25      TRUE 2.357230e-104 4.967391e-104   3.463986e-37
+17   1.6    25      TRUE 4.223917e-109 9.270566e-109   5.360621e-37
+18   1.7    25      TRUE 4.146998e-114 9.471823e-114   8.313982e-37
+19   1.8    25      TRUE 2.234104e-119 5.301094e-119   1.287733e-36
+20   1.9    25      TRUE 6.780755e-125 1.671225e-124   1.995934e-36
+21   2.0    25      TRUE 1.193177e-130 3.054538e-130   3.088202e-36
+22   2.0    25      TRUE  1.093996e-09  2.733885e-09   4.790313e-36
+23   1.9    25      TRUE  1.961470e-09  4.735125e-09   7.413636e-36
+24   1.8    25      TRUE  3.581707e-09  8.345954e-09   1.148807e-35
+25   1.7    50      TRUE  6.775045e-14  1.547570e-13   2.752915e-35
+26   1.6    50      TRUE  2.353701e-13  5.167953e-13   6.600433e-35
+27   1.5    50      TRUE  8.671688e-13  1.827684e-12   1.591064e-34
+28   1.4    50      TRUE  3.293831e-12  6.661853e-12   3.820262e-34
+29   1.3    50      TRUE  1.337880e-11  2.601297e-11   9.173251e-34
+30   1.2    50      TRUE  5.756417e-11  1.074034e-10   2.209027e-33
+31   1.1    50      TRUE  2.649330e-10  4.743431e-10   5.300897e-33
+32   1.0    50      TRUE  1.315599e-09  2.259340e-09   1.274453e-32
+33   0.9    75      TRUE  2.023350e-11  3.336853e-11   4.755241e-32
+34   0.8    75      TRUE  2.799500e-10  4.427692e-10   1.767413e-31
+35   0.7    75      TRUE  4.609761e-09  6.992621e-09   6.582104e-31
+36   0.6   100      TRUE  3.992263e-09  5.811822e-09   3.792712e-30
+37   0.5   150      TRUE  4.494068e-09  6.279950e-09   5.258817e-29
+38   0.4   325      TRUE  5.907488e-09  7.929703e-09   1.567093e-26
+39   0.3   400     FALSE  1.062349e-01  1.370833e-01   1.300283e-23
+40   0.2   275      TRUE  2.959121e+00  3.604250e+00   2.719616e-29
+41   0.1   400     FALSE  4.412843e+00  5.098203e+00   2.972385e-52
+42   0.0    50      TRUE  5.563750e+00  6.140200e+00   4.400773e-57
+   other_groundfish     cod_yield cod_biomass_start    direction
+1      9.461235e-09  0.000000e+00      1.637807e+00 increasing F
+2      2.375690e-10  6.890799e-01      9.641997e+00 increasing F
+3      1.977225e-09  1.145864e+00      7.704696e+00 increasing F
+4      1.681483e+00  6.493054e-01      6.630948e+00 increasing F
+5      7.918787e+00  3.588435e-05      2.644852e+00 increasing F
+6      9.373008e+00  1.220219e-20      1.164452e-04 increasing F
+7      9.385185e+00  2.487831e-42      3.257662e-20 increasing F
+8      9.389982e+00  8.536058e-71      5.705369e-42 increasing F
+9      9.388395e+00  1.792571e-79      1.728248e-70 increasing F
+10     9.383612e+00  5.414197e-82      3.268283e-79 increasing F
+11     9.384476e+00  7.099982e-85      9.023009e-82 increasing F
+12     9.387241e+00  4.241582e-88      1.092724e-84 increasing F
+13     9.388247e+00  1.202339e-91      6.089970e-88 increasing F
+14     9.381941e+00  1.671416e-95      1.621409e-91 increasing F
+15     9.389988e+00  1.178081e-99      2.131177e-95 increasing F
+16     9.387408e+00 4.299100e-104      1.426176e-99 increasing F
+17     9.385320e+00 8.376142e-109     4.967391e-104 increasing F
+18     9.388909e+00 8.909325e-114     9.270566e-109 increasing F
+19     9.385154e+00 5.179245e-119     9.471823e-114 increasing F
+20     9.390853e+00 1.692004e-124     5.301094e-119 increasing F
+21     9.385257e+00 3.197351e-130     1.671225e-124 increasing F
+22     9.389828e+00  2.894326e-09      1.637807e-03 decreasing F
+23     9.385647e+00  4.843699e-09      1.637807e-03 decreasing F
+24     9.384219e+00  8.231643e-09      1.637807e-03 decreasing F
+25     9.384271e+00  1.455518e-13      1.637807e-03 decreasing F
+26     9.383876e+00  4.668415e-13      1.637807e-03 decreasing F
+27     9.391594e+00  1.581672e-12      1.637807e-03 decreasing F
+28     9.387491e+00  5.503141e-12      1.637807e-03 decreasing F
+29     9.390564e+00  2.039968e-11      1.637807e-03 decreasing F
+30     9.391532e+00  7.961978e-11      1.637807e-03 decreasing F
+31     9.385841e+00  3.303871e-10      1.637807e-03 decreasing F
+32     9.390042e+00  1.468069e-09      1.637807e-03 decreasing F
+33     9.386578e+00  2.002509e-11      1.637807e-03 decreasing F
+34     9.388433e+00  2.428480e-10      1.637807e-03 decreasing F
+35     9.390279e+00  3.453861e-09      1.637807e-03 decreasing F
+36     9.391059e+00  2.534091e-09      1.637807e-03 decreasing F
+37     9.387707e+00  2.352158e-09      1.637807e-03 decreasing F
+38     9.391792e+00  2.450510e-09      1.637807e-03 decreasing F
+39     9.122586e+00  3.278313e-02      1.637807e-03 decreasing F
+40     2.155340e+00  6.018220e-01      1.370833e-01 decreasing F
+41     5.262404e-07  4.459261e-01      3.604250e+00 decreasing F
+42     6.723086e-10  0.000000e+00      5.098203e+00 decreasing F
+                                     quantity        value
+1               cod_ssb_end_from_baseline_rel  6.961903099
+2              cod_ssb_end_from_collapsed_rel  6.962223190
+3 years_to_50pct_from_collapsed_2025_state_F0 37.000000000
+4               two_distinct_attractors_at_F0  0.000000000
+5             cod_invasion_growth_rate_per_yr -0.009858101
+6                             invasion_fit_r2  0.989122443
+7                      hysteresis_F_range_min           NA
+8                      hysteresis_F_range_max           NA
+03_bistability.R done
+R/03_bistability.R finished with status 0 in 11.0 min
+
+========== R/04_forage_fishing_recovery.R ==========
+   F_forage   D permanent years_to_50pct years_to_100pct persistent_recovery
+1      0.10   5     FALSE             39              44                TRUE
+2      0.25   5     FALSE             41              45                TRUE
+3      0.50   5     FALSE             42              46                TRUE
+4      0.75   5     FALSE             42              47                TRUE
+5      1.00   5     FALSE             43              48                TRUE
+6      1.50   5     FALSE             43              48                TRUE
+7      2.00   5     FALSE             43              48                TRUE
+8      3.00   5     FALSE             43              48                TRUE
+9      0.25  10     FALSE             41              46                TRUE
+10     0.50  10     FALSE             43              47                TRUE
+11     0.75  10     FALSE             43              48                TRUE
+12     1.00  10     FALSE             43              48                TRUE
+13     1.50  10     FALSE             43              48                TRUE
+14     2.00  10     FALSE             43              48                TRUE
+15     3.00  10     FALSE             43              48                TRUE
+16     0.25  15     FALSE             42              46                TRUE
+17     0.50  15     FALSE             43              48                TRUE
+18     0.75  15     FALSE             43              48                TRUE
+19     1.00  15     FALSE             43              48                TRUE
+20     1.50  15     FALSE             43              48                TRUE
+21     2.00  15     FALSE             43              48                TRUE
+22     3.00  15     FALSE             43              48                TRUE
+23     0.25  20     FALSE             42              47                TRUE
+24     0.50  20     FALSE             43              48                TRUE
+25     0.75  20     FALSE             43              48                TRUE
+26     1.00  20     FALSE             43              48                TRUE
+27     1.50  20     FALSE             43              48                TRUE
+28     2.00  20     FALSE             43              48                TRUE
+29     3.00  20     FALSE             43              48                TRUE
+30     0.25  30     FALSE             42              47                TRUE
+31     0.50  30     FALSE             43              48                TRUE
+32     0.75  30     FALSE             43              48                TRUE
+33     1.00  30     FALSE             43              48                TRUE
+34     1.50  30     FALSE             43              48                TRUE
+35     2.00  30     FALSE             43              48                TRUE
+36     3.00  30     FALSE             43              48                TRUE
+37     0.25 100      TRUE             42              47                TRUE
+38     0.50 100      TRUE             43              48                TRUE
+39     0.75 100      TRUE             43              48                TRUE
+40     1.00 100      TRUE             43              48                TRUE
+41     1.50 100      TRUE             43              48                TRUE
+42     2.00 100      TRUE             43              48                TRUE
+43     3.00 100      TRUE             43              48                TRUE
+   cod_ssb_end_programme_rel cod_ssb_2085_rel cod_ssb_2125_rel forage_min_rel
+1               0.0010013564         3.814017         6.203751   2.100106e-02
+2               0.0009744152         3.628875         5.335667   6.996575e-03
+3               0.0009459356         3.395674         4.393137   1.879898e-03
+4               0.0009291542         3.251033         4.244742   7.319557e-04
+5               0.0009186429         3.170322         4.216354   3.473977e-04
+6               0.0009068258         3.094125         4.203981   1.046213e-04
+7               0.0009006782         3.069151         4.201583   3.839602e-05
+8               0.0008946547         3.053868         4.200869   7.655022e-06
+9               0.0024550977         3.483241         4.615530   3.007608e-03
+10              0.0023307109         3.199214         4.221930   3.930052e-04
+11              0.0022784695         3.112493         4.204983   9.225029e-05
+12              0.0022517433         3.083460         4.202453   2.686864e-05
+13              0.0022216927         3.061832         4.201342   3.093999e-06
+14              0.0022081065         3.054631         4.201414   4.689487e-07
+15              0.0021947677         3.049398         4.199638   1.845953e-08
+16              0.0059931907         3.374846         4.359371   1.508045e-03
+17              0.0055540527         3.139550         4.206298   1.130356e-04
+18              0.0053937123         3.092486         4.201978   1.501240e-05
+19              0.0053188259         3.075352         4.200977   2.474695e-06
+20              0.0052315883         3.061103         4.200617   9.830255e-08
+21              0.0051975726         3.054393         4.201032   5.754572e-09
+22              0.0051640626         3.049390         4.200979   4.227040e-11
+23              0.0142965601         3.312223         4.277036   8.545687e-04
+24              0.0129736589         3.123270         4.202542   3.508503e-05
+25              0.0125669291         3.090204         4.200843   2.528039e-06
+26              0.0123860337         3.076134         4.201459   2.289089e-07
+27              0.0121822278         3.060227         4.201278   3.109866e-09
+28              0.0120983525         3.054392         4.200720   6.888844e-11
+29              0.0120305096         3.049390         4.200979   9.442817e-14
+30              0.0772961027         3.257643         4.226096   3.126084e-04
+31              0.0688551321         3.117771         4.201662   3.517642e-06
+32              0.0666980427         3.090063         4.201334   7.060185e-08
+33              0.0657401267         3.076108         4.201411   1.943316e-09
+34              0.0646795477         3.060227         4.201276   3.036326e-12
+35              0.0642787588         3.054392         4.200719   9.805667e-15
+36              0.0639313569         3.049390         4.200979   4.732689e-19
+37              4.2014760995         3.241345         4.201476   6.109051e-06
+38              4.2010504794         3.119455         4.201050   8.705907e-11
+39              4.2009094132         3.090056         4.200909   5.314799e-16
+40              4.2014113000         3.076108         4.201411   4.910554e-21
+41              4.2012764488         3.060227         4.201276   4.711672e-30
+42              4.2007189101         3.054392         4.200719   5.153943e-38
+43              4.2009787623         3.049390         4.200979   4.032717e-52
+   forage_2125_rel forage_yield_during_kt_per_yr forage_yield_2026_2085_kt
+1     1.523282e+00                     22.749498                  837.0753
+2     1.107366e+00                     46.230731                  707.7122
+3     2.640406e-01                     69.960682                  598.9046
+4     6.379130e-02                     84.829860                  560.8057
+5     2.218171e-02                     96.099896                  558.6098
+6     4.810576e-03                    115.243907                  604.7964
+7     1.464260e-03                    133.724178                  680.4545
+8     2.361416e-04                    172.694488                  866.1816
+9     5.234734e-01                     36.153925                  628.8791
+10    3.034565e-02                     44.547650                  514.0001
+11    5.148436e-03                     48.402750                  503.1926
+12    1.337382e-03                     51.732849                  523.2528
+13    1.333562e-04                     59.096830                  591.7124
+14    1.762758e-05                     67.510854                  675.2330
+15    4.975127e-07                     86.505196                  865.0583
+16    2.207457e-01                     29.126320                  583.0076
+17    7.612310e-03                     31.488260                  490.2709
+18    8.704460e-04                     32.846199                  495.2557
+19    1.343355e-04                     34.682421                  520.6702
+20    4.679739e-06                     39.424525                  591.3866
+21    2.268004e-07                     45.011904                  675.1798
+22    1.048114e-09                     57.670377                  865.0557
+23    1.091099e-01                     24.053279                  559.4011
+24    2.427694e-03                     23.994090                  484.4661
+25    1.608422e-04                     24.697230                  494.2822
+26    1.379740e-05                     26.023308                  520.4973
+27    1.605563e-07                     29.568935                  591.3792
+28    2.837190e-09                     33.758966                  675.1793
+29    2.163778e-12                     43.252783                  865.0557
+30    3.637732e-02                     17.444511                  543.7137
+31    2.789327e-04                     16.089257                  482.9526
+32    5.353420e-06                     16.471909                  494.1627
+33    1.407366e-07                     17.349539                  520.4863
+34    1.804079e-10                     19.712633                  591.3790
+35    4.150723e-13                     22.505977                  675.1793
+36    8.706281e-18                     28.835189                  865.0557
+37    1.310830e-04                      5.447691                  544.6356
+38    1.366840e-10                      4.829352                  482.9352
+39    5.314799e-16                      4.941622                  494.1622
+40    4.910554e-21                      5.204863                  520.4863
+41    4.711672e-30                      5.913790                  591.3790
+42    5.153943e-38                      6.751793                  675.1793
+43    4.032717e-52                      8.650557                  865.0557
+   cod_yield_2026_2085_kt years_saved_vs_status_quo
+1               131.85375                         0
+2               117.30655                        -2
+3               102.85737                        -3
+4                95.47908                        -3
+5                91.61265                        -4
+6                88.11341                        -4
+7                86.93288                        -4
+8                86.20816                        -4
+9               108.12021                        -2
+10               93.27261                        -4
+11               89.12052                        -4
+12               87.73522                        -4
+13               86.64254                        -4
+14               86.30332                        -4
+15               86.02384                        -4
+16              102.50767                        -3
+17               90.60025                        -4
+18               88.25991                        -4
+19               87.39303                        -4
+20               86.61144                        -4
+21               86.29346                        -4
+22               86.02350                        -4
+23               99.47372                        -3
+24               89.90614                        -4
+25               88.15827                        -4
+26               87.41153                        -4
+27               86.58784                        -4
+28               86.29341                        -4
+29               86.02350                        -4
+30               97.09276                        -3
+31               89.70384                        -4
+32               88.14765                        -4
+33               87.41000                        -4
+34               86.58783                        -4
+35               86.29341                        -4
+36               86.02350                        -4
+37               96.52398                        -3
+38               89.76003                        -4
+39               88.14739                        -4
+40               87.40999                        -4
+41               86.58783                        -4
+42               86.29341                        -4
+43               86.02350                        -4
+Warning message:
+There was 1 warning in `summarise()`.
+ℹ In argument: `min_F_for_persistent_recovery = if (any(ok(cur_data())))
+  min(F_forage[ok(cur_data())]) else NA`.
+ℹ In group 1: `D = 5`.
+Caused by warning:
+! `cur_data()` was deprecated in dplyr 1.1.0.
+ℹ Please use `pick()` instead. 
+# A tibble: 13 × 5
+       D min_F_for_persistent_recovery kind      F_forage min_D_for_persistent…¹
+   <dbl>                         <dbl> <chr>        <dbl>                  <dbl>
+ 1     5                          0.25 by durat…    NA                        NA
+ 2    10                          0.25 by durat…    NA                        NA
+ 3    15                          0.25 by durat…    NA                        NA
+ 4    20                          0.25 by durat…    NA                        NA
+ 5    30                          0.25 by durat…    NA                        NA
+ 6   100                          0.25 by durat…    NA                        NA
+ 7    NA                         NA    by forag…     0.25                      5
+ 8    NA                         NA    by forag…     0.5                       5
+ 9    NA                         NA    by forag…     0.75                      5
+10    NA                         NA    by forag…     1                         5
+11    NA                         NA    by forag…     1.5                       5
+12    NA                         NA    by forag…     2                         5
+13    NA                         NA    by forag…     3                         5
+# ℹ abbreviated name: ¹​min_D_for_persistent_recovery
+          F_forage F_cod     start converged  cod_ssb_rel forage_biomass_rel
+1030...1      0.00  0.02  baseline      TRUE 7.353058e+00       2.500427e+00
+1030...2      0.00  0.02 collapsed     FALSE 1.247804e-08       2.650372e+01
+1030...3      0.00  0.40  baseline      TRUE 2.084066e-15       2.650482e+01
+1030...4      0.00  0.40 collapsed      TRUE 6.128591e-19       2.650441e+01
+1030...5      0.10  0.02  baseline      TRUE 6.556255e+00       1.842204e+00
+1030...6      0.10  0.02 collapsed      TRUE 6.559599e+00       1.841051e+00
+1030...7      0.10  0.40  baseline      TRUE 3.292146e-21       1.934812e+01
+1030...8      0.10  0.40 collapsed      TRUE 1.822466e-20       1.934873e+01
+1030...9      0.25  0.02  baseline      TRUE 5.635805e+00       1.100328e+00
+1030...10     0.25  0.02 collapsed     FALSE 5.634049e+00       1.098484e+00
+1030...11     0.25  0.40  baseline     FALSE 4.977015e-09       7.072005e-19
+1030...12     0.25  0.40 collapsed     FALSE 1.265469e-12       1.635768e-18
+1030...13     0.50  0.02  baseline      TRUE 4.516706e+00       2.365171e-01
+1030...14     0.50  0.02 collapsed     FALSE 4.215472e+00       2.844592e-03
+1030...15     0.50  0.40  baseline     FALSE 4.852062e-09       1.499393e-50
+1030...16     0.50  0.40 collapsed     FALSE 1.160574e-12       2.635692e-50
+1030...17     0.75  0.02  baseline      TRUE 4.212162e+00       1.286636e-09
+1030...18     0.75  0.02 collapsed      TRUE 4.212162e+00       2.374481e-21
+1030...19     0.75  0.40  baseline     FALSE 4.756638e-09       3.390393e-79
+1030...20     0.75  0.40 collapsed     FALSE 1.143123e-12       5.048262e-79
+1030...21     1.00  0.02  baseline      TRUE 4.212162e+00       7.239248e-20
+1030...22     1.00  0.02 collapsed      TRUE 4.212162e+00       2.894936e-34
+1030...23     1.00  0.40  baseline     FALSE 4.681276e-09      1.674600e-105
+1030...24     1.00  0.40 collapsed     FALSE 1.100942e-12      2.168818e-105
+1030...25     1.50  0.02  baseline      TRUE 4.212162e+00       3.632746e-39
+1030...26     1.50  0.02 collapsed      TRUE 4.212162e+00       2.348446e-58
+1030...27     1.50  0.40  baseline     FALSE 4.699206e-09      4.090923e-152
+1030...28     1.50  0.40 collapsed     FALSE 1.086220e-12      4.334050e-152
+1030...29     2.00  0.02  baseline      TRUE 4.212162e+00       6.646825e-57
+1030...30     2.00  0.02 collapsed      TRUE 4.212162e+00       7.452270e-79
+1030...31     2.00  0.40  baseline     FALSE 4.718085e-09      1.252956e-192
+1030...32     2.00  0.40 collapsed     FALSE 1.076706e-12      1.135115e-192
+1030...33     3.00  0.02  baseline      TRUE 4.212162e+00       8.621782e-86
+1030...34     3.00  0.02 collapsed      TRUE 4.212162e+00      3.196391e-114
+1030...35     3.00  0.40  baseline     FALSE 4.548589e-09      4.871818e-262
+1030...36     3.00  0.40 collapsed     FALSE 1.027111e-12      3.741013e-262
+          other_groundfish_rel forage_yield_kt cod_yield_kt
+1030...1          3.721446e-10    0.000000e+00 2.064146e+01
+1030...2          6.052426e-49    0.000000e+00 3.475045e-08
+1030...3          1.397026e-09    0.000000e+00 1.160794e-13
+1030...4          1.446392e-09    0.000000e+00 3.413536e-17
+1030...5          7.905393e-10    4.937557e+01 1.841127e+01
+1030...6          1.747082e-09    4.934247e+01 1.841953e+01
+1030...7          3.524062e-12    5.804252e+02 1.833483e-19
+1030...8          3.841900e-10    5.804416e+02 1.014978e-18
+1030...9          3.882758e-13    7.151835e+01 1.583046e+01
+1030...10         1.467551e-25    7.140165e+01 1.582570e+01
+1030...11         2.436311e+00    4.913868e-17 2.874958e-07
+1030...12         2.436752e+00    1.136612e-16 7.310318e-11
+1030...13         1.438153e-13    2.927765e+01 1.268430e+01
+1030...14         1.740466e-21    3.485093e-01 1.183573e+01
+1030...15         2.437224e+00    2.025995e-48 2.802882e-07
+1030...16         2.436907e+00    3.561240e-48 6.703716e-11
+1030...17         2.979797e-10    2.321964e-07 1.182642e+01
+1030...18         7.010701e-10    4.284910e-19 1.182642e+01
+1030...19         2.437121e+00    6.678134e-77 2.747539e-07
+1030...20         2.436749e+00    9.943807e-77 6.603260e-11
+1030...21         3.054354e-10    1.711246e-17 1.182642e+01
+1030...22         7.121082e-10    6.843081e-32 1.182642e+01
+1030...23         2.437328e+00   4.270702e-103 2.704205e-07
+1030...24         2.436175e+00   5.530873e-103 6.359584e-11
+1030...25         3.105333e-10    1.243551e-36 1.182642e+01
+1030...26         7.137469e-10    7.955149e-56 1.182642e+01
+1030...27         2.437273e+00   1.477178e-149 2.714568e-07
+1030...28         2.435705e+00   1.564786e-149 6.274477e-11
+1030...29         3.123009e-10    2.884755e-54 1.182642e+01
+1030...30         7.100549e-10    2.956433e-76 1.182642e+01
+1030...31         2.435435e+00   5.703380e-190 2.725419e-07
+1030...32         2.436659e+00   5.167414e-190 6.219792e-11
+1030...33         3.164926e-10    4.776835e-83 1.182642e+01
+1030...34         7.106670e-10   1.770850e-111 1.182642e+01
+1030...35         2.436277e+00   3.003756e-259 2.627496e-07
+1030...36         2.437123e+00   2.306616e-259 5.932867e-11
+          cod_feeding_level_1kg cod_feeding_level_100g cod_weight_age5_g
+1030...1              0.6023841              0.6658883         1275.8563
+1030...2              0.8485205              0.6941815         1753.6648
+1030...3              0.8485330              0.6942049         1753.7389
+1030...4              0.8485277              0.6941946         1753.7071
+1030...5              0.5687148              0.6509380         1186.0172
+1030...6              0.5686310              0.6508943         1185.7953
+1030...7              0.8363359              0.7329526         1895.9082
+1030...8              0.8363517              0.7329822         1896.0257
+1030...9              0.5252070              0.6317818         1077.9676
+1030...10             0.5250802              0.6317276         1077.6677
+1030...11             0.4349400              0.5252248          710.2543
+1030...12             0.4349481              0.5252096          710.2098
+1030...13             0.4679219              0.6060388          946.9017
+1030...14             0.4514168              0.5982960          910.8047
+1030...15             0.4349261              0.5251793          710.0960
+1030...16             0.4350129              0.5252313          710.3281
+1030...17             0.4512146              0.5982008          910.3680
+1030...18             0.4512146              0.5982008          910.3636
+1030...19             0.4349474              0.5251919          710.1508
+1030...20             0.4349073              0.5251925          710.1025
+1030...21             0.4512146              0.5982008          910.3710
+1030...22             0.4512146              0.5982008          910.3630
+1030...23             0.4349155              0.5251735          710.0717
+1030...24             0.4349167              0.5252227          710.2225
+1030...25             0.4512146              0.5982008          910.3654
+1030...26             0.4512146              0.5982008          910.3634
+1030...27             0.4348958              0.5251678          710.0382
+1030...28             0.4349518              0.5252630          710.3791
+1030...29             0.4512146              0.5982008          910.3638
+1030...30             0.4512146              0.5982008          910.3641
+1030...31             0.4349020              0.5252496          710.2896
+1030...32             0.4349028              0.5251954          710.1214
+1030...33             0.4512146              0.5982008          910.3655
+1030...34             0.4512146              0.5982008          910.3717
+1030...35             0.4349384              0.5252280          710.2523
+1030...36             0.4348989              0.5251815          710.0722
+          fraction_cod_1mg_1g_eaten_by_forage cod_survival_1mg_1g
+1030...1                         2.946604e-02        2.542039e-02
+1030...2                         7.050773e-01        3.835418e-08
+1030...3                         7.050788e-01        3.835706e-08
+1030...4                         7.050785e-01        3.835303e-08
+1030...5                         1.965295e-02        2.635765e-02
+1030...6                         1.963516e-02        2.635831e-02
+1030...7                         6.055379e-01        1.934284e-05
+1030...8                         6.055225e-01        1.935953e-05
+1030...9                         8.876234e-03        2.744366e-02
+1030...10                        8.672363e-03        2.746068e-02
+1030...11                        0.000000e+00        2.277875e-02
+1030...12                        0.000000e+00        2.277923e-02
+1030...13                        1.236676e-03        2.839292e-02
+1030...14                        1.450587e-05        2.859374e-02
+1030...15                        0.000000e+00        2.277683e-02
+1030...16                        0.000000e+00        2.277959e-02
+1030...17                        6.127571e-12        2.859616e-02
+1030...18                        0.000000e+00        2.859616e-02
+1030...19                        0.000000e+00        2.277700e-02
+1030...20                        0.000000e+00        2.277802e-02
+1030...21                        0.000000e+00        2.859616e-02
+1030...22                        0.000000e+00        2.859616e-02
+1030...23                        0.000000e+00        2.277565e-02
+1030...24                        0.000000e+00        2.277949e-02
+1030...25                        0.000000e+00        2.859616e-02
+1030...26                        0.000000e+00        2.859616e-02
+1030...27                        0.000000e+00        2.277632e-02
+1030...28                        0.000000e+00        2.278320e-02
+1030...29                        0.000000e+00        2.859616e-02
+1030...30                        0.000000e+00        2.859616e-02
+1030...31                        0.000000e+00        2.278159e-02
+1030...32                        0.000000e+00        2.277825e-02
+1030...33                        0.000000e+00        2.859616e-02
+1030...34                        0.000000e+00        2.859616e-02
+1030...35                        0.000000e+00        2.278035e-02
+1030...36                        0.000000e+00        2.277817e-02
+Warning messages:
+1: In scale_y_log10() : log-10 transformation introduced infinite values.
+2: In scale_y_log10() : log-10 transformation introduced infinite values.
+04_forage_fishing_recovery.R done
+R/04_forage_fishing_recovery.R finished with status 0 in 8.2 min
+
+========== R/04b_forage_fishing_from_alternative_state.R ==========
+alternative state: forage biomass rel. baseline 19.34885 
+   F_forage   D permanent years_to_50pct persistent_recovery cod_ssb_end_rel
+1      0.10   5     FALSE             NA               FALSE    0.0002818446
+2      0.25   5     FALSE             NA               FALSE    0.0004275408
+3      0.50   5     FALSE             NA               FALSE    0.0014965516
+4      0.75   5     FALSE             NA               FALSE    0.0040255590
+5      1.00   5     FALSE             NA               FALSE    0.0092181751
+6      1.50   5     FALSE             18               FALSE    0.0537945493
+7      2.00   5     FALSE             16                TRUE    6.5459916513
+8      3.00   5     FALSE             16                TRUE    6.5472765511
+9      0.25  10     FALSE             NA               FALSE    0.0009521227
+10     0.50  10     FALSE             NA               FALSE    0.0120290922
+11     0.75  10     FALSE             18                TRUE    1.3382273719
+12     1.00  10     FALSE             16                TRUE    6.5484394018
+13     1.50  10     FALSE             16                TRUE    6.5601939886
+14     2.00  10     FALSE             17                TRUE    6.5602567808
+15     3.00  10     FALSE             17                TRUE    6.5592299057
+16     0.25  15     FALSE             NA               FALSE    0.0021051470
+17     0.50  15     FALSE             20                TRUE    6.5468684239
+18     0.75  15     FALSE             17                TRUE    6.5464217347
+19     1.00  15     FALSE             17                TRUE    6.5594252872
+20     1.50  15     FALSE             17                TRUE    6.5596297563
+21     2.00  15     FALSE             17                TRUE    6.5595026341
+22     3.00  15     FALSE             17                TRUE    6.5545703599
+23     0.25  20     FALSE             NA               FALSE    0.0046798377
+24     0.50  20     FALSE             20                TRUE    6.5479433331
+25     0.75  20     FALSE             17                TRUE    6.5584298812
+26     1.00  20     FALSE             17                TRUE    6.5577601149
+27     1.50  20     FALSE             17                TRUE    6.5588025125
+28     2.00  20     FALSE             17                TRUE    6.5583463830
+29     3.00  20     FALSE             17                TRUE    6.5307043518
+30     0.25  30     FALSE             NA               FALSE    0.0270160258
+31     0.50  30     FALSE             20                TRUE    6.5466006716
+32     0.75  30     FALSE             17                TRUE    6.5580940008
+33     1.00  30     FALSE             17                TRUE    6.5576821980
+34     1.50  30     FALSE             17                TRUE    6.5516050958
+35     2.00  30     FALSE             17                TRUE    6.5285881411
+36     3.00  30     FALSE             17                TRUE    4.8724190638
+37     0.25 150      TRUE             40                TRUE    5.6289076473
+38     0.50 150      TRUE             20                TRUE    4.5163266806
+39     0.75 150      TRUE             17                TRUE    4.2116381266
+40     1.00 150      TRUE             17                TRUE    4.2116371662
+41     1.50 150      TRUE             17                TRUE    4.2116367316
+42     2.00 150      TRUE             17                TRUE    4.2113774091
+43     3.00 150      TRUE             17                TRUE    4.2113723565
+   cod_ssb_after_programme_rel other_groundfish_end_rel forage_min_rel
+1                  0.007816580             3.248918e-18   1.932471e+01
+2                  0.007473346             4.349188e-18   1.288936e+01
+3                  0.006981278             1.219710e-17   7.448230e+00
+4                  0.006654901             3.387591e-17   4.724523e+00
+5                  0.006454415             8.038183e-17   3.118403e+00
+6                  0.006208512             3.627459e-16   1.395913e+00
+7                  0.006055868             2.236438e-10   6.338631e-01
+8                  0.005916492             2.331086e-07   1.439662e-01
+9                  0.013535978             7.456715e-18   1.250990e+01
+10                 0.023394143             7.335312e-17   6.697248e+00
+11                 0.034488081             1.486616e-15   3.633828e+00
+12                 0.040313469             3.670304e-08   1.832009e+00
+13                 0.042138835             2.007204e-07   4.248758e-01
+14                 0.042126537             1.889166e-07   8.361739e-02
+15                 0.042361356             1.358480e-07   4.032646e-03
+16                 0.023337889             1.327164e-17   1.250990e+01
+17                 0.110078439             1.283530e-13   1.829281e+00
+18                 0.234616766             1.254374e-07   1.830047e+00
+19                 0.287197601             1.618264e-07   1.263273e+00
+20                 0.279872459             1.574087e-07   1.242885e-01
+21                 0.273606648             1.202223e-07   8.781858e-03
+22                 0.272611768             7.526994e-08   7.306956e-05
+23                 0.042502821             2.412987e-17   1.250990e+01
+24                 0.549148327             2.786161e-08   1.830812e+00
+25                 1.422892592             1.078740e-07   1.244453e+00
+26                 1.473685447             1.245446e-07   4.275188e-01
+27                 1.175582013             1.061886e-07   1.085787e-02
+28                 1.087372553             8.092627e-08   2.138143e-04
+29                 1.028294762             5.592405e-08   1.747841e-07
+30                 0.146636061             8.432580e-17   1.250990e+01
+31                 5.379416554             4.079941e-08   1.415901e+00
+32                 4.587025403             7.181494e-08   1.212974e-01
+33                 4.035406321             7.585617e-08   9.128334e-03
+34                 3.590160707             6.225429e-08   2.201993e-05
+35                 3.434230671             5.028055e-08   5.396486e-08
+36                 3.316790764             3.123016e-07   1.709562e-12
+37                 5.628907647             3.718726e-11   1.093996e+00
+38                 4.516326681             4.278515e-09   2.351681e-01
+39                 4.211638127             2.823364e-08   5.088133e-06
+40                 4.211637166             8.021760e-08   2.107135e-13
+41                 4.211636732             1.998218e-07   9.892489e-28
+42                 4.211377409             2.602372e-07   4.892304e-41
+43                 4.211372356             3.103503e-07   1.049122e-62
+   forage_end_rel forage_yield_during_kt_per_yr cod_yield_first_60yr_kt
+1    1.934297e+01                      580.1017                1.412766
+2    1.934289e+01                     1168.8581                1.926935
+3    1.934180e+01                     1748.9121                5.672368
+4    1.933921e+01                     2102.9205               13.637128
+5    1.933384e+01                     2365.0452               27.323056
+6    1.928807e+01                     2799.4248               87.859225
+7    1.832463e+00                     3216.8335              335.442914
+8    1.832350e+00                     4116.9153              710.818785
+9    1.934234e+01                     1042.6333                3.510002
+10   1.933095e+01                     1359.0339               31.057399
+11   1.770639e+01                     1460.8469              170.310347
+12   1.834224e+00                     1495.9090              704.360218
+13   1.842766e+00                     1555.7676              668.816937
+14   1.842414e+00                     1680.4734              576.063437
+15   1.842961e+00                     2075.2100              461.661024
+16   1.934116e+01                      999.0841                6.239194
+17   1.829281e+00                     1207.7217              196.114341
+18   1.833732e+00                     1196.3735              741.180698
+19   1.844784e+00                     1133.0886              667.946745
+20   1.842765e+00                     1069.9463              540.171517
+21   1.843667e+00                     1126.5544              451.878858
+22   1.837586e+00                     1383.7633              414.286222
+23   1.933856e+01                      978.9334               10.845026
+24   1.831828e+00                     1122.7906              684.638646
+25   1.840344e+00                     1030.8420              662.123625
+26   1.842178e+00                      908.0823              584.468680
+27   1.845666e+00                      807.9886              458.441734
+28   1.840216e+00                      845.3014              419.996156
+29   1.802229e+00                     1037.8259              414.051913
+30   1.931551e+01                      958.5439               31.259788
+31   1.832884e+00                      941.2940              603.341265
+32   1.842318e+00                      735.5005              558.225141
+33   1.841926e+00                      615.1964              478.825934
+34   1.830283e+00                      538.9106              426.351589
+35   1.801590e+00                      563.5399              419.250190
+36   7.644994e-01                      691.8839              414.107034
+37   1.093996e+00                      399.1070              134.687912
+38   2.351681e-01                      220.1926              489.830457
+39   5.088133e-06                      148.4373              466.936432
+40   2.107135e-13                      123.1008              447.802170
+41   9.892489e-28                      107.7822              426.288423
+42   4.892304e-41                      112.7080              419.271782
+43   1.049122e-62                      138.3768              414.107038
+Warning messages:
+1: In scale_y_log10() : log-10 transformation introduced infinite values.
+2: In scale_y_log10() : log-10 transformation introduced infinite values.
+04b_forage_fishing_from_alternative_state.R done
+R/04b_forage_fishing_from_alternative_state.R finished with status 0 in 3.2 min
+
+========== R/04c_observed_like_start.R ==========
+   cod_start              s F_forage years_to_50pct persistent_recovery
+1       0.10      20 (main)      0.1              4                TRUE
+2       0.04      20 (main)      0.1              9                TRUE
+3       0.01      20 (main)      0.1             26               FALSE
+4       0.10 1 (diagnostic)      0.1              4                TRUE
+5       0.04 1 (diagnostic)      0.1              6                TRUE
+6       0.01 1 (diagnostic)      0.1             12                TRUE
+7       0.10      20 (main)      0.5              4                TRUE
+8       0.04      20 (main)      0.5              9                TRUE
+9       0.01      20 (main)      0.5             14                TRUE
+10      0.10      20 (main)      1.0              5                TRUE
+11      0.04      20 (main)      1.0              9                TRUE
+12      0.01      20 (main)      1.0             17                TRUE
+   cod_ssb_min_rel cod_ssb_end_rel forage_rel_year10
+1             0.10      6.54803427       10.43193535
+2             0.04      6.54850957       11.55772006
+3             0.01      0.02490374       12.15052155
+4             0.10      6.53469469        1.44108977
+5             0.04      6.54401549        1.85056513
+6             0.01      6.54475426        2.16250525
+7             0.10      6.55725175        1.09882257
+8             0.04      6.55782114        1.27157482
+9             0.01      6.55817507        1.38498855
+10            0.10      6.55689464        0.09958463
+11            0.04      6.55841905        0.10746127
+12            0.01      6.55802963        0.11262688
+04c_observed_like_start.R done
+R/04c_observed_like_start.R finished with status 0 in 0.9 min
+
+========== R/05_sensitivity.R ==========
+     s recalibrated repro_forage max_biomass_error max_erepro
+1    1         TRUE    0.0500000       0.006824035 0.04224728
+2    5         TRUE    0.0500000       0.014295790 0.04183513
+3   10         TRUE    0.0500000       0.008546254 0.04256169
+4   20         TRUE    0.0500000       0.005928743 0.04241668
+5   40         TRUE    0.0500000       0.016872587 0.04213179
+6   80        FALSE    0.0500000       0.005928743 0.04241618
+7  160        FALSE    0.0500000       0.005928743 0.04241551
+8    1         TRUE    0.1000000       0.006824035 0.04459435
+9    5         TRUE    0.1000000       0.014295790 0.04415931
+10  10         TRUE    0.1000000       0.008546254 0.04492622
+11  20         TRUE    0.1000000       0.005928743 0.04477316
+12  40         TRUE    0.1000000       0.016872587 0.04447245
+13  80        FALSE    0.1000000       0.005928743 0.04477263
+14 160        FALSE    0.1000000       0.005928743 0.04477193
+15   1         TRUE    0.1706693       0.006824035 0.04839434
+16   5         TRUE    0.1706693       0.014295790 0.04792223
+17  10         TRUE    0.1706693       0.008546254 0.04875450
+18  20         TRUE    0.1706693       0.005928743 0.04858839
+19  40         TRUE    0.1706693       0.016872587 0.04826205
+20  80        FALSE    0.1706693       0.005928743 0.04858782
+21 160        FALSE    0.1706693       0.005928743 0.04858706
+22   1         TRUE    0.2000000       0.006824035 0.05016864
+23   5         TRUE    0.2000000       0.014295790 0.04967922
+24  10         TRUE    0.2000000       0.008546254 0.05054200
+25  20         TRUE    0.2000000       0.005928743 0.05036981
+26  40         TRUE    0.2000000       0.016872587 0.05003151
+27  80        FALSE    0.2000000       0.005928743 0.05036921
+28 160        FALSE    0.2000000       0.005928743 0.05036842
+29   1         TRUE    0.5000000       0.006824035 0.08026983
+30   5         TRUE    0.5000000       0.014295790 0.07948675
+31  10         TRUE    0.5000000       0.008546254 0.08086720
+32  20         TRUE    0.5000000       0.005928743 0.08059169
+33  40         TRUE    0.5000000       0.016872587 0.08005041
+34  80        FALSE    0.5000000       0.005928743 0.08059074
+35 160        FALSE    0.5000000       0.005928743 0.08058948
+36   1         TRUE    0.7000000       0.006824035 0.13378305
+37   5         TRUE    0.7000000       0.014295790 0.13247792
+38  10         TRUE    0.7000000       0.008546254 0.13477867
+39  20         TRUE    0.7000000       0.005928743 0.13431948
+40  40         TRUE    0.7000000       0.016872587 0.13341735
+41  80        FALSE    0.7000000       0.005928743 0.13431790
+42 160        FALSE    0.7000000       0.005928743 0.13431580
+43   1         TRUE    0.9000000       0.006824035 0.40134914
+44   5         TRUE    0.9000000       0.014295790 0.39743376
+45  10         TRUE    0.9000000       0.008546254 0.40433602
+46  20         TRUE    0.9000000       0.005928743 0.40295844
+47  40         TRUE    0.9000000       0.016872587 0.40025205
+48  80        FALSE    0.9000000       0.005928743 0.40295370
+49 160        FALSE    0.9000000       0.005928743 0.40294739
+   baseline_eigenvalue forage_share_cod_deaths_baseline forage_ratio_1995_2004
+1        -0.0064409717                      0.003138675              1.1031749
+2        -0.0013308478                      0.015655874              1.1816269
+3         0.0002120435                      0.030601599              1.2252615
+4         0.0095684483                      0.059451898              1.6395640
+5         0.0243570018                      0.110679230              2.0491194
+6         0.0427437963                      0.201115311              3.1958456
+7         0.0761601310                      0.333130805              1.6831314
+8        -0.0120236839                      0.003138675              1.0615248
+9        -0.0070980288                      0.015655874              1.1258531
+10       -0.0059258886                      0.030601599              1.1704697
+11        0.0025863404                      0.059451898              1.4912621
+12        0.0175731215                      0.110679230              1.8455941
+13        0.0418262533                      0.201115311              3.1531034
+14        0.0719533079                      0.333130805              1.7027567
+15       -0.0152349015                      0.003138675              1.0134031
+16       -0.0147198471                      0.015655874              1.0667380
+17       -0.0138722649                      0.030601599              1.1106361
+18       -0.0062566780                      0.059451898              1.3553977
+19        0.0091241615                      0.110679230              1.6449321
+20        0.0373071960                      0.201115311              3.0992882
+21        0.0656702036                      0.333130805              1.7114077
+22       -0.0153938878                      0.003138675              0.9969209
+23       -0.0160986736                      0.015655874              1.0470543
+24       -0.0140281473                      0.030601599              1.0897435
+25       -0.0096026277                      0.059451898              1.3116603
+26        0.0060120250                      0.110679230              1.5821376
+27        0.0349610918                      0.201115311              3.0738270
+28        0.0629618568                      0.333130805              1.7102349
+29       -0.0164386623                      0.003138675              0.8954127
+30       -0.0159367747                      0.015655874              0.9273099
+31       -0.0150889423                      0.030601599              0.9557444
+32       -0.0169367715                      0.059451898              1.0663926
+33       -0.0108553142                      0.110679230              1.2224788
+34        0.0039823060                      0.201115311              2.8029766
+35        0.0322820397                      0.333130805              1.6475951
+36       -0.0164887004                      0.003138675              0.8675476
+37       -0.0156046045                      0.015655874              0.8926321
+38       -0.0158537874                      0.030601599              0.9137221
+39       -0.0169890761                      0.059451898              0.9925866
+40       -0.0117588667                      0.110679230              1.1084696
+41       -0.0215386098                      0.201115311              2.6499824
+42        0.0087087454                      0.333130805              1.6013332
+43       -0.0163728930                      0.003138675              0.8561081
+44       -0.0153834319                      0.015655874              0.8749720
+45       -0.0164005145                      0.030601599              0.8903017
+46       -0.0170593856                      0.059451898              0.9473413
+47       -0.0124485813                      0.110679230              1.0373466
+48       -0.0509304787                      0.201115311              2.5158516
+49       -0.0178776290                      0.333130805              1.5617150
+   forage_ratio_2005_2012 cod_ratio_1995_2004 cod_ssb_2025_rel cod_ssb_min_rel
+1               0.5099419         2.208076959     6.9520607950    2.612335e-01
+2               0.5803974         2.213542736     7.0618182500    2.531020e-01
+3               0.5921296         2.177447186     6.8910880791    2.541394e-01
+4               0.9603275         2.314183062     7.4335311623    2.604751e-01
+5               1.4745518         2.155050841     7.2069632186    2.440494e-01
+6               2.9423247         0.007020018     0.0016659339    1.969853e-05
+7               1.5569349         0.001446964     0.0001039616    1.218995e-06
+8               0.5068431         2.183524851     6.4575901395    2.605796e-01
+9               0.5560371         2.178664366     6.4627326775    2.517336e-01
+10              0.5691652         2.152943123     6.3991188118    2.536558e-01
+11              0.8085758         2.245497551     6.6207767872    2.582590e-01
+12              1.1423771         2.105517267     6.4781920621    2.433510e-01
+13              3.0030231         0.007995289     0.0019391973    2.299500e-05
+14              1.6202903         0.001473455     0.0001051561    1.235621e-06
+15              0.5108246         2.153791953     6.0512815879    2.596132e-01
+16              0.5410804         2.138615815     6.0155276857    2.497955e-01
+17              0.5538116         2.123835062     6.0142125137    2.528624e-01
+18              0.7034486         2.184417812     6.1018930041    2.557362e-01
+19              0.9076751         2.054010997     6.0324674653    2.419973e-01
+20              3.0371570         0.009622782     0.0024287312    2.889935e-05
+21              1.6601065         0.001506434     0.0001069799    1.260145e-06
+22              0.5145707         2.143401137     5.9345474148    2.592436e-01
+23              0.5391352         2.125035123     5.8922282576    2.490816e-01
+24              0.5517277         2.112925368     5.9066581495    2.525392e-01
+25              0.6750158         2.163276402     5.9681034643    2.547986e-01
+26              0.8486060         2.038216667     5.9273348844    2.415971e-01
+27              3.0349357         0.010437402     0.0026856934    3.199994e-05
+28              1.6665804         0.001518817     0.0001077297    1.270121e-06
+29              0.5773899         2.068142828     5.3510939794    2.554659e-01
+30              0.5729350         2.035589307     5.3095724209    2.435506e-01
+31              0.5755293         2.040343967     5.3780418647    2.492735e-01
+32              0.5879367         2.043090061     5.4081731603    2.477727e-01
+33              0.6226600         1.942323641     5.5119496590    2.368920e-01
+34              2.8942082         0.025828413     0.0086089612    1.040380e-04
+35              1.6453145         0.001623460     0.0001154038    1.369844e-06
+36              0.6209041         2.040827844     5.2245919449    2.534813e-01
+37              0.6100589         2.003845184     5.1866657506    2.409044e-01
+38              0.6095866         2.014749537     5.2613835729    2.475358e-01
+39              0.5991822         2.003914437     5.2987713085    2.444357e-01
+40              0.6024187         1.914871785     5.4349403372    2.356576e-01
+41              2.7640986         0.046722039     0.0184985916    2.402941e-04
+42              1.6046729         0.001690432     0.0001216917    1.448696e-06
+43              0.6702047         2.023759079     5.2986257146    2.517972e-01
+44              0.6565699         1.983748070     5.2551673027    2.388686e-01
+45              0.6555289         1.997544913     5.3277505679    2.461227e-01
+46              0.6342237         1.982525378     5.3576665359    2.425744e-01
+47              0.6217953         1.899203123     5.4761536227    2.336757e-01
+48              2.6395104         0.076800153     0.0367361407    7.049342e-04
+49              1.5665531         0.001769406     0.0001297589    1.548036e-06
+   years_to_50pct_from_1993 B_forage_ratio_1995_2004 B_cod_ratio_1995_2004
+1                         2                 1.477973          9.211911e-02
+2                         2                 1.554540          8.808125e-02
+3                         2                 1.645431          8.674490e-02
+4                         2                 2.273954          8.399456e-02
+5                         2                 3.060509          6.941024e-02
+6                        NA                 3.192923          4.036752e-05
+7                        NA                 1.683055          9.226121e-06
+8                         2                 1.411470          9.123987e-02
+9                         2                 1.474384          8.695084e-02
+10                        2                 1.567263          8.609918e-02
+11                        2                 2.053036          8.261643e-02
+12                        2                 2.705031          6.935438e-02
+13                       NA                 3.153325          4.494215e-05
+14                       NA                 1.703804          9.343525e-06
+15                        2                 1.335635          9.021398e-02
+16                        2                 1.387937          8.564732e-02
+17                        2                 1.471053          8.524053e-02
+18                        2                 1.844192          8.132261e-02
+19                        2                 2.337984          6.870629e-02
+20                       NA                 3.100254          5.286365e-05
+21                       NA                 1.710865          9.487316e-06
+22                        2                 1.307808          8.981782e-02
+23                        2                 1.357731          8.518003e-02
+24                        2                 1.437451          8.495853e-02
+25                        2                 1.777720          8.095149e-02
+26                        2                 2.227182          6.870324e-02
+27                       NA                 3.077025          5.707764e-05
+28                       NA                 1.709821          9.540480e-06
+29                        2                 1.129792          8.640957e-02
+30                        2                 1.163622          8.199742e-02
+31                        2                 1.214888          8.390601e-02
+32                        2                 1.389150          7.854639e-02
+33                        2                 1.631270          6.802182e-02
+34                       NA                 2.810287          1.849087e-04
+35                       NA                 1.648023          9.983535e-06
+36                        2                 1.068466          8.517463e-02
+37                        2                 1.096710          8.070002e-02
+38                        2                 1.138949          8.329771e-02
+39                        2                 1.263491          7.748219e-02
+40                        2                 1.447660          6.799637e-02
+41                       NA                 2.663960          4.491387e-04
+42                       NA                 1.602509          1.026945e-05
+43                        2                 1.033157          8.422752e-02
+44                        2                 1.055350          7.980132e-02
+45                        2                 1.086442          8.263664e-02
+46                        2                 1.181185          7.690071e-02
+47                        2                 1.325445          6.836101e-02
+48                       NA                 2.538771          8.822223e-04
+49                       NA                 1.562598          1.062896e-05
+   B_years_to_50pct_after_2025 invasion_rate invasion_fit_r2
+1                           40   0.210903383       1.0000000
+2                           41   0.213638826       0.9999999
+3                           40  -0.009774831       0.9898737
+4                           36  -0.023687119       0.9965205
+5                           NA   0.193010575       0.9999995
+6                           NA  -0.023739740       0.9968720
+7                           NA  -0.023758026       0.9970262
+8                           40   0.208048290       1.0000000
+9                           41   0.208535619       0.9999999
+10                          40   0.213506130       0.9999998
+11                          38  -0.022730832       0.9960891
+12                          NA   0.193012690       0.9999996
+13                          NA  -0.023680533       0.9965313
+14                          NA  -0.023700490       0.9967069
+15                          41   0.205525881       1.0000000
+16                          42   0.204656987       1.0000000
+17                          41   0.206489020       0.9999999
+18                          39  -0.009858101       0.9891224
+19                          NA   0.192904294       0.9999995
+20                          NA  -0.023607624       0.9960706
+21                          NA  -0.023628954       0.9962706
+22                          41   0.204745491       0.9999999
+23                          42   0.203766273       1.0000000
+24                          41   0.205502203       0.9999999
+25                          40   0.002434384       0.9187237
+26                          NA   0.192862891       0.9999997
+27                          NA  -0.023578479       0.9958730
+28                          NA  -0.023600723       0.9960880
+29                          41   0.201728900       0.9999999
+30                          42   0.199886780       1.0000000
+31                          41   0.201454886       0.9999998
+32                          41   0.200333272       0.9999999
+33                          41   0.196628145       0.9999974
+34                          NA  -0.023304112       0.9939509
+35                          NA  -0.023355188       0.9942673
+36                          40   0.201754082       0.9999998
+37                          41   0.200149038       0.9999999
+38                          40   0.201602368       0.9999999
+39                          40   0.201132055       0.9999997
+40                          41   0.202642012       0.9999995
+41                          NA  -0.022580785       0.9925587
+42                          NA  -0.023216300       0.9930491
+43                          39   0.202411329       0.9999998
+44                          40   0.200908782       0.9999999
+45                          39   0.202511746       1.0000000
+46                          40   0.201737369       0.9999999
+47                          40   0.203422756       0.9999988
+48                          NA  -0.019021847       0.9899683
+49                          NA  -0.023089709       0.9918288
+                                 outcome
+1            recovers quickly (<= 20 yr)
+2            recovers quickly (<= 20 yr)
+3  alternative state exists, not reached
+4  alternative state exists, not reached
+5            recovers quickly (<= 20 yr)
+6              alternative state reached
+7              alternative state reached
+8            recovers quickly (<= 20 yr)
+9            recovers quickly (<= 20 yr)
+10           recovers quickly (<= 20 yr)
+11 alternative state exists, not reached
+12           recovers quickly (<= 20 yr)
+13             alternative state reached
+14             alternative state reached
+15           recovers quickly (<= 20 yr)
+16           recovers quickly (<= 20 yr)
+17           recovers quickly (<= 20 yr)
+18 alternative state exists, not reached
+19           recovers quickly (<= 20 yr)
+20             alternative state reached
+21             alternative state reached
+22           recovers quickly (<= 20 yr)
+23           recovers quickly (<= 20 yr)
+24           recovers quickly (<= 20 yr)
+25           recovers quickly (<= 20 yr)
+26           recovers quickly (<= 20 yr)
+27             alternative state reached
+28             alternative state reached
+29           recovers quickly (<= 20 yr)
+30           recovers quickly (<= 20 yr)
+31           recovers quickly (<= 20 yr)
+32           recovers quickly (<= 20 yr)
+33           recovers quickly (<= 20 yr)
+34             alternative state reached
+35             alternative state reached
+36           recovers quickly (<= 20 yr)
+37           recovers quickly (<= 20 yr)
+38           recovers quickly (<= 20 yr)
+39           recovers quickly (<= 20 yr)
+40           recovers quickly (<= 20 yr)
+41             alternative state reached
+42             alternative state reached
+43           recovers quickly (<= 20 yr)
+44           recovers quickly (<= 20 yr)
+45           recovers quickly (<= 20 yr)
+46           recovers quickly (<= 20 yr)
+47           recovers quickly (<= 20 yr)
+48             alternative state reached
+49             alternative state reached
+    s recalibrated cod_collapse_F ssb_rel_F0.6 ssb_rel_F1.0
+1   1         TRUE            0.5 8.093866e-08 9.911681e-80
+2   5         TRUE            0.5 3.987305e-08 2.556997e-14
+3  10         TRUE            0.5 7.551032e-08 5.204879e-15
+4  20         TRUE            0.5 9.356906e-23 2.859315e-55
+5  40         TRUE            0.4 7.680478e-27 3.021453e-63
+6  80        FALSE            0.4 2.724794e-27 1.044275e-63
+7 160        FALSE            0.4 5.156685e-24 1.987280e-60
+                     parameter value               recalibrated
+1                   main model    NA exact (baseline unchanged)
+2                    repro_cod  0.02 exact (baseline unchanged)
+3                    repro_cod  0.30 exact (baseline unchanged)
+4                    repro_cod  0.60 exact (baseline unchanged)
+5 resource_productivity_factor  0.50 exact (baseline unchanged)
+6 resource_productivity_factor  2.00 exact (baseline unchanged)
+  max_biomass_error max_erepro baseline_eigenvalue
+1       0.005928743 0.04858839        -0.006256673
+2       0.005928743 0.04858839        -0.003937987
+3       0.005928743 0.04858839        -0.011154571
+4       0.005928743 0.04858839        -0.013014938
+5       0.005928743 0.04858839        -0.007453081
+6       0.005928743 0.04858839        -0.005450463
+  forage_share_cod_deaths_baseline forage_ratio_1995_2004
+1                        0.0594519               1.355398
+2                        0.0594519               1.368707
+3                        0.0594519               1.324857
+4                        0.0594519               1.267759
+5                        0.0594519               1.313683
+6                        0.0594519               1.398366
+  forage_ratio_2005_2012 cod_ratio_1995_2004 cod_ssb_2025_rel cod_ssb_min_rel
+1              0.7034486            2.184418         6.101893       0.2557362
+2              0.6507858            2.143926         6.092886       0.2505056
+3              0.8194324            2.284610         6.003507       0.2688058
+4              0.9730364            2.474974         5.728955       0.2922161
+5              0.6831260            2.167721         6.223455       0.2607584
+6              0.7197578            2.189862         6.006959       0.2503687
+  years_to_50pct_from_1993 B_forage_ratio_1995_2004 B_cod_ratio_1995_2004
+1                        2                 1.844192            0.08132261
+2                        2                 1.841626            0.07445807
+3                        2                 1.833427            0.10279854
+4                        1                 1.803229            0.16344411
+5                        2                 1.767400            0.07987891
+6                        2                 1.903070            0.08133336
+  B_years_to_50pct_after_2025 invasion_rate invasion_fit_r2
+1                          39  -0.009858101       0.9891224
+2                          43  -0.010836721       0.9905707
+3                          30  -0.006576931       0.9796180
+4                          15   0.003318114       0.9561839
+5                          40  -0.017533452       0.9943412
+6                          39   0.202507043       0.9999994
+                                outcome
+1 alternative state exists, not reached
+2 alternative state exists, not reached
+3 alternative state exists, not reached
+4           recovers quickly (<= 20 yr)
+5 alternative state exists, not reached
+6           recovers quickly (<= 20 yr)
+05_sensitivity.R done
+R/05_sensitivity.R finished with status 0 in 27.9 min
+
+========== R/06_numerical_checks.R ==========
+       case no_w    dt  method max_biomass_error A_cod_ratio_1995_2004
+1 reference  120 0.100   euler       0.005928743              2.184418
+2  dt_0.025  120 0.025   euler       0.005928743              2.162789
+3   tr_bdf2  120 0.100 tr_bdf2       0.005928743              2.159004
+4  no_w_200  200 0.100   euler       0.010080290              2.150592
+  A_forage_ratio_1995_2004 A_cod_ssb_2025_rel B_cod_ratio_1995_2004
+1                 1.355398           6.101893            0.08132261
+2                 1.370621           6.100917            0.07574017
+3                 1.363831           6.126458            0.07519087
+4                 1.351966           6.184285            0.08072931
+  B_years_to_50pct_after_2025 B_forage_F1_10yr_years_to_50pct invasion_rate
+1                          39                              43  -0.009858101
+2                          41                              44  -0.008723919
+3                          41                              45  -0.009786704
+4                          41                              46  -0.016904720
+  invasion_fit_r2
+1       0.9891224
+2       0.9870044
+3       0.9889869
+4       0.9934134
+06_numerical_checks.R done
+R/06_numerical_checks.R finished with status 0 in 5.6 min
+
+========== R/07_adult_mortality_alternative.R ==========
+         M forage_mechanism cod_ssb_2000_02_rel_1980_85
+1 baseline               on                  2.92849030
+2 elevated               on                  0.04382660
+3 baseline              off                  3.06455886
+4 elevated              off                  0.05121729
+  cod_survey_ratio_1995_2004 forage_ratio_1995_2004 forage_ratio_2005_2012
+1                 2.18289224              1.3589575              0.7030043
+2                 0.08132261              1.8441923              1.2735206
+3                 2.31838030              0.8511049              0.3085385
+4                 0.10267727              1.1243690              0.4928132
+  cod_ssb_2025_rel cod_ssb_2085_rel years_to_50pct_from_1993
+1     6.1023854726     6.557933e+00                        2
+2     0.0002017002     1.202413e-10                       NA
+3     5.7770181062     6.545555e+00                        2
+4     0.0002038894     9.593262e-11                       NA
+   F_forage  D        M_after_2025 years_to_50pct cod_ssb_2050_rel
+1       0.1 10           stays 0.8             NA     7.114485e-07
+2       0.5 10           stays 0.8             NA     5.476384e-07
+3       1.0 10           stays 0.8             NA     5.218047e-07
+4       2.0 10           stays 0.8             NA     5.105683e-07
+5       0.5 30           stays 0.8             NA     5.413511e-07
+6       1.0 30           stays 0.8             NA     5.210661e-07
+7       2.0 30           stays 0.8             NA     5.105493e-07
+8       0.1 10 returns to baseline             39     3.570839e-02
+9       0.5 10 returns to baseline             43     2.587941e-02
+10      1.0 10 returns to baseline             43     2.429980e-02
+11      2.0 10 returns to baseline             43     2.368204e-02
+12      0.5 30 returns to baseline             43     2.543059e-02
+13      1.0 30 returns to baseline             43     2.424995e-02
+14      2.0 30 returns to baseline             43     2.368099e-02
+   cod_ssb_2125_rel
+1      1.053360e-14
+2      3.293044e-15
+3      2.737266e-15
+4      2.643297e-15
+5      2.752402e-15
+6      2.679041e-15
+7      2.646114e-15
+8      6.203751e+00
+9      4.221930e+00
+10     4.202453e+00
+11     4.201414e+00
+12     4.201662e+00
+13     4.201411e+00
+14     4.200719e+00
+07_adult_mortality_alternative.R done
+R/07_adult_mortality_alternative.R finished with status 0 in 1.2 min
+run_all.R completed

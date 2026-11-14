@@ -16,3 +16,12 @@
   below a tolerance, without an extinction stop.
 * A species set to exactly zero abundance stays at zero, which gives a clean
   cod-free community for invasion tests.
+
+## v3
+
+* `run_scenario()` with 7 species and 120 bins: ~2-3 s per 100 years at
+  dt 0.1. dt 0.025, TR-BDF2 and a 200-bin rebuild change recovery times by
+  2-3 years (`results/numerical_checks.csv`).
+* Running several scripts with `mclapply(mc.cores = 8)` at once on the
+  8-core machine pushed the load to ~23 and slowed everything ~3x; run the
+  heavy ones (05, 03) one at a time.
