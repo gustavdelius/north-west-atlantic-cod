@@ -1,14 +1,15 @@
 # Possible mizer issues found while building the eastern Scotian Shelf model
 
-Installed mizer: 3.4.0.9003 (defaults edition 3 used for the model). None of
-these has been filed upstream yet; each is described with enough detail to
-build a reprex. None of them changes the scientific results: the work-arounds
-are described in the scripts.
+Installed mizer: 3.4.0.9003 (defaults edition 3 used for the model). Filed
+upstream as <https://github.com/sizespectrum/mizer/issues/652> (items 1, 3, 4)
+and <https://github.com/sizespectrum/mizer/issues/653> (item 2). None of them
+changes the scientific results: the work-arounds are described in the scripts.
 
 ## 1. `matchGrowth(keep = "biomass")` fails erratically depending on fishing effort
 
-**Status:** observed, not isolated to a minimal example; may be a genuine
-property of a far-from-steady initial state rather than a bug.
+**Status:** filed upstream as part of
+<https://github.com/sizespectrum/mizer/issues/652> (same root cause in
+`get_steady_state_n()` as #4 below).
 
 On a freshly built model (`newMultispeciesParams()` with the species in
 `data/species_params.csv`, `kappa = 3`, `no_w = 120`, the gears in
@@ -37,52 +38,57 @@ unfished, and the baseline effort is switched on afterwards.
 
 ## 2. Newton solver errors inside the van Leer limiter
 
-**Status:** observed repeatedly, not isolated.
+**Status:** isolated to a 3-line `NS_params` reprex and filed upstream as
+<https://github.com/sizespectrum/mizer/issues/653>.
 
 `tuneSteadyState(params, solver = "newton")` on intermediate calibration
-states of this model sometimes stops with
+states of this model (and on `NS_params` with `second_order_w(p) <- TRUE`)
+stops with
 
     Error in chi_int[nz] <- limiter(num[nz], den[nz]):
       NAs are not allowed in subscripted assignments
 
 (edition-3 model, i.e. `second_order_w` flux `"van_leer"`). It also sometimes
 returns with nleqslv termination code 5 ("Jacobian is too ill-conditioned")
-or 3 ("No better point found"). The help page of `findSteadyState()` warns
-that with van Leer the residual is only Lipschitz, so non-convergence is
-documented; an `NA` error from inside the limiter is not, and suggests a
-`0/0` in the limiter's ratio that is not guarded. Work-around in
+or 3 ("No better point found"). Cause: (a) active bins at `w_top` where somatic
+growth $g \approx 0$ (e.g. `w[no_w] == w_max`, or bins in $[w_\infty, 1.5 w_\infty]$
+where `repro_prop` is clamped to 1) have $r_{\text{ss}} = \text{res}/N \approx \mu$
+nearly independent of $\log N$, giving the Jacobian a $\sim 10^{-9}$ singular
+value and a $\Delta x \sim 10^7$ Newton step; (b) `exp(x)` overflows to `Inf`,
+`delta` has `Inf - Inf = NaN`, and `nz <- den != 0` has `NA`. Work-around in
 `tune_ss()` (R/functions.R): fall back to `solver = "project"` whenever the
 Newton solve errors or does not return a fixed point.
 
 ## 3. tuneSteadyState() lands on very different solutions for tiny input changes (v2)
 
-**Status:** observed; probably a property of this model (several fixed points
-with recruitment held), not necessarily a bug.
+**Status:** explained by #4 (<https://github.com/sizespectrum/mizer/issues/652>).
 
-In the v2 calibration (`R/functions.R`, `build_model()`), repeating
+In the v2 calibration (`R/v2/functions.R`, `build_model()`), repeating
 `match_biomass_damped(p, 0.01)` (abundances changed by < 1 %) followed by
-`tuneSteadyState(solver = "newton")` returned states whose maximum biomass
-error jumped between 0.9 and 8, and once a state in which silver hake had
-grown by a factor ~3e7 while every other species was near zero
-(`attractor` NA). `solver = "project"` from the same start produced the
-silver-hake runaway as well. The help pages document that Newton can converge
-to unstable fixed points; whether a runaway with reproduction held fixed is
-expected is unclear. Work-around: keep the best fixed point with all
-erepro < 1 and accept a looser calibration (max error 61 %).
+`safe_match_growth()` and `tuneSteadyState(solver = "newton")` returned states
+whose maximum biomass error jumped between 0.9 and 8, and once a state in which
+silver hake had grown by a factor ~3e7 while every other species was near zero
+(`attractor` NA). Cause: calling `match_biomass_damped(p, 0.01)` followed
+directly by `tuneSteadyState()` changes biomasses by < 1 % as expected; the
+jump was introduced by the intervening `matchGrowth(keep = "biomass")` call,
+which ran `steadySingleSpecies(keep = "biomass")` (#4 below) followed by
+`setBevertonHolt()`, changing `getRDD()` by factors of 0.15--7.7x before
+`tuneSteadyState()` held recruitment fixed. Work-around in v2: keep the best
+fixed point with all erepro < 1; fixed cleanly in v3 by `scale_growth()`.
 
 ## 4. steadySingleSpecies() (and hence matchGrowth()) is far from the identity on a steady state of the v3 model
 
-**Status:** observed with project files; a portable reprex with
-`NS_species_params` (editions 2 and 3) shows only a 0-2 % change, so the
-effect needs this model's steep early-life mortality to become large. Not
-filed upstream.
+**Status:** root cause identified and filed upstream as
+<https://github.com/sizespectrum/mizer/issues/652>.
 
 The help page says `steadySingleSpecies()` "solves the steady-state equation
 with these growth and death rates and the current abundance at the smallest
 size". Applied to a model that *is* at steady state, it should therefore
 return (nearly) the same spectra. On the v3 calibration at s = 5
 (`isSteady()` TRUE, R_max = Inf for all species, hand-set `ext_mort` holding
-the early-life background mortality) it does not:
+the early-life background mortality) — and even on
+`tuneSteadyState(newSingleSpeciesParams(), solver = "newton")` in edition 3 —
+it does not:
 
 ```r
 library(mizer)
@@ -95,12 +101,17 @@ getBiomass(steadySingleSpecies(p, keep = "biomass")) / getBiomass(p)
 packageVersion("mizer")                                # 3.4.0.9003, defaults_edition(3)
 ```
 
-A likely cause is that the steady-state equation is solved with a different
-discretisation from the edition-3 transport scheme used by `project()`,
-which matters where mortality/growth is large (here Z/G = 0.5 background plus
-forage predation on larvae). Because `matchGrowth()` ends with
-`steadySingleSpecies()`, a growth rescaling of < 0.5 % turned the calibrated
-state into one with silver hake x20 and the other species near zero.
-Work-around in v3: `scale_growth()` in `R/functions.R` does the same
-rescaling of gamma, h, ks and k but keeps the spectra, and
+Cause: `get_steady_state_n()` uses the same discretisation as `project()`, and
+the true steady state *is* an exact fixed point of its equation, but when
+`flux_limiter != "none"` it iterates by inverting the frozen-$\chi$ matrix
+$M(\chi(n^{(k)}))$. Because $M(\chi)$ at $\chi \approx 1$ is nearly central
+differences (eigenvalue $O(\mu \Delta w / g) \ll 1$ on the grid-scale sawtooth
+mode $(-1)^j$) while the omitted $\partial \chi / \partial n$ Jacobian term is
+$O(g / \Delta w)$, the true steady state is a linearly unstable repeller of the
+frozen-$\chi$ Picard map. The iteration develops alternating negative values
+that get clipped by `n_new[n_new < 0] <- 0` and runs all 500 iterations without
+converging. Preconditioning the residual with the first-order upwind operator
+($M_{\text{upwind}}$ at $\chi = 0$) instead of $M(\chi)$ converges in ~30
+iterations to `< 1e-10`. Work-around in v3: `scale_growth()` in `R/functions.R`
+does the same rescaling of gamma, h, ks and k but keeps the spectra, and
 `tuneSteadyState()` re-settles them.
